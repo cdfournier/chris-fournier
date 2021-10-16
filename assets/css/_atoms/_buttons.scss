@@ -1,0 +1,31 @@
+// BUTTONS
+button, .button {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  max-height: none;
+  overflow: hidden;
+  margin: $p 0 0;
+  padding: $p calc(2.5 * #{$p});
+  border: 1px solid $green;
+  border-radius: 2rem;
+  @include sans-bold;
+  font-size: $p;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  color: white;
+  background: $green;
+  white-space: nowrap;
+  cursor: pointer;
+  @include transition(all, 0.25s, ease);
+  svg {
+    margin: 0;
+    height: 1rem;
+  }
+  &:hover, &:focus {
+    color: $green;
+    background: white;
+  }
+}

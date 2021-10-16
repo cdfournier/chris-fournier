@@ -2,37 +2,28 @@
 @font-face {
   font-family: "metropolis-light";
   font-display: swap;
-    src: url("../fonts/metropolis/metropolis-light.eot");
-    src: url("../fonts/metropolis/metropolis-light.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-light.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-light.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-light.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  src: url("../fonts/metropolis-light.woff2") format("woff2"),
+       url("../fonts/metropolis-light.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
   font-family: "metropolis-regular";
   font-display: swap;
-    src: url("../fonts/metropolis/metropolis-regular.eot");
-    src: url("../fonts/metropolis/metropolis-regular.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-regular.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-regular.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  src: url("../fonts/metropolis-regular.woff2") format("woff2"),
+       url("../fonts/metropolis-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
   font-family: "metropolis-bold";
   font-display: swap;
-    src: url("../fonts/metropolis/metropolis-bold.eot");
-    src: url("../fonts/metropolis/metropolis-bold.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/metropolis/metropolis-bold.woff") format("woff"),
-         url("../fonts/metropolis/metropolis-bold.woff2") format("woff2"),
-         url("../fonts/metropolis/metropolis-bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  src: url("../fonts/metropolis-bold.woff2") format("woff2"),
+       url("../fonts/metropolis-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
 }
 
 @mixin sans-light {
@@ -51,16 +42,4 @@
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
-}
-
-@mixin serif-regular {
-  font-family: "Cardo", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-@mixin serif-bold {
-  font-family: "Cardo", serif;
-  font-weight: 700;
-  font-style: normal;
 }

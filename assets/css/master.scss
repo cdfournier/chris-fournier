@@ -1,8 +1,16 @@
 @import "_global/base";
 @import "_global/typography";
-@import "_global/navigation";
-@import "_global/header";
-@import "_global/footer";
 @import "_global/layout";
-@import "_global/animation";
-@import "_pages/error";
+@import "_global/animations";
+
+@import "_atoms/buttons";
+@import "_atoms/figures";
+@import "_atoms/blockquotes";
+
+@import "_molecules/banners";
+@import "_molecules/cards";
+@import "_molecules/media-grids";
+
+@import "_organisms/gallery-grid";
+@import "_organisms/header";
+@import "_organisms/footer";

@@ -1,30 +1,130 @@
 @import "fonts";
 @import "mixins";
-@import "colors";
+
+:root {
+  --green: #384332;
+  --orange: #af4433;
+  --cream: #eef1e8;
+  --delta-design: #003442;
+  --delta-design-light: #eeeeee;
+  --east-wind: #552a80;
+  --east-wind-light: #eeeaf2;
+  --eberhardt-design: #ffe151;
+  --eberhardt-design-light: #665a20;
+  --enservio: #2e84ed;
+  --enservio-light: #eaf3fd;
+  --mystuff: #cd2183;
+  --mystuff-light: #fae9f3;
+  --panera: #4c753f;
+  --panera-light: #e9f0e5;
+  --pine-tree-motel: #34421e;
+  --pine-tree-motel-light: #34421e;
+  --transferx: #0d1e27;
+  --transferx-light: #f0f5f8;
+  --gray: #e5e5e5;
+  --h1-title: 3.052rem;
+  --h2-title: 2.441rem;
+  --h1: 2.441rem;
+  --h2: 1.953rem;
+  --h3: 1.563rem;
+  --h4: 1.25rem;
+  --p: 1rem;
+  --small: 0.8rem;
+  --xsmall: 0.64rem;
+}
+
+
+// VARIABLES
+$green: var(--green);
+$orange: var(--orange);
+$cream: var(--cream);
+$delta-design: var(--delta-design);
+$delta-design-light: var(--delta-design-light);
+$east-wind: var(--east-wind);
+$east-wind-light: var(--east-wind-light);
+$eberhardt-design: var(--eberhardt-design);
+$eberhardt-design-light: var(--eberhardt-design-light);
+$enservio: var(--enservio);
+$enservio-light: var(--enservio-light);
+$mystuff: var(--mystuff);
+$mystuff-light: var(--mystuff-light);
+$panera: var(--panera);
+$panera-light: var(--panera-light);
+$pine-tree-motel: var(--pine-tree-motel);
+$pine-tree-motel-light: var(--pine-tree-motel-light);
+$transferx: var(--transferx);
+$transferx-light: var(--transferx-light);
+$gray: var(--gray);
+$h1-title: var(--h1-title);
+$h2-title: var(--h2-title);
+$h1: var(--h1);
+$h2: var(--h2);
+$h3: var(--h3);
+$h4: var(--h4);
+$p: var(--p);
+$small: var(--small);
+$xsmall: var(--xsmall);
+
+
+// COLOR CLASSES
+.bg-green {background-color: $green;}
+.bg-orange {background-color: $orange;}
+.bg-cream {background-color: $cream;}
+.bg-delta-design {background-color: $delta-design;}
+.bg-delta-design-light {background-color: $delta-design-light;}
+.bg-east-wind {background-color: $east-wind;}
+.bg-east-wind-light {background-color: $east-wind-light;}
+.bg-eberhardt-design {background-color: $eberhardt-design;}
+.bg-eberhardt-design-light {background-color: $eberhardt-design-light;}
+.bg-enservio {background-color: $enservio;}
+.bg-enservio-light {background-color: $enservio-light;}
+.bg-mystuff {background-color: $mystuff;}
+.bg-mystuff-light {background-color: $mystuff-light;}
+.bg-panera {background-color: $panera;}
+.bg-panera-light {background-color: $panera-light;}
+.bg-pine-tree-motel {background-color: $pine-tree-motel;}
+.bg-pine-tree-motel-light {background-color: $pine-tree-motel-light;}
+.bg-transferx {background-color: $transferx;}
+.bg-transferx-light {background-color: $transferx-light;}
+.bg-gray {background-color: $gray;}
+
+
+// SELECTION
+::-moz-selection {
+  color: white;
+  background: $green;
+}
+
+::selection {
+  color: white;
+  background: $green;
+}
 
 
 // BASE
 html {
+  width: 100%;
+  min-width: 100%;
   margin: 0 auto;
   padding: 0;
   @include sans-regular;
   font-size: 16px;
-  line-height: 1.65;
   color: black;
   scroll-behavior: smooth;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-smooth: auto;
 }
 
-/*
 @media screen and (prefers-reduced-motion: reduce) {
 	html {scroll-behavior: auto;}
 	* {
   	animation: none !important;
-  	transition: none !important;
+  	@include transition(none !important);
 	}
 }
-*/
 
-body, .body {
+body {
   width: 100%;
   margin: 0 auto;
   padding: 0;

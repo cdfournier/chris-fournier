@@ -1,88 +1,178 @@
 // TYPOGRAPHY
-/* 
-  NOTES:  
-  All typography is set to a 1.250 Major-Third type-scale
-*/
-
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, p, small {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
-  font-style: normal;
+}
+
+h1, h2, h3, h4 {
+  @include sans-light;
+  line-height: 1.1;
+}
+
+h1 {
+  padding: 2rem 0 0;
+	font-size: $h1;
+}
+
+h2 {
+  max-width: 64rem;
+  padding: 1.5rem 0 0;
+	font-size: $h2;
+	&.title {
+  	font-size: $h1;
+	}
+}
+
+h3 {
+  max-width: 48rem;
+  padding: 1.25rem 0 0;
+	font-size: $h3;
+}
+
+h4 {
+  max-width: 40rem;
+  padding: 1rem 0 0;
+	font-size: $h4;
+}
+
+p {
+  max-width: 36rem;
+  padding: 1rem 0 0;
+	font-size: $p;
+  line-height: 1.5;
+}
+
+p > cite {
+  display: block;
+  font-size: $small;
+}
+
+p > cite a {
+  display: inline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+strong, em, b {
+  display: inline;
+  @include sans-bold;
   color: inherit;
 }
 
-h1, h2, h3, h4, h5 {
-  @include sans-light;
-  line-height: 1.125;
-  span {
-    display: block;
-    @include sans-bold;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    text-transform: uppercase;
+small, .small {
+  max-width: 26rem;
+  padding: 0.5rem 0;
+	font-size: $small;
+	line-height: 1.5;
+}
+
+.visuallyhidden {display: none;}
+
+@media (min-width: 48rem) {
+  h1.title {
+    max-width: 72rem;
+    margin: 0;
+    font-size: $h1-title;
+    & + p {
+      max-width: 48rem;
+      font-size: calc(1.5 * #{$p});
+    }
+  }
+  h2.title {
+    max-width: 48rem;
+    margin: 0;
+    font-size: $h2-title;
+    & + p {
+      max-width: 40rem;
+      font-size: calc(1.25 * #{$p});
+    }
+    &:first-of-type {
+      font-size: $h1-title;
+    }
+  }
+  h3.title {
+    font-size: $h2;
   }
 }
 
-h1 {font-size: 3.502rem;}
-h2 {font-size: 2.441rem;}
-h3 {font-size: 1.953rem;}
-h4 {font-size: 1.563rem;}
-h5 {font-size: 1.25rem;}
 
-p {
-  max-width: 40rem;
-  margin: 0;
-  padding: 1rem 0 0;
-  font-size: 1rem;
+//HEADING SPANS
+h1 span, h2 span, h3 span, h4 span {
+  display: block;
+	@include sans-bold;
+	line-height: 1;
+	text-transform: uppercase;
 }
 
-strong, em {
-  display: inline;
-  @include sans-bold;
+h1 span {
+  padding-bottom: calc(0.125 * #{$h1});
+	font-size: calc(0.325 * #{$h1});
 }
 
-small {font-size: 0.8rem;}
+h2 span {
+  padding-bottom: calc(0.125 * #{$h2});
+	font-size: calc(0.325 * #{$h2});
+}
+
+h3 span {
+  padding-bottom: calc(0.125 * #{$h3});
+	font-size: calc(0.325 * #{$h3});
+}
+
+h4 span {
+  padding-bottom: calc(0.225 * #{$h4});;
+	font-size: calc(0.425 * #{$h4});
+}
 
 
-// CUSTOM SPACING
-h2 + h3,
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p,
-h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul,
-h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol {padding: 0.5rem 0 0;}
+// TEXT ALIGNMENT
+h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.center {
+  margin: 0 auto;
+  text-align: center;
+}
 
-p + h1, p + h2, p + h3, p + h4, p + h5, p + ol,
-ul + h1, ul + h2, ul + h3, ul + h4, ul + h5,
-ol + h1, ol + h2, ol + h3, ol + h4, ol + h5,
-dl + h1, dl + h2, dl + h3, dl + h4, dl + h5 {padding: 2rem 0 0;}
+h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {text-align: right;}
 
 
 // LISTS
-ul, ol {
+ul, ol, dl {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 36rem;
   margin: 0;
   padding: 0;
   list-style: none;
-  li {
-    margin: 1rem 0 0;
+  li, dt, dd {
+    display: list-item;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 0;
+    line-height: 1.325;
+  }
+}
+
+ul {
+  padding: 1rem 0 1rem 1.5rem;
+  list-style: disc;
+  &:last-child {
+    padding: 1rem 0 0 1.5rem;
   }
 }
 
 ol {
-  display: flex;
-  flex-direction: column;
-  max-width: 40rem;
-  padding: 0;
+  padding: 1rem 0;
+  list-style: none;
   counter-reset: count;
+  &:last-child {
+    padding: 1rem 0 0;
+  }
   li {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    width: 100%;
-    max-width: 32rem;
-    margin: 1rem 0;
-    line-height: 1.5;
     span {
       display: flex;
       align-items: stretch;
@@ -96,67 +186,153 @@ ol {
       display: flex;
       align-items: center;
       flex: 0 1 auto;
-      margin: 0 0.8rem 0 0;
-      padding: 0 0.32rem 0 0;
-      border-right: 1px solid $green;
+      margin: 0 1rem 0 0;
+      border-right: 1px solid;
       @include sans-bold;
       font-size: 150%;
-      color: $green;
       counter-increment: count;
       content: "0" counter(count);
     }
   }
-  li:first-of-type {margin: 0.32rem 0 1rem;}
-  li:last-of-type {margin: 1rem 0 0;}
-}
-
-@media (min-width: 48rem) {
-  ol {font-size: 110%;}
 }
 
 dl {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 110%;
+  padding: 1rem 0;
+  &:last-child {
+    padding: 1rem 0 0;
+  }
   dt {
-    margin: 1rem 0 0;
+    padding: 0;
     @include sans-bold;
-    font-size: 110%;
   }
   dd {
-    margin: 0;
+    padding: 0 0 1.5rem;
+    &:last-of-type {
+      padding: 0;
+    }
   }
 }
 
-@media (min-width: 48rem) {
-  dl {width: 95%;}
+
+// PROJECT SPEC LIST
+ul.project-spec {
+  max-width: 32rem;
+  padding: 0;
+  list-style: none;
+  li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    span {
+      @include sans-bold;
+      font-size: $xsmall;
+      text-transform: uppercase;
+    }
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style: none;
+      li {
+        width: auto;
+        margin: 0 0 0 0.5rem;
+        padding: 0 0 0 0.5rem;
+        text-transform: capitalize;
+        &:before {
+          display: block;
+          position: absolute;
+          top: 15%;
+          left: 0;
+          width: 1px;
+          height: 70%;
+          background: $green;
+          opacity: 0.5;
+          content: "";
+        }
+        &:first-child {
+          margin: 0;
+          padding: 0;
+          &:before {display: none;}
+        }
+      }
+    }
+  }
+  &:before, &:after {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin: 1rem 0;
+    background: $gray;
+    content: "";
+  }
+  &:before {
+    margin: 0 0 1rem;
+  }
+  &:after {
+    margin: 1rem 0 0;
+  }
 }
 
 
-// LINKS
+// PADDING MODIFIERS
+h1 + p, h2 + p, h3 + p, h4 + p,
+h1 + ol, h2 + ol, h3 + ol, h4 + ol,
+h1 + ul, h2 + ul, h3 + ul, h4 + ul,
+h1 + dl, h2 + dl, h3 + dl, h4 + dl, {padding-top: 0.25rem;}
+
+h1 + h2 {padding-top: 0;}
+
+h1.visuallyhidden + p, h2.visuallyhidden + p, h3.visuallyhidden + p, h4.visuallyhidden + p {padding: 0;}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, p:first-child {padding-top: 0;}
+
+p:last-child {padding-bottom: 0;}
+
+
+// TEXT LINK STYLES
 a {
+  position: relative;
+  line-height: inherit;
   text-decoration: none;
-  cursor: pointer;
-  @include transition(all, 0.325s, ease);
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a {color: $green;}
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover,
-h1 a:focus, h2 a:focus, h3 a:focus, h4 a:focus, h5 a:focus {color: $orange;}
-
-p a, li a, small a {
-  @include sans-bold;
   color: $green;
+  cursor: pointer;
+  @include transition(all, 0.25s, ease);
+  &:hover, &:focus {
+    color: $orange;
+  }
 }
 
-p a:hover, p a:focus, li a:hover, li a:focus, small a:hover, small a:focus {color: $orange;}
+h1 a, h2 a, h3 a, h4 a {text-decoration: none;}
 
+p a, small a, li a {@include sans-bold;}
 
-// VISUALLY HIDDEN
-.visuallyhidden {display: none;}
+p.icon a {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 1.5;
+  span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $green;
+    svg {
+      width: 1.5rem;
+      margin: 0 0 0 0.25rem;
+      @include transform(scale(1));
+      @include transform-origin(left);
+      @include transition(all, 0.25s, ease);
+    }
+  }
+  &:hover, &:focus {
+    span {
+      color: $orange;
+      svg {
+        margin: 0 0 0 0.5rem;
+        @include transform(scale(1.25));
+      }
+    }
+  }
+}
