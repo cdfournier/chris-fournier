@@ -6,12 +6,12 @@ button, .button {
   max-width: 100%;
   max-height: none;
   overflow: hidden;
-  margin: $p 0 0;
-  padding: $p calc(2.5 * #{$p});
+  margin: 1.5rem 0 0;
+  padding: 0.875rem 1.5rem 0.75rem;
   border: 1px solid $green;
   border-radius: 2rem;
   @include sans-bold;
-  font-size: $p;
+  font-size: $small;
   text-align: center;
   text-decoration: none;
   text-overflow: ellipsis;

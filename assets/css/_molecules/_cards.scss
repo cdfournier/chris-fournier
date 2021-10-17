@@ -23,8 +23,7 @@
         display: none;
         padding: 1rem 1rem 0;
         @include sans-regular;
-        font-size: 0.8rem;
-        font-style: normal;
+        font-size: $small;
         text-transform: none;
       }
       figcaption > cite a {@include sans-bold;}

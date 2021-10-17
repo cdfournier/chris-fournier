@@ -21,7 +21,6 @@
         padding: 1rem 0 0;
         @include sans-bold;
         font-size: $small;
-        font-style: normal;
         text-transform: none;
       }
       figcaption > cite a {@include sans-bold;}

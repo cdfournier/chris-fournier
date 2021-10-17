@@ -129,60 +129,6 @@ header {
   top: 0
 }
 
-/*
-@media (min-width: 48rem) {
-  header {
-    nav {
-      ul {
-        margin: 0 0 0 auto;
-        li {
-          ul {
-            li {
-              &:first-child {
-                display: list-item;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-*/
-
-/*
-@media (min-width: 48rem) and (min-height: 48rem), (max-height: 40rem) and (orientation: portrait) {
-  header {
-    nav {
-      ul.header-navigation {
-        width: 50%;
-        min-width: inherit;
-        li {
-          ul {
-            font-size: $h4;
-            li {
-              &:first-child {
-                display: list-item;
-              }
-            }
-          }
-        }
-        li.profile ul ul.social {
-          li {
-            font-size: $p;
-          }
-        }
-        li.work {
-          ul {
-            font-size: $h3;
-          }
-        }
-      }
-    }
-  }
-}
-*/
-
 @media (orientation: landscape) and (max-height: 40rem) {
   header {
     nav {
