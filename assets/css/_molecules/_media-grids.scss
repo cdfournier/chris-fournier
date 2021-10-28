@@ -1,0 +1,63 @@
+// MEDIA GRID ITEMS
+.media-grid-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  .media-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 2rem;
+    figure {
+      padding: 0;
+      figcaption > cite {
+        display: inline-block;
+        display: none;
+        padding: 1rem 0 0;
+        @include sans-bold;
+        font-size: $small;
+        text-transform: none;
+      }
+      figcaption > cite a {@include sans-bold;}
+    }
+    .text {
+      padding: 2rem 0 0;
+      width: 100%;
+      h1, h2, h3, h4 {padding: 0;}
+    }
+  }
+  .media-grid-item:after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 2rem 0 0;
+    background-color: $gray;
+    content: "";
+  }
+  .media-grid-item:last-child {padding: 0;}
+  .media-grid-item:last-child:after {display: none;}
+}
+
+@media (min-width: 48rem) {
+  .media-grid-block {
+    .media-grid-item {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      figure {width: 35%;}
+      .text {
+        width: 65%;
+        padding: 0 0 0 2rem;
+      }
+    }
+    .media-grid-item.reverse {
+      flex-direction: row-reverse;
+      .text {padding: 0 2rem 0 0;}
+    }
+  }
+}

@@ -1,0 +1,59 @@
+// NAVIGATION
+nav {
+  width: 100%;
+  padding: 1rem;
+  button.menu-toggle {
+    display: flex;
+    margin: 0 0 0 auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $green;
+    }
+    svg.menu-toggle-open {@include transition(width, 0.25s, ease);}
+    svg.menu-toggle-close {
+      width: 0;
+      @include transition(width, 0.25s, ease);
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    padding: 0;
+    font-size: $h3;
+    list-style-type: none;
+    @include transform(translateX(-100rem));
+    @include transition(all, 0.325s, ease);
+    li {
+      padding: 0 0 calc(0.75 * #{$p});
+      @include sans-bold;
+    }
+    li a {text-decoration: none;}
+    li:last-child {padding: 1rem 0;}
+  }
+}
+
+@media (min-width: 48rem) {
+  nav {
+    button.menu-toggle {display: none;}
+    ul {
+      flex-direction: row;
+      z-index: 10;
+      width: auto;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      font-size: $p;
+      @include transform (translateX(0));
+      li {
+        width: auto;
+        padding: 0 2rem 0 0;
+      }
+      li:last-child {padding: 0 2rem 0 0;}
+    }
+  }
+}

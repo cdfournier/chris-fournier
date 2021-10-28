@@ -1,0 +1,166 @@
+// BANNERS
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  @include transition(all, 0.25s, ease);
+  @include transform(translateX(0));
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 2rem;
+  }
+  .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    backdrop-filter: saturate(180%);
+  }
+  &.dark {
+    .text {
+      color: white;
+      a {
+        color: white;
+        &:hover, &:focus {
+          color: $orange;
+        }
+      }
+      button, .button {
+        border-color: white;
+        color: white;
+        background: transparent;
+        &:hover, &:focus {
+          color: $green;
+          background: white;
+        }
+      }
+    }
+  }
+  &.light {
+    .text {
+      color: black;
+      button, .button {
+        border-color: $green;
+        color: $green;
+        background: transparent;
+        &:hover, &:focus {
+          color: white;
+          background: $green;
+        }
+      }
+    }
+  }
+}
+
+.row + .banner {
+  margin: 2rem 0 0;
+}
+
+.banner:first-of-type {z-index: 500;}
+
+.banner.tall {
+  min-height: 100vh;
+  .text {
+    padding-bottom: 4rem;
+  }
+}
+
+.banner.short {
+  min-height: 50vh;
+}
+
+.banner.split {
+  z-index: 0;
+  margin: 0;
+  padding: 2rem;
+  figure {padding: 0;}
+  .text {padding: 1rem 0 0;}
+}
+
+.banner.split.border {padding: 2rem;}
+
+.banner.split.border:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 4rem);
+  height: 1px;
+  margin: 2rem auto 0;
+  background-color: $gray;
+  content: "";
+}
+
+@media (min-width: 48rem) {
+  .banner {
+    figure, .text {width: 80%;}
+  }
+  .banner.left {align-items: flex-start;}
+  .banner.right {align-items: flex-end;}
+  .banner.split {
+    flex-direction: row;
+    align-items: center;
+    figure {padding: 0;}
+    .text {
+      padding: 0;
+      margin: 0 0 0 2rem;
+    }
+  }
+  .banner.split.reverse {
+    flex-direction: row-reverse;
+    .text {margin: 0 2rem 0 0;}
+  }
+}
+
+
+// PHOTO BACKGROUNDS
+.bg-photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-photo.center {background-position: center center;}
+.bg-photo.center-bottom {background-position: center bottom;}
+.bg-photo.center-top {background-position: center top;}
+.bg-photo.left-bottom {background-position: left bottom;}
+.bg-photo.left-center {background-position: left center;}
+.bg-photo.left-top {background-position: left top;}
+.bg-photo.right-bottom {background-position: right bottom;}
+.bg-photo.right-center {background-position: right center;}
+.bg-photo.right-top {background-position: right top;}
+
+@media (min-width: 48rem) {
+  .bg-photo.fixed {background-attachment: fixed;}
+  .bg-photo {
+    .text {
+      width: 60%;
+    }
+  }
+}
+
+
+//BACKGROUND COLORS
+.bg-cream {
+  color: $green;
+  background-color: $cream;
+}
+
+.bg-green {
+  color: white;
+  background-color: $green;
+}

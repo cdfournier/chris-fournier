@@ -1,4 +1,149 @@
-// SKIP
+// LAYOUT
+.row {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin: 0;
+  padding: 2rem 2rem 0;
+  .row {padding: 2rem 0 0;}
+  .column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0 0;
+  }
+  .column:first-of-type {padding: 0;}
+  h1 + .row,
+  h2 + .row,
+  h3 + .row,
+  h4 + .row {padding: 0.5rem 0 0;}
+  h1 + .column,
+  h2 + .column,
+  h3 + .column,
+  h4 + .column {padding: 0.5rem 0 0;}
+}
+
+main > .row:first-of-type {padding: 6rem 2rem 0;}
+
+.wide, .golden, .thirds, .fourths {width: 100%;}
+
+.row.border:after {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 2rem auto 0;
+  background-color: $gray;
+  content: "";
+}
+
+@media (min-width: 48rem) {
+  .row {
+    flex-direction: row;
+    align-items: inherit;
+    flex-wrap: wrap;
+  }
+  .row.wide {flex-direction: column;}
+  .row.fifty {
+    .column {width: 50%;}
+    .column:nth-of-type(1n) {padding: 0 1rem 0 0;}
+    .column:nth-of-type(2n) {padding: 0 0 0 1rem;}
+  }
+  .row.golden.left {
+    .column:nth-of-type(1n) {
+      width: 62%;
+      padding: 0 1rem 0 0;
+    }
+    .column:nth-of-type(2n) {
+      width: 38%;
+      padding: 0 0 0 1rem;
+    }
+  }
+  .row.golden.right {
+    .column:nth-of-type(1n) {
+      width: 38%;
+      padding: 0 1rem 0 0;
+    }
+    .column:nth-of-type(2n) {
+      width: 62%;
+      padding: 0 0 0 1rem;
+    }
+  }
+  .row.thirds {
+    justify-content: space-between;
+    .column {
+      width: calc(33% - 1rem);
+      padding: 0;
+    }
+  }
+  .row.fourths {
+    .column {width: 50%;}
+    .column:nth-of-type(1n) {padding: 0 1rem 0 0;}
+    .column:nth-of-type(2n) {padding: 0 0 0 1rem;}
+    .column:nth-of-type(3n) {padding: 1rem 1rem 0 0;}
+    .column:nth-of-type(4n) {padding: 1rem 0 0 1rem;}
+  }
+}
+
+@media (min-width: 64rem) {
+  .row.fourths {
+    justify-content: space-between;
+    .column {width: calc(25% - 1rem);}
+    .column:nth-of-type(1n),
+    .column:nth-of-type(2n),
+    .column:nth-of-type(3n),
+    .column:nth-of-type(4n) {padding: 0;}
+  }
+}
+
+
+// GALLERIES
+.gallery {
+  margin: 2rem 0 0;
+  .row {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    .column {
+      width: 50%;
+      padding: 1rem;
+    }
+  }
+  .row + .row {
+    margin: -1rem 0 0;
+    padding: 0 2rem 2rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .gallery {
+    .row {
+      .column {
+         padding: 1rem;
+      }
+    }
+    .row + .row {
+      margin: 0;
+    }
+  } 
+}
+
+@media (min-width: 80rem) {
+  .gallery {
+    margin: 4rem 0 2rem;
+    .row {
+      padding: 4rem;
+    }
+    .row + .row {
+      padding: 0 4rem 4rem;
+    }
+  } 
+}
+
+
+// SKIP LINKS
 .skip {
   display: flex;
   align-items: center;
@@ -20,6 +165,7 @@
       display: block;
       width: 100%;
       padding: 0;
+      text-decoration: none;
       text-transform: uppercase;
       background: white;
       opacity: 0;
@@ -27,341 +173,9 @@
         padding: 2rem;
         opacity: 1;
       }
-    }
-  }
-}
-
-
-// BANNERS
-.banner {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 100;
-  width: 100%;
-  height: inherit;
-  min-height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  padding: 2rem;
-  color: white;
-  background-attachment: inherit;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  .overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0.5;
-    -webkit-backdrop-filter: saturate(180%);
-    backdrop-filter: saturate(180%);
-  }
-  .text {
-    margin: 0 0 2rem;
-    h1 {
-      position: relative;
-      max-width: 32rem;
-      @include sans-bold;
-    }
-    p {
-      position: relative;
-      max-width: 32rem;
-    }
-  }
-  a.scroll {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4rem;
-    height: 4rem;
-    margin: 0;
-    border: 1px dashed white;
-    border-radius: 100%;
-    background: transparent;
-    span {
-      width: 1.5rem;
-      height: 1.5rem;
-      @include transition(all, 0.5s, ease);
-      svg {fill: white;}
-    }
-    &:hover, &:focus {
-      background: white;
-      span {
-        @include transform (rotate(360deg));
-        svg {fill: $green;}
+      &:after {
+        display: none;
       }
     }
-  }
-}
-
-@media (min-width: 48rem) {
-  .banner {
-    width: calc(100% - 4rem);
-    min-height: calc(100vh - 4rem);
-    margin: 2rem auto 0;
-    padding: 2rem;
-  }
-}
-
-
-// PROJECT BANNERS
-.banner.delta-design {background-image: url(../images/work-delta-design-01-1x.jpg);}
-.banner.east-wind {background-image: url(../images/work-east-wind-01-1x.jpg);}
-.banner.eberhardt-design {background-image: url(../images/work-eberhardt-design-01-1x.jpg);}
-.banner.enservio {background-image: url(../images/work-enservio-01-1x.jpg);}
-.banner.mystuff {background-image: url(../images/work-mystuff-01-1x.jpg);}
-.banner.panera {background-image: url(../images/work-panera-01-1x.jpg);}
-.banner.transferx {background-image: url(../images/work-transferx-01-1x.jpg);}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-width: 64rem) {
-  .banner.delta-design {background-image: url(../images/work-delta-design-01-2x.jpg);}
-  .banner.east-wind {background-image: url(../images/work-east-wind-01-2x.jpg);}
-  .banner.eberhardt-design {background-image: url(../images/work-eberhardt-design-01-2x.jpg);}
-  .banner.enservio {background-image: url(../images/work-enservio-01-2x.jpg);}
-  .banner.mystuff {background-image: url(../images/work-mystuff-01-2x.jpg);}
-  .banner.panera {background-image: url(../images/work-panera-01-2x.jpg);}
-  .banner.transferx {background-image: url(../images/work-transferx-01-2x.jpg);}
-}
-
-
-// CONTENT
-.content, .up-next {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 2rem 2rem 0;
-  .card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto 2rem;
-    padding: 2rem 0 0;
-    figure {
-      display: grid;
-      width: 100%;
-      overflow: hidden;
-      margin: 0 auto;
-      figcaption {display: none;}
-      a {
-        display: grid;
-        position: relative;
-        .overlay {
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: black;
-          opacity: 0.25;
-          -webkit-backdrop-filter: saturate(180%);
-          @include transition(all, 1s, ease);
-          backdrop-filter: saturate(180%);
-        }
-        img {
-          @include transition(all, 1.5s, ease);
-        }
-        &:hover, &:focus {
-          .overlay {opacity: 0;}
-        }
-      }
-    }
-    .text {margin: 1rem 0 0;}
-    &::before {
-      display: block;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 1px;
-      margin: 0;
-      background: $gray-platinum;
-      content: "";
-    }
-    &:first-of-type {padding: 0;}
-    &:first-of-type::before {display: none;}
-  }
-  figure {
-    display: grid;
-    width: 100%;
-    margin: 1rem 0;
-    picture {
-      display: grid;
-      width: 100%;
-      overflow: hidden;
-    }
-    figcaption {display: none;}
-  }
-  figure.small {width: calc(50% - 1rem);}
-  video {
-    display: grid;
-    width: 100%;
-    margin: 1rem auto;
-  }
-  .text {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: 1rem 0;
-    h1 {
-      padding: 0 0 1rem;
-      @include sans-bold;
-      line-height: 1;
-    }
-    h2.deliverables + p {
-      padding: 0;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      &::after {
-        display: block;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        margin: 1rem auto 0;
-        background: $gray-platinum;
-        content: "";
-      }
-    }
-    .group {
-      h1, h2 {padding: 2rem 0 0;}
-      &:first-of-type h2 {padding: 0;}
-    }
-    .group + ol {padding: 1rem 0 0;}
-  }
-  .text > p:first-child {padding: 0;}
-  .highlight {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% + 4rem);
-    margin: 2rem -2rem;
-    padding: 4rem 2rem;
-    h2 {
-      @include sans-bold;
-      font-size: 3.441rem;
-    }
-    p {font-size: 125%;}
-  }
-  .highlight.figures {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .highlight + .card {
-    padding: 1rem 0 0;
-    &::before {display: none;}
-  }
-  .border {
-    &::before {
-      display: block;
-      position: relative;
-      top: 0;
-      width: 100%;
-      max-width: 40rem;
-      height: 1px;
-      margin: 0 auto 2rem;
-      background: $gray-platinum;
-      content: "";
-    }
-  }
-}
-
-@media (min-width: 36.25rem) {
-  .content {
-    figure {width: calc(50% - 1rem);}
-    figure.wide {width: 100%;}
-  }
-}
-
-@media (min-width: 48rem) {
-  .content {
-    .card {
-      align-items: center;
-      flex-direction: row;
-      figure {width: 45%;}
-      .no-touch figure {
-        a:hover, a:focus {
-          .overlay {opacity: 0;}
-        }
-      }
-      .text {
-        width: 55%;
-        margin: 0;
-        padding: 0 0 0 2rem;
-      }
-    }
-    .card.reverse {
-      flex-direction: row-reverse;
-      .text {padding: 0 2rem 0 0;}
-    }
-    .highlight p {font-size: 150%;}
-    figure.small {width: calc(25% - 2rem;}
-  }
-}
-
-@media (min-width: 64rem) {
-  .content {
-    .text {
-      margin: 2rem 0;
-      h1, h2, h3, p, ul, ol, dl {
-        max-width: 40rem;
-        margin: 0 auto;
-      }
-    }
-    .text + .text {margin: 0 0 2rem;}
-    .highlight h2, .highlight p {max-width: 56rem;}
-    video {width: 70%;}
-  }
-}
-
-
-// UP NEXT
-.up-next {
-  margin: 0;
-  padding: 2rem 2rem 0;
-  h1 {
-    margin: 0 0 2rem;
-    color: $green;
-  }
-  &::before {
-    display: block;
-    top: 0;
-    width: 100%;
-    height: 1px;
-    margin: 0 auto 2rem;
-    background: $gray-platinum;
-    content: "";
-  }
-}
-
-@media (min-width: 36.25rem) {
-  .up-next {
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .card {
-      flex-direction: column;
-      width: calc(50% - 1rem);
-      margin: 0 0 2rem;
-      padding: 0;
-      &::before {display: none;}
-      figure {width: 100%;}
-      .text {
-        width: 100%;
-        margin: 1rem 0 0;
-        padding: 0;
-      }
-    }
-    &::before {width: 100%;}
   }
 }
