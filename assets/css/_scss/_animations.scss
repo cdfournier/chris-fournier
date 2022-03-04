@@ -1,0 +1,49 @@
+// ANIMATION MIXINS
+@mixin animation-delay($delay: 1s) {
+  -webkit-animation-delay: $delay;
+  animation-delay: $delay;
+};
+
+@mixin animation-duration($duration: 0.25s) {
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+};
+
+@mixin animation-fill-mode($animation-fill-mode: both) {
+  -webkit-animation-fill-mode: $animation-fill-mode;
+  animation-fill-mode: $animation-fill-mode;
+};
+
+@mixin animation-iteration-count($iteration) {
+  -webkit-animation-iteration-count: $iteration;
+  animation-iteration-count: $iteration;
+};
+
+@mixin animation-name($name: name) {
+  -webkit-animation-name: $name;
+  animation-name: $name;
+};
+
+
+// SCROLL SPIN
+.spin {
+  @include animation-name(spin);
+  @include animation-duration(10s);
+  @include animation-iteration-count(infinite);
+  @include transform-origin(center);
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+html.touch {
+  .spin {
+    @include animation-iteration-count(1);
+  }
+}

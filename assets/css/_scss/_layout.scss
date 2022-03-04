@@ -1,0 +1,61 @@
+
+
+
+// BANNERS
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 2rem 2rem 0;
+  min-height: calc(100vh - 2rem);
+}
+
+
+// SKIP
+.skip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  p {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    a {
+      display: block;
+      width: 100%;
+      padding: 0;
+      text-transform: uppercase;
+      opacity: 0;
+      &:focus {
+        padding: 1rem;
+        opacity: 1;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+
+// SCROLL
+.scroll {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 8rem;
+}

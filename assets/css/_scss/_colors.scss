@@ -1,0 +1,33 @@
+// COLOR CLASSES
+.bg-green {background-color: $green;}
+.bg-orange {background-color: $orange;}
+.bg-cream {background-color: $cream;}
+.bg-delta-design {background-color: $delta-design;}
+.bg-delta-design-light {background-color: $delta-design-light;}
+.bg-east-wind {background-color: $east-wind;}
+.bg-east-wind-light {background-color: $east-wind-light;}
+.bg-eberhardt-design {background-color: $eberhardt-design;}
+.bg-eberhardt-design-light {background-color: $eberhardt-design-light;}
+.bg-enservio {background-color: $enservio;}
+.bg-enservio-light {background-color: $enservio-light;}
+.bg-mystuff {background-color: $mystuff;}
+.bg-mystuff-light {background-color: $mystuff-light;}
+.bg-panera {background-color: $panera;}
+.bg-panera-light {background-color: $panera-light;}
+.bg-pine-tree-motel {background-color: $pine-tree-motel;}
+.bg-pine-tree-motel-light {background-color: $pine-tree-motel-light;}
+.bg-transferx {background-color: $transferx;}
+.bg-transferx-light {background-color: $transferx-light;}
+.bg-gray {background-color: $gray;}
+
+
+// SELECTION
+::-moz-selection {
+  color: white;
+  background: $green;
+}
+
+::selection {
+  color: white;
+  background: $green;
+}

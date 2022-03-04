@@ -1,0 +1,118 @@
+// TYPOGRAPHY
+h1, h2, h3, h4, p, small {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  @include sans-regular;
+  line-height: 1;
+}
+
+h1 {
+  padding: 2rem 0 0;
+	font-size: $h1;
+}
+
+h2 {
+  max-width: 64rem;
+  padding: 1.5rem 0 0;
+	font-size: $h2;
+}
+
+h3 {
+  max-width: 56rem;
+  padding: 1.25rem 0 0;
+	font-size: $h3;
+}
+
+h4 {
+  max-width: 44rem;
+  padding: 1rem 0 0;
+	font-size: $h4;
+}
+
+h1, h2, h3, h4 {
+  span {
+    display: block;
+    font-size: 35%;
+    text-transform: uppercase;
+  }
+  &:first-of-type {
+    padding: 0;
+  }
+}
+
+p {
+  max-width: 36rem;
+  padding: 0.5rem 0 0;
+	font-size: $p;
+  line-height: 1.5;
+}
+
+p > cite {
+  display: block;
+  font-size: $small;
+}
+
+p > cite a {
+  display: inline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+strong, em, b {
+  display: inline;
+  @include sans-bold;
+  color: inherit;
+}
+
+small, .small {
+  max-width: 28rem;
+  padding: 0.5rem 0 0;
+	font-size: $small;
+	line-height: 1.5;
+}
+
+.visuallyhidden {display: none;}
+
+
+// TEXT ALIGNMENT
+h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
+  text-align: right;
+}
+
+
+// TITLE SIZES
+@media (min-width: 48rem) {
+  h1.title {
+    max-width: none;
+    margin: 0;
+    font-size: $h1-title;
+    & + p {
+      max-width: 48rem;
+      font-size: calc(1.5 * #{$p});
+    }
+  }
+  h2.title {
+    max-width: none;
+    margin: 0;
+    font-size: $h2-title;
+    & + p {
+      max-width: 40rem;
+      font-size: calc(1.25 * #{$p});
+    }
+  }
+  h3.title {
+    font-size: $h2;
+  }
+}
