@@ -45,6 +45,7 @@ img {
 }
 
 a {
+  @include sans-bold;
   text-decoration: none;
   color: $green;
   @include transition(all, 0.25s, ease);

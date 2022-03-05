@@ -32,27 +32,25 @@
     </style>
     <link rel="stylesheet" href="assets/css/master.min.css">
     <style>
-      .banner.about {
-        background-image: url(assets/images/mug-1x.png);
-        background-position: bottom right;
-        background-repeat: no-repeat;
-        background-size: 50%;
-      }
-      .banner.about ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .banner.about ul li {
+      .about-me ul li {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: var(--h3);
+        align-items: flex-start;
+        font-size: var(--small);
         text-transform: uppercase;
       }
-      .banner.about ul li svg {
-        display: grid;
-        height: 1.5rem;
+      .about-me ul li svg {
+        display: inline-flex;
+        width: 1.25rem;
+        max-width: 1.25rem;
+        min-width: 1.25rem;
+      }
+      .about-me li span {
+        padding-left: 0.5rem;
+      }
+      @media (min-width: 48rem) {
+        .about-me ul li {
+          font-size: var(--p);
+        }
       }
     </style>
   </head>
@@ -80,17 +78,57 @@
           </a>
         </div>
       </section>
-      <!-- <section id="content" class="banner about">
+      <section id="content" class="selected-projects">
+        <h2 class="title">Selected Projects</h2>
+        <p>I love to build things. I specialize in design systems and prototypes. These selected projects are good examples of my work.</p>
+        <section class="project-card">
+          <h3><span>Project</span>Panera Bread</h3>
+          <figure>
+            <img src="assets/images/work-panera-16-1x.jpg" srcset="assets/images/work-panera-16-1x.jpg 1x, assets/images/work-panera-16-1x.jpg 2x" alt="A woman looks at my Panera Bread prototype on her phone">
+          </figure>
+          <figure>
+            <img src="assets/images/work-panera-19-1x.jpg" srcset="assets/images/work-panera-19-1x.jpg 1x, assets/images/work-panera-19-1x.jpg 2x" alt="A woman looks at my Panera Bread prototype on her tablet">
+          </figure>
+        </section>
+        <section class="project-card">
+          <h3><span>Project</span>TransferX</h3>
+          <figure>
+            <img src="assets/images/work-transferx-30-1x.jpg" srcset="assets/images/work-transferx-30-1x.jpg 1x, assets/images/work-transferx-30-1x.jpg 2x" alt="TransferX app on a table with espresso">
+          </figure>
+          <figure>
+            <img src="assets/images/work-transferx-26-1x.jpg" srcset="assets/images/work-transferx-26-1x.jpg 1x, assets/images/work-transferx-26-1x.jpg 2x" alt="Gentleman transfers funds on the TransferX app">
+          </figure>
+        </section>
+        <section class="project-card">
+          <h3><span>Project</span>Enservio</h3>
+          <figure>
+            <img src="assets/images/work-enservio-16-1x.jpg" srcset="assets/images/work-enservio-16-1x.jpg 1x, assets/images/work-enservio-16-1x.jpg 2x" alt="User viewing the Enservio Your Inventory List screen on a tablet">
+          </figure>
+          <figure>
+            <img src="assets/images/work-enservio-15-1x.jpg" srcset="assets/images/work-enservio-15-1x.jpg 1x, assets/images/work-enservio-15-1x.jpg 2x" alt="User viewing the Enservio Enter Your Banking Information screen on a phone">
+          </figure>
+        </section>
+        <section class="project-card">
+          <h3><span>Project</span>Eberhardt Design</h3>
+          <figure>
+            <img src="assets/images/work-eberhardt-design-01-1x.jpg" srcset="assets/images/work-eberhardt-design-01-1x.jpg 1x, assets/images/work-eberhardt-design-01-1x.jpg 2x" alt="Woman browses the Ebherdardt Design web site on a tablet at a table">
+          </figure>
+          <figure>
+            <img src="assets/images/work-eberhardt-design-02-1x.jpg" srcset="assets/images/work-eberhardt-design-02-1x.jpg 1x, assets/images/work-eberhardt-design-02-1x.jpg 2x" alt="Eberhardt Design web site user experience design on a phone and a tablet">
+          </figure>
+        </section>
+        <!-- <p>Additional project samples are available in the <a href="#footer">footer</a>.</p> -->
+      </section>
+      <section id="about-me" class="banner about-me">
         <h2 class="title">About me</h2>
-        <ul>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M20 12H10M20 12l-4 4M20 12l-4-4M4 4v16"/></svg>
-            <span>Born and raised in Maine</span>
-          </li>
+        <ul style="padding-left: 0; list-style: none;">
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M14 12H4M14 12l-4 4M14 12l-4-4M20 4v16"/></svg><span>20 years of experience in marketing, branding, and&nbsp;design</span></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M14 12H4M14 12l-4 4M14 12l-4-4M20 4v16"/></svg><span>Design experitise with Adobe, Sketch, Figma, and&nbsp;more</span></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M14 12H4M14 12l-4 4M14 12l-4-4M20 4v16"/></svg><span>Coding expertise with html, css, git, and&nbsp;more</span></li>
         </ul>
-      </section> -->
+      </section>
     </main>
-    <footer>
+    <footer id="footer">
       <div class="copyright"><small>&copy; Chris Fournier. American Made. Powered by Coffee.</small></div>
     </footer>
     <!-- scripts -->
