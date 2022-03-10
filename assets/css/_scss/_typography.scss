@@ -118,6 +118,18 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
   }
 }
 
+@media (min-width: 64rem) {
+  h1.title {
+    font-size: calc(2 * #{$h1});
+  }
+  h2.title {
+    font-size: calc(2 * #{$h2});
+  }
+  h3.title {
+    font-size: $h1;
+  }
+}
+
 
 // LISTS
 ul, ol, dl {
@@ -131,6 +143,7 @@ ul, ol, dl {
     display: list-item;
     width: 100%;
     margin: 0;
+    line-height: 1.25;
     &:first-child {
       padding: 0;
     }

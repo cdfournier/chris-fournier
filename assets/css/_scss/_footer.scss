@@ -1,10 +1,29 @@
 // FOOTER
 footer {
   display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 0;
   padding: 2rem;
-  small {
-    font-size: $xsmall;
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 0 0;
+    svg {
+      display: grid;
+      width: 100%;
+      max-width: 8rem;
+    }
+  }
+  .copyright {
+    display: block;
+    width: 100%;
+    small {
+      font-size: $xsmall;
+      text-align: center;
+    }
   }
 }
