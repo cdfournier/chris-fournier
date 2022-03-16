@@ -1,17 +1,23 @@
 // FOOTER
 footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0;
   padding: 2rem;
+  nav {
+    ul:last-of-type {
+      display: none;
+    }
+  }
   .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     margin: 0;
-    padding: 2rem 0 0;
+    padding: 2rem 0 0.5rem;
     svg {
       display: grid;
       width: 100%;
@@ -21,9 +27,32 @@ footer {
   .copyright {
     display: block;
     width: 100%;
+    text-align: center;
     small {
+      max-width: none;
       font-size: $xsmall;
-      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  footer {
+    nav {
+      width: 75%;
+      ul {
+        width: calc((100% / 3) - 1rem);
+        &:last-of-type {
+          display: flex;
+        }
+      }
+    }
+    .logo {
+      justify-content: flex-end;
+      width: 25%;
+      padding: 0;
+    }
+    .copyright {
+      text-align: right;
     }
   }
 }

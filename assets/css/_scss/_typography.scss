@@ -35,18 +35,6 @@ h4 {
 	font-size: $h4;
 }
 
-h1, h2, h3, h4 {
-  span {
-    display: block;
-    font-size: 35%;
-    line-height: 1.5;
-    text-transform: uppercase;
-  }
-  &:first-of-type {
-    padding: 0;
-  }
-}
-
 p, ul li, ol li {
   max-width: 36rem;
   padding: 0.5rem 0 0;
@@ -93,6 +81,43 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
 }
 
 
+// H SPANS
+h1, h2, h3, h4 {
+  span {
+    display: block;
+    line-height: 1.75;
+    text-transform: uppercase;
+  }
+  &:first-of-type {
+    padding: 0;
+  }
+}
+
+h1 {
+  span {
+    font-size: calc(0.425 * #{$h1});
+  }
+}
+
+h2 {
+  span {
+    font-size: calc(0.425 * #{$h2});
+  }
+}
+
+h3 {
+  span {
+    font-size: calc(0.425 * #{$h3});
+  }
+}
+
+h4 {
+  span {
+    font-size: calc(0.425 * #{$h4});
+  }
+}
+
+
 // TITLE SIZES
 @media (min-width: 48rem) {
   h1.title {
@@ -100,16 +125,15 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
     margin: 0;
     font-size: calc(1.5 * #{$h1});
     & + p {
-      max-width: 48rem;
+      max-width: calc(1.5 * 36rem);
       font-size: calc(1.5 * #{$p});
     }
   }
   h2.title {
     max-width: none;
     margin: 0;
-    font-size: calc(1.5 * #{$h2});
+    font-size: calc(1.25 * #{$h2});
     & + p {
-      max-width: 40rem;
       font-size: calc(1.25 * #{$p});
     }
   }
@@ -123,7 +147,7 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
     font-size: calc(2 * #{$h1});
   }
   h2.title {
-    font-size: calc(2 * #{$h2});
+    font-size: calc(1.75 * #{$h2});
   }
   h3.title {
     font-size: $h1;
@@ -153,6 +177,10 @@ ul, ol, dl {
 ul {
   padding: 1rem 0 0 1.5rem;
   list-style: disc;
+  &.no-bullets {
+    padding-left: 0;
+    list-style: none;
+  }
 }
 
 ol {

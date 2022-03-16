@@ -17,7 +17,11 @@ nav {
       font-size: $small;
       color: $orange;
       &:first-child {
-        padding: 0.5rem 0 0;
+        padding: 0;
+        @include sans-bold;
+        font-size: $xsmall;
+        text-transform: uppercase;
+        color: $green;
       }
       a {
         @include sans-regular;
@@ -30,6 +34,3 @@ nav {
     }
   }
 }
-
-
-// FOOTER NAVIGATION
