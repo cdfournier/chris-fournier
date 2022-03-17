@@ -70,6 +70,50 @@ html.no-touch .banner {
   width: 100%;
   margin: 0;
   padding: 2rem 2rem 0;
+  .cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0 0;
+    text-transform: uppercase;
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      span {
+        overflow: hidden;
+        line-height: calc(1.25 * #{$p});
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      svg {
+        display: inline-grid;
+        height: calc(1.5 * #{$p});
+        margin: 0;
+        @include transition(margin, 0.25s, ease);
+      }
+      &:hover, &:focus {
+        svg {
+          // margin: 0 0 0 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.selected-projects {
+  .cta {
+    font-size: $small;
+    a {
+      span {
+        line-height: calc(1.25 * #{$small});
+      }
+      svg {
+        height: calc(1.25 * #{$small});
+      }
+    }
+  }
 }
 
 @media (min-width: 48rem) {
@@ -81,12 +125,19 @@ html.no-touch .banner {
       width: 30vw;
       padding: 0;
     }
-    p {
+    p, h2.title+p {
       width: calc(100% - 30vw);
       padding: 0 0 0 2rem;
+      font-size: $p;
     }
     h2, p {
       align-self: flex-end;
+    }
+  }
+  .about-me {
+    .cta {
+      width: 35vw;
+      padding: 1rem 0 0 2rem;
     }
   }
 }
@@ -162,7 +213,7 @@ html.no-touch .banner {
     li {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       width: 50%;
       padding: 0;
       font-size: $xsmall;
@@ -173,7 +224,7 @@ html.no-touch .banner {
       span {
         padding: 0.25rem 0 0;
         @include sans-bold;
-        font-size: $h4;
+        font-size: $h3;
         line-height: 1;
       }
     }
@@ -183,17 +234,17 @@ html.no-touch .banner {
 @media (min-width: 48rem) {
   .about-me > .card {
     flex-direction: row-reverse;
+    align-items: center;
     align-self: flex-start;
+    justify-content: flex-end;
     ul {
       align-items: center;
-      width: calc(100% - 30vw);
-      padding: 0 0 0 2rem;
+      width: auto;
+      max-width: 35vw;
+      padding: 0;
       li {
-        align-items: flex-start;
-        font-size: $small;
-        span {
-          font-size: $h2;
-        }
+        width: auto;
+        padding: 0 2rem;
       }
     }
     figure {

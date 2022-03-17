@@ -7,8 +7,11 @@ footer {
   margin: 0;
   padding: 2rem;
   nav {
-    ul:last-of-type {
-      display: none;
+    ul {
+      text-align: center;
+      &:last-of-type {
+        display: none;
+      }
     }
   }
   .logo {
@@ -41,18 +44,23 @@ footer {
       width: 75%;
       ul {
         width: calc((100% / 3) - 1rem);
+        text-align: left;
         &:last-of-type {
           display: flex;
         }
       }
     }
     .logo {
+      align-items: flex-end;
       justify-content: flex-end;
       width: 25%;
       padding: 0;
     }
     .copyright {
       text-align: right;
+      small {
+        padding-top: 2rem;
+      }
     }
   }
 }
