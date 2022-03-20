@@ -70,50 +70,6 @@ html.no-touch .banner {
   width: 100%;
   margin: 0;
   padding: 2rem 2rem 0;
-  .cta {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 0 0;
-    text-transform: uppercase;
-    a {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      span {
-        overflow: hidden;
-        line-height: calc(1.25 * #{$p});
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      svg {
-        display: inline-grid;
-        height: calc(1.5 * #{$p});
-        margin: 0;
-        @include transition(margin, 0.25s, ease);
-      }
-      &:hover, &:focus {
-        svg {
-          // margin: 0 0 0 0.5rem;
-        }
-      }
-    }
-  }
-}
-
-.selected-projects {
-  .cta {
-    font-size: $small;
-    a {
-      span {
-        line-height: calc(1.25 * #{$small});
-      }
-      svg {
-        height: calc(1.25 * #{$small});
-      }
-    }
-  }
 }
 
 @media (min-width: 48rem) {
@@ -134,6 +90,66 @@ html.no-touch .banner {
       align-self: flex-end;
     }
   }
+}
+
+
+// CTAS
+.cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0 0;
+  text-transform: uppercase;
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    span {
+      overflow: hidden;
+      line-height: calc(1.25 * #{$p});
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    svg {
+      display: inline-grid;
+      height: calc(1.5 * #{$p});
+      margin: 0 0 0.125rem;
+      @include transform(translateY(2rem));
+      @include transition(all, 0.25s, ease);
+    }
+    &:hover, &:focus {
+      svg {
+        @include transform(translateY(0));
+      }
+    }
+  }
+}
+
+html.touch {
+  .cta {
+    svg {
+      @include transform(translateY(0));
+    }
+  }
+}
+
+.selected-projects {
+  .cta {
+    font-size: $small;
+    a {
+      span {
+        line-height: calc(1.25 * #{$small});
+      }
+      svg {
+        height: calc(1.25 * #{$small});
+      }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
   .about-me {
     .cta {
       width: 35vw;

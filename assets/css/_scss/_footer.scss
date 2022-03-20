@@ -27,6 +27,65 @@ footer {
       max-width: 8rem;
     }
   }
+  .theme-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0;
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      fieldset {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          width: 100%;
+          margin: 0;
+          height: 1.25rem;
+          font-size: $small;
+          text-transform: uppercase;
+          input[type="checkbox"] {
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 2.5rem;
+            height: 1.25rem;
+            margin: 0 0 0 0.5rem;
+            padding: 0;
+            border: 1px solid black;
+            border-radius: 2rem;
+            appearance: none;
+            &:after {
+              display: block;
+              position: absolute;
+              top: 0.125rem;
+              left: 0.125rem;
+              width: 0.875rem;
+              height: 0.875rem;
+              border-radius: 100%;
+              background: black;
+              content: "";
+              @include transition(all, 0.25s, ease);
+            }
+            &:checked:after {
+              margin-left: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
   .copyright {
     display: block;
     width: 100%;
@@ -55,6 +114,17 @@ footer {
       justify-content: flex-end;
       width: 25%;
       padding: 0;
+    }
+    .theme-switch {
+      form {
+        align-items: flex-end;
+        fieldset {
+          width: 25%;
+          label {
+            justify-content: space-between;
+          }
+        }
+      }
     }
     .copyright {
       text-align: right;
