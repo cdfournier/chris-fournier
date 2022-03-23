@@ -62,7 +62,7 @@ footer {
             padding: 0;
             border: 1px solid $green;
             border-radius: 2rem;
-            appearance: none;
+            @include appearance(none);
             &:after {
               display: block;
               position: absolute;
