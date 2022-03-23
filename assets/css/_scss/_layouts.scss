@@ -84,7 +84,6 @@ html.no-touch .banner {
     p, h2.title+p {
       width: calc(100% - 30vw);
       padding: 0 0 0 2rem;
-      font-size: $p;
     }
     h2, p {
       align-self: flex-end;
@@ -129,8 +128,28 @@ html.no-touch .banner {
 
 html.touch {
   .cta {
+    span {
+      overflow: visible;
+      text-overflow: inherit;
+      white-space: normal;
+    }
     svg {
+      display: none;
       @include transform(translateY(0));
+    }
+  }
+  .about-me > .card {
+    .cta {
+      span {
+        overflow: hidden;
+        line-height: calc(1.25 * #{$p});
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      svg {
+        display: inline-grid;
+        @include transform(translateY(0));
+      }
     }
   }
 }
@@ -259,7 +278,6 @@ html.touch {
       max-width: 35vw;
       padding: 0;
       li {
-        width: auto;
         padding: 0 2rem;
       }
     }

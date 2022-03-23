@@ -2,12 +2,13 @@
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   ul {
     display: flex;
     flex-direction: column;
     width: calc((100% / 2) - 0.5rem);
+    max-width: 16rem;
     padding: 0;
     list-style: none;
     li {

@@ -14,8 +14,9 @@ footer {
       }
     }
   }
-  .logo {
+  .branding {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -26,20 +27,12 @@ footer {
       width: 100%;
       max-width: 8rem;
     }
-  }
-  .theme-switch {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 1rem 0;
     form {
       display: flex;
       flex-direction: column;
       width: 100%;
       margin: 0;
-      padding: 0;
+      padding: 1rem 0 0;
       fieldset {
         width: 100%;
         margin: 0;
@@ -52,18 +45,22 @@ footer {
           position: relative;
           width: 100%;
           margin: 0;
-          height: 1.25rem;
-          font-size: $small;
-          text-transform: uppercase;
+          color: $green;
+          span {
+            svg {
+              height: 1.25rem;
+            }
+          }
           input[type="checkbox"] {
             position: relative;
             top: 0;
             right: 0;
-            width: 2.5rem;
-            height: 1.25rem;
-            margin: 0 0 0 0.5rem;
+            width: 2rem;
+            min-width: 2rem;
+            height: 1rem;
+            margin: 0 0.5rem;
             padding: 0;
-            border: 1px solid black;
+            border: 1px solid $green;
             border-radius: 2rem;
             appearance: none;
             &:after {
@@ -71,15 +68,15 @@ footer {
               position: absolute;
               top: 0.125rem;
               left: 0.125rem;
-              width: 0.875rem;
-              height: 0.875rem;
+              width: 0.625rem;
+              height: 0.625rem;
               border-radius: 100%;
-              background: black;
+              background: $green;
               content: "";
               @include transition(all, 0.25s, ease);
             }
             &:checked:after {
-              margin-left: 1.25rem;
+              margin-left: 1rem;
             }
           }
         }
@@ -109,19 +106,16 @@ footer {
         }
       }
     }
-    .logo {
+    .branding {
       align-items: flex-end;
       justify-content: flex-end;
       width: 25%;
       padding: 0;
-    }
-    .theme-switch {
       form {
         align-items: flex-end;
+        max-width: 8rem;
         fieldset {
-          width: 25%;
           label {
-            justify-content: space-between;
           }
         }
       }
@@ -129,7 +123,7 @@ footer {
     .copyright {
       text-align: right;
       small {
-        padding-top: 2rem;
+        padding: 1rem 0 0;
       }
     }
   }
