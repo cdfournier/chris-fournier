@@ -62,36 +62,6 @@ html.no-touch .banner {
 }
 
 
-// SELECTED PROJECTS & ABOUT ME
-.selected-projects, .about-me {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 2rem 2rem 0;
-}
-
-@media (min-width: 48rem) {
-  .selected-projects, .about-me {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    h2 {
-      width: 30vw;
-      padding: 0;
-    }
-    p, h2.title+p {
-      width: calc(100% - 30vw);
-      padding: 0 0 0 2rem;
-    }
-    h2, p {
-      align-self: flex-end;
-    }
-  }
-}
-
-
 // CTAS
 .cta {
   display: flex;
@@ -154,29 +124,6 @@ html.touch {
   }
 }
 
-.selected-projects {
-  .cta {
-    font-size: $small;
-    a {
-      span {
-        line-height: calc(1.25 * #{$small});
-      }
-      svg {
-        height: calc(1.25 * #{$small});
-      }
-    }
-  }
-}
-
-@media (min-width: 48rem) {
-  .about-me {
-    .cta {
-      width: 35vw;
-      padding: 1rem 0 0 2rem;
-    }
-  }
-}
-
 
 // CARDS
 .card {
@@ -233,58 +180,271 @@ html.touch {
 }
 
 
-// ABOUT ME CARDS
-.about-me > .card {
+// SELECTED PROJECTS
+.selected-projects {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
   margin: 0;
-  &:before {
-    display: none;
-  }
-  ul {
-    flex-direction: row;
-    width: 100%;
-    max-width: none;
-    padding: 1rem 0 0;
-    list-style: none;
-    li {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 50%;
-      padding: 0;
-      font-size: $xsmall;
-      text-transform: uppercase;
-      svg {
-        width: 2rem;
-      }
+  padding: 2rem 2rem 0;
+  .cta {
+    font-size: $small;
+    a {
       span {
-        padding: 0.25rem 0 0;
-        @include sans-bold;
-        font-size: $h3;
-        line-height: 1;
+        line-height: calc(1.25 * #{$small});
+      }
+      svg {
+        height: calc(1.25 * #{$small});
       }
     }
   }
 }
 
 @media (min-width: 48rem) {
-  .about-me > .card {
-    flex-direction: row-reverse;
-    align-items: center;
-    align-self: flex-start;
-    justify-content: flex-end;
-    ul {
-      align-items: center;
-      width: auto;
-      max-width: 35vw;
+  .selected-projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    h2 {
+      width: 30vw;
       padding: 0;
+    }
+    p, h2.title+p {
+      width: calc(100% - 30vw);
+      padding: 0 0 0 2rem;
+    }
+    h2, p {
+      align-self: flex-end;
+    }
+  }
+}
+
+
+// ABOUT ME
+.about-me {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 2rem 0;
+  & > .card {
+    margin: 0;
+    &:before {
+      display: none;
+    }
+    ul {
+      flex-direction: row;
+      width: 100%;
+      max-width: none;
+      padding: 1rem 0 0;
+      list-style: none;
       li {
-        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        padding: 0;
+        font-size: $xsmall;
+        text-transform: uppercase;
+        svg {
+          width: 2rem;
+        }
+        span {
+          padding: 0.25rem 0 0;
+          @include sans-bold;
+          font-size: $h3;
+          line-height: 1;
+        }
       }
     }
-    figure {
+  }
+}
+
+@media (min-width: 48rem) {
+  .about-me {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    h2 {
       width: 30vw;
-      min-width: 30vw;
-      padding-left: 0;
+      padding: 0;
+    }
+    p, h2.title+p {
+      width: calc(100% - 30vw);
+      padding: 0 0 0 2rem;
+    }
+    h2, p {
+      align-self: flex-end;
+    }
+    .cta {
+      width: 35vw;
+      padding: 1rem 0 0 2rem;
+    }
+    & > .card {
+      flex-direction: row-reverse;
+      align-items: center;
+      align-self: flex-start;
+      justify-content: flex-end;
+      ul {
+        align-items: center;
+        width: auto;
+        max-width: 35vw;
+        padding: 0;
+        li {
+          padding: 0 2rem;
+        }
+      }
+      figure {
+        width: 30vw;
+        min-width: 30vw;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+
+// EXPERIENCE
+.experience {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 2rem 0;
+  .position {
+    padding: 1rem 0;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    h3 {
+      a {
+        @include sans-regular;
+      }
+    }
+    p {
+      padding: 0;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        padding: 0.5rem 0;
+        &:first-of-type {
+          padding-bottom: 0;
+          @include sans-bold;
+        }
+      }
+    }
+  }
+}
+
+
+// SKILLS
+.skills {
+  width: 100%;
+  margin: 0;
+  padding: 4rem 2rem 0;
+  ul {
+    padding-left: 0;
+    list-style: none;
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem 0;
+      &:first-child {
+        padding-top: 0;
+      }
+      span {
+        // text-transform: uppercase;
+      }
+      div {
+        display: block;
+        width: 100%;
+        height: 0.5rem;
+        margin: 0.5rem 0 0;
+        background: $cream;
+        & > span {
+          display: block;
+          width: 0;
+          height: inherit;
+          background: $green;
+          @include transition(width, 0.5s, ease);
+        }
+      }
+    }
+    li.code div > span {
+      width: 90%;
+      transition-property: width;
+    }
+    li.ux-tools div > span {
+      width: 85%;
+      transition-property: width;
+    }
+    li.google div > span {
+      width: 70%;
+      transition-property: width;
+    }
+    li.accessibility div > span {
+      width: 60%;
+      transition-property: width;
+    }
+    li.adobe div > span {
+      width: 95%;
+      transition-property: width;
+    }
+  }
+}
+
+
+// ATTRIBUTES
+.attributes {
+  width: 100%;
+  margin: 0;
+  padding: 4rem 2rem 0;
+  dl {
+    dt {
+      @include sans-regular;
+      font-size: $h4;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+// CONTACT ME
+.contact {
+  width: 100%;
+  margin: 0;
+  padding: 4rem 2rem 0;
+  ul {
+    padding-left: 0;
+    list-style: none;
+    li {
+      display: flex;
+      padding: 0.75rem 0 0;
+      &:first-child {
+        padding-top: 0;
+      }
+      a {
+        display: inline-flex;
+        align-items: center;
+        overflow: hidden;
+        @include sans-regular;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        svg {
+          display: inline-grid;
+          width: 1.5rem;
+          min-width: 1.5rem;
+          margin-right: 0.5rem;
+        }
+        span {
+          overflow: hidden;
+          line-height: 1.5;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
     }
   }
 }
