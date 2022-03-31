@@ -32,3 +32,17 @@ nav {
     }
   }
 }
+
+
+// DARK MODE
+body.dark {
+  nav {
+    ul {
+      li {
+        &:first-child {
+          color: white;
+        }
+      }
+    }
+  }
+}

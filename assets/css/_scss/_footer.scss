@@ -128,3 +128,25 @@ footer {
     }
   }
 }
+
+
+// DARK MODE
+body.dark {
+  footer {
+    .branding {
+      form {
+        fieldset {
+          label {
+            color: white;
+            input[type="checkbox"] {
+              border-color: white;
+              &:after {
+                background: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
