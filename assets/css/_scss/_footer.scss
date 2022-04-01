@@ -129,6 +129,12 @@ footer {
   }
 }
 
+@media (min-width: 64rem) {
+  footer {
+    padding-top: 4rem;
+  }
+}
+
 
 // DARK MODE
 html.dark {
