@@ -208,7 +208,7 @@
       // THEME
       window.addEventListener("DOMContentLoaded", function(theme) {
         if(sessionStorage.getItem("theme") === "true") {
-          $("body").toggleClass("dark");
+          $("html").toggleClass("dark");
           $("input#switch-theme").prop("checked",true);
         }
         else {
@@ -216,7 +216,7 @@
         }
       });
       $("input#switch-theme").click(function() {
-        $("body").toggleClass("dark");
+        $("html").toggleClass("dark");
         if(sessionStorage.getItem("theme") === "true") {
           $("input#switch-theme").prop("checked",false);
           sessionStorage.setItem("theme",false);

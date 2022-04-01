@@ -30,7 +30,6 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  color: black;
   background: white;
 }
 
@@ -58,13 +57,18 @@ a {
 
 
 // DARK MODE
-body.dark {
+html.dark {
   color: white;
-  background: $green;
+  body {
+    background: $green;
+  }
   a {
     color: white;
     &:hover, &:focus {
       color: $orange;
     }
   }
+}
+
+@media (prefers-color-scheme: dark) {
 }

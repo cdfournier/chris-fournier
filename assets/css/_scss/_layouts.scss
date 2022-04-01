@@ -181,7 +181,7 @@ html.touch {
 
 
 // DARK MODE CARDS
-body.dark {
+html.dark {
   .card {
     &:before {
       background: white;
@@ -436,8 +436,9 @@ body.dark {
   }
 }
 
+
 // DARK MODE SKILLS
-body.dark {
+html.dark {
   .skills {
     ul {
       li {
@@ -450,7 +451,6 @@ body.dark {
     }
   }
 }
-
 
 
 // ATTRIBUTES
