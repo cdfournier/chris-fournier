@@ -443,8 +443,9 @@ html.dark {
     ul {
       li {
         div {
+          background: $green-dark;
           & > span {
-            background: $orange;
+            background: $cream;
           }
         }
       }

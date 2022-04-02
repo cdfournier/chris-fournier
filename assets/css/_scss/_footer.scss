@@ -97,6 +97,7 @@ footer {
 @media (min-width: 48rem) {
   footer {
     nav {
+      justify-content: flex-start;
       width: 75%;
       ul {
         width: calc((100% / 3) - 1rem);
