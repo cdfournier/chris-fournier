@@ -141,7 +141,7 @@
       <nav id="footer-navigation" aria-labelledby="footer-navigation">
         <ul class="profile">
           <li>About me</li>
-          <li><a href="index.html">Home</a></li>
+          <li>Home</li>
           <li><a href="resume/index.html" class="footer--resume">My resume</a></li>
           <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="footer--linkedin" target="_blank" rel="noopener noreferrer">
             <span>LinkedIn</span>
@@ -205,14 +205,14 @@
         $("body").addClass("visible");
       });
       // THEME
-      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+      const prefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
       window.addEventListener("DOMContentLoaded", function(theme) {
-        if(sessionStorage.getItem("theme") === "true") {
-          $("html").toggleClass("dark");
-          $("input#switch-theme").prop("checked",true);
+        if(sessionStorage.getItem("theme") === "false") {
+          $("html").removeClass("dark");
+          $("input#switch-theme").prop("checked",false);
         }
         else {
-          if(prefersDarkScheme.matches) {
+          if(prefersColorScheme.matches) {
             $("html").toggleClass("dark");
             $("input#switch-theme").prop("checked",true);
             sessionStorage.setItem("theme",true);
