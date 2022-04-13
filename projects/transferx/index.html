@@ -10,7 +10,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chris Fournier. American Made. Powered by Coffee.</title>
+    <base href="../../">
+    <title>TransferX | Chris Fournier. American Made. Powered by Coffee.</title>
     <meta name="description" content="I'm a seasoned user experience strategist, researcher, and designer who works in html, css, and Git. I use my skills and experience to solve problems and deliver intuitive user experiences.">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
@@ -32,7 +33,133 @@
     </style>
     <link rel="stylesheet" href="assets/css/master.min.css">
     <style>
+      .banner {
+        /* background-image: url(assets/images/work-panera-20-1x.jpg); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      ul.project-details {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem 0 0;
+        list-style: none;
+      }
+      ul.project-details li {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1rem;
+        padding: 0 0 1rem;
+        border-bottom: 1px solid var(--gray);
+      }
+      ul.project-details li:last-child {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      ul.project-details li span {
+        font-size: var(--h4);
+        text-transform: uppercase;
+      }
+      dl.colors {
+        width: 50%;
+        padding: 0.5rem 0;
+        font-size: var(--xsmall);
+        text-transform: uppercase;
+      }
+      dl.colors dt {
+        display: flex;
+        flex-direction: column;
+        font-size: inherit;
+        line-height: 1.5;
+      }
+      dl.colors dt span {
+        display: grid;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0 0.5rem;
+        border-radius: 100%;
+      }
+      dl.colors dd {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        font-size: inherit;
+        line-height: 1.5;
+      }
+      dl.colors dd span {
+        display: inline-block;
+        width: 15%;
+        margin: 0 0.125rem 0 0;
+        overflow: hidden;
+        line-height: 1.5;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      dl.colors dd:nth-of-type(3n) span:nth-of-type(2n) {
+        width: auto;
+        overflow: visible;
+        text-overflow: inherit;
+        white-space: nowrap;
+      }
+      figure.patterns {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      figure.patterns img {
+        width: calc((100% / 2) - 0.5rem);
+      }
+      html.dark figure.patterns img {
+        background: white;
+      }
+      figure.patterns img:nth-last-of-type(2n) {
+        display: none;
+      }
+      figure.marks svg:last-of-type {
+        margin: 1rem auto 0 0;
+      }
+      html.dark figure.marks svg:first-of-type path:first-of-type {
+        opacity: 1;
+      }
+      html.dark figure.marks svg:last-of-type path {
+        fill: white;
+      }
+      @media (min-width: 40rem) {
+        figure.patterns img {
+          width: calc((100% / 3) - 1rem);
+        }
+        figure.patterns img:nth-last-of-type(2n) {
+          display: inherit;
+        }
+        figure.marks {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        figure.marks svg:last-of-type {
+          margin: 0 auto;
+        }
+      }
       @media (min-width: 48rem) {
+        ul.project-details {
+          flex-direction: row;
+          padding: 0.5rem 0 0;
+        }
+        ul.project-details li {
+          margin: 0 1rem 0 0;
+          padding: 0 1rem 0 0;
+          border-bottom:  none;
+          border-right: 1px solid;
+          border-color: var(--gray);
+        }
+        dl.colors {
+          width: 30%;
+        }
+      }
+      @media (min-width: 64rem) {
+        dl.colors {
+          width: calc(25% - 0.5rem);
+        }
       }
     </style>
   </head>
@@ -49,93 +176,154 @@
     </header>
     <main>
       <section class="banner">
-        <h1 class="title"><span>Hi. My name is</span>Chris Fournier</h1>
-        <p>I am a &lt;em&gt;seasoned&lt;/em&gt; user experience strategist, researcher, and designer who works in html, css, and Git. I use my skills and experience to solve problems and deliver intuitive user experiences.</p>
+        <h1 class="title"><span>Project</span>TransferX</h1>
+        <p>New branding and improved user experience design for financial services blockchain startup.</p>
       </section>
-      <section id="content" class="selected-projects">
-        <h2 class="title">Selected Projects</h2>
-        <p>I love to build things. I specialize in design systems and prototypes. These selected projects are good examples of my work.</p>
-        <div class="card">
-          <div class="text">
-            <h3>Panera Bread<span>Project</span></h3>
-            <div class="cta">
-              <a href="projects/panera/index.html"><span>View my Panera project</span><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M5 12h14M15 16l4-4M15 8l4 4"/></svg></a>
-            </div>
-          </div>
-          <figure>
-            <img src="assets/images/work-panera-16-1x.jpg" srcset="assets/images/work-panera-16-1x.jpg 1x, assets/images/work-panera-16-2x.jpg 2x" alt="A woman looks at my Panera Bread prototype on her phone">
-          </figure>
-          <figure>
-            <img src="assets/images/work-panera-19-1x.jpg" srcset="assets/images/work-panera-19-1x.jpg 1x, assets/images/work-panera-19-2x.jpg 2x" alt="A woman looks at my Panera Bread prototype on her tablet">
-          </figure>
-        </div>
-        <div class="card">
-          <div class="text">
-            <h3>TransferX<span>Project</span></h3>
-            <div class="cta">
-              <a href="projects/transferx/index.html"><span>View my TransferX project</span><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M5 12h14M15 16l4-4M15 8l4 4"/></svg></a>
-            </div>
-          </div>
-          <figure>
-            <img src="assets/images/work-transferx-30-1x.jpg" srcset="assets/images/work-transferx-30-1x.jpg 1x, assets/images/work-transferx-30-2x.jpg 2x" alt="TransferX app on a table with espresso">
-          </figure>
-          <figure>
-            <img src="assets/images/work-transferx-26-1x.jpg" srcset="assets/images/work-transferx-26-1x.jpg 1x, assets/images/work-transferx-26-2x.jpg 2x" alt="Gentleman transfers funds on the TransferX app">
-          </figure>
-        </div>
-        <div class="card">
-          <div class="text">
-            <h3>Enservio<span>Project</span></h3>
-            <div class="cta">
-              <a href="projects/enservio/index.html"><span>View my Enservio project</span><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M5 12h14M15 16l4-4M15 8l4 4"/></svg></a>
-            </div>
-          </div>
-          <figure>
-            <img src="assets/images/work-enservio-16-1x.jpg" srcset="assets/images/work-enservio-16-1x.jpg 1x, assets/images/work-enservio-16-2x.jpg 2x" alt="User viewing the Enservio Your Inventory List screen on a tablet">
-          </figure>
-          <figure>
-            <img src="assets/images/work-enservio-15-1x.jpg" srcset="assets/images/work-enservio-15-1x.jpg 1x, assets/images/work-enservio-15-2x.jpg 2x" alt="User viewing the Enservio Enter Your Banking Information screen on a phone">
-          </figure>
-        </div>
-        <div class="card">
-          <div class="text">
-            <h3>Eberhardt Design<span>Project</span></h3>
-            <div class="cta">
-              <a href="projects/eberhardt-design/index.html"><span>View my Eberhardt Design project</span><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M5 12h14M15 16l4-4M15 8l4 4"/></svg></a>
-            </div>
-          </div>
-          <figure>
-            <img src="assets/images/work-eberhardt-design-01-1x.jpg" srcset="assets/images/work-eberhardt-design-01-1x.jpg 1x, assets/images/work-eberhardt-design-01-2x.jpg 2x" alt="Woman browses the Ebherdardt Design web site on a tablet at a table">
-          </figure>
-          <figure>
-            <img src="assets/images/work-eberhardt-design-02-1x.jpg" srcset="assets/images/work-eberhardt-design-02-1x.jpg 1x, assets/images/work-eberhardt-design-02-2x.jpg 2x" alt="Eberhardt Design web site user experience design on a phone and a tablet">
-          </figure>
-        </div>
-      </section>
-      <section id="about-me" class="about-me banner">
-        <h2 class="title">About Me</h2>
-        <p>I was born and raised in Maine, and I&rsquo;ve got more than 20 years experience in marketing, branding, design, and&nbsp;publishing.</p>
-        <div class="card">
-          <div class="cta">
-            <a href="resume/index.html"><span>View my resume</span>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M5 12h14M15 16l4-4M15 8l4 4"/></svg>
-            </a>
-          </div>
-          <ul>
-            <li><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M18 21V7M9 15l3-3 3 3M15 10l3-3 3 3M3 21h18M12 21v-9M3 6l3-3 3 3M6 21V3"/></svg><span>KPI</span>-driven</li>
-            <li><svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M17 3v8.707M13 7l4-4 4 4M7 14l-4-4 4-4"/><path d="M17 21A11 11 0 0 0 6 10H3"/></svg><span>Left</span>-handed</li>
+      <article id="content">
+        <section>
+          <h2 class="title">Introduction</h2>
+          <p>TransferX is a blockchain-driven P2P money transfer platform designed to provide a better solution for transferring funds into under-banked markets and give money back to those same communities that need it.</p>
+          <h3>Project details</h3>
+          <ul class="project-details">
+            <li><span>Brief</span>Design a premium brand identity and user experience for a blockchain financial services startup based in the UK; must feel as comfortable as conventional finance applications.</li>
+            <li><span>Audience</span>Individuals in eastern African nations like Kenya, Ethiopia, and Tanzania who want a secure and easy way to transfer money to friends and family.</li>
+            <li><span>Deliverables</span>Branding, Product, UX</li>
           </ul>
-          <figure>
-            <img src="assets/images/mug-ratio-1x.jpg" srcset="assets/images/mug-ratio-1x.jpg 1x, assets/images/mug-ratio-2x.jpg 2x" alt="This is my face">
+        </section>
+        <section>
+          <h2>Brand design</h2>
+          <p>The biggest challenge on this project was the confluence of brand design iteration and user experience design and development. To get started on the branding I created a mood board with images of people, places, and things.</p>
+          <h3>Color palette</h3>
+          <p>The color palette came to life quickly, inspired by the arts and traditions of eastern African communities. The founders loved the balance between the really bright brand colors and the almost institutional darker colors.</p>
+          <!-- <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start;"> -->
+          <figure class="color-palette" style="flex-direction: row; flex-wrap: wrap;">
+            <dl class="colors animate visible">
+              <dt><span style="background: #0d1e27;"></span>Dark Blue Grey</dt>
+              <dd><span>cmyk</span><span>c086</span><span>m070</span><span>y058</span><span>k071</span></dd>
+              <dd><span>rbg</span><span>r014</span><span>g030</span><span>b039</span></dd>
+              <dd><span>Hex</span><span>#0d1e27</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #ffb300;"></span>Yellow Orange</dt>
+              <dd><span>cmyk</span><span>c000</span><span>m033</span><span>y100</span><span>k000</span></dd>
+              <dd><span>rgb</span><span>r255</span><span>g179</span><span>b000</span></dd>
+              <dd><span>hex</span><span>#ffb300</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #06b07d;"></span>Green Blue</dt>
+              <dd><span>cmyk</span><span>c079</span><span>m002</span><span>y069</span><span>k000</span></dd>
+              <dd><span>rgb</span><span>r006</span><span>g176</span><span>b125</span></dd>
+              <dd><span>hex</span><span>#06b07d</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #00986e;"></span>Green</dt>
+              <dd><span>cmyk</span><span>c084</span><span>m016</span><span>y073</span><span>k002</span></dd>
+              <dd><span>rgb</span><span>r000</span><span>g152</span><span>b110</span></dd>
+              <dd><span>hex</span><span>#00986e</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #9fd9df;"></span>Light Blue Grey</dt>
+              <dd><span>cmyk</span><span>c036</span><span>m000</span><span>y012</span><span>k000</span></dd>
+              <dd><span>rgb</span><span>r159</span><span>g217</span><span>b223</span></dd>
+              <dd><span>hex</span><span>#9fd9df</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #01b1fb;"></span>Name TBD</dt>
+              <dd><span>cmyk</span><span>c052</span><span>m066</span><span>y000</span><span>k000</span></dd>
+              <dd><span>rgb</span><span>r001</span><span>g177</span><span>b251</span></dd>
+              <dd><span>hex</span><span>#01b1fb</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #045ab4;"></span>Name TBD #2</dt>
+              <dd><span>cmyk</span><span>c030</span><span>m001</span><span>y002</span><span>k000</span></dd>
+              <dd><span>rgb</span><span>r004</span><span>g090</span><span>b180</span></dd>
+              <dd><span>hex</span><span>#045ab4</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #021486;"></span>Deep Blue</dt>
+              <dd><span>cmyk</span><span>c100</span><span>m097</span><span>y014</span><span>k010</span></dd>
+              <dd><span>rgb</span><span>r002</span><span>g020</span><span>b134</span></dd>
+              <dd><span>hex</span><span>#021486</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #373d64;"></span>Dark Grey Blue</dt>
+              <dd><span>cmyk</span><span>c087</span><span>m081</span><span>y035</span><span>k023</span></dd>
+              <dd><span>rgb</span><span>r055</span><span>g061</span><span>b100</span></dd>
+              <dd><span>hex</span><span>#373d64</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #c741cd;"></span>Purpley Pink</dt>
+              <dd><span>cmyk</span><span>c036</span><span>m081</span><span>y000</span><span>k000</span></dd>
+              <dd><span>rgb</span><span>r199</span><span>g065</span><span>b205</span></dd>
+              <dd><span>hex</span><span>#c741cd</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #5a2870;"></span>Grape</dt>
+              <dd><span>cmyk</span><span>c078</span><span>m100</span><span>y023</span><span>k010</span></dd>
+              <dd><span>rgb</span><span>r090</span><span>g040</span><span>b112</span></dd>
+              <dd><span>hex</span><span>#5a2870</span></dd>
+            </dl>
+            <dl class="colors animate visible">
+              <dt><span style="background: #ff6809;"></span>Bright Orange</dt>
+              <dd><span>cmyk</span><span>c000</span><span>m073</span><span>y100</span><span>k000</span></dd>
+              <dd><span>rgb</span><span>r255</span><span>g104</span><span>b009</span></dd>
+              <dd><span>hex</span><span>#ff6809</span></dd>
+            </dl>
+            <dl class="colors animate">
+              <dt><span style="background: #da1010;"></span>Vermillion</dt>
+              <dd><span>cmyk</span><span>c008</span><span>m100</span><span>y100</span><span>k027</span></dd>
+              <dd><span>rgb</span><span>r216</span><span>g016</span><span>b016</span></dd>
+              <dd><span>hex</span><span>#da1010</span></dd>
+            </dl>
+            <dl class="colors animate">
+              <dt><span style="background: #93070b;"></span>Carmine</dt>
+              <dd><span>cmyk</span><span>c026</span><span>m100</span><span>y100</span><span>k027</span></dd>
+              <dd><span>rgb</span><span>r147</span><span>g007</span><span>b011</span></dd>
+              <dd><span>hex</span><span>#93070b</span></dd>
+            </dl>
+            <dl class="colors animate">
+              <dt><span style="background: #9b9b9b;"></span>Grey</dt>
+              <dd><span>cmyk</span><span>c042</span><span>m034</span><span>y035</span><span>k001</span></dd>
+              <dd><span>rgb</span><span>r155</span><span>g155</span><span>b155</span></dd>
+              <dd><span>hex</span><span>#9b9b9b</span></dd>
+            </dl>
           </figure>
-        </div>
-      </section>
+          <!-- </div> -->
+          <h3>Patterns and textures</h3>
+          <p>Next I designed some patterns &mdash; still taking inspiration from the people of Kenya, Ethiopia, and Tanzania &mdash; in order to provide some subtle texture. The founders stressed that they did not want the brand to feel &ldquo;sterile&rdquo;.</p>
+          <figure class="patterns">
+            <img src="assets/images/work-transferx-01-1x.png" srcset="assets/images/work-transferx-01-1x.png 1x, assets/images/work-transferx-01-2x.png 2x" alt="TransferX brand pattern">
+            <img src="assets/images/work-transferx-02-1x.png" srcset="assets/images/work-transferx-02-1x.png 1x, assets/images/work-transferx-02-2x.png 2x" alt="TransferX brand pattern">
+            <img src="assets/images/work-transferx-03-1x.png" srcset="assets/images/work-transferx-03-1x.png 1x, assets/images/work-transferx-03-2x.png 2x" alt="TransferX brand pattern">
+            <figcaption>TransferX brand patterns</figcaption>
+          </figure>
+        </section>
+        <section>
+          <h2>Logo design</h2>
+          <p>When it came to the logo, I started by designing the icon. I wanted the icon to express confidence and stability. The X in TransferX became an arrow to signify transactions and progress. I wanted something that would look good in any form of branding, as well as stand out in a crowd of blockchain logos and icons.</p>
+          <figure class="marks">
+            <svg style="max-width: 32rem;" viewBox="0 0 765.24 421.24"><path d="M0 0v421.24h765.24V0zm686.43 342.43H78.81V78.81h607.62z" opacity=".1"></path><path fill="#00aeef" opacity=".1" d="M78.81 78.81h607.62v263.62H78.81z"></path><path fill="#fff" d="M157.62 157.62h450v106h-450z"></path><path d="M189.12 339.8h-1v-73.55h1zm-.5 2.63l3-3h-6.08zm-3-75.77h6.08l-3-3zm391.54-.41h-1v73.55h1zm-.5 76.18l3-3h-6.08zm-3-75.77h6.08l-3-3zM189.12 81.44h-1V155h1zm-.5 76.18l3-3h-6.08zm-3-75.77h6.08l-3-3zm-68.5 111.75h-1v34.15h1zm-.5 36.78l3-3h-6.08zm-3-36.37h6.08l-3-3zm463.5-112.57h-1V155h1zm-.5 76.18l3-3h-6.08zm-3-75.77h6.08l-3-3zM155 190.42H81.44v1H155zm-76.18.5l3 3v-6.07zm75.77-3V194l3-3zm.41 41.94H81.44v1H155zm-76.18.5l3 3v-6.07zm75.77-3v6.07l3-3zm529.21-37.74h-73.55v1h73.55zm-76.18.5l3 3v-6.08zm75.77-3v6.08l3-3zm.41 43.54h-73.55v1h73.55zm-76.18.5l3 3v-6.08zm75.77-3v6.08l3-3z" fill="#00aeef"></path><path d="M607.62 230.82h-450v-1h450zm0-19.7h-450v-1h450zm0-19.7h-450v-1h450z" fill="#ec008c"></path><g><path d="M607.46 263.89h-450a.5.5 0 01-.5-.5v-106a.5.5 0 01.5-.5h450a.51.51 0 01.5.5v106a.5.5 0 01-.5.5zm-105.86-1H607v-105H501.61v40.27zm-65.47 0h64.46v-64.23h-64.46zm-278.17 0h277.17v-105H158zm327.35-65.24h15.29v-15.19h-15.29zm-8.34 0h7.34v-7.32H477zm-40.84 0H476V157.9h-39.87zm40.87-8.32h7.34v-6.87H477zm7.84-7.87h15.76V157.9H477v23.56z" fill="#0071bc"></path></g><g><path fill="#ffb300" d="M543.75 178.37h-23.46l21.68 32.15-23.17 33.35h23.57l21.85-33.46-20.47-32.04z"></path><path d="M607.62 157.62v106h-106v-14.76h6.24v8.52h93.52v-93.52h-93.52v8.52h-6.24v-14.76zm-41.26 52.09l20.8-30.42h-22.25l-10.3 16.09 9.61 15-9.66 14.79 11.8 17.83h22.7zm23.86-39.6h1.27v3.59h.71v-3.59h1.27v-.62h-3.25zm3.87 3.59h.66v-3.21l1.33 2.77h.46l1.33-2.77v3.21h.65v-4.21h-.84l-1.37 2.85-1.38-2.85h-.84zm-436.47 22.17h12.68v34.45h5.41v-34.45h12.74v-5h-30.83zm71.82 34.45l-7.84-12.38c-.9.07-1.63.11-2.2.11h-10v12.27H204v-39.4h15.4q7.5 0 11.59 3.46t4.08 9.82a14 14 0 01-2.22 8.05 12.45 12.45 0 01-6.4 4.73l9.19 13.34zm-10-17.17q5.08 0 7.78-2.22t2.71-6.56a7.7 7.7 0 00-2.71-6.39c-1.8-1.44-4.39-2.17-7.78-2.17h-10v17.34zm66.52 17.17l-4.17-9.57H261l-4.12 9.57h-5.69l17.53-39.4h5.63l17.48 39.4zm-22.86-14.46h16.57l-8.34-19.14zm72.27-24.94h5.35v39.4h-5.47l-22.54-30.51v30.51h-5.41v-39.4h5.46l22.61 30.56zm42.36 5.55a19.4 19.4 0 00-5.48-.88 10.12 10.12 0 00-5.54 1.33 4.15 4.15 0 00-2.07 3.66 4.78 4.78 0 001.25 3.43 8.79 8.79 0 003.06 2.1q1.82.76 5.06 1.79a56.21 56.21 0 016.53 2.38 11.46 11.46 0 014.26 3.37 9.36 9.36 0 011.76 5.93 9.91 9.91 0 01-1.85 6 11.85 11.85 0 01-5.16 3.94 19.64 19.64 0 01-7.64 1.39 22.29 22.29 0 01-8.52-1.7 23.21 23.21 0 01-7.16-4.54l2.44-4.71a20.7 20.7 0 006.39 4.29 17.7 17.7 0 006.9 1.5 11.05 11.05 0 006.28-1.56 4.87 4.87 0 002.3-4.23 4.94 4.94 0 00-1.25-3.46 8.85 8.85 0 00-3.15-2.15 52.65 52.65 0 00-5.14-1.76 53.27 53.27 0 01-6.48-2.33 11.23 11.23 0 01-4.23-3.34 10.28 10.28 0 010-11.46 11.15 11.15 0 014.94-3.75 19.33 19.33 0 017.38-1.3 23.88 23.88 0 017 1 23.58 23.58 0 016.1 2.81l-2.27 4.88a22.27 22.27 0 00-5.71-2.63zm24.34-5.55h25.7l-.06 4.89h-20.23v12.95h18.21v4.9h-18.21v16.66h-5.41zm41.21 0h27.39v4.89h-22V208h19.67v4.9h-19.65v12.56h22.66v4.89h-28.07zm69.06 39.4l-7.84-12.38c-.9.07-1.63.11-2.19.11h-10v12.27h-5.41v-39.4h15.45q7.49 0 11.58 3.46t4.07 9.82a14 14 0 01-2.22 8.05 12.45 12.45 0 01-6.4 4.73l9.19 13.34zm-10-17.17q5.07 0 7.77-2.22t2.71-6.56a7.7 7.7 0 00-2.71-6.39c-1.8-1.44-4.39-2.17-7.77-2.17h-10v17.34z" fill="#0d1e27"></path></g></svg>
+            <svg style="width: 4rem;" viewBox="0 0 123 106"><path fill="#ffb300" d="M59.13 20.75H35.67L57.35 52.9 34.18 86.25h23.57L79.59 52.8 59.13 20.75z"></path><path d="M123 0v106H17V91.24h6.24v8.52h93.52V6.24H23.24v8.52H17V0zM81.74 52.09l20.8-30.42H80.29L70 37.76l9.61 15-9.67 14.83 11.8 17.74h22.7zm23.86-39.6h1.27v3.59h.71v-3.59h1.27v-.62h-3.25zm3.87 3.59h.66v-3.21l1.33 2.77h.46l1.33-2.77v3.21h.65v-4.21h-.84l-1.37 2.85-1.38-2.85h-.84zM0 39.25h12.68V73.7h5.41V39.25h12.74v-5H0z" fill="#0d1e27"></path></svg>
+            <figcaption>TransferX logo and icon</figcaption>
+          </figure>
+        </section>
+        <section>
+          <h2>User experience design</h2>
+          <p>The project brief for the native application user experience design stressed the importance of three key priorities:</p>
+          <ol>
+            <li><span></span>A modern financial services design</li>
+            <li><span></span>Simplified navigation for native and non-native crypto users</li>
+            <li><span></span>Complex options for payments, including repeat and automated payment scheduling abilities</li>
+          </ol>
+          <p>I designed beautiful, modern, and intuitive app that made transferring funds easy and enjoyable. Unfortunately, the project was unable to secure funding to keep it going to the next phase.</p>
+        </section>
+      </article>
     </main>
     <footer id="footer">
       <nav id="footer-navigation" aria-labelledby="footer-navigation">
         <ul class="profile">
           <li>About me</li>
-          <li>Home</li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="resume/index.html" class="footer--resume">My resume</a></li>
           <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="footer--linkedin" target="_blank" rel="noopener noreferrer">
             <span>LinkedIn</span>
@@ -150,7 +338,7 @@
           <li>Work projects</li>
           <li><a href="projects/panera/index.html" class="footer--panera">Panera</a></li>
           <li><a href="projects/enservio/index.html" class="footer--enservio">Enservio</a></li>
-          <li><a href="projects/transferx/index.html" class="footer--transferx">TransferX</a></li>
+          <li>TransferX</li>
           <li><a href="projects/eberhardt-design/index.html" class="footer--eberhardt-design">Eberhardt Design</a></li>
         </ul>
         <ul class="other-projects">

@@ -18,26 +18,23 @@ h1 {
 }
 
 h2 {
-  max-width: 64rem;
   padding: 1.5rem 0 0;
 	font-size: $h2;
 }
 
 h3 {
-  max-width: 56rem;
-  padding: 1.25rem 0 0;
+  padding: 1.5rem 0 0;
 	font-size: $h3;
 }
 
 h4 {
-  max-width: 44rem;
-  padding: 1rem 0 0;
+  padding: 1.5rem 0 0;
 	font-size: $h4;
 }
 
-p, ul li, ol li {
+p {
   max-width: 36rem;
-  padding: 0.5rem 0 0;
+  padding: 1rem 0 0;
 	font-size: $p;
   line-height: 1.5;
 }
@@ -80,6 +77,14 @@ h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
   text-align: right;
 }
 
+// H > P SPACING
+h1 + p, h2 + p, h3 + p, h4 + p,
+h1 + ul, h2 + ul, h3 + ul, h4 + ul,
+h1 + ol, h2 + ol, h3 + ol, h4 + ol,
+h1 + dl, h2 + dl, h3 + dl, h4 + dl {
+  padding-top: 0.5rem;
+}
+
 
 // H SPANS
 h1, h2, h3, h4 {
@@ -88,7 +93,7 @@ h1, h2, h3, h4 {
     line-height: 1.75;
     text-transform: uppercase;
   }
-  &:first-of-type {
+  &:first-child {
     padding: 0;
   }
 }
@@ -121,7 +126,6 @@ h4 {
 // TITLE SIZES
 @media (min-width: 48rem) {
   h1.title {
-    max-width: none;
     margin: 0;
     font-size: calc(1.5 * #{$h1});
     & + p {
@@ -130,10 +134,10 @@ h4 {
     }
   }
   h2.title {
-    max-width: none;
     margin: 0;
     font-size: calc(1.25 * #{$h2});
     & + p {
+      max-width: calc(1.25 * 36rem);
       font-size: calc(1.25 * #{$p});
     }
   }
@@ -167,7 +171,9 @@ ul, ol, dl {
     display: list-item;
     width: 100%;
     margin: 0;
-    line-height: 1.25;
+    padding: 1rem 0 0;
+    font-size: $p;
+    line-height: 1.5;
     &:first-child {
       padding: 0;
     }

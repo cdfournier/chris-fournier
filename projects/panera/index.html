@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="../../">
-    <title>Panera | Chris Fournier. American Made. Powered by Coffee.</title>
+    <title>Panera Bread | Chris Fournier. American Made. Powered by Coffee.</title>
     <meta name="description" content="I'm a seasoned user experience strategist, researcher, and designer who works in html, css, and Git. I use my skills and experience to solve problems and deliver intuitive user experiences.">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
@@ -34,10 +34,57 @@
     <link rel="stylesheet" href="assets/css/master.min.css">
     <style>
       .banner {
-        background-image: url(assets/images/work-panera-20-1x.jpg);
+        /* background-image: url(assets/images/work-panera-20-1x.jpg); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+      }
+      figure.analytics ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 1rem;
+        list-style: none;
+      }
+      figure.analytics ul:last-of-type {
+        padding: 0;
+      }
+      figure.analytics ul li {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        max-width: none;
+        padding: 0.5rem 0 0;
+        font-size: var(--xsmall);
+        text-transform: uppercase;
+      }
+      figure.analytics ul li span {
+        font-family: "metropolis-bold", sans-serif;
+        font-size: var(--h4);
+        line-height: 1;
+      }
+      figure.analytics ul li:first-of-type {
+        width: 100%;
+        font-size: var(--h4);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      figure.analytics figcaption {
+        font-family: "metropolis-bold", sans-serif;
+        font-size: var(--small);
+      }
+      @media (min-width: 30rem) {
+        figure.analytics ul li {
+          width: calc(25% - 1rem);
+          margin-right: 1rem;
+          border-right: 1px solid var(--gray);
+        }
+        figure.analytics ul li:first-child,
+        figure.analytics ul li:last-child {
+          border-right: none;
+        }
       }
       @media (min-width: 48rem) {
       }
@@ -56,11 +103,55 @@
     </header>
     <main>
       <section class="banner">
-        <h1 class="title"><span></span>Panera</h1>
-        <p></p>
+        <h1 class="title"><span>Project</span>Panera Bread</h1>
+        <p>Research, strategy, design, and prototyping to showcase a new user&nbsp;experience for the company.</p>
       </section>
-      <section id="content">
-      </section>
+      <article id="content">
+        <section>
+          <h2 class="title">Introduction</h2>
+          <p>Panera Bread is an American chain of fast-casual restaurants. I worked to convince Panera&rsquo;s leadership that there were massive, untapped opportunities to drive revenue and engagement through user experience, analytics, and personalization, and that the path to success was paved with moments that matter, key tactics, and measurable outcomes.</p>
+          <h2>History</h2>
+          <p>In 2012 Panera attempted to unify their online properties. Panera had neglected their online presence for years leading to dozens of sites with no coordinated planning, strategy, design, or insight. Hence the unification plan: gather all sites under roof with a new content management system with a unified visual design and analytics and data providing a unified view of the customer.</p>
+          <p>Unfortunately, we fell short of our goal. Competing forces and bad decisions left us in worse shape than before. Not only did we fail to unify our digital properties, we now had to deal with one of the most complex content managements system available (on a limited budget with an inadequate staff) for a confusing, marketing-only website (without e-commerce and not responsive/mobile-friendly), a separate e-commerce web site (with no marketing capabilities), a catering e-commerce website (plus another one for Canada), two e-commerce native platform apps (with no marketing capabilities), and many more. Compounding the issues, each group also had their own design, their own technology stack, their own analytics, and &mdash; in many cases &mdash; their own data sources.</p>
+        </section>
+        <section>
+          <h2 class="title">Turning the Titanic</h2>
+          <p>After a couple of years of withering support for panerabread.com, I decided to take the initiative and prove to the company that we were missing big opportunities: to connect with users, to increase revenue and enhance efficiency, cost-effectiveness, and quality control.</p>
+          <blockquote><p>My pitch has always been that Panera would be best-served by building one web site that synergizes the relationship between brand, customer, and commerce, driving efficiency in design, engineering, and technical debt, and gaining an advanced, single-source-of-truth for customer behavior.</p></blockquote>
+          <p>I knew there was little appetite within the company for another web site &ldquo;redesign&rdquo; project, so I began to position this an evolution of panerabread.com. We needed to be smarter and more strategic, and we needed a simple, but powerful and concrete vision of what success could look like, as well as how we should get there &mdash; to leap over the middle ground between where we were and where we needed to be.</p>
+        </section>
+        <section>
+          <h2>Understanding users</h2>
+          <p>In order to hone in on the biggest opportunities for success, I conducted a series of user interviews with a broad spectrum of people: people who classified themselves as heavy users and light users. I interviewed customers and people employed by the company. The five biggest problems (opportunities) identified were:</p>
+          <ol>
+            <li><span></span>Site navigation and content organization were complicated and confusing and lacked a direct drive to commerce.</li>
+            <li><span></span>Search engine optimization and site analytics were poorly executed.</li>
+            <li><span></span>The site was not mobile-friendly.</li>
+            <li><span></span>The site was impersonal and transactional. There was no joy in the user experience.</li>
+            <li><span></span>The visual design of the site was already outdated and out-of-alignment with other brand efforts.</li>
+          </ol>
+          <p>I took the empathy gained from the user interviews and studied the site’s analytics to better understand user behavior and pain points. There were a lot of opinions at Panera about what users wanted from our site, but what did the data say mattered most to users?</p>
+          <figure class="analytics">
+            <ul class="users">
+              <li>Users</li>
+              <li><span>57%</span>Menu</li>
+              <li><span>26%</span>Rewards</li>
+              <li><span>8%</span>Locations</li>
+              <li><span>9%</span>All others</li>
+            </ul>
+            <ul class="pageviews">
+              <li>Pageviews</li>
+              <li><span>56%</span>Menu</li>
+              <li><span>27%</span>Rewards</li>
+              <li><span>8%</span>Locations</li>
+              <li><span>9%</span>All others</li>
+            </ul>
+            <figcaption>User behavior January 2016 through December 2016</figcaption>
+          </figure>
+          <p>This data &mdash; combined with the feedback from the interviews &mdash; clearly showed what mattered most to users: food and rewards. Here is where the existing strategy and data collided.</p>
+          <!-- <p>All of the brand-attachment marketing content (stories, recipes, and other flotsam and jetsom) took up most of the valuable real estate (and budget) but none of the actual interest.</p> -->
+        </section>
+      </article>
     </main>
     <footer id="footer">
       <nav id="footer-navigation" aria-labelledby="footer-navigation">

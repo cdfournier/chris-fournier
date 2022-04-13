@@ -1,0 +1,46 @@
+// BLOCKQUOTES
+blockquote {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 36rem;
+  margin: 2rem auto 1rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: $gray;
+  p {
+    padding: 0;
+    @include sans-bold;
+    line-height: 1.75;
+  }
+  &:before {
+    display: block;
+    display: none;
+    position: absolute;
+    top: -0.75rem;
+    left: calc(50% - 1.5rem);
+    width: 3rem;
+    height: 1.5rem;
+    text-align: center;
+    background-color: white;
+    content: url(../icons/double-quotes-l.svg);
+    @include transform(scale(1.5));
+  }
+}
+
+@media (min-width: 64rem) {
+  blockquote {
+    p {
+      font-size: $h4;
+    }
+  }
+}
+
+
+// DARK MODE BLOCKQUOTES
+html.dark {
+  blockquote {
+    border-color: $cream;
+  }
+}

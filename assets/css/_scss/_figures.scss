@@ -1,0 +1,27 @@
+// FIGURES
+figure {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 64rem;
+  overflow: hidden;
+  margin: 0;
+  padding: 1rem 0 0;
+}
+
+@media (min-width: 64rem) {
+  figure {
+    padding: 2rem 0 1rem;
+  }
+}
+
+
+// FIGCAPTION
+figcaption {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0 0;
+  @include sans-bold;
+  font-size: $small;
+}

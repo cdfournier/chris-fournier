@@ -149,6 +149,8 @@ html.touch {
   figure {
     display: none;
     margin: 0;
+    padding: 0;
+    border: none;
     &:first-of-type {
       display: grid;
     }
@@ -174,7 +176,7 @@ html.touch {
       display: grid;
       width: 35vw;
       min-width: 35vw;
-      padding-left: 2rem;
+      padding: 0 0 0 2rem;
     }
   }
 }
@@ -444,8 +446,10 @@ html.dark {
       li {
         div {
           background: $green-dark;
+          background: $gray-dark;
           & > span {
             background: $cream;
+            background: white;
           }
         }
       }
@@ -511,5 +515,13 @@ html.dark {
         }
       }
     }
+  }
+}
+
+
+// PROJECT ARTICLES
+article {
+  section {
+    padding: 4rem 2rem 0;
   }
 }
