@@ -130,30 +130,14 @@ footer {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 48rem) {
   footer {
     padding-top: 4rem;
   }
 }
 
-
-// DARK MODE
-html.dark {
+@media (min-width: 64rem) {
   footer {
-    .branding {
-      form {
-        fieldset {
-          label {
-            color: white;
-            input[type="checkbox"] {
-              border-color: white;
-              &:after {
-                background: white;
-              }
-            }
-          }
-        }
-      }
-    }
+    padding-top: 6rem;
   }
 }

@@ -182,16 +182,6 @@ html.touch {
 }
 
 
-// DARK MODE CARDS
-html.dark {
-  .card {
-    &:before {
-      background: white;
-    }
-  }
-}
-
-
 // SELECTED PROJECTS
 .selected-projects {
   display: flex;
@@ -439,25 +429,6 @@ html.dark {
 }
 
 
-// DARK MODE SKILLS
-html.dark {
-  .skills {
-    ul {
-      li {
-        div {
-          background: $green-dark;
-          background: $gray-dark;
-          & > span {
-            background: $cream;
-            background: white;
-          }
-        }
-      }
-    }
-  }
-}
-
-
 // ATTRIBUTES
 .attributes {
   width: 100%;
@@ -523,5 +494,59 @@ html.dark {
 article {
   section {
     padding: 4rem 2rem 0;
+  }
+}
+
+
+// PROJECT DETAILS
+ul.project-details {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0 0;
+  list-style: none;
+  li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 0 1rem;
+    padding: 0 0 1rem;
+    span {
+      font-size: $h4;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $gray;
+      content: "";
+    }
+    &:last-child {
+      margin: 0;
+      padding: 0;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  ul.project-details {
+    flex-direction: row;
+    padding: 0.5rem 0 0;
+    li {
+      margin: 0 1rem 0 0;
+      padding: 0 1rem 0 0;
+      font-size: calc(0.875 * #{$p});
+      &:after {
+        right: 0;
+        width: 1px;
+        height: 100%;
+      }
+    }
   }
 }

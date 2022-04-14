@@ -32,18 +32,3 @@ nav {
     }
   }
 }
-
-
-// DARK MODE
-html.dark {
-  nav {
-    ul {
-      li {
-        color: $gray-mid;
-        &:first-child {
-          color: white;
-        }
-      }
-    }
-  }
-}

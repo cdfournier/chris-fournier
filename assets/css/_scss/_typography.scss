@@ -170,6 +170,7 @@ ul, ol, dl {
   li, dt, dd {
     display: list-item;
     width: 100%;
+    max-width: 36rem;
     margin: 0;
     padding: 1rem 0 0;
     font-size: $p;

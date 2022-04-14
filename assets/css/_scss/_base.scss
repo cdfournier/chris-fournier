@@ -54,19 +54,3 @@ a {
     color: $orange;
   }
 }
-
-
-// DARK MODE
-html.dark {
-  color: white;
-  body {
-    background: $green-dark;
-    background: $gray-dark;
-  }
-  a {
-    color: white;
-    &:hover, &:focus {
-      color: $orange;
-    }
-  }
-}
