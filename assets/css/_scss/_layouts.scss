@@ -181,6 +181,19 @@ html.touch {
   }
 }
 
+@media (min-width: 64rem) {
+  .card {
+    .text {
+      h3 {
+        font-size: $h2;
+        span {
+          font-size: calc(0.425 * #{$h2});
+        }
+      }
+    }
+  }
+}
+
 
 // SELECTED PROJECTS
 .selected-projects {
@@ -520,6 +533,7 @@ article {
 @media (min-width: 64rem) {
   article {
     section {
+      padding-top: 8rem;
       h2, h3, p, ul, ol {
         width: 60%;
         max-width: 36rem;

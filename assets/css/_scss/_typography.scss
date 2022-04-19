@@ -216,7 +216,7 @@ ol {
       margin: 0 1rem 0 0;
       border-right: 1px solid;
       @include sans-bold;
-      font-size: 150%;
+      font-size: $h4;
       counter-increment: count;
       content: "0" counter(count);
     }
