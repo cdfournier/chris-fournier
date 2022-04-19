@@ -357,12 +357,25 @@ html.touch {
 
 @media (min-width: 48rem) {
   .experience {
+    h2 {
+      width: 50%;
+      margin: 0 auto;
+    }
     .position {
+      width: 50%;
+      margin: 0 auto;
       h3 {
         span {
           display: inline-flex;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .experience {
+    .position {
     }
   }
 }
@@ -489,11 +502,43 @@ html.touch {
   }
 }
 
+@media (min-width: 48rem) {
+  .contact {
+    // width: 50%;
+    // margin: 0 auto;
+  }
+}
+
 
 // PROJECT ARTICLES
 article {
   section {
     padding: 4rem 2rem 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  article {
+    section {
+      h2, h3, p, ul, ol {
+        width: 60%;
+        max-width: 36rem;
+        margin: 0 auto;
+        &.title {
+          margin: 0 auto;
+          &+p {
+            max-width: 36rem;
+          }
+        }
+      }
+      figure {
+        figcaption {
+          width: 60%;
+          max-width: 36rem;
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }
 
@@ -536,17 +581,20 @@ ul.project-details {
 
 @media (min-width: 48rem) {
   ul.project-details {
-    flex-direction: row;
-    padding: 0.5rem 0 0;
     li {
-      margin: 0 1rem 0 0;
-      padding: 0 1rem 0 0;
       font-size: calc(0.875 * #{$p});
       &:after {
-        right: 0;
-        width: 1px;
-        height: 100%;
+        width: 25%;
       }
     }
   }
+}
+
+@media (min-width: 64rem) {
+  // ul.project-details {
+  //   li {
+  //     margin: 0 2rem 0 0;
+  //     padding: 0 2rem 0 0;
+  //   }
+  // }
 }
