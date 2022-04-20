@@ -369,27 +369,28 @@ html.touch {
 }
 
 @media (min-width: 48rem) {
-  .experience {
-    h2 {
-      width: 50%;
-      margin: 0 auto;
-    }
-    .position {
-      width: 50%;
-      margin: 0 auto;
-      h3 {
-        span {
-          display: inline-flex;
-        }
-      }
-    }
-  }
+  // .experience {
+  //   h2 {
+  //     width: 50%;
+  //     margin: 0 auto;
+  //   }
+  //   .position {
+  //     width: 50%;
+  //     margin: 0 auto;
+  //     h3 {
+  //       span {
+  //         display: inline-flex;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media (min-width: 64rem) {
   .experience {
-    .position {
-    }
+    width: 60%;
+    max-width: 36rem;
+    margin: 0 auto;
   }
 }
 
@@ -447,9 +448,11 @@ html.touch {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .skills {
-    width: 50%;
+    width: 60%;
+    max-width: 36rem;
+    margin: 0 auto;
     padding: 4rem 1rem 0 2rem;
   }
 }
@@ -469,9 +472,11 @@ html.touch {
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .attributes {
-    width: 50%;
+    width: 60%;
+    max-width: 36rem;
+    margin: 0 auto;
     padding: 4rem 2rem 0 1rem;
   }
 }
@@ -519,6 +524,14 @@ html.touch {
   .contact {
     // width: 50%;
     // margin: 0 auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .contact {
+    width: 60%;
+    max-width: 36rem;
+    margin: 0 auto;
   }
 }
 

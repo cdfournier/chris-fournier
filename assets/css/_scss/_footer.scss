@@ -99,7 +99,7 @@ footer {
       justify-content: flex-start;
       width: 75%;
       ul {
-        width: calc((100% / 3) - 1rem);
+        width: calc(100% / 3);
         text-align: left;
         &:last-of-type {
           display: flex;
@@ -138,5 +138,12 @@ footer {
 @media (min-width: 64rem) {
   footer {
     padding-top: 6rem;
+    nav {
+      ul {
+        li {
+          font-size: $p;
+        }
+      }
+    }
   }
 }
