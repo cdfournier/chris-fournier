@@ -4,10 +4,12 @@ figure {
   flex-direction: column;
   position: relative;
   width: 100%;
-  max-width: 64rem;
   overflow: hidden;
   margin: 0;
   padding: 1rem 0 0;
+  img {
+    border-radius: 0.25rem;
+  }
 }
 
 @media (min-width: 64rem) {
