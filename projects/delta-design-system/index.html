@@ -33,13 +33,61 @@
     </style>
     <link rel="stylesheet" href="assets/css/master.min.css">
     <style>
-      .banner {
-        /* background-image: url(assets/images/work-panera-20-1x.jpg); */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+      section.figures {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .row-a figure, .row-b figure, .row-c figure, .row-d figure, .row-e figure {
+        padding: 1rem;
+      }
+      .row-a, .row-b, .row-c, .row-d, .row-e {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1rem 1rem 0;
+      }
+      .row-b, .row-c, .row-d {
+        /* padding-top: 1rem; */
+        background-color: var(--gray);
+      }
+      html.dark .row-b, html.dark .row-c, html.dark .row-d {
+        background-color: transparent;
+      }
+      .row-b {
+        margin-top: 1rem;
+      }
+      .row-d {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+      }
+      .row-b figure:nth-of-type(2),
+      .row-b figure:nth-of-type(3) {
+        width: 50%;
       }
       @media (min-width: 48rem) {
+        .row-a figure, .row-c figure, .row-d figure, .row-e figure {
+          width: 50%;
+        }
+        .row-b figure:nth-of-type(1) {
+          width: 60%;
+        }
+        .row-b figure:nth-of-type(2),
+        .row-b figure:nth-of-type(3) {
+          width: 20%;
+        }
+        .row-c figure:nth-of-type(1) {
+          width: 60%;
+        }
+        .row-c figure:nth-of-type(2) {
+          width: 40%;
+        }
+        .row-d figure:nth-of-type(1) {
+          width: 40%;
+        }
+        .row-d figure:nth-of-type(2) {
+          width: 60%;
+        }
       }
     </style>
   </head>
@@ -60,14 +108,61 @@
         <p>An open-source design system that makes it easy to design responsive web sites, apps, and prototypes with code that is semantic, flexible, and efficient.</p>
       </section>
       <article id="content">
+        <figure>
+          <img src="assets/images/delta-design-01-1x.jpg" srcset="assets/images/delta-design-01-1x.jpg 1x, assets/images/delta-design-01-2x.jpg 2x" alt="The Delta Design System on a phone">
+          <figcaption style="padding: 1rem 1rem 0;">[fig] The Delta Design System on a phone</figcaption>
+        </figure>
         <section>
           <h2 class="title">Introduction</h2>
-          <p>Inspired by the dynamic world of user experience and design systems, I decided to create a system of my own. Design systems offer a unique perspective on the health of your product design, as well as your design teams.</p>
-          <p>I love to create bespoke, responsive web sites and applications &mdash; both for a living and for fun. I frequently find myself reusing my own code, so I decided to build <a href="https://cdfournier.github.io/delta-design-system/" class="offsite--delta-design-system" target="_blank" rel="noopener noreferrer">The Delta Design System</a>, an open-source system that makes it easy to design responsive web sites, apps, and prototypes with code that is semantic, flexible, customizable, and wicked efficient.</p>
-          <p><a href="https://ethanmarcotte.com/" class="offsite--em" target="_blank" rel="noopener noreferrer">Ethan Marcotte&rsquo;s</a> <a href="https://alistapart.com/article/responsive-web-design/" class="offsite--rwd" target="_blank" rel="noopener noreferrer">Responsive Web Design article</a> and <a href="https://atomicdesign.bradfrost.com/" class="offsite--ad" target="_blank" rel="noopener noreferrer">Brad Frost&rsquo;s Atomic Design</a> methodology, as well as <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" class="offsite--flex" target="_blank" rel="noopener noreferrer">flexbox</a> and <a href="https://sass-lang.com/" class="offsite--sass" target="_blank" rel="noopener noreferrer">Sass</a> are some of the things that inspired my decision to build a design system. Responsive web design, in particular, changed my life. I love everything about the concept of responsive design.</p>
-          <p>I wanted to create a smart and mindful scss and html framework that anyone could use to jump start projects. I made this project open-source to encourage others to iterate on my work.</p>
-          <p>I created what I consider to be a robust and complete user experience design resource, delivering something that was open-source with usable code, and a static design asset in the form of a Sketch library.</p>
-          <p>Visit <a href="https://github.com/cdfournier/delta-design-system" class="offsite--delta-design-system-repo" target="_blank" rel="noopener noreferrer">The Delta Design System Github repo</a> or <a href="https://cdfournier.github.io/delta-design-system/index.html" class="offsite--delta-design-system" target="_blank" rel="noopener noreferrer">online guide</a> for more information. And, if you’re looking for more of my work, check out the <a href="https://cdfournier.github.io/delta-design-system/demo/index.html" class="offsite--delta-design-system-demo" target="_blank" rel="noopener noreferrer">demo site I created</a> using The Delta Design System.</p>
+          <p>I love to create responsive web sites and applications. I frequently find myself reusing my own code, so I decided to build The Delta Design System, an open-source system that makes it easy to design responsive web sites, apps, and prototypes with code that is semantic, flexible, customizable, and wicked efficient.</p>
+          <p>I wanted to create a smart and mindful scss and html framework that anyone could use to jump start projects. I made this project open-source in hopes that others might iterate on my work.</p>
+          <p>Visit <a href="https://github.com/cdfournier/delta-design-system" class="offsite--delta-design-system-repo" target="_blank" rel="noopener noreferrer">The Delta Design System Github repo</a> or <a href="https://cdfournier.github.io/delta-design-system/index.html" class="offsite--delta-design-system" target="_blank" rel="noopener noreferrer">online guide</a> for more information. And, also be sure to check out the <a href="https://cdfournier.github.io/delta-design-system/demo/index.html" class="offsite--delta-design-system-demo" target="_blank" rel="noopener noreferrer">demo site</a> I created using The Delta Design System.</p>
+        </section>
+        <section class="figures">
+          <h2 class="visuallyhidden">Project visuals</h2>
+          <div class="row-a">
+            <figure>
+              <img src="assets/images/delta-design-02-1x.jpg" srcset="assets/images/delta-design-02-1x.jpg 1x, assets/images/delta-design-02-2x.jpg 2x" alt="A woman showing The Delta Design System on a laptop">
+            </figure>
+            <figure>
+              <img src="assets/images/delta-design-03-1x.jpg" srcset="assets/images/delta-design-03-1x.jpg 1x, assets/images/delta-design-03-2x.jpg 2x" alt="A young woman coding with The Delta Design System">
+            </figure>
+          </div>
+          <div class="row-b">
+            <figure>
+              <img src="assets/images/delta-design-04-1x.png" srcset="assets/images/delta-design-04-1x.png 1x, assets/images/delta-design-04-2x.png 2x" alt="A woman showing The Delta Design System on a laptop">
+            </figure>
+            <figure>
+              <img src="assets/images/delta-design-05-1x.png" srcset="assets/images/delta-design-05-1x.png 1x, assets/images/delta-design-05-2x.png 2x" alt="A young woman coding with The Delta Design System">
+            </figure>
+            <figure>
+              <img src="assets/images/delta-design-06-1x.png" srcset="assets/images/delta-design-06-1x.png 1x, assets/images/delta-design-06-2x.png 2x" alt="A young woman coding with The Delta Design System">
+            </figure>
+          </div>
+          <div class="row-c">
+            <figure>
+              <img src="assets/images/delta-design-07-1x.png" srcset="assets/images/delta-design-07-1x.png 1x, assets/images/delta-design-07-2x.png 2x" alt="A young woman coding with The Delta Design System">
+            </figure>
+            <figure>
+              <img src="assets/images/delta-design-08-1x.png" srcset="assets/images/delta-design-08-1x.png 1x, assets/images/delta-design-08-2x.png 2x" alt="A young woman coding with The Delta Design System">
+            </figure>
+          </div>
+          <div class="row-d">
+            <figure>
+              <img src="assets/images/delta-design-11-1x.png" srcset="assets/images/delta-design-11-1x.png 1x, assets/images/delta-design-11-2x.png 2x" alt="A woman showing The Delta Design System on a laptop">
+            </figure>
+            <figure>
+              <img src="assets/images/delta-design-12-1x.png" srcset="assets/images/delta-design-12-1x.png 1x, assets/images/delta-design-12-2x.png 2x" alt="A young woman coding with The Delta Design System">
+            </figure>
+          </div>
+          <div class="row-e">
+            <figure>
+              <img src="assets/images/delta-design-09-1x.jpg" srcset="assets/images/delta-design-09-1x.jpg 1x, assets/images/delta-design-09-2x.jpg 2x" alt="A woman showing The Delta Design System on a laptop">
+            </figure>
+            <figure>
+              <img src="assets/images/delta-design-10-1x.jpg" srcset="assets/images/delta-design-10-1x.jpg 1x, assets/images/delta-design-10-2x.jpg 2x" alt="A young woman coding with The Delta Design System">
+            </figure>
+          </div>
         </section>
       </article>
     </main>

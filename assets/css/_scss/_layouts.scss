@@ -207,10 +207,10 @@ html.touch {
     font-size: $small;
     a {
       span {
-        line-height: calc(1.25 * #{$small});
+        // line-height: calc(1.25 * #{$small});
       }
       svg {
-        height: calc(1.25 * #{$small});
+        // height: calc(1.25 * #{$small});
       }
     }
   }
@@ -369,24 +369,6 @@ html.touch {
 }
 
 @media (min-width: 48rem) {
-  // .experience {
-  //   h2 {
-  //     width: 50%;
-  //     margin: 0 auto;
-  //   }
-  //   .position {
-  //     width: 50%;
-  //     margin: 0 auto;
-  //     h3 {
-  //       span {
-  //         display: inline-flex;
-  //       }
-  //     }
-  //   }
-  // }
-}
-
-@media (min-width: 64rem) {
   .experience {
     width: 60%;
     max-width: 36rem;
@@ -448,7 +430,7 @@ html.touch {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 48rem) {
   .skills {
     width: 60%;
     max-width: 36rem;
@@ -471,7 +453,7 @@ html.touch {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 48rem) {
   .attributes {
     width: 60%;
     max-width: 36rem;
@@ -519,13 +501,6 @@ html.touch {
 }
 
 @media (min-width: 48rem) {
-  .contact {
-    // width: 50%;
-    // margin: 0 auto;
-  }
-}
-
-@media (min-width: 64rem) {
   .contact {
     width: 60%;
     max-width: 36rem;

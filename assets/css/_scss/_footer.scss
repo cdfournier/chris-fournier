@@ -95,9 +95,10 @@ footer {
 
 @media (min-width: 48rem) {
   footer {
+    padding-top: 4rem;
     nav {
       justify-content: flex-start;
-      width: 75%;
+      width: 80%;
       ul {
         width: calc(100% / 3);
         text-align: left;
@@ -109,7 +110,7 @@ footer {
     .branding {
       align-items: flex-end;
       justify-content: flex-end;
-      width: 25%;
+      width: 20%;
       padding: 0;
       form {
         align-items: flex-end;
@@ -129,15 +130,9 @@ footer {
   }
 }
 
-@media (min-width: 48rem) {
-  footer {
-    padding-top: 4rem;
-  }
-}
-
 @media (min-width: 64rem) {
   footer {
-    padding-top: 6rem;
+    padding-top: 8rem;
     nav {
       ul {
         li {
