@@ -47,3 +47,15 @@ html.touch {
     @include animation-iteration-count(1);
   }
 }
+
+
+// ANIMATE VISIBLE
+.animate {
+  opacity: 0;
+  // @include transform(translateY(2rem));
+  @include transition(all, 0.5s, ease-in);
+  &.visible {
+    opacity: 1;
+    // @include transform(translateY(0));
+  }
+}

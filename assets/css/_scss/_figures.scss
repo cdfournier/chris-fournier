@@ -15,6 +15,10 @@ figure {
 @media (min-width: 64rem) {
   figure {
     padding: 2rem 0 1rem;
+    &.small {
+      max-width: 60%;
+      margin: 0 auto;
+    }
   }
 }
 

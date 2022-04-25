@@ -537,6 +537,11 @@ article {
           max-width: 36rem;
           margin: 0 auto;
         }
+        &.small {
+          figcaption {
+            width: 100%;
+          }
+        }
       }
     }
   }
