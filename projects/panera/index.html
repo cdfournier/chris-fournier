@@ -81,14 +81,17 @@
         padding: 2rem;
         background-color: var(--cream);
       }
-      html.dark .row-a, html.dark .row-b, html.dark .row-c {
+      html.dark .row-a,
+      html.dark .row-b,
+      html.dark .row-c {
         background-color: transparent;
       }
       .row-a {
         margin-top: 2rem;
         padding-bottom: 0;
       }
-      .row-a figure, .row-c figure {
+      .row-a figure,
+      .row-c figure {
         width: 50%;
         padding: 1rem;
       }
@@ -118,7 +121,8 @@
         }
       }
       @media (min-width: 48rem) {
-        .row-a figure, .row-c figure {
+        .row-a figure,
+        .row-c figure {
           width: 25%;
         }
         .row-b figure {
@@ -129,12 +133,14 @@
           flex-wrap: wrap;
           padding: 1rem 1rem 0;
         }
-        .row-d figure:nth-of-type(1n), .row-d figure:nth-of-type(2n) {
-          width: 50%;
+        .row-d figure:nth-of-type(1),
+        .row-d figure:nth-of-type(4) {
+          width: 100%;
           padding: 1rem;
         }
-        .row-d figure:nth-of-type(3n) {
-          width: 100%;
+        .row-d figure:nth-of-type(2),
+        .row-d figure:nth-of-type(3) {
+          width: 50%;
           padding: 1rem;
         }
       }
@@ -148,7 +154,7 @@
           padding: 0 0 2rem;
         }
         .row-d {
-          padding-top: 0;
+          padding-top: 4rem;
         }
       }
     </style>
@@ -317,13 +323,12 @@
         <section>
           <h2>Results and outcomes</h2>
           <p>My strategy, user experience design, and functional prototypes were successful: <em>I convinced Panera&rsquo;s senior leadership to approve a 2900% increase in funding year-over-year for panerabread.com.</em> The topic became so hot that Panera went on a hiring spree and began to engage more seriously with external expertise.</p>
-          <blockquote><p>My strategy, user experience design, and prototypes successfully convinced Panera&rsquo;s senior leadership to approve a 2900% increase in funding year-over-year for panerabread.com.</p></blockquote>
           <p>By 2017 my time at Panera had run its course. As part of my exit, I was able to work with the amazing and creative people at <a href="https://work.co/" class="offsite--work" target="_blank" rel="noopener noreferrer">Work & Co.</a> for a new &ldquo;omni-channel digital design&rdquo;. Before I left I was able to incorporate the Work & Co. designs into one <a href="https://cdfournier.github.io/panera-bread-prototype/" class="offsite--panera" target="_blank" rel="noopener noreferrer">final version of the responsive prototype</a> I had nurtured over the previous 2 years.</p>
         </section>
-        <figure class="animate">
-          <img src="assets/images/panera-17-1x.jpg" srcset="assets/images/panera-17-1x.jpg 1x, assets/images/panera-17-2x.jpg 2x" alt="Redesigned prototype home page on an iMac">
-        </figure>
         <div class="row-d">
+          <figure class="animate">
+            <img src="assets/images/panera-17-1x.jpg" srcset="assets/images/panera-17-1x.jpg 1x, assets/images/panera-17-2x.jpg 2x" alt="Redesigned prototype home page on an iMac">
+          </figure>
           <figure class="animate">
             <img src="assets/images/panera-18-1x.jpg" srcset="assets/images/panera-18-1x.jpg 1x, assets/images/panera-18-2x.jpg 2x" alt="Woman browses redesigned home page on a laptop">
           </figure>
