@@ -43,7 +43,7 @@
         justify-content: center;
         width: 100vw;
         margin: 0 0 0 -2rem;
-        padding: 2rem;
+        padding: 1rem;
         background-color: var(--enservio);
       }
       html.dark .row-a,
@@ -77,8 +77,19 @@
         }
       }
       @media (min-width: 64rem) {
-        .row-a figure {
-          width: 20%;
+        .row-a,
+        .row-b {
+          padding: 2rem 4rem 0;
+        }
+        .row-a {
+          margin-top: 4rem;
+        }
+        .row-b {
+          padding-bottom: 2rem;
+        }
+        .row-a figure,
+        .row-b figure {
+          padding: 2rem;
         }
         .row-b figure {
           width: 40%;

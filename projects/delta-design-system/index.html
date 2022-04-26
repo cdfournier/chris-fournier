@@ -37,13 +37,6 @@
         padding-right: 0;
         padding-left: 0;
       }
-      .row-a figure,
-      .row-b figure,
-      .row-c figure,
-      .row-d figure,
-      .row-e figure {
-        padding: 1rem;
-      }
       .row-a,
       .row-b,
       .row-c,
@@ -76,6 +69,13 @@
       .row-d {
         padding-bottom: 1rem;
       }
+      .row-a figure,
+      .row-b figure,
+      .row-c figure,
+      .row-d figure,
+      .row-e figure {
+        padding: 1rem;
+      }
       .row-b figure:nth-of-type(2),
       .row-b figure:nth-of-type(3) {
         width: 50%;
@@ -97,6 +97,20 @@
         .row-c figure,
         .row-d figure {
           width: 50%;
+        }
+      }
+      @media (min-width: 64rem) {
+        .row-b,
+        .row-c,
+        .row-d {
+          padding: 2rem 4rem 0;
+        }
+        .row-b {
+          margin-top: 1rem;
+        }
+        .row-d {
+          margin-bottom: 1rem;
+          padding-bottom: 2rem;
         }
       }
     </style>

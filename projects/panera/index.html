@@ -78,7 +78,7 @@
         align-items: center;
         width: 100vw;
         margin: 0 0 0 -2rem;
-        padding: 2rem;
+        padding: 1rem;
         background-color: var(--cream);
       }
       html.dark .row-a,
@@ -94,6 +94,10 @@
       .row-c figure {
         width: 50%;
         padding: 1rem;
+      }
+      .row-b,
+      .row-c {
+        padding-top: 0;
       }
       .row-b figure {
         width: 100%;
@@ -153,8 +157,29 @@
         figure.analytics ul {
           padding: 0 0 2rem;
         }
+        .row-a,
+        .row-b,
+        .row-c {
+          padding: 2rem 4rem 0;
+        }
+        .row-a {
+          margin-top: 4rem;
+        }
+        .row-b,
+        .row-c {
+          padding-top: 0;
+        }
+        .row-c {
+          padding-bottom: 2rem;
+        }
         .row-d {
           padding-top: 4rem;
+        }
+        .row-a figure,
+        .row-b figure,
+        .row-c figure,
+        .row-d figure {
+          padding: 2rem;
         }
       }
     </style>

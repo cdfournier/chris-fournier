@@ -53,7 +53,7 @@
         justify-content: center;
         width: 100vw;
         margin: 0 0 0 -2rem;
-        padding: 2rem;
+        padding: 1rem;
         background-color: var(--mystuff);
       }
       html.dark .row-a {
@@ -80,6 +80,9 @@
         padding: 1rem;
       }
       @media (min-width: 48rem) {
+        figure.journeys img {
+          width: 50%;
+        }
         .row-a figure {
           width: 25%;
         }
@@ -88,8 +91,13 @@
         }
       }
       @media (min-width: 64rem) {
+        .row-a {
+          margin-top: 2rem;
+          padding: 2rem;
+        }
         .row-a figure {
           width: calc(100% / 3.5);
+          padding: 2rem;
         }
       }
     </style>
