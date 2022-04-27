@@ -407,23 +407,23 @@ html.touch {
         }
       }
     }
-    li.code div > span {
+    li.code div > span.visible {
       width: 90%;
       transition-property: width;
     }
-    li.ux-tools div > span {
+    li.ux-tools div > span.visible {
       width: 85%;
       transition-property: width;
     }
-    li.google div > span {
+    li.google div > span.visible {
       width: 70%;
       transition-property: width;
     }
-    li.accessibility div > span {
+    li.accessibility div > span.visible {
       width: 60%;
       transition-property: width;
     }
-    li.adobe div > span {
+    li.adobe div > span.visible {
       width: 95%;
       transition-property: width;
     }
@@ -519,7 +519,7 @@ article {
 @media (min-width: 64rem) {
   article {
     section {
-      padding-top: 8rem;
+      // padding-top: 8rem;
       h2, h3, p, ul, ol {
         width: 60%;
         max-width: 36rem;
@@ -593,13 +593,4 @@ ul.project-details {
       }
     }
   }
-}
-
-@media (min-width: 64rem) {
-  // ul.project-details {
-  //   li {
-  //     margin: 0 2rem 0 0;
-  //     padding: 0 2rem 0 0;
-  //   }
-  // }
 }

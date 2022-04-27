@@ -31,3 +31,50 @@ figcaption {
   @include sans-bold;
   font-size: $small;
 }
+
+
+// GALLERIES
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin: 2rem 0 0 -2rem;
+  padding: 1rem;
+  figure {
+    margin: 0;
+    padding: 1rem;
+    &.phone {
+      width: 50%;
+    }
+  }
+}
+
+.gallery + .gallery {
+  margin-top: -2rem;
+}
+
+@media (min-width: 48rem) {
+  .gallery {
+    figure.phone {
+      width: 25%;
+    }
+    figure.tablet,
+    figure.small {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .gallery {
+    figure.phone {
+      width: 20%;
+    }
+    figure.tablet {
+      width: 45%;
+    }
+  }
+}

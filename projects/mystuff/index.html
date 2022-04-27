@@ -45,59 +45,20 @@
       figure.journeys img {
         padding: 1rem;
       }
-      .row-a {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-        margin: 0 0 0 -2rem;
-        padding: 1rem;
+      .gallery {
         background-color: var(--mystuff);
       }
-      html.dark .row-a {
+      html.dark .gallery {
         background-color: transparent;
-      }
-      .row-a {
-        margin-top: 2rem;
-      }
-      .row-a figure {
-        width: 50%;
-        padding: 1rem;
-      }
-      .row-b {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-        margin: 0 0 0 -2rem;
-        padding: 1rem;
-      }
-      .row-b figure {
-        padding: 1rem;
       }
       @media (min-width: 48rem) {
         figure.journeys img {
           width: 50%;
         }
-        .row-a figure {
-          width: 25%;
-        }
-        .row-b figure {
-          width: 50%;
-        }
       }
       @media (min-width: 64rem) {
-        .row-a {
-          margin-top: 2rem;
-          padding: 2rem;
-        }
-        .row-a figure {
-          width: calc(100% / 3.5);
-          padding: 2rem;
+        .gallery figure.phone {
+          width: 22.5%;
         }
       }
     </style>
@@ -128,7 +89,7 @@
           <p>We take for granted that we are usually safe from disaster and property loss. Should a disaster strike, it would be helpful to have a record of your property. Inspired by the work I had done at Enservio, I decided to create a consumer-facing application to make it easier for people to file insurance claims.</p>
           <h3>Project details</h3>
           <ul class="project-details">
-            <li><span>Brief:</span>Design and built a (browser-based) personal inventory prototype application that would enable users to create a catalog of their valuables in case of catastrophe</li>
+            <li><span>Brief:</span>Design and build a (browser-based) personal inventory prototype application that would enable users to create a catalog of their valuables in case of catastrophe</li>
             <li><span>Audience:</span>Anyone and everyone with a vested interest in holding records of personal value: home owners, insurance companies, small business, and more</li>
           </ul>
         </section>
@@ -142,31 +103,31 @@
           </figure>
           <p>The journey maps also helped me to develop the prototype much faster because I was able to focus on the &ldquo;happy paths&rdquo; for users. The prototype build was much more efficienct, and it enabled me to hone in on deliverying a superiour MVP prototype with the behaviors and experience of a more mature application.</p>
           <p><a href="https://cdfournier.github.io/my-stuff/app/app/index.html" class="offsite--mystuff" target="_blank" rel="noopener noreferrer">Explore the prototype</a> on your mobile device.</p>
-          <div class="row-a">
-            <figure class="animate">
+          <div class="gallery">
+            <figure class="phone animate">
               <img src="assets/images/mystuff-05-1x.png" srcset="assets/images/mystuff-05-1x.png 1x, assets/images/mystuff-05-2x.png 2x" alt="MyStuff loading screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/mystuff-06-1x.png" srcset="assets/images/mystuff-06-1x.png 1x, assets/images/mystuff-06-2x.png 2x" alt="MyStuff authentication screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/mystuff-07-1x.png" srcset="assets/images/mystuff-07-1x.png 1x, assets/images/mystuff-07-2x.png 2x" alt="MyStuff on-boarding screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/mystuff-08-1x.png" srcset="assets/images/mystuff-08-1x.png 1x, assets/images/mystuff-08-2x.png 2x" alt="MyStuff home screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/mystuff-09-1x.png" srcset="assets/images/mystuff-09-1x.png 1x, assets/images/mystuff-09-2x.png 2x" alt="MyStuff stuff screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/mystuff-10-1x.png" srcset="assets/images/mystuff-10-1x.png 1x, assets/images/mystuff-10-2x.png 2x" alt="MyStuff attachments screen">
             </figure>
           </div>
-          <div class="row-b">
-            <figure class="animate">
+          <div class="gallery" style="margin-top: 0; background-color: transparent;">
+            <figure class="small animate">
               <img src="assets/images/mystuff-11-1x.jpg" srcset="assets/images/mystuff-11-1x.jpg 1x, assets/images/mystuff-11-2x.jpg 2x" alt="Woman looking at her stuff on the MyStuff app on her phone">
             </figure>
-            <figure class="animate">
+            <figure class="small animate">
               <img src="assets/images/mystuff-12-1x.jpg" srcset="assets/images/mystuff-12-1x.jpg 1x, assets/images/mystuff-12-2x.jpg 2x" alt="The MyStuff get paid screen on a phone resting on a laptop">
             </figure>
           </div>

@@ -101,44 +101,11 @@
       html.dark figure.marks svg:last-of-type path {
         fill: white;
       }
-      .row-a,
-      .row-b,
-      .row-c,
-      .row-d {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        width: 100vw;
-        margin: 0 0 0 -2rem;
-        padding: 1rem;
+      .gallery {
         background-color: var(--transferx);
       }
-      html.dark .row-a,
-      html.dark .row-b,
-      html.dark .row-c {
+      html.dark .gallery {
         background-color: transparent;
-      }
-      .row-a {
-        margin-top: 2rem;
-      }
-      .row-b,
-      .row-c {
-        margin-top: -2rem;
-      }
-      .row-d {
-        padding: 1rem;
-        background-color: transparent;
-      }
-      .row-a figure,
-      .row-b figure,
-      .row-c figure {
-        width: 50%;
-        padding: 1rem;
-      }
-      .row-d figure {
-        padding: 1rem;
       }
       @media (min-width: 40rem) {
         figure.patterns img {
@@ -173,47 +140,13 @@
         figure.marks figcaption {
           width: 100%;
         }
-        .row-a figure,
-        .row-b figure,
-        .row-c figure {
-          width: 25%;
-        }
-        .row-d figure:nth-of-type(1),
-        .row-d figure:nth-of-type(4) {
-          width: 100%;
-        }
-        .row-d figure:nth-of-type(2),
-        .row-d figure:nth-of-type(3) {
-          width: 50%;
-        }
       }
       @media (min-width: 64rem) {
         dl.colors {
           width: calc(25% - 0.5rem);
         }
-        .row-a,
-        .row-b,
-        .row-c {
-          padding: 2rem 4rem 0;
-        }
-        .row-a {
-          margin-top: 4rem;
-        }
-        .row-b,
-        .row-c {
-          padding-bottom: 2rem;
-        }
-        .row-a figure,
-        .row-b figure,
-        .row-c figure {
-          padding: 2rem;
-        }
-      }
-      @media (min-width: 80rem) {
-        .row-a figure,
-        .row-b figure,
-        .row-c figure {
-          width: calc(100% / 6);
+        .gallery figure.phone {
+          width: 22.5%;
         }
       }
     </style>
@@ -372,74 +305,74 @@
             <li><span></span>Complex options for payments, including repeat and automated payment scheduling abilities</li>
           </ol>
           <p>I designed beautiful, modern, and intuitive app that made transferring funds easy and enjoyable. Unfortunately, the project was unable to secure funding to keep it going to the next phase.</p>
-          <div class="row-a">
-            <figure class="animate">
+          <div class="gallery">
+            <figure class="phone animate">
               <img src="assets/images/transferx-06-1x.png" srcset="assets/images/transferx-06-1x.png 1x, assets/images/transferx-06-2x.png 2x" alt="TransferX loading screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-07-1x.png" srcset="assets/images/transferx-07-1x.png 1x, assets/images/transferx-07-2x.png 2x" alt="TransferX recent transfer screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-08-1x.png" srcset="assets/images/transferx-08-1x.png 1x, assets/images/transferx-08-2x.png 2x" alt="TransferX recipients screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-09-1x.png" srcset="assets/images/transferx-09-1x.png 1x, assets/images/transferx-09-2x.png 2x" alt="TransferX transfer screen">
             </figure>
           </div>
-          <div class="row-b">
-            <figure class="animate">
+          <div class="gallery">
+            <figure class="phone animate">
               <img src="assets/images/transferx-10-1x.png" srcset="assets/images/transferx-10-1x.png 1x, assets/images/transferx-10-2x.png 2x" alt="TransferX on-boarding welcome screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-11-1x.png" srcset="assets/images/transferx-11-1x.png 1x, assets/images/transferx-11-2x.png 2x" alt="TransferX on-boarding security screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-12-1x.png" srcset="assets/images/transferx-12-1x.png 1x, assets/images/transferx-12-2x.png 2x" alt="TransferX on-boarding automated transfers screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-14-1x.png" srcset="assets/images/transferx-14-1x.png 1x, assets/images/transferx-14-2x.png 2x" alt="TransferX on-boarding recipients screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-15-1x.png" srcset="assets/images/transferx-15-1x.png 1x, assets/images/transferx-15-2x.png 2x" alt="TransferX on-boarding flexible payment methods screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-16-1x.png" srcset="assets/images/transferx-16-1x.png 1x, assets/images/transferx-16-2x.png 2x" alt="TransferX on-boarding success screen">
             </figure>
           </div>
-          <div class="row-c">
-            <figure class="animate">
+          <div class="gallery">
+            <figure class="phone animate">
               <img src="assets/images/transferx-21-1x.png" srcset="assets/images/transferx-21-1x.png 1x, assets/images/transferx-21-2x.png 2x" alt="TransferX transfer setup screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-22-1x.png" srcset="assets/images/transferx-22-1x.png 1x, assets/images/transferx-22-2x.png 2x" alt="TransferX set transfer schedule screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-23-1x.png" srcset="assets/images/transferx-23-1x.png 1x, assets/images/transferx-23-2x.png 2x" alt="TransferX create repeat transfer screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-24-1x.png" srcset="assets/images/transferx-24-1x.png 1x, assets/images/transferx-24-2x.png 2x" alt="TransferX transfer details screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-25-1x.png" srcset="assets/images/transferx-25-1x.png 1x, assets/images/transferx-25-2x.png 2x" alt="TransferX transfer receipt screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-17-1x.png" srcset="assets/images/transferx-17-1x.png 1x, assets/images/transferx-17-2x.png 2x" alt="TransferX add new card screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-18-1x.png" srcset="assets/images/transferx-18-1x.png 1x, assets/images/transferx-18-2x.png 2x" alt="TransferX wallet screen">
             </figure>
-            <figure class="animate">
+            <figure class="phone animate">
               <img src="assets/images/transferx-19-1x.png" srcset="assets/images/transferx-19-1x.png 1x, assets/images/transferx-19-2x.png 2x" alt="TransferX recipient details screen">
             </figure>
           </div>
-          <div class="row-d">
+          <div class="gallery" style="margin-top: 0; background-color: transparent;">
             <figure class="animate">
               <img src="assets/images/transferx-26-1x.jpg" srcset="assets/images/transferx-26-1x.jpg 1x, assets/images/transferx-26-2x.jpg 2x" alt="Gentleman transfers funds on the TransferX app">
             </figure>
-            <figure class="animate">
+            <figure class="small animate">
               <img src="assets/images/transferx-27-1x.jpg" srcset="assets/images/transferx-27-1x.jpg 1x, assets/images/transferx-27-2x.jpg 2x" alt="Woman using the TransferX app to transfer funds reads her transfer receipt">
             </figure>
-            <figure class="animate">
+            <figure class="small animate">
               <img src="assets/images/transferx-28-1x.jpg" srcset="assets/images/transferx-28-1x.jpg 1x, assets/images/transferx-28-2x.jpg 2x" alt="User flips through on-boarding screens on the TransferX app">
             </figure>
             <figure class="animate">
