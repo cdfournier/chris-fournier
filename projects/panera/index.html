@@ -97,6 +97,9 @@
         figure.analytics ul {
           padding: 0 0 2rem;
         }
+        .gallery figure.tablet {
+          width: 50%;
+        }
       }
     </style>
   </head>
@@ -191,7 +194,7 @@
           <p>I knew there was little appetite within the company for another website &ldquo;redesign&rdquo; project, so I began to position this as an evolution of panerabread.com. We needed to be smarter and more strategic, and we needed a simple, but powerful and concrete vision of what success could look like, as well as how we should get there &mdash; to leap over the middle ground between where we were and where we needed to be.</p>
         </section>
         <section>
-          <h2>Understanding users</h2>
+          <h2 id="understanding-users">Understanding users</h2>
           <p>In order to hone in on the biggest opportunities for success, I conducted a series of user interviews with a broad spectrum of people: people who classified themselves as heavy users and light users. I interviewed customers and people employed by the company. The five biggest problems (opportunities) identified were:</p>
           <ol>
             <li><span></span>Site navigation and content organization were complicated and confusing and lacked a direct drive to commerce.</li>
@@ -218,14 +221,13 @@
             </ul>
             <figcaption>[fig] User behavior January 2016 through December 2016</figcaption>
           </figure>
-          <p>This data &mdash; combined with the user interview feedback &mdash; clearly showed what mattered most to users: food and rewards. This was where the existing strategy and data collided.</p>
-          <p>The executive wisdom was that users wanted to connect with the brand: all of the brand-attachment marketing content (stories, recipes, and other flotsam and jetsam) took up the valuable site real estate (and budget) but none of the actual pageviews.  The same executive wisdom had always kept a wall between the brand (content) and its menu (not content?) online. There was the menu (not e-commerce, just a grid of product photos and words) and there was brand content and marketing.</p>
+          <p>This data &mdash; combined with the user interview feedback &mdash; clearly showed what mattered most to users: food and rewards. The prevailing executive-level attitude at the time was, &ldquo;Do not get in the way of e-commerce.&rdquo; This was a noble goal, but they did it at the expense of experience. By placing a wall between the brand&lsquo;s belief system and the brand&lsquo;s commerce system, they created the first problem for users: <a href="projects/panera/index.html#understanding-users">&ldquo;panerabread.com lacked a direct drive to commerce.&rdquo;</a></p>
         </section>
         <section>
           <h2 class="title">A more elegant solution</h2>
-          <p>What they failed to realize is that the menu is the perfect place to drive transactions and engagement with the brand. I knew from the research and analytics that the moments that mattered most to users were the menu and their rewards. Everything else is secondary to the users.</p>
-          <p>I began to see the menu as the ideal index or table of contents for the site. Users who wanted to place an order or redeem their rewards could do so immediately on the home page or at any time on the menu pages without interruption or interference. With the same experience, branded content could be placed adjacent to menu items for users who were more curious about the brand. It’s all about focusing on moments that matter and removing friction from those experiences.</p>
-          <figure class="small animate">
+          <p>What they failed to realize is that the menu was (and still is) the perfect place to drive transactions and engagement with the brand. I knew from the research and analytics that the moments that mattered most to users were the menu and their rewards. Everything else was secondary to the users.</p>
+          <p>I began to talk about the menu as the ideal index or table of contents for the site. Users who wanted to place an order or redeem their rewards could do so immediately on the home page or at any time on the menu pages without interruption or interference. With the same experience, branded content could be placed adjacent to menu items for users who were more curious about the brand. It&rsquo;s all about focusing on moments that matter and removing friction from those experiences.</p>
+          <figure class="animate">
             <img src="assets/images/panera-21-1x.png" srcset="assets/images/panera-21-1x.png 1x, assets/images/panera-21-2x.png 2x" alt="Old user experience journey v. new user experience journey">
             <figcaption>[fig] Old user experience journey v. new user experience journey</figcaption>
           </figure>
@@ -264,16 +266,17 @@
             <img src="assets/images/panera-06-1x.png" srcset="assets/images/panera-06-1x.png 1x, assets/images/panera-06-2x.png 2x" alt="Redesigned prototype home page with customized known user content and rewards information on a tablet, a phone, and a laptop">
             <figcaption>[fig] One example of a new home page with customized known user content and rewards information.</figcaption>
           </figure>
-          <p>Lastly, everything would be cataloged as part of a tagging, testing, and analytics cycle to provide insights and highlight opportunities, as well as foster an enhanced learning environment.</p>
+          <p>Lastly, everything had to be cataloged as part of a tagging, testing, and analytics cycle to provide insights and highlight opportunities, as well as foster an enhanced learning environment.</p>
           <h3>Content strategy and UX design</h3>
           <p>Content and design are most successful in a symbiotic relationship. The new content strategy was also simple: support the product (the food). Provide the details and tell the stories that inspired the food. Connect those things for people who are invested in the brand. Where do ingredients come from? How does it get to my plate? The only requirements: make it authentic and enjoyable, and something that would resonate based on how and when users were browsing the menu.</p>
-          <figure class="small animate">
+          <figure class="animate">
             <img src="assets/images/panera-22-1x.png" srcset="assets/images/panera-22-1x.png 1x, assets/images/panera-22-2x.png 2x" alt="Continuum of storytelling opportunities">
-            <figcaption style="text-align: center;">[fig] Continuum of storytelling opportunities</figcaption>
+            <figcaption>[fig] Continuum of storytelling opportunities</figcaption>
           </figure>
           <h3>Prototyping</h3>
           <p>I made an early decision to present my concepts in fully-functional, hand-coded prototypes &mdash; to make it a point to put the work directly in stakeholder&rsquo;s hands (on their own devices). Experience taught me that too many challenges come from static design for digital products. I was determined to design in code and test and present this project in the browser.</p>
-          <p>I designed the first fully functional, responsive prototype for this new strategy and user experience in late 2016. I used live menu data (updated daily) in an effort to socialize the strategy with Panera&rsquo;s leadership team and demonstrate the key pillars of a new user experience strategy and design.</p>
+          <p>The prototypes also helped to highlight the benefits of a unified experience: one responsive design, one code base, any device, one experience for users to learn, but all stronger together.</p>
+          <p>I designed the first fully functional, responsive prototype for this new strategy and user experience in late 2016. I used live menu data (updated manually daily) in an effort to socialize the strategy with Panera&rsquo;s leadership team and demonstrate the key pillars of a new user experience strategy and design. I supplemented the experience with simple weather and time-of-day logic to simulate personalization.</p>
           <div class="gallery">
             <figure class="phone animate">
               <img src="assets/images/panera-02-1x.png" srcset="assets/images/panera-02-1x.png 1x, assets/images/panera-02-2x.png 2x" alt="Redesigned prototype menu page on a phone">
