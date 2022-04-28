@@ -51,6 +51,62 @@
       <p><a href="#content" class="skip">Skip to the main content on this page</a></p>
     </section>
     <header>
+      <nav id="header-navigation" aria-labelledby="header-navigation">
+        <button class="menu-toggle" aria-label="Open and close navigation" aria-expanded="false" aria-controls="header-navigation">
+          <svg class="menu-toggle-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"></path><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <svg class="menu-toggle-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"></path><path d="M18 6L6 18M6 6l12 12"></path></svg>
+        </button>
+        <ul class="profile">
+          <li>About me</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume/index.html" class="header--resume">My resume</a></li>
+          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="header--linkedin" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5"/></svg>
+          </a></li>
+          <li><a href="https://github.com/cdfournier" class="header--github" target="_blank" rel="noopener noreferrer">
+            <span>Github</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5"/></svg>
+          </a></li>
+        </ul>
+        <ul class="work-projects">
+          <li>Work projects</li>
+          <li><a href="projects/panera/index.html" class="header--panera">Panera</a></li>
+          <li>Enservio</li>
+          <li><a href="projects/transferx/index.html" class="header--transferx">TransferX</a></li>
+          <li><a href="https://cdfournier.github.io/eberhardt-design/" class="header--eberhardt-design" target="_blank" rel="noopener noreferrer">
+            <span>Eberhardt Design</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5"/></svg>
+          </a></li>
+        </ul>
+        <ul class="other-projects">
+          <li>Other projects</li>
+          <li><a href="projects/delta-design-system/index.html" class="header--delta-design-system">The Delta Design System</a></li>
+          <li><a href="projects/mystuff/index.html" class="header--mystuff">MyStuff</a></li>
+          <li><a href="projects/east-wind/index.html" class="header--east-wind">East Wind</a></li>
+          <li><a href="https://cdfournier.github.io/guitar-notes/" class="header--guitar-notes" target="_blank" rel="noopener noreferrer">
+            <span>Guitar Notes</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5"/></svg>
+          </a></li>
+          <li><a href="https://cdfournier.github.io/wundermint/" class="header--wundermint" target="_blank" rel="noopener noreferrer">
+            <span>Wundermint</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5"/></svg>
+          </a></li>
+        </ul>
+        <form>
+          <fieldset>
+            <label for="switch-theme">
+              <span class="light-mode">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></svg>
+              </span>
+              <input type="checkbox" name="switch-theme" class="switch" id="switch-theme-header">
+              <span class="dark-mode">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
+              </span>
+            </label>
+          </fieldset>
+        </form>
+      </nav>
     </header>
     <main>
       <section class="banner">
@@ -183,9 +239,9 @@
               <span class="light-mode">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></svg>
               </span>
-              <input type="checkbox" name="switch-theme" class="switch" id="switch-theme">
+              <input type="checkbox" name="switch-theme" class="switch" id="switch-theme-footer">
               <span class="dark-mode">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
               </span>
             </label>
           </fieldset>
@@ -206,20 +262,20 @@
       window.addEventListener("DOMContentLoaded", function(theme) {
         if(localStorage.getItem("theme") === "true") {
           $("html").toggleClass("dark");
-          $("input#switch-theme").prop("checked",true);
+          $("input.switch").prop("checked",true);
         }
         else {
           localStorage.setItem("theme",false);
         }
       });
-      $("input#switch-theme").click(function() {
+      $("input.switch").click(function() {
         $("html").toggleClass("dark");
         if(localStorage.getItem("theme") === "true") {
-          $("input#switch-theme").prop("checked",false);
+          $("input.switch").prop("checked",false);
           localStorage.setItem("theme",false);
         }
         else {
-          $("input#switch-theme").prop("checked",true);
+          $("input.switch").prop("checked",true);
           localStorage.setItem("theme",true);
         }
       });
@@ -240,6 +296,21 @@
           entry.target.classList.toggle("visible", entry.isIntersecting);
         });
       };
+      // HEADROOM
+      var myElement = document.querySelector("header");
+      var headroom  = new Headroom(myElement);
+      headroom.init();
+      //HEADER NAVIGATION UPDATES
+      $("button.menu-toggle").click(function() {
+        $("body").toggleClass("open");
+        $("header").toggleClass("open");
+        $("button.menu-toggle").attr("aria-expanded",true);
+        $("nav ul").attr("aria-hidden",false);
+      });
+      $(".close").click(function() {
+        $("button.menu-toggle").attr("aria-expanded",false);
+        $("nav ul").attr("aria-hidden",true);
+      });
     </script>
   </body>
 </html>

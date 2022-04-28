@@ -16,6 +16,14 @@ html.dark {
 
 // NAV DARK MODE
 html.dark {
+  header {
+    background: $green-dark;
+    nav {
+      button.menu-toggle {
+        color: white;
+      }
+    }
+  }
   nav {
     ul {
       li {
@@ -29,20 +37,16 @@ html.dark {
 }
 
 
-// FOOTER DARK MODE
+// THEME SWITCH DARK MODE
 html.dark {
-  footer {
-    .branding {
-      form {
-        fieldset {
-          label {
-            color: white;
-            input[type="checkbox"] {
-              border-color: white;
-              &:after {
-                background: white;
-              }
-            }
+  form {
+    fieldset {
+      label {
+        color: white;
+        input[type="checkbox"] {
+          border-color: white;
+          &:after {
+            background: white;
           }
         }
       }

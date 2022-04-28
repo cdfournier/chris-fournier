@@ -2,12 +2,12 @@ const prefersColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
 window.addEventListener("DOMContentLoaded", function(theme) {
   if(localStorage.getItem("theme") === "false") {
     $("html").removeClass("dark");
-    $("input#switch-theme").prop("checked",false);
+    $("input.switch").prop("checked",false);
   }
   else {
     if(prefersColorScheme.matches) {
       $("html").toggleClass("dark");
-      $("input#switch-theme").prop("checked",true);
+      $("input.switch").prop("checked",true);
       localStorage.setItem("theme",true);
     }
     else {
@@ -15,14 +15,14 @@ window.addEventListener("DOMContentLoaded", function(theme) {
     }
   }
 });
-$("input#switch-theme").click(function() {
+$("input.switch").click(function() {
   $("html").toggleClass("dark");
   if(localStorage.getItem("theme") === "true") {
-    $("input#switch-theme").prop("checked",false);
+    $("input.switch").prop("checked",false);
     localStorage.setItem("theme",false);
   }
   else {
-    $("input#switch-theme").prop("checked",true);
+    $("input.switch").prop("checked",true);
     localStorage.setItem("theme",true);
   }
 });
