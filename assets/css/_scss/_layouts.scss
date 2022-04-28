@@ -375,21 +375,32 @@ html.touch {
     list-style: none;
     li {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       padding: 0.75rem 0;
       &:first-child {
         padding-top: 0;
+      }
+      span {
+        display: inline-flex;
+        margin: 0 0.25rem 0.25rem 0;
+        padding: 0.125rem 0.5rem;
+        border: 1px solid;
+        border-radius: 2rem;
+        font-size: $xsmall;
       }
       div {
         display: block;
         width: 100%;
         height: 0.5rem;
         margin: 0.5rem 0 0;
+        border-radius: 0.25rem;
         background: $cream;
         & > span {
           display: block;
           width: 0;
           height: inherit;
+          border-radius: 0.25rem;
           background: $green;
           @include transition(width, 0.5s, ease);
         }
@@ -418,6 +429,30 @@ html.touch {
   }
 }
 
+@media (min-width: 48rem) {
+  .skills {
+    ul {
+      li {
+        span {
+          font-size: $small;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .skills {
+    ul {
+      li {
+        span {
+          padding: 0.25rem 0.75rem;
+        }
+      }
+    }
+  }
+}
+
 
 // ATTRIBUTES
 .attributes {
@@ -429,6 +464,9 @@ html.touch {
       @include sans-regular;
       font-size: $h4;
       text-transform: uppercase;
+    }
+    dd {
+      text-transform: capitalize;
     }
   }
 }
