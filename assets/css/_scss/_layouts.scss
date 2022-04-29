@@ -17,14 +17,18 @@
     padding: 0;
     text-align: center;
     a {
-      display: block;
+      display: flex;
       width: 100%;
+      height: 4rem;
+      max-height: 4rem;
       padding: 0;
       text-transform: uppercase;
       opacity: 0;
+      @include transform(translateY(-4rem));
       &:focus {
         padding: 1rem;
         opacity: 1;
+        @include transform(translateY(0));
       }
       &:after {
         display: none;
@@ -389,6 +393,14 @@ html.touch {
         border-radius: 2rem;
         font-size: $xsmall;
       }
+      span:first-child {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 0.125rem;
+        border: none;
+        font-size: $p;
+      }
       div {
         display: block;
         width: 100%;
@@ -573,28 +585,28 @@ ul.project-details {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 0 0 1rem;
-    padding: 0 0 1rem;
+    // margin: 0 0 1rem;
+    // padding: 0 0 1rem;
     span {
       font-size: $h4;
       line-height: 1.25;
       text-transform: uppercase;
     }
-    &:after {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      background-color: $gray;
-      content: "";
-    }
+    // &:after {
+    //   display: block;
+    //   position: absolute;
+    //   bottom: 0;
+    //   width: 100%;
+    //   height: 1px;
+    //   background-color: $gray;
+    //   content: "";
+    // }
     &:last-child {
-      margin: 0;
-      padding: 0;
-      &:after {
-        display: none;
-      }
+      // margin: 0;
+      // padding: 0;
+      // &:after {
+      //   display: none;
+      // }
     }
   }
 }
@@ -602,10 +614,10 @@ ul.project-details {
 @media (min-width: 48rem) {
   ul.project-details {
     li {
-      font-size: calc(0.875 * #{$p});
-      &:after {
-        width: 25%;
-      }
+      // font-size: calc(0.875 * #{$p});
+      // &:after {
+      //   width: 25%;
+      // }
     }
   }
 }
