@@ -408,35 +408,31 @@ html.touch {
         margin: 0.5rem 0 0;
         border-radius: 0.25rem;
         background: $cream;
-        & > span {
+        & > span.animate {
           display: block;
           width: 0;
           height: inherit;
           border-radius: 0.25rem;
           background: $green;
           @include transition(width, 0.5s, ease);
+          @include transform-origin(left);
         }
       }
     }
-    li.code div > span.visible {
+    li.code div > span.animate.visible {
       width: 90%;
-      transition-property: width;
     }
-    li.ux-tools div > span.visible {
+    li.ux-tools div > span.animate.visible {
       width: 85%;
-      transition-property: width;
     }
-    li.google div > span.visible {
+    li.google div > span.animate.visible {
       width: 70%;
-      transition-property: width;
     }
-    li.accessibility div > span.visible {
+    li.accessibility div > span.animate.visible {
       width: 60%;
-      transition-property: width;
     }
-    li.adobe div > span.visible {
+    li.adobe div > span.animate.visible {
       width: 95%;
-      transition-property: width;
     }
   }
 }
