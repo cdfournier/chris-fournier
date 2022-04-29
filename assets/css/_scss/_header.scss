@@ -14,9 +14,11 @@ header {
   background: white;
   @include transition(max-height, 0.25s, ease);
   nav {
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
+    flex-direction: row;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     position: relative;
     width: 100%;
     max-height: 4rem;
@@ -25,8 +27,11 @@ header {
     button.menu-toggle {
       display: flex;
       justify-content: flex-end;
-      width: 100%;
-      margin: 0 0 0 auto;
+      position: absolute;
+      right: 1rem;
+      width: 2rem;
+      height: 2rem;
+      margin: 0;
       padding: 0;
       border: none;
       color: $green;
@@ -34,6 +39,7 @@ header {
       cursor: pointer;
       @include transition(color, 0.25s, ease);
       svg {
+        position: absolute;
         width: 2rem;
         height: 2rem;
       }
@@ -49,7 +55,7 @@ header {
       }
     }
     ul {
-      width: 80%;
+      width: 0;
       max-width: 100vw;
       padding: 2rem 0 0;
       @include transform(translateX(100vw));
@@ -59,70 +65,20 @@ header {
       }
       li {
         padding: 0.5rem 0 0;
-        font-size: 2.5vh;
+        font-size: 2.5vw;
         svg {
           width: auto;
-          height: 2.25vh;
+          height: 2.25vw;
         }
       }
     }
     form {
-      width: 80%;
+      width: 0;
       max-width: 100vw;
       @include transform(translateX(100vw));
       @include transition(all, 0.25s, ease);
       fieldset label {
         justify-content: flex-start;
-      }
-    }
-  }
-}
-
-@media (orientation: landscape) and (max-height: 48rem) {
-  header {
-    nav {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-content: flex-start;
-      align-items: flex-start;
-      ul {
-        width: calc(100% / 3);
-        &:first-of-type {
-          padding: 2rem 0 0;
-        }
-        li {
-          font-size: inherit;
-          svg {
-            width: 0.75rem;
-            height: 0.75rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 48rem) {
-  header {
-    nav {
-      flex-direction: column;
-      align-items: flex-end;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      ul, form {
-        width: 50vw;
-        max-width: 50vw;
-      }
-    }
-  }
-}
-
-@media (min-width: 64rem) {
-  header {
-    nav {
-      ul, form {
-        width: 30vw;
-        max-width: 30vw;
       }
     }
   }
@@ -136,6 +92,26 @@ header {
   top: 0
 }
 
+@media (min-height: 40rem) {
+  header {
+    nav {
+      align-items: flex-end;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      ul {
+        padding: 2rem 0 0;
+        li {
+          font-size: 2.25vh;
+          svg {
+            height: 2.25vh;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 // OPEN HEADER
 header.open {
@@ -146,15 +122,45 @@ header.open {
     max-height: 100vh;
     button.menu-toggle {
       svg.menu-toggle-open {
-        width: 0;
         left: -2rem;
+        width: 0;
       }
       svg.menu-toggle-close {
+        z-index: 5000;
         width: 2rem;
       }
     }
     ul, form {
+      width: calc(100% / 3);
+      padding: 3rem 0 0;
       @include transform(translateX(0));
+    }
+    form {
+      padding: 1rem 0 0;
+    }
+  }
+}
+
+@media (min-height: 40rem) {
+  header.open {
+    nav {
+      ul, form {
+        width: 80%;
+        padding: 2rem 0 0;
+      }
+      form {
+        padding: 1rem 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  header.open {
+    nav {
+      ul, form {
+        width: 40vw;
+      }
     }
   }
 }
