@@ -61,8 +61,7 @@ figcaption {
     figure.phone {
       width: 25%;
     }
-    figure.tablet,
-    figure.small {
+    figure.tablet {
       width: 50%;
     }
   }
@@ -75,6 +74,9 @@ figcaption {
     }
     figure.tablet {
       width: 40%;
+    }
+    figure.small {
+      width: 50%;
     }
   }
 }
