@@ -71,6 +71,17 @@
         font-family: "metropolis-bold", sans-serif;
         font-size: var(--small);
       }
+      figure.wide {
+        width: 100vw;
+        margin: 2rem 0 1rem -2rem;
+        padding: 2rem;
+        background: var(--cream);
+      }
+      html.dark figure.wide {
+        margin: 0;
+        padding: 1rem 2rem 0;
+        background: transparent;
+      }
       .gallery {
         background-color: var(--panera);
       }
@@ -96,6 +107,13 @@
         }
         figure.analytics ul {
           padding: 0 0 2rem;
+        }
+        figure.wide {
+          margin: 4rem 0 3rem -2rem;
+        }
+        html.dark figure.wide {
+          margin: 0;
+          padding: 2rem 2rem 1rem;
         }
         .gallery figure.tablet {
           width: 50%;
@@ -133,7 +151,7 @@
         </ul>
         <ul class="work-projects">
           <li>Work projects</li>
-          <li>Panera</li>
+          <li>Panera Bread</li>
           <li><a href="projects/enservio/index.html" class="header--enservio">Enservio</a></li>
           <li><a href="projects/transferx/index.html" class="header--transferx">TransferX</a></li>
           <li><a href="https://cdfournier.github.io/eberhardt-design/" class="header--eberhardt-design" target="_blank" rel="noopener noreferrer">
@@ -258,12 +276,12 @@
           <h2>User experience design</h2>
           <p>From a design perspective, the goal was simple: keep the experience as clean as the food (clean food being a brand pillar). Site navigation needed to be concise: menu and rewards — everything else should be secondary. The data was to be trusted.</p>
           <p>The intent was to present brand and commerce together, but keep both out of the way of each other: users who knew what they wanted should be able to place an order quickly (while still being exposed to some personalization and marketing), and users who had a desire to explore, connect on a deeper level with the brand, or just learn more about the food could dive as deeply as they like through videos, stories, and more.</p>
-          <figure class="animate">
+          <figure class="wide animate">
             <img src="assets/images/panera-01-1x.png" srcset="assets/images/panera-01-1x.png 1x, assets/images/panera-01-2x.png 2x" alt="Redesigned prototype home page on a laptop" style="max-width: 80%; margin: 0 auto;">
             <figcaption>[fig] A clean new home page with clear calls-to-action: menu and rewards.</figcaption>
           </figure>
           <p>Another key user experience: surface rewards (and suggestions) immediately and throughout the experience based on history, preferences, time of day, weather, and other factors.</p>
-          <figure class="animate">
+          <figure class="wide animate">
             <img src="assets/images/panera-06-1x.png" srcset="assets/images/panera-06-1x.png 1x, assets/images/panera-06-2x.png 2x" alt="Redesigned prototype home page with customized known user content and rewards information on a tablet, a phone, and a laptop">
             <figcaption>[fig] One example of a new home page with customized known user content and rewards information.</figcaption>
           </figure>
@@ -359,7 +377,7 @@
         </ul>
         <ul class="work-projects">
           <li>Work projects</li>
-          <li>Panera</li>
+          <li>Panera Bread</li>
           <li><a href="projects/enservio/index.html" class="footer--enservio">Enservio</a></li>
           <li><a href="projects/transferx/index.html" class="footer--transferx">TransferX</a></li>
           <li><a href="https://cdfournier.github.io/eberhardt-design/" class="footer--eberhardt-design" target="_blank" rel="noopener noreferrer">
