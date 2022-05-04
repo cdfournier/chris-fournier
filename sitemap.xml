@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/</loc>
+  <lastmod>2022-05-04T21:49:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/resume/index.html</loc>
+  <lastmod>2022-05-04T21:49:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/panera/index.html</loc>
+  <lastmod>2022-05-04T21:51:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/enservio/index.html</loc>
+  <lastmod>2022-05-04T21:51:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/transferx/index.html</loc>
+  <lastmod>2022-05-04T21:51:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/delta-design-system/index.html</loc>
+  <lastmod>2022-05-04T21:51:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/mystuff/index.html</loc>
+  <lastmod>2022-05-04T21:51:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/projects/east-wind/index.html</loc>
+  <lastmod>2022-05-04T21:51:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://chris.blackcoffeeshoppe.com/index.html</loc>
+  <lastmod>2022-05-04T21:49:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
