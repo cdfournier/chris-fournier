@@ -1,0 +1,56 @@
+@import "variables";
+@import "colors";
+@import "fonts";
+@import "mixins";
+@import "animations";
+
+html {
+  width: 100%;
+  min-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  @include sans-regular;
+  font-size: 16px;
+  color: black;
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-smoothing: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {scroll-behavior: auto;}
+	* {
+  	animation: none !important;
+  	@include transition(none !important);
+	}
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+a {
+  @include sans-bold;
+  text-decoration: none;
+  color: $green;
+  @include transition(all, 0.25s, ease);
+  &:hover, &:focus {
+    color: $orange;
+  }
+}

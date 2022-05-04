@@ -1,16 +1,10 @@
-@import "_global/base";
-@import "_global/typography";
-@import "_global/layout";
-@import "_global/animations";
-
-@import "_atoms/buttons";
-@import "_atoms/figures";
-@import "_atoms/blockquotes";
-
-@import "_molecules/banners";
-@import "_molecules/cards";
-@import "_molecules/media-grids";
-
-@import "_organisms/gallery-grid";
-@import "_organisms/header";
-@import "_organisms/footer";
+@import "_scss/base";
+@import "_scss/typography";
+@import "_scss/blockquotes";
+@import "_scss/figures";
+@import "_scss/layouts";
+@import "_scss/buttons";
+@import "_scss/navigation";
+@import "_scss/header";
+@import "_scss/footer";
+@import "_scss/dark";
