@@ -158,6 +158,18 @@ h4 {
   }
 }
 
+@media (min-width: 90rem) {
+  h1.title {
+    font-size: calc(2.5 * #{$h1});
+  }
+  h2.title {
+    font-size: calc(2.25 * #{$h2});
+  }
+  h3.title {
+    font-size: $h2;
+  }
+}
+
 
 // LISTS
 ul, ol, dl {

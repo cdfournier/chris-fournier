@@ -194,6 +194,19 @@ html.touch {
   }
 }
 
+@media (min-width: 90rem) {
+  .card {
+    .text {
+      h3 {
+        font-size: $h1;
+        span {
+          font-size: calc(0.425 * #{$h1});
+        }
+      }
+    }
+  }
+}
+
 
 // SELECTED PROJECTS
 .selected-projects {
@@ -203,17 +216,6 @@ html.touch {
   width: 100%;
   margin: 0;
   padding: 2rem 2rem 0;
-  .cta {
-    font-size: $small;
-    a {
-      span {
-        // line-height: calc(1.25 * #{$small});
-      }
-      svg {
-        // height: calc(1.25 * #{$small});
-      }
-    }
-  }
 }
 
 @media (min-width: 48rem) {
