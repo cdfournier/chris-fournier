@@ -58,7 +58,7 @@
   height: 100vh;
   min-height: 100vh;
   margin: 0;
-  padding: 2rem 2rem 0;
+  padding: 4rem 2rem 0;
 }
 
 
@@ -517,20 +517,6 @@ html.touch {
         }
       }
     }
-  }
-}
-
-@media (min-width: 48rem) {
-  .experience, .skills, .attributes, .contact {
-    width: 75%;
-    max-width: 36rem;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 64rem) {
-  .experience, .skills, .attributes, .contact {
-    width: 60%;
   }
 }
 
