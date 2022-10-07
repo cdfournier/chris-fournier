@@ -54,38 +54,77 @@
 
 
 // CTAS
-// .cta {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   width: 100%;
-//   padding: 1rem 0 0;
-//   text-transform: uppercase;
-//   a {
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     overflow: hidden;
-//     span {
-//       overflow: hidden;
-//       line-height: calc(1.25 * #{$p});
-//       text-overflow: ellipsis;
-//       white-space: nowrap;
-//     }
-//     svg {
-//       display: inline-grid;
-//       height: calc(1.5 * #{$p});
-//       margin: 0 0 0.125rem;
-//       @include transform(translateY(2rem));
-//       @include transition(all, 0.25s, ease);
-//     }
-//     &:hover, &:focus {
-//       svg {
-//         @include transform(translateY(0));
-//       }
-//     }
-//   }
-// }
+.cta-group {
+  display: flex;
+  flex-direction: column;
+}
+p.cta {
+  padding: 1rem 0 0;
+  + p.cta {
+    padding: 0.5rem 0 0;
+  }
+}
+p.cta a {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-size: $small;
+  line-height: 1;
+  span.icon {
+    display: grid;
+    width: $h2;
+    height: $h2;
+    border: 1px solid;
+    border-radius: 100%;
+    margin: 0;
+    padding: 0.125rem;
+  }
+  span.label {
+    padding: 0 0 0 0.5rem;
+  }
+  span.icon svg, span.label {
+    @include transition(all, 0.325s, ease);
+  }
+  &.down {
+    span.icon svg, span.label {
+      @include transform(translateY(0));
+    }
+  }
+  &.page {
+    span.icon svg, span.label {
+      @include transform(translateX(0));
+    }
+  }
+  &:hover, &:focus {
+    &.down {
+      span.icon svg {
+        @include transform(translateY(1.75rem));
+      }
+    }
+    &.page {
+      span.icon svg, span.label {
+        @include transform(translateX(1.75rem));
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .cta-group {
+    flex-direction: row;
+  }
+  .cta-group p.cta {
+    padding: 1rem 0 0;
+    + p.cta {
+      padding: 1rem 0 0 2rem;
+    }
+  }
+}
+
 //
 // html.touch {
 //   .cta {
