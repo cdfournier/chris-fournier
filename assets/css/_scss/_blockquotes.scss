@@ -3,7 +3,8 @@ blockquote {
   display: block;
   position: relative;
   width: 100%;
-  margin: 2rem auto 1rem 0;
+  max-width: 33.75rem;
+  margin: 2rem auto 1rem;
   padding: 2rem 0;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -15,7 +16,6 @@ blockquote {
   }
   &:before {
     display: block;
-    display: none;
     position: absolute;
     top: -0.75rem;
     left: calc(50% - 1.5rem);
@@ -25,15 +25,5 @@ blockquote {
     background-color: white;
     content: url(../icons/double-quotes-l.svg);
     @include transform(scale(1.5));
-  }
-}
-
-@media (min-width: 64rem) {
-  blockquote {
-    max-width: 36rem;
-    margin: 2rem auto 1rem;
-    p {
-      font-size: $h4;
-    }
   }
 }

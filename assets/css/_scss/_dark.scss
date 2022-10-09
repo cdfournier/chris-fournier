@@ -86,7 +86,10 @@ html.dark {
 // BLOCKQUOTES DARK MODE
 html.dark {
   blockquote {
-    border-color: $cream;
+    border-color: white;
+    &:before {
+      background-color: $green-dark;
+    }
   }
 }
 

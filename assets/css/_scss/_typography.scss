@@ -255,7 +255,22 @@ dl {
 article.project section {
   padding: 2rem 2rem 0;
   h1, h2, h3, p, small, ul, ol, dl {
-    max-width: 36rem;
+    max-width: 33.75rem;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 90rem) {
+  article.project section {
+    h1, h2, h3, p, small, ul, ol, dl, blockquote {
+      max-width: 40rem;
+    }
+    h3 {
+      font-size: $h2;
+    }
+    p {
+      padding: 1.5rem 0 0;
+      line-height: 1.75;
+    }
   }
 }
