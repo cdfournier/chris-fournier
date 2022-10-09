@@ -126,7 +126,7 @@ h4 {
 // TITLE SIZES
 @media (min-width: 48rem) {
   h1.title {
-    margin: 0;
+    max-width: calc(1.5 * 36rem);
     font-size: calc(1.5 * #{$h1});
     & + p {
       max-width: calc(1.5 * 36rem);
@@ -134,7 +134,7 @@ h4 {
     }
   }
   h2.title {
-    margin: 0;
+    max-width: calc(1.25 * 36rem);
     font-size: calc(1.25 * #{$h2});
     & + p {
       max-width: calc(1.25 * 36rem);
@@ -142,6 +142,7 @@ h4 {
     }
   }
   h3.title {
+    max-width: calc(1.25 * 36rem);
     font-size: $h2;
   }
 }
@@ -246,5 +247,15 @@ dl {
     &:last-of-type {
       padding: 0;
     }
+  }
+}
+
+
+// ARTICLE TYPOGRAPH
+article.project section {
+  padding: 2rem 2rem 0;
+  h1, h2, h3, p, small, ul, ol, dl {
+    max-width: 36rem;
+    margin: 0 auto;
   }
 }

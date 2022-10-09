@@ -4,20 +4,45 @@ figure {
   flex-direction: column;
   position: relative;
   width: 100%;
-  overflow: hidden;
   margin: 0;
-  padding: 1rem 0 0;
+  padding: 0;
+  &.wide {
+    width: 100vw;
+    margin: 2rem 0 1rem -2rem;
+    padding: 0;
+    figcaption {
+      padding: 1rem 2rem 0;
+    }
+    &.bg {
+      padding: 2rem;
+    }
+  }
   img {
     border-radius: 0.25rem;
+  }
+  a {
+    display: grid;
+    img {
+      @include transition(all, 0.5s, ease);
+    }
+    &:hover {
+      img {
+        @include transform(scale(1.125));
+      }
+    }
   }
 }
 
 @media (min-width: 64rem) {
   figure {
-    padding: 2rem 0 1rem;
     &.small {
       max-width: 60%;
       margin: 0 auto;
+    }
+    &.wide {
+      figcaption {
+        padding: 1rem 0 0;
+      }
     }
   }
 }
@@ -31,6 +56,13 @@ figcaption {
   @include sans-bold;
   font-size: $small;
   line-height: 1.25;
+}
+
+@media (min-width: 48rem) {
+  figcaption {
+    max-width: 36rem;
+    margin: 0 auto;
+  }
 }
 
 
@@ -48,7 +80,7 @@ figcaption {
     margin: 0;
     padding: 1rem;
     &.phone {
-      width: 50%;
+      width: 48%;
     }
   }
 }
@@ -60,7 +92,7 @@ figcaption {
 @media (min-width: 48rem) {
   .gallery {
     figure.phone {
-      width: 25%;
+      width: 22.5%;
     }
     figure.tablet {
       width: 50%;
@@ -72,9 +104,6 @@ figcaption {
   .gallery {
     figure.phone {
       width: 20%;
-    }
-    figure.tablet {
-      width: 40%;
     }
     figure.small {
       width: 50%;

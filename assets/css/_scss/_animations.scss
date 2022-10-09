@@ -52,10 +52,10 @@ html.touch {
 // ANIMATE VISIBLE
 .animate {
   opacity: 0;
-  @include transform(translateY(1rem));
-  @include transition(opacity, 0.5s, ease-in);
+  // @include transform(translateY(1rem));
+  @include transition(all, 0.5s, ease-in);
   &.visible {
     opacity: 1;
-    @include transform(translateY(0));
+    // @include transform(translateY(0));
   }
 }

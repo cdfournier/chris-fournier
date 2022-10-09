@@ -30,6 +30,8 @@ blockquote {
 
 @media (min-width: 64rem) {
   blockquote {
+    max-width: 36rem;
+    margin: 2rem auto 1rem;
     p {
       font-size: $h4;
     }
