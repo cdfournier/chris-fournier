@@ -18,6 +18,9 @@ figure {
       padding: 2rem;
     }
   }
+  img {
+    border-radius: 0.25rem;
+  }
   a {
     display: grid;
     border-radius: 0.25rem;
@@ -62,6 +65,12 @@ figcaption {
 @media (min-width: 48rem) {
   figcaption {
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 90rem) {
+  figcaption {
+    max-width: 40rem;
   }
 }
 

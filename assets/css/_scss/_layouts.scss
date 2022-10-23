@@ -85,6 +85,7 @@ p.cta a {
   }
   span.label {
     padding: 0 0 0 0.5rem;
+    line-height: 2rem;
   }
   span.icon svg, span.label {
     @include transition(all, 0.325s, ease);

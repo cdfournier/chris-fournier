@@ -43,7 +43,7 @@
         background-repeat: no-repeat;
         background-size: 50vh;
       }
-      .banner.welcome h1,
+      .banner.welcome h2,
       .banner.welcome p {
         width: 90%;
       }
@@ -102,7 +102,7 @@
           justify-content: center;
           background-size: 70vh;
         }
-        .banner.welcome h1,
+        .banner.welcome h2,
         .banner.welcome p {
           width: 70%;
         }
@@ -112,7 +112,7 @@
           justify-content: center;
           padding-top: inherit;
         }
-        .banner.welcome h1.title {
+        .banner.welcome h2.title {
           font-size: calc(1.5 * var(--h1));
         }
         .about-me ul {
@@ -132,7 +132,7 @@
         }
       }
       @media (min-width: 64rem) {
-        .banner.welcome h1.title {
+        .banner.welcome h2.title {
           font-size: calc(2 * var(--h1));
         }
         .project {
@@ -157,7 +157,7 @@
         }
       }
       @media (min-width: 90rem) {
-        .banner.welcome h1.title {
+        .banner.welcome h2.title {
           font-size: calc(2.5 * var(--h1));
         }
       }
@@ -220,25 +220,28 @@
     </header>
     <main>
       <section class="banner welcome">
-        <h1 class="title"><span>Hi. My name is</span>Chris</h1>
-        <p>I solve problems with design.</p>
-        <div class="cta-group">
-          <p class="cta" style="width: auto;">
-            <a href="index.html#about-me" class="down">
-              <span class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon arrow-down" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 5v14M18 13l-6 6M6 13l6 6"/></svg>
-              </span>
-              <span class="label">More about me</span>
-            </a>
-          </p>
-          <p class="cta" style="width: auto;">
-            <a href="index.html#selected-projects" class="down">
-              <span class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon arrow-down" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 5v14M18 13l-6 6M6 13l6 6"/></svg>
-              </span>
-              <span class="label">View selected projects</span>
-            </a>
-          </p>
+        <h1 class="visuallyhidden">Hi. My name is Chris</h1>
+        <div class="text">
+          <h2 class="title"><span>Hi. My name is</span>Chris</h2>
+          <p>I solve problems with design.</p>
+          <div class="cta-group">
+            <p class="cta" style="width: auto;">
+              <a href="index.html#about-me" class="down">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon arrow-down" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 5v14M18 13l-6 6M6 13l6 6"/></svg>
+                </span>
+                <span class="label">More about me</span>
+              </a>
+            </p>
+            <p class="cta" style="width: auto;">
+              <a href="index.html#selected-projects" class="down">
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon arrow-down" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 5v14M18 13l-6 6M6 13l6 6"/></svg>
+                </span>
+                <span class="label">View selected projects</span>
+              </a>
+            </p>
+          </div>
         </div>
       </section>
       <article id="content">
@@ -301,7 +304,7 @@
             <h3 class="visuallyhidden">Enservio case study</h3>
             <div class="text animate">
               <h3>Enservio<span>Case study</span></h3>
-              <p>A bold new user experience designed improve data collection, conversion, and customer satisfaction.</p>
+              <p>A bold new user experience designed to improve data collection, conversion, and customer satisfaction.</p>
               <p class="cta" style="width: auto;">
                 <a href="projects/enservio/index.html" class="page">
                   <span class="icon">
@@ -312,14 +315,16 @@
               </p>
             </div>
             <figure class="animate">
-              <img src="assets/images/enservio-16-1x.jpg" srcset="assets/images/enservio-16-1x.jpg 1x, assets/images/enservio-16-2x.jpg 2x" alt="User viewing the Enservio Your Inventory List screen on a tablet">
+              <a href="projects/enservio/index.html">
+                <img src="assets/images/enservio-16-1x.jpg" srcset="assets/images/enservio-16-1x.jpg 1x, assets/images/enservio-16-2x.jpg 2x" alt="User viewing the Enservio Your Inventory List screen on a tablet">
+              </a>
             </figure>
           </section>
           <section class="project">
             <h3 class="visuallyhidden">TransferX case study</h3>
             <div class="text animate">
               <h3>TransferX<span>Case study</span></h3>
-              <p>New branding and improved user experience design for financial services blockchain startup.</p>
+              <p>New branding and improved product and user experience design for financial services blockchain startup.</p>
               <p class="cta" style="width: auto;">
                 <a href="projects/transferx/index.html" class="page">
                   <span class="icon">
@@ -330,7 +335,9 @@
               </p>
             </div>
             <figure class="animate">
-              <img src="assets/images/transferx-30-1x.jpg" srcset="assets/images/transferx-30-1x.jpg 1x, assets/images/transferx-30-2x.jpg 2x" alt="TransferX app on a table with espresso">
+              <a href="projects/transferx/index.html">
+                <img src="assets/images/transferx-30-1x.jpg" srcset="assets/images/transferx-30-1x.jpg 1x, assets/images/transferx-30-2x.jpg 2x" alt="TransferX app on a table with espresso">
+              </a>
             </figure>
           </section>
         </section>
