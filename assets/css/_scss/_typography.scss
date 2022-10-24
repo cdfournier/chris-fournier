@@ -251,12 +251,29 @@ dl {
 }
 
 
-// ARTICLE TYPOGRAPH
+// ARTICLE TYPOGRAPHY
 article.project section {
   padding: 2rem 2rem 0;
-  h1, h2, h3, p, small, ul, ol, dl {
+  h1, h2, h3, p, small, ul, ol, dl, blockquote {
     max-width: 33.75rem;
     margin: 0 auto;
+  }
+  ul.project-details {
+    padding: 0;
+    list-style: none;
+    li {
+      max-width: none;
+      span {
+        display: block;
+        width: 100%;
+        font-size: $h3;
+        text-transform: uppercase;
+      }
+    }
+  }
+  & > section.banner {
+        width: 100%;
+        padding: 2rem 0;
   }
 }
 
@@ -264,9 +281,6 @@ article.project section {
   article.project section {
     h1, h2, h3, p, small, ul, ol, dl, blockquote {
       max-width: 40rem;
-    }
-    h3 {
-      font-size: $h2;
     }
     p {
       padding: 1.5rem 0 0;

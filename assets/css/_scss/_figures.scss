@@ -55,7 +55,7 @@ figure {
 figcaption {
   width: 100%;
   max-width: 33.75rem;
-  margin: 0;
+  margin: 0 auto;
   padding: 1rem 0 0;
   @include sans-bold;
   font-size: $small;
@@ -111,9 +111,6 @@ figcaption {
 
 @media (min-width: 64rem) {
   .gallery {
-    figure.phone {
-      width: 20%;
-    }
     figure.small {
       width: 50%;
     }
