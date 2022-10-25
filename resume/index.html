@@ -132,34 +132,29 @@
       ul.skills li.adobe div > span.animate.visible {
         width: 95%;
       }
+      .contact h2, .contact p {
+        text-align: center;
+      }
       .contact ul {
-        padding-left: 0;
+        padding: 0;
         list-style: none;
+        flex-direction: row;
+        justify-content: center;
       }
       .contact ul li {
-        display: flex;
-        flex-direction: row;
+        width: auto;
+        padding: 1rem;
       }
       .contact ul li a {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: row;
-        overflow: hidden;
-        font-family: "metropolis-regular", sans-serif;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        display: grid;
       }
       .contact ul li a svg {
-        display: inline-grid;
-        width: 1.5rem;
-        min-width: 1.5rem;
-        margin-right: 0.5rem;
+        display: grid;
+        width: 2rem;
+        min-width: 2rem;
       }
       .contact ul li a span {
-        overflow: hidden;
-        line-height: 1.5;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        display: none;
       }
       @media (min-width: 90rem) {
         section.banner, article section {
