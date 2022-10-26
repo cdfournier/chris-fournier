@@ -112,6 +112,18 @@ p.cta a {
       }
     }
   }
+  &:active {
+    &.down {
+      span.icon svg, span.label {
+        @include transform(translateY(0));
+      }
+    }
+    &.page {
+      span.icon svg, span.label {
+        @include transform(translateX(0));
+      }
+    }
+  }
 }
 
 @media (min-width: 64rem) {
