@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <base href="../../../">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Header</title>
+    <meta name="description" content="I have more than 20 years of experience solving problems in cross-functional settings for a wide range of B2B and B2C products, platforms, and services for retail, e-commerce, fintech, and more. I specialize in UX and UI design, responsive web design, and design systems.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#384332">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/master.min.css">
+  </head>
+  <body>
+    <header>
+      <nav id="header-navigation" aria-labelledby="header-navigation">
+        <button class="menu-toggle" aria-label="Open and close navigation" aria-expanded="false" aria-controls="header-navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-toggle-open" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-toggle-close" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <ul class="profile">
+          <li>About me</li>
+          <li><a href="index.html" class="header--home">Home</a></li>
+          <li><a href="resume/index.html" class="header--resume">My resume</a></li>
+          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="header--linkedin" target="_blank" rel="noopener noreferrer">
+            <span>LinkedIn</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon external-link" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5"/></svg>
+          </a></li>
+          <li><a href="https://github.com/cdfournier" class="header--github" target="_blank" rel="noopener noreferrer">
+            <span>Github</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon external-link" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5"/></svg>
+          </a></li>
+        </ul>
+        <ul class="work-projects">
+          <li>Work projects</li>
+          <li><a href="projects/panera/index.html" class="header--panera">Panera Bread</a></li>
+          <li><a href="projects/enservio/index.html" class="header--enservio">Enservio</a></li>
+          <li><a href="projects/transferx/index.html" class="header--transferx">TransferX</a></li>
+        </ul>
+        <ul class="other-projects">
+          <li>Other projects</li>
+          <li><a href="projects/delta-design-system/index.html" class="header--delta-design-system">The Delta Design System</a></li>
+          <li><a href="projects/mystuff/index.html" class="header--mystuff">MyStuff</a></li>
+          <li><a href="projects/east-wind/index.html" class="header--east-wind">East Wind</a></li>
+        </ul>
+        <form>
+          <fieldset>
+            <label for="switch-theme-header">
+              <span class="light-mode">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon sun" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></svg>
+              </span>
+              <input type="checkbox" name="switch-theme" class="switch" id="switch-theme-header">
+              <span class="dark-mode">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon moon" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></svg>
+              </span>
+            </label>
+          </fieldset>
+        </form>
+      </nav>
+    </header>
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/scripts/headroom.js"></script>
+    <script src="assets/scripts/site.js"></script>
+  </body>
+</html>
