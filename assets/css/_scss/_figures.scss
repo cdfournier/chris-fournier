@@ -36,16 +36,20 @@ figure {
   }
 }
 
+@media (min-width: 48rem) {
+  figure {
+    &.wide {
+      figcaption {
+        padding: 1rem 0 0;
+      }
+    }
+  }
+}
 @media (min-width: 64rem) {
   figure {
     &.small {
       max-width: 48rem;
       margin: 0 auto;
-    }
-    &.wide {
-      figcaption {
-        padding: 1rem 0 0;
-      }
     }
   }
 }

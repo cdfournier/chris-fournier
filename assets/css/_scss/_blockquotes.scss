@@ -27,3 +27,9 @@ blockquote {
     @include transform(scale(1.5));
   }
 }
+
+@media (min-width: 90rem) {
+  blockquote {
+    max-width: 40rem;
+  }
+}

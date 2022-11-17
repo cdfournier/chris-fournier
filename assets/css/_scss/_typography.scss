@@ -254,7 +254,7 @@ dl {
 // ARTICLE TYPOGRAPHY
 article.project section {
   padding: 2rem 2rem 0;
-  h1, h2, h3, p, small, ul, ol, dl, blockquote {
+  h1, h2, h3, p, small, ul, ol, dl {
     max-width: 33.75rem;
     margin: 0 auto;
   }
@@ -279,7 +279,7 @@ article.project section {
 
 @media (min-width: 90rem) {
   article.project section {
-    h1, h2, h3, p, small, ul, ol, dl, blockquote {
+    h1, h2, h3, p, small, ul, ol, dl {
       max-width: 40rem;
     }
     p {
