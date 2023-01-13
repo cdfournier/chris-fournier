@@ -1,0 +1,20 @@
+// BUTTONS
+button, .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 1rem 0 0;
+  padding: 0 1.25rem;
+  border: 1px solid $green;
+  border-radius: 2rem;
+  @include sans-bold;
+  font-size: $small;
+  line-height: 2rem;
+  text-align: center;
+  background: white;
+  svg {
+    display: grid;
+    height: 1rem;
+  }
+}
