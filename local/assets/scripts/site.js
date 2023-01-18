@@ -57,11 +57,11 @@ function io_callback (entries, observer) {
 };
 
 // PARALAX BANNERS
-const banner = document.querySelector(".banner .text");
-const speed = 0.2;
-banner.style.transform = "translateY( calc( var(--scrollparallax) * 1px ) )";
-function setScrollParallax() {
-  banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
-  window.requestAnimationFrame( setScrollParallax );
-}
-window.requestAnimationFrame( setScrollParallax );
+// const banner = document.querySelector(".banner .text");
+// const speed = 0.2;
+// banner.style.transform = "translateY( calc( var(--scrollparallax) * 1px ) )";
+// function setScrollParallax() {
+//   banner.style.setProperty("--scrollparallax", (document.body.scrollTop || document.documentElement.scrollTop) * speed);
+//   window.requestAnimationFrame( setScrollParallax );
+// }
+// window.requestAnimationFrame( setScrollParallax );
