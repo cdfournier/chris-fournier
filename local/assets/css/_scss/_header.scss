@@ -54,37 +54,14 @@ header {
         color: $orange;
       }
     }
-    ul {
+    ul, form {
       width: 0;
       max-width: 100vw;
       padding: 2rem 0 0;
       @include transform(translateX(100vw));
       @include transition(all, 0.25s, ease);
-      &:first-of-type {
-        padding: 0;
-      }
-      li {
-        padding: 0.5rem 0 0;
-      }
-    }
-    form {
-      width: 0;
-      max-width: 100vw;
-      @include transform(translateX(100vw));
-      @include transition(all, 0.25s, ease);
-      fieldset label {
-        justify-content: flex-start;
-      }
     }
   }
-}
-
-.header--fixed {
-  position: fixed;
-  z-index: 10;
-  right: 0;
-  left: 0;
-  top: 0
 }
 
 @media (min-height: 40rem) {
@@ -128,7 +105,11 @@ header.open {
       @include transform(translateX(0));
     }
     form {
+      align-items: flex-start;
       padding: 1rem 0 0;
+      fieldset {
+        width: auto;
+      }
     }
   }
 }

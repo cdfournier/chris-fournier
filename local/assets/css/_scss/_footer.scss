@@ -8,7 +8,6 @@ footer {
   padding: 2rem;
   nav {
     ul {
-      text-align: center;
       &:last-of-type {
         display: none;
       }
@@ -29,8 +28,8 @@ footer {
     }
   }
   .copyright {
-    display: block;
     width: 100%;
+    padding: $p 0 0;
     text-align: center;
     small {
       max-width: none;
@@ -41,12 +40,10 @@ footer {
 
 @media (min-width: 48rem) {
   footer {
+    align-items: flex-end;
     nav {
-      justify-content: flex-start;
       width: 80%;
       ul {
-        width: calc(100% / 3);
-        text-align: left;
         &:last-of-type {
           display: flex;
         }
@@ -54,7 +51,6 @@ footer {
     }
     .branding {
       align-items: flex-end;
-      justify-content: flex-end;
       width: 20%;
       padding: 0;
       form {
@@ -64,22 +60,6 @@ footer {
     }
     .copyright {
       text-align: right;
-      small {
-        padding: 1rem 0 0;
-      }
-    }
-  }
-}
-
-@media (min-width: 64rem) {
-  footer {
-    padding-top: 4rem;
-    nav {
-      ul {
-        li {
-          font-size: $p;
-        }
-      }
     }
   }
 }
