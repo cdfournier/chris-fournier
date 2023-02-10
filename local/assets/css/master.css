@@ -745,6 +745,34 @@ figcaption {
   line-height: 1.25;
 }
 
+.gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  margin: 0 0 0 -2rem;
+  padding: 1rem;
+}
+.gallery figure {
+  padding: 1rem;
+}
+
+article.project.delta-design-system .gallery {
+  background: var(--delta-design);
+}
+
+@media (min-width: 48rem) {
+  .gallery figure.tablet {
+    width: 50%;
+  }
+}
+@media (min-width: 64rem) {
+  .gallery figure.small {
+    width: 50%;
+  }
+}
 .skip {
   display: flex;
   align-items: center;
@@ -1336,6 +1364,16 @@ footer .copyright small {
     text-align: right;
   }
 }
+@media (min-width: 64rem) {
+  footer {
+    padding: 4rem 2rem 2rem;
+  }
+}
+@media (min-width: 90rem) {
+  footer {
+    padding: 8rem 2rem 2rem;
+  }
+}
 form {
   display: flex;
   flex-direction: column;
@@ -1450,7 +1488,10 @@ html.dark blockquote:before {
 }
 
 html.dark .gallery {
-  background-color: transparent;
+  background: transparent;
+}
+html.dark article.project.delta-design-system .gallery {
+  background: transparent;
 }
 
 html.dark .banner.intro {

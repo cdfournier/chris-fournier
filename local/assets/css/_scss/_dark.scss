@@ -154,8 +154,13 @@ html.dark {
 // FIGURES & GALLERIES
 html.dark {
   .gallery {
-    background-color: transparent;
+    background: transparent;
   }
+  article.project.delta-design-system {
+    .gallery {
+      background: transparent;
+    }
+  }  
 }
 
 

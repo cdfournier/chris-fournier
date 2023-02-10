@@ -29,3 +29,40 @@ figcaption {
 
 
 // GALLERIES
+.gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  margin: 0 0 0 -2rem;
+  padding: 1rem;
+  figure {
+    padding: 1rem;
+  }
+}
+
+article.project.delta-design-system {
+  .gallery {
+    background: $delta-design;
+  }
+}
+
+@media (min-width: 48rem) {
+  .gallery {
+    figure.tablet {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .gallery {
+    figure {
+      &.small {
+        width: 50%;
+      }
+    }
+  }
+}
