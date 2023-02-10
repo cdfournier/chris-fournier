@@ -157,3 +157,40 @@ html.dark {
     background-color: transparent;
   }
 }
+
+
+// INTRO BANNERS
+html.dark {
+  .banner.intro {
+    background-color: $green-dark;
+  }
+  .banner.intro.welcome {
+    background-blend-mode: soft-light;
+  }
+  @media (orientation: landscape) {
+    .banner.intro.delta-design-system,
+    .banner.intro.enservio,
+    .banner.intro.transferx {
+      color: black;
+      a {
+        color: $green;
+        &:hover, &:focus {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+
+// RESUME SKILLS
+html.dark {
+  article.resume {
+    section.skills ul li div {
+      background: $gray-dark;
+      & > span.animate {
+        background: $cream;
+      }
+    }
+  }
+}

@@ -155,22 +155,10 @@
   font-weight: normal;
 }
 .spin {
-  -webkit-animation-name: spin;
   animation-name: spin;
-  -webkit-animation-duration: 10s;
   animation-duration: 10s;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   transform-origin: center;
-}
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes spin {
@@ -182,7 +170,6 @@
   }
 }
 html.touch .spin {
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -220,8 +207,7 @@ html {
     scroll-behavior: auto;
   }
   * {
-    -webkit-animation: none !important;
-            animation: none !important;
+    animation: none !important;
     transition: none !important 0.25s ease 0s;
   }
 }
@@ -455,6 +441,282 @@ h4 span {
   font-size: calc(0.425 * var(--h4));
 }
 
+h2.title {
+  font-size: var(--h1);
+}
+
+@media (min-width: 48rem) {
+  h1.title {
+    max-width: 54rem;
+    font-size: calc(1.5 * var(--h1));
+  }
+  h1.title + p {
+    max-width: 54rem;
+    font-size: calc(1.5 * var(--p));
+  }
+  h2.title {
+    max-width: 45rem;
+    font-size: calc(1.5 * var(--h2));
+  }
+  h2.title + p {
+    max-width: 45rem;
+    font-size: calc(1.25 * var(--p));
+  }
+  h3.title {
+    max-width: 45rem;
+    font-size: var(--h2);
+  }
+}
+@media (min-width: 64rem) {
+  h1.title {
+    font-size: calc(2 * var(--h1));
+  }
+  h2.title {
+    font-size: calc(1.75 * var(--h2));
+  }
+  h3.title {
+    font-size: var(--h1);
+  }
+}
+@media (min-width: 90rem) {
+  h1.title {
+    font-size: calc(2.5 * var(--h1));
+  }
+  h2.title {
+    font-size: calc(2.25 * var(--h2));
+  }
+  h3.title {
+    font-size: var(--h2);
+  }
+}
+.about-me ul.about-me {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 1rem 0 0;
+  list-style: none;
+}
+.about-me ul.about-me li {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  padding: 0 2rem 0 0;
+  font-size: calc(1.25 / var(--p));
+  text-transform: uppercase;
+}
+.about-me ul.about-me li svg {
+  display: grid;
+  width: 2rem;
+}
+.about-me ul.about-me li span {
+  padding: 0.25rem 0 0;
+  font-size: var(--h3);
+  line-height: 1;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+article.resume section.job small {
+  padding: 0.25rem 0 0;
+  text-transform: uppercase;
+}
+article.resume section.job p.role {
+  padding: 0.5rem 0 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+article.resume section.job p.role + ul {
+  padding: 1rem 0 0;
+  list-style: none;
+}
+article.resume section.skills ul.skills {
+  padding: 0;
+  list-style: none;
+}
+article.resume section.skills ul.skills li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.75rem 0;
+}
+article.resume section.skills ul.skills li:first-child {
+  padding-top: 0;
+}
+article.resume section.skills ul.skills li span {
+  display: inline-flex;
+  margin: 0 0.25rem 0.25rem 0;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid;
+  border-radius: 2rem;
+  font-size: var(--xsmall);
+}
+article.resume section.skills ul.skills li span:first-child {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 0.125rem;
+  border: none;
+  font-size: var(--p);
+}
+article.resume section.skills ul.skills li div {
+  display: block;
+  width: 100%;
+  height: 0.5rem;
+  margin: 0.5rem 0 0;
+  border-radius: 0.25rem;
+  background: var(--cream);
+}
+article.resume section.skills ul.skills li div > span.animate {
+  width: 0;
+  height: inherit;
+  border-radius: 0.25rem;
+  background: var(--green);
+  transition: width 0.5s ease 0s;
+  transform-origin: left;
+}
+article.resume section.skills ul.skills li.code div > span.animate.visible {
+  width: 85%;
+}
+article.resume section.skills ul.skills li.ux-tools div > span.animate.visible {
+  width: 85%;
+}
+article.resume section.skills ul.skills li.google div > span.animate.visible {
+  width: 60%;
+}
+article.resume section.skills ul.skills li.accessibility div > span {
+  width: 50%;
+}
+article.resume section.skills ul.skills li.adobe div > span.animate.visible {
+  width: 90%;
+}
+article.resume section.contact {
+  text-align: center;
+}
+article.resume section.contact ul {
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+}
+article.resume section.contact ul li {
+  width: auto;
+  padding: 1rem;
+}
+article.resume section.contact ul li a svg {
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+article.resume section.contact ul li a span {
+  display: none;
+}
+
+article.project section h1, article.project section h2, article.project section h3, article.project section h4, article.project section p, article.project section ul, article.project section ol, article.project section dl, article.project section figcaption {
+  max-width: 33.75rem;
+  margin: 0 auto;
+}
+article.project section ul.project-details {
+  padding-left: 0;
+  list-style: none;
+}
+article.project section ul.project-details li span {
+  display: block;
+  width: 100%;
+  font-size: var(--h3);
+  text-transform: uppercase;
+}
+article.project section ul.users, article.project section ul.pageviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2rem 0 0;
+  list-style: none;
+}
+article.project section ul.users li, article.project section ul.pageviews li {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  font-size: var(--xsmall);
+  text-transform: uppercase;
+}
+article.project section ul.users li:first-of-type, article.project section ul.pageviews li:first-of-type {
+  width: 100%;
+  margin: 0;
+  border-right: none;
+  font-size: var(--h4);
+  line-height: 1;
+  text-transform: uppercase;
+}
+article.project section ul.users li span, article.project section ul.pageviews li span {
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--h3);
+  line-height: 1;
+}
+
+@media (min-width: 30rem) {
+  article.project section ul.users li, article.project section ul.pageviews li {
+    width: calc(25% - 1rem);
+    margin: 0.5rem 1rem 0 0;
+    border-right: 1px solid var(--gray);
+  }
+  article.project section ul.users li:last-of-type, article.project section ul.pageviews li:last-of-type {
+    margin: 0.5rem 0 0;
+    border-right: none;
+  }
+}
+@media (min-width: 90rem) {
+  article.project section h1, article.project section h2, article.project section h3, article.project section h4, article.project section p, article.project section ul, article.project section ol, article.project section dl, article.project section figcaption {
+    max-width: 40rem;
+  }
+}
+blockquote {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 33.75rem;
+  margin: 2rem auto 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: var(--gray);
+}
+blockquote:before {
+  display: block;
+  position: absolute;
+  top: -0.75rem;
+  left: calc(50% - 1.5rem);
+  width: 3rem;
+  height: 1.5rem;
+  text-align: center;
+  background-color: white;
+  content: url(../icons/double-quotes-l.svg);
+  transform: scale(1.5);
+}
+blockquote p {
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+@media (min-width: 64rem) {
+  blockquote {
+    margin: 4rem auto 3rem;
+  }
+  blockquote:before {
+    transform: scale(2);
+  }
+}
 figure {
   display: flex;
   flex-direction: column;
@@ -470,6 +732,17 @@ figure a {
 }
 figure img {
   border-radius: 0.25rem;
+}
+
+figcaption {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--small);
+  line-height: 1.25;
 }
 
 .skip {
@@ -513,13 +786,182 @@ figure img {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
   margin: 0;
   padding: 4rem 2rem;
+  background-repeat: no-repeat;
+}
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
+.banner.intro {
+  justify-content: center;
+  background-color: white;
+  background-position: center top;
+  background-size: contain;
+}
+.banner.intro .text {
+  padding-top: 2rem;
+}
+
+.banner.intro.welcome {
+  z-index: 0;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
+  background-image: url(../images/mug-1x.png);
+  background-position: right bottom;
+  background-size: 40vh;
+}
+.banner.intro.welcome .text {
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.banner.intro.delta-design-system {
+  background-image: url(../images/delta-design-01-1x.jpg);
+}
+
+.banner.intro.east-wind {
+  background-image: url(../images/east-wind-01-1x.jpg);
+}
+
+.banner.intro.enservio {
+  background-image: url(../images/enservio-16-1x.jpg);
+  background-size: 120vw;
+}
+
+.banner.intro.mystuff {
+  background-image: url(../images/mystuff-01-1x.jpg);
+}
+
+.banner.intro.panera {
+  background-image: url(../images/panera-20-1x.jpg);
+}
+
+.banner.intro.transferx {
+  background-image: url(../images/transferx-30-1x.jpg);
+}
+
+@media (min-width: 48rem) {
+  .banner.intro .text {
+    padding-top: 12rem;
+  }
+}
+@media (orientation: landscape) {
+  .banner.intro {
+    background-position: left center;
+    background-size: 120vw;
+  }
+  .banner.intro .text {
+    width: 48%;
+    padding: 0;
+  }
+  .banner.intro.welcome {
+    background-size: 70vh;
+  }
+  .banner.intro.welcome .text {
+    padding: 0;
+  }
+  .banner.intro.east-wind {
+    color: white;
+  }
+  .banner.intro.east-wind .overlay {
+    background-color: black;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+  }
+  .banner.intro.east-wind a {
+    color: white;
+  }
+  .banner.intro.mystuff {
+    color: white;
+  }
+  .banner.intro.mystuff a {
+    color: white;
+  }
+  .banner.intro.panera {
+    color: white;
+  }
+  .banner.intro.panera .overlay {
+    background-color: black;
+    opacity: 0.25;
+  }
+  .banner.intro.panera a {
+    color: white;
+  }
+}
+@media (min-width: 64rem) {
+  .banner.intro {
+    background-position: left center;
+    background-size: cover;
+  }
+  .banner.intro .text {
+    width: 48%;
+    padding: 0;
+  }
+  .banner.intro.delta-design-system {
+    background-image: url(../images/delta-design-01-2x.jpg);
+    background-size: 120vw;
+  }
+  .banner.intro.east-wind {
+    background-image: url(../images/east-wind-01-2x.jpg);
+  }
+  .banner.intro.enservio {
+    background-image: url(../images/enservio-16-2x.jpg);
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-2x.jpg);
+  }
+  .banner.intro.panera {
+    background-image: url(../images/panera-20-2x.jpg);
+  }
+  .banner.intro.transferx {
+    background-image: url(../images/transferx-30-2x.jpg);
+  }
+  .banner.intro.transferx .text {
+    width: 45%;
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-1x.jpg);
+  }
+  .banner.intro.welcome {
+    background-image: url(../images/mug-2x.png);
+  }
+}
+@media (resolution: 150dpi) {
+  .banner.intro.delta-design-system {
+    background-image: url(../images/delta-design-01-2x.jpg);
+  }
+  .banner.intro.east-wind {
+    background-image: url(../images/east-wind-01-2x.jpg);
+  }
+  .banner.intro.enservio {
+    background-image: url(../images/enservio-16-2x.jpg);
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-2x.jpg);
+  }
+  .banner.intro.panera {
+    background-image: url(../images/panera-20-2x.jpg);
+  }
+  .banner.intro.transferx {
+    background-image: url(../images/transferx-30-2x.jpg);
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-1x.jpg);
+  }
+  .banner.intro.welcome {
+    background-image: url(../images/mug-2x.png);
+  }
+}
 ul.cta {
   display: flex;
   flex-direction: column;
@@ -544,11 +986,33 @@ ul.cta li a span.icon {
   border-radius: 100%;
 }
 ul.cta li a span.icon svg {
-  width: 80%;
-  height: 80%;
+  transform: scale(0.8);
+  transform-origin: center;
+  transition: all 0.25s 0 0.25s ease 0s;
 }
 ul.cta li a span.label {
   padding: 0 0 0 0.5rem;
+}
+ul.cta li a span.icon svg, ul.cta li a span.label {
+  transition: all 0.25s ease 0s;
+}
+ul.cta li a.down span.icon svg, ul.cta li a.down span.label {
+  transform: translateY(0);
+}
+ul.cta li a.page span.icon svg, ul.cta li a.page span.label {
+  transform: translateX(0);
+}
+ul.cta li a:hover.down span.icon svg, ul.cta li a:focus.down span.icon svg {
+  transform: translateY(1.75rem);
+}
+ul.cta li a:hover.page span.icon svg, ul.cta li a:hover.page span.label, ul.cta li a:focus.page span.icon svg, ul.cta li a:focus.page span.label {
+  transform: translateX(1.75rem);
+}
+ul.cta li a:active.down span.icon svg, ul.cta li a:active.down span.label {
+  transform: translateY(0);
+}
+ul.cta li a:active.page span.icon svg, ul.cta li a:active.page span.label {
+  transform: translateX(0);
 }
 
 @media (min-width: 64rem) {
@@ -557,7 +1021,7 @@ ul.cta li a span.label {
   }
   ul.cta li {
     width: auto;
-    padding: 0 2rem 0 0;
+    padding: 0 4rem 0 0;
   }
   ul.cta li:last-of-type {
     padding: 0;
@@ -567,67 +1031,80 @@ ul.cta li a span.label {
   padding: 2rem;
 }
 
-.about-me ul.about-me {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  padding: 1rem 0 0;
-  list-style: none;
-}
-.about-me ul.about-me li {
-  display: flex;
-  align-items: flex-start;
+.about-me ul.cta {
   flex-direction: column;
-  width: 50%;
-  padding: 0 2rem 0 0;
-  font-size: calc(1.25 / var(--p));
-  text-transform: uppercase;
 }
-.about-me ul.about-me li svg {
-  display: grid;
-  width: 2rem;
-}
-.about-me ul.about-me li span {
-  padding: 0.25rem 0 0;
-  font-size: var(--h3);
-  line-height: 1;
-  font-family: "metropolis-bold", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+.about-me ul.cta li {
+  padding: calc(0.5 * var(--p)) 0 0;
 }
 
-.project {
+.selected-projects .selected-project {
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
   margin: 0;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
-.project figure {
+.selected-projects .selected-project figure {
   padding: 0 0 1rem;
 }
 
 @media (min-width: 48rem) {
-  .project figure {
+  .selected-projects .selected-project figure {
     width: 80%;
   }
 }
 @media (min-width: 64rem) {
-  .project {
+  .about-me ul.about-me {
+    width: 80%;
+  }
+  .selected-projects .selected-project {
     align-items: center;
     flex-direction: row;
     padding: 2rem 0 1rem;
   }
-  .project.reverse {
+  .selected-projects .selected-project.reverse {
     flex-direction: row-reverse;
   }
-  .project .text {
+  .selected-projects .selected-project .text {
     padding: 0 2rem 0 0;
   }
-  .project figure {
+  .selected-projects .selected-project figure {
     width: 60%;
     padding: 0;
+  }
+}
+article.project section {
+  padding: 2rem 2rem 0;
+}
+
+@media (orientation: landscape) {
+  article.project section {
+    padding: 4rem 2rem 0;
+  }
+}
+@media (min-width: 64rem) {
+  article.project section {
+    padding: 4rem 2rem 0;
+  }
+}
+@media (min-width: 90rem) {
+  article.project section {
+    padding: 8rem 2rem 0;
+  }
+}
+article.resume section {
+  max-width: 33.75rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+article.resume section.job {
+  padding: 1rem 0;
+}
+
+@media (min-width: 90rem) {
+  article.resume section {
+    max-width: 40rem;
   }
 }
 nav {
@@ -974,4 +1451,37 @@ html.dark blockquote:before {
 
 html.dark .gallery {
   background-color: transparent;
+}
+
+html.dark .banner.intro {
+  background-color: var(--green-dark);
+}
+html.dark .banner.intro.welcome {
+  background-blend-mode: soft-light;
+}
+@media (orientation: landscape) {
+  html.dark .banner.intro.delta-design-system,
+  html.dark .banner.intro.enservio,
+  html.dark .banner.intro.transferx {
+    color: black;
+  }
+  html.dark .banner.intro.delta-design-system a,
+  html.dark .banner.intro.enservio a,
+  html.dark .banner.intro.transferx a {
+    color: var(--green);
+  }
+  html.dark .banner.intro.delta-design-system a:hover, html.dark .banner.intro.delta-design-system a:focus,
+  html.dark .banner.intro.enservio a:hover,
+  html.dark .banner.intro.enservio a:focus,
+  html.dark .banner.intro.transferx a:hover,
+  html.dark .banner.intro.transferx a:focus {
+    color: var(--orange);
+  }
+}
+
+html.dark article.resume section.skills ul li div {
+  background: var(--gray-dark);
+}
+html.dark article.resume section.skills ul li div > span.animate {
+  background: var(--cream);
 }

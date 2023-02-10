@@ -42,11 +42,188 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
   margin: 0;
   padding: 4rem 2rem;
+  background-repeat: no-repeat;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+// INTRO BANNERS
+.banner.intro {
+  justify-content: center;
+  background-color: white;
+  background-position: center top;
+  background-size: contain;
+  .text {
+    padding-top: 2rem;
+  }
+}
+
+.banner.intro.welcome {
+  z-index: 0;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
+  background-image: url(../images/mug-1x.png);
+  background-position: right bottom;
+  background-size: 40vh;
+  .text {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+.banner.intro.delta-design-system {
+  background-image: url(../images/delta-design-01-1x.jpg);
+}
+
+.banner.intro.east-wind {
+  background-image: url(../images/east-wind-01-1x.jpg);
+}
+
+.banner.intro.enservio {
+  background-image: url(../images/enservio-16-1x.jpg);
+  background-size: 120vw;
+}
+
+.banner.intro.mystuff {
+  background-image: url(../images/mystuff-01-1x.jpg);
+}
+
+.banner.intro.panera {
+  background-image: url(../images/panera-20-1x.jpg);
+}
+
+.banner.intro.transferx {
+  background-image: url(../images/transferx-30-1x.jpg);
+}
+
+@media (min-width: 48rem) {
+  .banner.intro {
+    .text {
+      padding-top: 12rem;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .banner.intro {
+    background-position: left center;
+    background-size: 120vw;
+    .text {
+      width: 48%;
+      padding: 0;
+    }
+  }
+  .banner.intro.welcome {
+    background-size: 70vh;
+    .text {
+      padding: 0;
+    }
+  }
+  .banner.intro.east-wind {
+    color: white;
+    .overlay {
+      background-color: black;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+    }
+    a {
+      color: white;
+    }
+  }
+  .banner.intro.mystuff {
+    color: white;
+    a {
+      color: white;
+    }
+  }  
+  .banner.intro.panera {
+    color: white;
+    .overlay {
+      background-color: black;
+      opacity: 0.25;
+    }
+    a {
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .banner.intro {
+    background-position: left center;
+    background-size: cover;
+    .text {
+      width: 48%;
+      padding: 0;
+    }
+  }
+  .banner.intro.delta-design-system {
+    background-image: url(../images/delta-design-01-2x.jpg);
+    background-size: 120vw;
+  }
+  .banner.intro.east-wind {
+    background-image: url(../images/east-wind-01-2x.jpg);
+  }  
+  .banner.intro.enservio {
+    background-image: url(../images/enservio-16-2x.jpg);
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-2x.jpg);
+  }
+  .banner.intro.panera {
+    background-image: url(../images/panera-20-2x.jpg);
+  }
+  .banner.intro.transferx {
+    background-image: url(../images/transferx-30-2x.jpg);
+    .text {
+      width: 45%;
+    }
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-1x.jpg);
+  }
+  .banner.intro.welcome {
+    background-image: url(../images/mug-2x.png);
+  }
+}
+
+@media (resolution: 150dpi) {
+  .banner.intro.delta-design-system {
+    background-image: url(../images/delta-design-01-2x.jpg);
+  }
+  .banner.intro.east-wind {
+    background-image: url(../images/east-wind-01-2x.jpg);
+  }  
+  .banner.intro.enservio {
+    background-image: url(../images/enservio-16-2x.jpg);
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-2x.jpg);
+  }
+  .banner.intro.panera {
+    background-image: url(../images/panera-20-2x.jpg);
+  }
+  .banner.intro.transferx {
+    background-image: url(../images/transferx-30-2x.jpg);
+  }
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-1x.jpg);
+  }
+  .banner.intro.welcome {
+    background-image: url(../images/mug-2x.png);
+  }
 }
 
 
@@ -72,13 +249,51 @@ ul.cta {
       border: 1px solid;
       border-radius: 100%;
       svg {
-        width: 80%;
-        height: 80%;
+        @include transform(scale(0.8));
+        @include transform-origin(center);
+        @include transition(all 0.25s 0);
       }
     }
     span.label {
       padding: 0 0 0 0.5rem;
     }
+    span.icon svg, span.label {
+      @include transition(all, 0.25s, ease);
+    }
+    &.down {
+      span.icon svg, span.label {
+        @include transform(translateY(0));
+      }
+    }
+    &.page {
+      span.icon svg, span.label {
+        @include transform(translateX(0));
+      }
+    }
+    &:hover, &:focus {
+      &.down {
+        span.icon svg {
+          @include transform(translateY(1.75rem));
+        }
+      }
+      &.page {
+        span.icon svg, span.label {
+          @include transform(translateX(1.75rem));
+        }
+      }
+    }
+    &:active {
+      &.down {
+        span.icon svg, span.label {
+          @include transform(translateY(0));
+        }
+      }
+      &.page {
+        span.icon svg, span.label {
+          @include transform(translateX(0));
+        }
+      }
+    }  
   }
 }
 
@@ -87,7 +302,7 @@ ul.cta {
     flex-direction: row;
     li {
       width: auto;
-      padding: 0 2rem 0 0;
+      padding: 0 4rem 0 0;
       &:last-of-type {
         padding: 0;
       }
@@ -102,71 +317,111 @@ ul.cta {
 }
 
 .about-me {
-  ul.about-me {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    padding: 1rem 0 0;
-    list-style: none;
+  ul.cta {
+    flex-direction: column;
     li {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      width: 50%;
-      padding: 0 2rem 0 0;
-      font-size: calc(1.25 / #{$p});
-      text-transform: uppercase;
-      svg {
-        display: grid;
-        width: 2rem;
-      }
-      span {
-        padding: 0.25rem 0 0;
-        font-size: $h3;
-        line-height: 1;
-        @include sans-bold;
-      }
+      padding: calc(0.5 * #{$p}) 0 0;
     }
   }
 }
 
-.project {
-  display: flex;
-  flex-direction: column-reverse;
-  width: 100%;
-  margin: 0;
-  padding: 1rem 0;
-  figure {
-    padding: 0 0 1rem;
+.selected-projects {
+  .selected-project {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 0;
+    figure {
+      padding: 0 0 1rem;
+    }
   }
 }
 
 @media (min-width: 48rem) {
-  .project {
-    figure {
-      width: 80%;
-    }  
+  .selected-projects {
+    .selected-project {
+      figure {
+        width: 80%;
+      }  
+    }
   }
 }
 
 @media (min-width: 64rem) {
-  .project {
-    align-items: center;
-    flex-direction: row;
-    padding: 2rem 0 1rem;
-    &.reverse {
-      flex-direction: row-reverse;
+  .about-me {
+    ul.about-me {
+      width: 80%;
     }
-    h3 {
-      // font-size: $h2;
+  }
+  .selected-projects {
+    .selected-project {
+      align-items: center;
+      flex-direction: row;
+      padding: 2rem 0 1rem;
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+      .text {
+        padding: 0 2rem 0 0;
+      }
+      figure {
+        width: 60%;
+        padding: 0;
+      }
     }
-    .text {
-      padding: 0 2rem 0 0;
+  }
+}
+
+
+// PROJECT PAGE ARTICLES
+article.project {
+  section {
+    padding: 2rem 2rem 0;
+  }
+}
+
+@media (orientation: landscape) {
+  article.project {
+    section {
+      padding: 4rem 2rem 0;
     }
-    figure {
-      width: 60%;
-      padding: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  article.project {
+    section {
+      padding: 4rem 2rem 0;
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  article.project {
+    section {
+      padding: 8rem 2rem 0;
+    }
+  }
+}
+
+
+// RESUME
+article.resume {
+  section {
+    max-width: 33.75rem;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  section.job {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 90rem) {
+  article.resume {
+    section {
+      max-width: 40rem;
     }
   }
 }
