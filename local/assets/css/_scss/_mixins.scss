@@ -5,7 +5,9 @@
   -ms-transition: $property $easing $timing $delay;
   -o-transition: $property $easing $timing $delay;
   transition: $property $easing $timing $delay;
-};
+}
+
+;
 
 @mixin transform($transform: all) {
   -webkit-transform: $transform;
@@ -13,7 +15,9 @@
   -ms-transform: $transform;
   -o-transform: $transform;
   transform: $transform;
-};
+}
+
+;
 
 @mixin transform-origin($transform-origin: all) {
   -webkit-transform-origin: $transform-origin;
@@ -21,10 +25,14 @@
   -ms-transform-origin: $transform-origin;
   -o-transform-origin: $transform-origin;
   transform-origin: $transform-origin;
-};
+}
+
+;
 
 @mixin appearance($appearance: none) {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-};
+}
+
+;

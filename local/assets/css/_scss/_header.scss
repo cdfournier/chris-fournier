@@ -13,6 +13,7 @@ header {
   padding: 0;
   background: white;
   @include transition(max-height, 0.25s, ease);
+
   nav {
     flex-direction: row;
     align-content: flex-start;
@@ -24,6 +25,7 @@ header {
     max-height: 4rem;
     padding: 1rem;
     @include transition(max-height, 0.25s, ease);
+
     button.menu-toggle {
       display: flex;
       justify-content: flex-end;
@@ -38,23 +40,30 @@ header {
       background-color: transparent;
       cursor: pointer;
       @include transition(color, 0.25s, ease);
+
       svg {
         position: absolute;
         width: 2rem;
         height: 2rem;
       }
+
       svg.menu-toggle-open {
         @include transition(width, 0.25s, ease);
       }
+
       svg.menu-toggle-close {
         width: 0;
         @include transition(width, 0.25s, ease);
       }
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         color: $orange;
       }
     }
-    ul, form {
+
+    ul,
+    form {
       width: 0;
       max-width: 100vw;
       padding: 2rem 0 0;
@@ -71,8 +80,10 @@ header {
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: flex-start;
+
       ul {
         padding: 2rem 0 0;
+
         li {
           // font-size: 2.25vh;
         }
@@ -86,27 +97,34 @@ header {
 header.open {
   z-index: 1000;
   max-height: 100vh;
+
   nav {
     height: 100vh;
     max-height: 100vh;
+
     button.menu-toggle {
       svg.menu-toggle-open {
         left: -2rem;
         width: 0;
       }
+
       svg.menu-toggle-close {
         z-index: 5000;
         width: 2rem;
       }
     }
-    ul, form {
+
+    ul,
+    form {
       width: calc(100% / 3);
       padding: 3rem 0 0;
       @include transform(translateX(0));
     }
+
     form {
       align-items: flex-start;
       padding: 1rem 0 0;
+
       fieldset {
         width: auto;
       }
@@ -117,10 +135,13 @@ header.open {
 @media (min-height: 40rem) {
   header.open {
     nav {
-      ul, form {
+
+      ul,
+      form {
         width: 80%;
         padding: 2rem 0 0;
       }
+
       form {
         padding: 1rem 0 0;
       }
@@ -131,7 +152,9 @@ header.open {
 @media (min-width: 48rem) {
   header.open {
     nav {
-      ul, form {
+
+      ul,
+      form {
         width: 40vw;
       }
     }

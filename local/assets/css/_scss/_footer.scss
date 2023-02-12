@@ -6,6 +6,7 @@ footer {
   width: 100%;
   margin: 0;
   padding: 2rem;
+
   nav {
     ul {
       &:last-of-type {
@@ -13,6 +14,7 @@ footer {
       }
     }
   }
+
   .branding {
     display: flex;
     flex-direction: column;
@@ -21,16 +23,19 @@ footer {
     width: 100%;
     margin: 0;
     padding: 2rem 0 0.5rem;
+
     svg {
       display: grid;
       width: 100%;
       max-width: 8rem;
     }
   }
+
   .copyright {
     width: 100%;
     padding: $p 0 0;
     text-align: center;
+
     small {
       max-width: none;
       font-size: $xsmall;
@@ -41,23 +46,28 @@ footer {
 @media (min-width: 48rem) {
   footer {
     align-items: flex-end;
+
     nav {
       width: 80%;
+
       ul {
         &:last-of-type {
           display: flex;
         }
       }
     }
+
     .branding {
       align-items: flex-end;
       width: 20%;
       padding: 0;
+
       form {
         align-items: flex-end;
         max-width: 8rem;
       }
     }
+
     .copyright {
       text-align: right;
     }

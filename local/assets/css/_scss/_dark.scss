@@ -5,11 +5,13 @@ form {
   width: 100%;
   margin: 0;
   padding: 1rem 0 0;
+
   fieldset {
     width: 100%;
     margin: 0;
     padding: 0;
     border: none;
+
     label {
       display: flex;
       align-items: center;
@@ -18,10 +20,12 @@ form {
       width: 100%;
       margin: 0;
       color: $green;
+
       span {
         width: 1.25rem;
         height: 1.25rem;
       }
+
       input[type="checkbox"] {
         position: relative;
         top: 0;
@@ -34,6 +38,7 @@ form {
         border: 1px solid $green;
         border-radius: 2rem;
         @include appearance(none);
+
         &:after {
           display: block;
           position: absolute;
@@ -46,6 +51,7 @@ form {
           content: "";
           @include transition(all, 0.25s, ease);
         }
+
         &:checked:after {
           margin-left: 1rem;
         }
@@ -58,12 +64,16 @@ form {
 // DARK MODE
 html.dark {
   color: white;
+
   body {
     background: $green-dark;
   }
+
   a {
     color: white;
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       color: $orange;
     }
   }
@@ -74,16 +84,19 @@ html.dark {
 html.dark {
   header {
     background: $green-dark;
+
     nav {
       button.menu-toggle {
         color: white;
       }
     }
   }
+
   nav {
     ul {
       li {
         color: $gray-mid;
+
         &:first-child {
           color: white;
         }
@@ -99,8 +112,10 @@ html.dark {
     fieldset {
       label {
         color: white;
+
         input[type="checkbox"] {
           border-color: white;
+
           &:after {
             background: white;
           }
@@ -129,7 +144,8 @@ html.dark {
         div {
           background: $green-dark;
           background: $gray-dark;
-          & > span {
+
+          &>span {
             background: $cream;
             background: white;
           }
@@ -144,6 +160,7 @@ html.dark {
 html.dark {
   blockquote {
     border-color: white;
+
     &:before {
       background-color: $green-dark;
     }
@@ -156,11 +173,21 @@ html.dark {
   .gallery {
     background: transparent;
   }
-  article.project.delta-design-system {
+
+  article.project.delta-design-system,
+  article.project.enservio,
+  article.project.mystuff,
+  article.project.panera,
+  article.project.transferx {
     .gallery {
       background: transparent;
     }
-  }  
+  }
+
+  article.project.east-wind figure.logo svg,
+  article.project.transferx figure.marks .icon svg path {
+    fill: white;
+  }
 }
 
 
@@ -169,17 +196,23 @@ html.dark {
   .banner.intro {
     background-color: $green-dark;
   }
+
   .banner.intro.welcome {
     background-blend-mode: soft-light;
   }
+
   @media (orientation: landscape) {
+
     .banner.intro.delta-design-system,
     .banner.intro.enservio,
     .banner.intro.transferx {
       color: black;
+
       a {
         color: $green;
-        &:hover, &:focus {
+
+        &:hover,
+        &:focus {
           color: $orange;
         }
       }
@@ -193,7 +226,8 @@ html.dark {
   article.resume {
     section.skills ul li div {
       background: $gray-dark;
-      & > span.animate {
+
+      &>span.animate {
         background: $cream;
       }
     }

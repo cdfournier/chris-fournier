@@ -1,12 +1,20 @@
 // TYPOGRAPHY
-h1, h2, h3, h4, p, small {
+h1,
+h2,
+h3,
+h4,
+p,
+small {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-transform: uppercase;
   @include sans-regular;
   line-height: 1;
@@ -14,44 +22,46 @@ h1, h2, h3, h4 {
 
 h1 {
   padding: $h1 0 0;
-	font-size: $h1;
+  font-size: $h1;
 }
 
 h2 {
   padding: $h2 0 0;
-	font-size: $h2;
+  font-size: $h2;
 }
 
 h3 {
   padding: $h3 0 0;
-	font-size: $h3;
+  font-size: $h3;
 }
 
 h4 {
   padding: $h4 0 0;
-	font-size: $h4;
+  font-size: $h4;
 }
 
 p {
   max-width: 36rem;
   padding: $p 0 0;
-	font-size: $p;
+  font-size: $p;
   line-height: 1.5;
 }
 
-p > cite {
+p>cite {
   display: block;
   font-size: $small;
 }
 
-p > cite a {
+p>cite a {
   display: inline;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-strong, em, b {
+strong,
+em,
+b {
   display: inline;
   @include sans-bold;
   color: inherit;
@@ -60,8 +70,8 @@ strong, em, b {
 small {
   max-width: 28rem;
   padding: $small 0 0;
-	font-size: $small;
-	line-height: 1.5;
+  font-size: $small;
+  line-height: 1.5;
 }
 
 .visuallyhidden {
@@ -70,25 +80,42 @@ small {
 
 
 // TEXT ALIGNMENT
-h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.center {
+h1.center,
+h2.center,
+h3.center,
+p.center,
+strong.center,
+em.center,
+small.center {
   margin: 0 auto;
   text-align: center;
 }
 
-h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {
+h1.right,
+h2.right,
+h3.right,
+p.right,
+strong.right,
+em.right,
+small.right {
   text-align: right;
 }
 
 
 // LISTS
-ul, ol, dl {
+ul,
+ol,
+dl {
   display: flex;
   flex-direction: column;
   position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
-  li, dt, dd {
+
+  li,
+  dt,
+  dd {
     display: list-item;
     width: 100%;
     max-width: 36rem;
@@ -96,6 +123,7 @@ ul, ol, dl {
     padding: calc(0.5 * #{$p}) 0 0;
     font-size: $p;
     line-height: 1.5;
+
     &:first-child {
       padding: 0;
     }
@@ -105,6 +133,7 @@ ul, ol, dl {
 ul {
   padding: $p 0 0 calc(1.5 * #{$p});
   list-style: disc;
+
   &.no-bullets {
     padding-left: 0;
     list-style: none;
@@ -115,12 +144,15 @@ ol {
   padding: $p 0 0;
   list-style: none;
   counter-reset: count;
+
   &:first-child {
     padding: 0;
   }
+
   li {
     display: flex;
     align-items: center;
+
     span {
       display: flex;
       align-items: stretch;
@@ -130,6 +162,7 @@ ol {
       min-width: 3.5rem;
       margin: 0;
     }
+
     span::before {
       display: flex;
       align-items: center;
@@ -146,12 +179,15 @@ ol {
 
 dl {
   padding: $p 0 0;
+
   dt {
     padding: 0;
     @include sans-bold;
   }
+
   dd {
     padding: 0 0 calc(1.5 * #{$p});
+
     &:last-of-type {
       padding: 0;
     }
@@ -160,29 +196,51 @@ dl {
 
 
 // FIRST CHILD SPACING
-h1:first-child, h2:first-child, h3:first-child,
-h4:first-child, p:first-child, small:first-child,
-ul:first-child, ol:first-child, dl:first-child {
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+p:first-child,
+small:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child {
   padding: 0;
 }
 
 
 // H > P SPACING
-h1 + p, h2 + p, h3 + p, h4 + p,
-h1 + ul, h2 + ul, h3 + ul, h4 + ul,
-h1 + ol, h2 + ol, h3 + ol, h4 + ol,
-h1 + dl, h2 + dl, h3 + dl, h4 + dl {
+h1+p,
+h2+p,
+h3+p,
+h4+p,
+h1+ul,
+h2+ul,
+h3+ul,
+h4+ul,
+h1+ol,
+h2+ol,
+h3+ol,
+h4+ol,
+h1+dl,
+h2+dl,
+h3+dl,
+h4+dl {
   padding-top: calc(0.5 * #{$p});
 }
 
 
 // H SPANS
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   span {
     display: block;
     line-height: 1.75;
     text-transform: uppercase;
   }
+
   &:first-child {
     padding: 0;
   }
@@ -222,19 +280,23 @@ h2.title {
   h1.title {
     max-width: calc(1.5 * 36rem);
     font-size: calc(1.5 * #{$h1});
-    & + p {
+
+    &+p {
       max-width: calc(1.5 * 36rem);
       font-size: calc(1.5 * #{$p});
     }
   }
+
   h2.title {
     max-width: calc(1.25 * 36rem);
     font-size: calc(1.5 * #{$h2});
-    & + p {
+
+    &+p {
       max-width: calc(1.25 * 36rem);
       font-size: calc(1.25 * #{$p});
     }
   }
+
   h3.title {
     max-width: calc(1.25 * 36rem);
     font-size: $h2;
@@ -245,9 +307,11 @@ h2.title {
   h1.title {
     font-size: calc(2 * #{$h1});
   }
+
   h2.title {
     font-size: calc(1.75 * #{$h2});
   }
+
   h3.title {
     font-size: $h1;
   }
@@ -257,9 +321,11 @@ h2.title {
   h1.title {
     font-size: calc(2.5 * #{$h1});
   }
+
   h2.title {
     font-size: calc(2.25 * #{$h2});
   }
+
   h3.title {
     font-size: $h2;
   }
@@ -275,6 +341,7 @@ h2.title {
     width: 100%;
     padding: 1rem 0 0;
     list-style: none;
+
     li {
       display: flex;
       align-items: flex-start;
@@ -283,10 +350,12 @@ h2.title {
       padding: 0 2rem 0 0;
       font-size: calc(1.25 / #{$p});
       text-transform: uppercase;
+
       svg {
         display: grid;
         width: 2rem;
       }
+
       span {
         padding: 0.25rem 0 0;
         font-size: $h3;
@@ -305,27 +374,33 @@ article.resume {
       padding: 0.25rem 0 0;
       text-transform: uppercase;
     }
+
     p.role {
       padding: 0.5rem 0 0;
       @include sans-bold;
-      + ul {
+
+      +ul {
         padding: 1rem 0 0;
         list-style: none;
-      }  
+      }
     }
   }
+
   section.skills {
     ul.skills {
       padding: 0;
       list-style: none;
+
       li {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0.75rem 0;
+
         &:first-child {
           padding-top: 0;
         }
+
         span {
           display: inline-flex;
           margin: 0 0.25rem 0.25rem 0;
@@ -333,6 +408,7 @@ article.resume {
           border: 1px solid;
           border-radius: 2rem;
           font-size: $xsmall;
+
           &:first-child {
             display: block;
             width: 100%;
@@ -342,6 +418,7 @@ article.resume {
             font-size: $p;
           }
         }
+
         div {
           display: block;
           width: 100%;
@@ -349,7 +426,8 @@ article.resume {
           margin: 0.5rem 0 0;
           border-radius: 0.25rem;
           background: $cream;
-          > span.animate {
+
+          >span.animate {
             width: 0;
             height: inherit;
             border-radius: 0.25rem;
@@ -358,37 +436,42 @@ article.resume {
             @include transform-origin(left);
           }
         }
+
         &.code {
           div {
-            > span.animate.visible {
+            >span.animate.visible {
               width: 85%;
             }
           }
         }
+
         &.ux-tools {
           div {
-            > span.animate.visible {
+            >span.animate.visible {
               width: 85%;
             }
           }
         }
+
         &.google {
           div {
-            > span.animate.visible {
+            >span.animate.visible {
               width: 60%;
             }
           }
         }
+
         &.accessibility {
           div {
-            > span {
+            >span {
               width: 50%;
             }
           }
         }
+
         &.adobe {
           div {
-            > span.animate.visible {
+            >span.animate.visible {
               width: 90%;
             }
           }
@@ -396,22 +479,27 @@ article.resume {
       }
     }
   }
+
   section.contact {
     text-align: center;
+
     ul {
       flex-direction: row;
       justify-content: center;
       padding-left: 0;
       list-style: none;
+
       li {
         width: auto;
         padding: 1rem;
+
         a {
           svg {
             display: grid;
             width: 1.75rem;
             height: 1.75rem;
           }
+
           span {
             display: none;
           }
@@ -425,13 +513,24 @@ article.resume {
 // ARTICLE TYPOGRAPHY
 article.project {
   section {
-    h1, h2, h3, h4, p, ul, ol, dl, figcaption {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    ul,
+    ol,
+    dl,
+    figcaption {
       max-width: 33.75rem;
       margin: 0 auto;
     }
+
     ul.project-details {
       padding-left: 0;
       list-style: none;
+
       li span {
         display: block;
         width: 100%;
@@ -439,13 +538,16 @@ article.project {
         text-transform: uppercase;
       }
     }
-    ul.users, ul.pageviews {
+
+    ul.users,
+    ul.pageviews {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
       padding: 2rem 0 0;
       list-style: none;
+
       li {
         display: flex;
         flex-direction: column;
@@ -455,6 +557,7 @@ article.project {
         padding: 0;
         font-size: $xsmall;
         text-transform: uppercase;
+
         &:first-of-type {
           width: 100%;
           margin: 0;
@@ -463,6 +566,7 @@ article.project {
           line-height: 1;
           text-transform: uppercase;
         }
+
         span {
           @include sans-bold;
           font-size: $h3;
@@ -476,11 +580,14 @@ article.project {
 @media (min-width: 30rem) {
   article.project {
     section {
-      ul.users, ul.pageviews {
+
+      ul.users,
+      ul.pageviews {
         li {
           width: calc((100% / 4) - 1rem);
           margin: 0.5rem 1rem 0 0;
           border-right: 1px solid $gray;
+
           &:last-of-type {
             margin: 0.5rem 0 0;
             border-right: none;
@@ -491,14 +598,21 @@ article.project {
   }
 }
 
-@media (orientation: landscape) {
-
-}
+@media (orientation: landscape) {}
 
 @media (min-width: 90rem) {
   article.project {
     section {
-      h1, h2, h3, h4, p, ul, ol, dl, figcaption {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul,
+      ol,
+      dl,
+      figcaption {
         max-width: 40rem;
       }
     }

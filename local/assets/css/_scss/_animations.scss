@@ -2,27 +2,37 @@
 @mixin animation-delay($delay: 1s) {
   -webkit-animation-delay: $delay;
   animation-delay: $delay;
-};
+}
+
+;
 
 @mixin animation-duration($duration: 0.25s) {
   -webkit-animation-duration: $duration;
   animation-duration: $duration;
-};
+}
+
+;
 
 @mixin animation-fill-mode($animation-fill-mode: both) {
   -webkit-animation-fill-mode: $animation-fill-mode;
   animation-fill-mode: $animation-fill-mode;
-};
+}
+
+;
 
 @mixin animation-iteration-count($iteration) {
   -webkit-animation-iteration-count: $iteration;
   animation-iteration-count: $iteration;
-};
+}
+
+;
 
 @mixin animation-name($name: name) {
   -webkit-animation-name: $name;
   animation-name: $name;
-};
+}
+
+;
 
 
 // SCROLL SPIN
@@ -35,10 +45,11 @@
 
 @keyframes spin {
   from {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
-    transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -54,6 +65,7 @@ html.touch {
   opacity: 0;
   // @include transform(translateY(1rem));
   @include transition(all, 0.5s, ease-in);
+
   &.visible {
     opacity: 1;
     // @include transform(translateY(0));

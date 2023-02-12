@@ -4,6 +4,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+
   ul {
     display: flex;
     flex-direction: column;
@@ -11,9 +12,11 @@ nav {
     max-width: 16rem;
     padding: 0;
     list-style: none;
+
     li {
       line-height: 1.25;
       color: $orange;
+
       &:first-child {
         padding: 0;
         @include sans-bold;
@@ -21,14 +24,15 @@ nav {
         text-transform: uppercase;
         color: $green;
       }
+
       a {
         @include sans-regular;
       }
+
       svg {
         display: inline-grid;
-        display: none;
-        @include transform(scale(0.625));
-        @include transform-origin(left bottom);
+        width: $p;
+        height: $p;
       }
     }
   }
