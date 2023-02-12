@@ -154,31 +154,14 @@
   font-style: normal;
   font-weight: normal;
 }
-.spin {
-  animation-name: spin;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  transform-origin: center;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-html.touch .spin {
-  animation-iteration-count: 1;
-}
-
 .animate {
   opacity: 0;
-  transition: all 0.5s ease-in 0s;
+  transform: translateY(1rem);
+  transition: all 0.5s ease 0s;
 }
 .animate.visible {
   opacity: 1;
+  transform: translateY(0);
 }
 
 html {
@@ -982,7 +965,7 @@ article.project.transferx figure.colors dl.colors {
 article.project.transferx figure.colors dl.colors dt {
   display: flex;
   flex-direction: column;
-  font-size: inherit;
+  font-size: var(--small);
   line-height: 1.5;
 }
 article.project.transferx figure.colors dl.colors dt span {
@@ -997,33 +980,32 @@ article.project.transferx figure.colors dl.colors dd {
   display: flex;
   align-items: center;
   padding: 0;
-  font-size: inherit;
+  font-size: var(--xsmall);
 }
 article.project.transferx figure.colors dl.colors dd span {
   display: inline-block;
-  width: 15%;
   margin: 0 0.125rem 0 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 article.project.transferx figure.colors dl.colors dd:nth-of-type(1) span {
-  width: 17.5%;
+  width: 19.375%;
 }
 article.project.transferx figure.colors dl.colors dd:nth-of-type(1) span:first-child {
-  width: 30%;
+  width: 22.5%;
 }
 article.project.transferx figure.colors dl.colors dd:nth-of-type(2) span {
-  width: 23.3333333333%;
+  width: 25.8333333333%;
 }
 article.project.transferx figure.colors dl.colors dd:nth-of-type(2) span:first-child {
-  width: 30%;
+  width: 22.5%;
 }
 article.project.transferx figure.colors dl.colors dd:nth-of-type(3) span {
-  width: 70%;
+  width: 77.5%;
 }
 article.project.transferx figure.colors dl.colors dd:nth-of-type(3) span:first-child {
-  width: 30%;
+  width: 22.5%;
 }
 @media (min-width: 48rem) {
   article.project.transferx figure.colors dl.colors {
