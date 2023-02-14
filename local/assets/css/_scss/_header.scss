@@ -70,6 +70,16 @@ header {
       @include transform(translateX(100vw));
       @include transition(all, 0.25s, ease);
     }
+
+    ul {
+      li {
+        font-size: $h4;
+        svg {
+          width: $h4;
+          height: $h4;
+        }
+      }
+    }
   }
 }
 
@@ -83,10 +93,6 @@ header {
 
       ul {
         padding: 2rem 0 0;
-
-        li {
-          // font-size: 2.25vh;
-        }
       }
     }
   }

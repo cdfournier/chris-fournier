@@ -120,7 +120,7 @@ dl {
     width: 100%;
     max-width: 36rem;
     margin: 0;
-    padding: calc(0.5 * #{$p}) 0 0;
+    padding: $p 0 0;
     font-size: $p;
     line-height: 1.5;
 
@@ -339,7 +339,7 @@ h2.title {
     align-items: center;
     flex-direction: row;
     width: 100%;
-    padding: 1rem 0 0;
+    padding: $p 0 0;
     list-style: none;
 
     li {
@@ -363,6 +363,12 @@ h2.title {
         @include sans-bold;
       }
     }
+
+    @media (min-width: 48rem) {
+      li {
+        width: 25%;
+      }
+    }
   }
 }
 
@@ -371,16 +377,16 @@ h2.title {
 article.resume {
   section.job {
     small {
-      padding: 0.25rem 0 0;
+      padding: calc(0.25 * $p) 0 0;
       text-transform: uppercase;
     }
 
     p.role {
-      padding: 0.5rem 0 0;
+      padding: calc(0.5 * $p) 0 0;
       @include sans-bold;
 
       +ul {
-        padding: 1rem 0 0;
+        padding: $p 0 0;
         list-style: none;
       }
     }
@@ -395,7 +401,7 @@ article.resume {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 0.75rem 0;
+        padding: calc(0.75 * $p) 0;
 
         &:first-child {
           padding-top: 0;
@@ -491,7 +497,7 @@ article.resume {
 
       li {
         width: auto;
-        padding: 1rem;
+        padding: $p;
 
         a {
           svg {

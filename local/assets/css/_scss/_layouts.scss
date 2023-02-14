@@ -373,12 +373,13 @@ ul.cta {
 
 
 // HOME PAGE
-.about-me,
-.selected-projects {
+section.about-me,
+section.selected-projects {
   padding: 2rem;
 }
 
-.about-me {
+section.about-me {
+  min-height: 150vh;
   ul.cta {
     flex-direction: column;
 
@@ -389,7 +390,7 @@ ul.cta {
   }
 }
 
-.selected-projects {
+section.selected-projects {
   .selected-project {
     display: flex;
     flex-direction: column-reverse;
@@ -404,7 +405,7 @@ ul.cta {
 }
 
 @media (min-width: 48rem) {
-  .selected-projects {
+  section.selected-projects {
     .selected-project {
       figure {
         width: 80%;
@@ -414,13 +415,13 @@ ul.cta {
 }
 
 @media (min-width: 64rem) {
-  .about-me {
+  section.about-me {
     ul.about-me {
       width: 80%;
     }
   }
 
-  .selected-projects {
+  section.selected-projects {
     .selected-project {
       align-items: center;
       flex-direction: row;
