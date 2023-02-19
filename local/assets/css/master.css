@@ -1161,7 +1161,6 @@ article.project.transferx figure.marks .icon {
 
 .banner.intro.enservio {
   background-image: url(../images/enservio-16-1x.jpg);
-  background-size: 120vw;
 }
 
 .banner.intro.mystuff {
@@ -1242,6 +1241,7 @@ article.project.transferx figure.marks .icon {
   }
   .banner.intro.enservio {
     background-image: url(../images/enservio-16-2x.jpg);
+    background-size: 120vw;
   }
   .banner.intro.mystuff {
     background-image: url(../images/mystuff-01-2x.jpg);
@@ -1288,6 +1288,11 @@ article.project.transferx figure.marks .icon {
     background-image: url(../images/mug-2x.png);
   }
 }
+@supports (-webkit-touch-callout: none) {
+  .banner.intro.welcome {
+    background-attachment: scroll;
+  }
+}
 ul.cta {
   display: flex;
   flex-direction: column;
@@ -1314,9 +1319,8 @@ ul.cta li a span.icon {
 ul.cta li a span.icon svg {
   width: 100%;
   height: 100%;
-  transform: scale(0.8);
   transform-origin: center;
-  transition: all 0.25s 0 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
 }
 ul.cta li a span.label {
   padding: 0 0 0 0.5rem;
@@ -1325,27 +1329,36 @@ ul.cta li a span.icon svg,
 ul.cta li a span.label {
   transition: all 0.25s ease 0s;
 }
-ul.cta li a.down span.icon svg,
+ul.cta li a.down span.icon svg {
+  transform: translateY(0) scale(0.75);
+}
 ul.cta li a.down span.label {
   transform: translateY(0);
 }
-ul.cta li a.page span.icon svg,
+ul.cta li a.page span.icon svg {
+  transform: translateY(0) scale(0.75);
+}
 ul.cta li a.page span.label {
   transform: translateX(0);
 }
 ul.cta li a:hover.down span.icon svg, ul.cta li a:focus.down span.icon svg {
-  transform: translateY(1.75rem);
+  transform: translateY(1.75rem) scale(1);
 }
-ul.cta li a:hover.page span.icon svg,
-ul.cta li a:hover.page span.label, ul.cta li a:focus.page span.icon svg,
-ul.cta li a:focus.page span.label {
+ul.cta li a:hover.page span.icon svg, ul.cta li a:focus.page span.icon svg {
+  transform: translateX(1.75rem) scale(1);
+}
+ul.cta li a:hover.page span.label, ul.cta li a:focus.page span.label {
   transform: translateX(1.75rem);
 }
-ul.cta li a:active.down span.icon svg,
+ul.cta li a:active.down span.icon svg {
+  transform: translateY(0) scale(0.75);
+}
 ul.cta li a:active.down span.label {
   transform: translateY(0);
 }
-ul.cta li a:active.page span.icon svg,
+ul.cta li a:active.page span.icon svg {
+  transform: translateX(0) scale(0.75);
+}
 ul.cta li a:active.page span.label {
   transform: translateX(0);
 }
@@ -1462,6 +1475,7 @@ nav ul {
   list-style: none;
 }
 nav ul li {
+  padding: calc(0.5 * var(--p)) 0 0;
   color: var(--orange);
 }
 nav ul li:first-child {
