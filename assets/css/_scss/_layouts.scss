@@ -10,28 +10,28 @@
   width: 100%;
   margin: 0 auto;
   padding: 0;
+
   p {
     width: 100%;
     max-width: none;
     margin: 0 auto;
     padding: 0;
     text-align: center;
+
     a {
-      display: flex;
-      width: 100%;
-      height: 4rem;
-      max-height: 4rem;
+      margin: 0;
       padding: 0;
+      height: 4rem;
+      min-height: 4rem;
       text-transform: uppercase;
       opacity: 0;
       @include transform(translateY(-4rem));
+      @include transition(all, 0.25s, ease);
+
       &:focus {
         padding: 1rem;
         opacity: 1;
         @include transform(translateY(0));
-      }
-      &:after {
-        display: none;
       }
     }
   }
@@ -45,181 +45,468 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
   margin: 0;
   padding: 4rem 2rem;
+  background-repeat: no-repeat;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+// INTRO BANNERS
+.banner.intro {
+  justify-content: center;
+  background-color: white;
+  background-position: center top;
+  background-size: contain;
+
+  .text {
+    padding-top: 2rem;
+  }
+}
+
+.banner.intro.welcome {
+  z-index: 0;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
+  background-image: url(../images/mug-1x.png);
+  background-position: right bottom;
+  background-size: 40vh;
+
+  .text {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+.banner.intro.delta-design-system {
+  background-image: url(../images/delta-design-01-1x.jpg);
+}
+
+.banner.intro.east-wind {
+  background-image: url(../images/east-wind-01-1x.jpg);
+}
+
+.banner.intro.enservio {
+  background-image: url(../images/enservio-16-1x.jpg);
+}
+
+.banner.intro.mystuff {
+  background-image: url(../images/mystuff-01-1x.jpg);
+}
+
+.banner.intro.panera {
+  background-image: url(../images/panera-20-1x.jpg);
+}
+
+.banner.intro.transferx {
+  background-image: url(../images/transferx-30-1x.jpg);
+}
+
+@media (min-width: 48rem) {
+  .banner.intro {
+    .text {
+      padding-top: 12rem;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .banner.intro {
+    background-position: left center;
+    background-size: 120vw;
+
+    .text {
+      width: 48%;
+      padding: 0;
+    }
+  }
+
+  .banner.intro.welcome {
+    background-size: 70vh;
+
+    .text {
+      padding: 0;
+    }
+  }
+
+  .banner.intro.east-wind {
+    color: white;
+
+    .overlay {
+      background-color: black;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  .banner.intro.mystuff {
+    color: white;
+
+    a {
+      color: white;
+    }
+  }
+
+  .banner.intro.panera {
+    color: white;
+
+    .overlay {
+      background-color: black;
+      opacity: 0.25;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .banner.intro {
+    background-position: left center;
+    background-size: cover;
+
+    .text {
+      width: 48%;
+      padding: 0;
+    }
+  }
+
+  .banner.intro.delta-design-system {
+    background-image: url(../images/delta-design-01-2x.jpg);
+  }
+
+  .banner.intro.east-wind {
+    background-image: url(../images/east-wind-01-2x.jpg);
+  }
+
+  .banner.intro.enservio {
+    background-image: url(../images/enservio-16-2x.jpg);
+  }
+
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-2x.jpg);
+  }
+
+  .banner.intro.panera {
+    background-image: url(../images/panera-20-2x.jpg);
+  }
+
+  .banner.intro.transferx {
+    background-image: url(../images/transferx-30-2x.jpg);
+
+    .text {
+      width: 45%;
+    }
+  }
+
+  .banner.intro.welcome {
+    background-image: url(../images/mug-2x.png);
+  }
+}
+
+@media (resolution: 150dpi) {
+  .banner.intro.delta-design-system {
+    background-image: url(../images/delta-design-01-2x.jpg);
+  }
+
+  .banner.intro.east-wind {
+    background-image: url(../images/east-wind-01-2x.jpg);
+  }
+
+  .banner.intro.enservio {
+    background-image: url(../images/enservio-16-2x.jpg);
+  }
+
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-2x.jpg);
+  }
+
+  .banner.intro.panera {
+    background-image: url(../images/panera-20-2x.jpg);
+  }
+
+  .banner.intro.transferx {
+    background-image: url(../images/transferx-30-2x.jpg);
+  }
+
+  .banner.intro.mystuff {
+    background-image: url(../images/mystuff-01-2x.jpg);
+  }
+
+  .banner.intro.welcome {
+    background-image: url(../images/mug-2x.png);
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .banner.intro.welcome {
+    background-attachment: scroll;
+  }
 }
 
 
 // CTAS
-.cta-group {
+ul.cta {
   display: flex;
   flex-direction: column;
-}
-p.cta {
-  padding: 1rem 0 0;
-  + p.cta {
-    padding: 0.5rem 0 0;
-  }
-}
-p.cta a {
-  display: inline-flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  font-size: $small;
-  line-height: 1;
-  span.icon {
-    display: grid;
-    width: $h2;
-    height: $h2;
-    border: 1px solid;
-    border-radius: 100%;
-    margin: 0;
-    padding: 0.125rem;
-  }
-  span.label {
-    padding: 0 0 0 0.5rem;
-    line-height: 2rem;
-  }
-  span.icon svg, span.label {
-    @include transition(all, 0.325s, ease);
-  }
-  &.down {
-    span.icon svg, span.label {
-      @include transform(translateY(0));
+  width: 100%;
+  padding-left: 0;
+  list-style: none;
+
+  li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    span.icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $h2;
+      height: $h2;
+      margin: 0;
+      padding: 0.125rem;
+      border: 1px solid;
+      border-radius: 100%;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        @include transform-origin(center);
+        @include transition(all, 0.25s, ease);
+      }
     }
-  }
-  &.page {
-    span.icon svg, span.label {
-      @include transform(translateX(0));
+
+    span.label {
+      padding: 0 0 0 0.5rem;
     }
-  }
-  &:hover, &:focus {
+
+    span.icon svg,
+    span.label {
+      @include transition(all, 0.25s, ease);
+    }
+
     &.down {
+
       span.icon svg {
-        @include transform(translateY(1.75rem));
-      }
-    }
-    &.page {
-      span.icon svg, span.label {
-        @include transform(translateX(1.75rem));
-      }
-    }
-  }
-  &:active {
-    &.down {
-      span.icon svg, span.label {
+        @include transform(translateY(0) (scale(0.75)));
+      } 
+      span.label {
         @include transform(translateY(0));
       }
     }
+
     &.page {
-      span.icon svg, span.label {
+
+      span.icon svg {
+        @include transform(translateY(0) (scale(0.75)));
+      }
+
+      span.label {
         @include transform(translateX(0));
+      }
+    }
+
+    &:hover,
+    &:focus {
+      &.down {
+        span.icon svg {
+          @include transform(translateY(1.75rem) (scale(1)));
+        }
+      }
+
+      &.page {
+
+        span.icon svg {
+          @include transform(translateX(1.75rem) (scale(1)));
+        }
+
+        span.label {
+          @include transform(translateX(1.75rem));
+        }
+      }
+    }
+
+    &:active {
+      &.down {
+
+        span.icon svg {
+          @include transform(translateY(0) (scale(0.75)));;
+        }
+
+        span.label {
+          @include transform(translateY(0));
+        }
+      }
+
+      &.page {
+
+        span.icon svg {
+          @include transform(translateX(0) (scale(0.75)));;
+        }
+
+        span.label {
+          @include transform(translateX(0));
+        }
       }
     }
   }
 }
 
 @media (min-width: 64rem) {
-  .cta-group {
+  ul.cta {
     flex-direction: row;
-  }
-  .cta-group p.cta {
-    padding: 1rem 0 0;
-    + p.cta {
-      padding: 1rem 0 0 2rem;
+
+    li {
+      width: auto;
+      padding: 0 4rem 0 0;
+
+      &:last-of-type {
+        padding: 0;
+      }
     }
   }
 }
 
-//
-// html.touch {
-//   .cta {
-//     span {
-//       overflow: visible;
-//       text-overflow: inherit;
-//       white-space: normal;
-//     }
-//     svg {
-//       display: none;
-//       @include transform(translateY(0));
-//     }
-//   }
-//   .about-me > .card {
-//     .cta {
-//       span {
-//         overflow: hidden;
-//         line-height: calc(1.25 * #{$p});
-//         text-overflow: ellipsis;
-//         white-space: nowrap;
-//       }
-//       svg {
-//         display: inline-grid;
-//         @include transform(translateY(0));
-//       }
-//     }
-//   }
-// }
 
+// HOME PAGE
+section.about-me,
+section.selected-projects {
+  padding: 2rem;
+}
 
-// DARK MODE/LIGHT MODE FORM
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 1rem 0 0;
-  fieldset {
+section.about-me {
+  min-height: 150vh;
+
+  ul.cta {
+    flex-direction: column;
+
+    li {
+      display: inline-flex;
+      padding: calc(0.5 * #{$p}) 0 0;
+    }
+  }
+}
+
+section.selected-projects {
+  .selected-project {
+    display: flex;
+    flex-direction: column-reverse;
     width: 100%;
     margin: 0;
-    padding: 0;
-    border: none;
-    label {
-      display: flex;
+    padding: 2rem 0;
+
+    figure {
+      padding: 0 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  section.selected-projects {
+    .selected-project {
+      figure {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  section.about-me {
+    ul.about-me {
+      width: 80%;
+    }
+  }
+
+  section.selected-projects {
+    .selected-project {
       align-items: center;
-      justify-content: center;
-      position: relative;
-      width: 100%;
-      margin: 0;
-      color: $green;
-      span {
-        width: 1.25rem;
-        height: 1.25rem;
+      flex-direction: row;
+      padding: 2rem 0 1rem;
+
+      &.reverse {
+        flex-direction: row-reverse;
       }
-      input[type="checkbox"] {
-        position: relative;
-        top: 0;
-        right: 0;
-        width: 2rem;
-        min-width: 2rem;
-        height: 1rem;
-        margin: 0 0.5rem;
+
+      .text {
+        padding: 0 2rem 0 0;
+      }
+
+      figure {
+        width: 60%;
         padding: 0;
-        border: 1px solid $green;
-        border-radius: 2rem;
-        @include appearance(none);
-        &:after {
-          display: block;
-          position: absolute;
-          top: 0.125rem;
-          left: 0.125rem;
-          width: 0.625rem;
-          height: 0.625rem;
-          border-radius: 100%;
-          background: $green;
-          content: "";
-          @include transition(all, 0.25s, ease);
-        }
-        &:checked:after {
-          margin-left: 1rem;
-        }
       }
+    }
+  }
+}
+
+
+// PROJECT PAGE ARTICLES
+article.project {
+  section {
+    padding: 2rem 2rem 0;
+  }
+}
+
+@media (orientation: landscape) {
+  article.project {
+    section {
+      padding: 4rem 2rem 0;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  article.project {
+    section {
+      padding: 4rem 2rem 0;
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  article.project {
+    section {
+      padding: 8rem 2rem 0;
+    }
+  }
+}
+
+
+// RESUME
+article.resume {
+  section {
+    max-width: 33.75rem;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  section.job {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 90rem) {
+  article.resume {
+    section {
+      max-width: 40rem;
     }
   }
 }

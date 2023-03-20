@@ -57,7 +57,7 @@ function io_callback (entries, observer) {
 };
 
 // PARALAX BANNERS
-const banner = document.querySelector(".banner .text");
+const banner = document.querySelector(".banner.intro .text");
 const speed = 0.2;
 banner.style.transform = "translateY( calc( var(--scrollparallax) * 1px ) )";
 function setScrollParallax() {

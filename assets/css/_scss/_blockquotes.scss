@@ -9,11 +9,7 @@ blockquote {
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-color: $gray;
-  p {
-    padding: 0;
-    @include sans-bold;
-    line-height: 1.75;
-  }
+
   &:before {
     display: block;
     position: absolute;
@@ -26,10 +22,19 @@ blockquote {
     content: url(../icons/double-quotes-l.svg);
     @include transform(scale(1.5));
   }
+
+  p {
+    @include sans-bold;
+    line-height: 1.75;
+  }
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 64rem) {
   blockquote {
-    max-width: 40rem;
+    margin: 4rem auto 3rem;
+
+    &:before {
+      @include transform(scale(2));
+    }
   }
 }
