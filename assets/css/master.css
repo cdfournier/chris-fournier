@@ -1129,13 +1129,10 @@ article.project.transferx figure.marks .icon {
 }
 
 .banner.intro {
-  justify-content: center;
+  justify-content: flex-end;
   background-color: white;
   background-position: center top;
   background-size: contain;
-}
-.banner.intro .text {
-  padding-top: 2rem;
 }
 
 .banner.intro.welcome {
@@ -1182,6 +1179,7 @@ article.project.transferx figure.marks .icon {
 }
 @media (orientation: landscape) {
   .banner.intro {
+    justify-content: center;
     background-position: left center;
     background-size: 120vw;
   }
@@ -1225,6 +1223,7 @@ article.project.transferx figure.marks .icon {
 }
 @media (min-width: 64rem) {
   .banner.intro {
+    justify-content: center;
     background-position: left center;
     background-size: cover;
   }
