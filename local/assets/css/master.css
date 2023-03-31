@@ -1135,6 +1135,7 @@ article.project.transferx figure.marks .icon {
 }
 
 .banner.intro.welcome {
+  justify-content: center;
   z-index: 0;
   background-attachment: fixed;
   background-blend-mode: luminosity;
