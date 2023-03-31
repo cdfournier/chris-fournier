@@ -1148,6 +1148,10 @@ article.project.transferx figure.marks .icon {
   padding-bottom: 2rem;
 }
 
+.banner.intro.resume {
+  justify-content: center;
+}
+
 .banner.intro.delta-design-system {
   background-image: url(../images/delta-design-01-1x.jpg);
 }

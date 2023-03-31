@@ -85,6 +85,10 @@
   }
 }
 
+.banner.intro.resume {
+  justify-content: center;
+}
+
 .banner.intro.delta-design-system {
   background-image: url(../images/delta-design-01-1x.jpg);
 }
@@ -306,7 +310,8 @@ ul.cta {
 
       span.icon svg {
         @include transform(translateY(0) (scale(0.75)));
-      } 
+      }
+
       span.label {
         @include transform(translateY(0));
       }
@@ -347,7 +352,8 @@ ul.cta {
       &.down {
 
         span.icon svg {
-          @include transform(translateY(0) (scale(0.75)));;
+          @include transform(translateY(0) (scale(0.75)));
+          ;
         }
 
         span.label {
@@ -358,7 +364,8 @@ ul.cta {
       &.page {
 
         span.icon svg {
-          @include transform(translateX(0) (scale(0.75)));;
+          @include transform(translateX(0) (scale(0.75)));
+          ;
         }
 
         span.label {
