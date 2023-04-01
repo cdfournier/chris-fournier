@@ -1082,19 +1082,21 @@ article.project.transferx figure.marks .icon {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  background: white;
 }
 .skip p {
   width: 100%;
   max-width: none;
   margin: 0 auto;
   padding: 0;
+  font-size: var(--small);
   text-align: center;
 }
 .skip p a {
-  margin: 0;
-  padding: 0;
   height: 4rem;
   min-height: 4rem;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
   opacity: 0;
   transform: translateY(-4rem);
@@ -1135,6 +1137,7 @@ article.project.transferx figure.marks .icon {
 }
 
 .banner.intro.welcome {
+  justify-content: center;
   z-index: 0;
   background-attachment: fixed;
   background-blend-mode: luminosity;
@@ -1145,6 +1148,16 @@ article.project.transferx figure.marks .icon {
 .banner.intro.welcome .text {
   padding-top: 0;
   padding-bottom: 2rem;
+}
+.banner.intro.welcome .text h2.title {
+  font-size: calc(1.5 * var(--h1));
+}
+
+.banner.intro.resume {
+  justify-content: center;
+}
+.banner.intro.resume .text h2.title {
+  font-size: calc(1.5 * var(--h1));
 }
 
 .banner.intro.delta-design-system {
@@ -1802,6 +1815,10 @@ html.dark form fieldset label input[type=checkbox] {
 }
 html.dark form fieldset label input[type=checkbox]:after {
   background: white;
+}
+
+html.dark .skip {
+  background: var(--green-dark);
 }
 
 html.dark .card:before {

@@ -126,6 +126,14 @@ html.dark {
 }
 
 
+// SKIP DARK MODE
+html.dark {
+  .skip {
+    background: $green-dark;
+  }
+}
+
+
 // CARDS DARK MODE
 html.dark {
   .card {
