@@ -1255,6 +1255,9 @@ article.project.transferx figure.marks .icon {
     width: 48%;
     padding: 0;
   }
+  .banner.intro.resume {
+    z-index: 0;
+  }
   .banner.intro.delta-design-system {
     background-image: url(../images/delta-design-01-2x.jpg);
   }
