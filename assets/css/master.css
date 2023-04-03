@@ -1540,20 +1540,21 @@ header {
 }
 header nav {
   flex-direction: row;
-  align-content: flex-start;
+  align-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: flex-end;
   position: relative;
   width: 100%;
   max-height: 4rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   transition: max-height 0.25s ease 0s;
 }
 header nav button.menu-toggle {
   display: flex;
   justify-content: flex-end;
   position: absolute;
+  top: 1rem;
   right: 1rem;
   width: 2rem;
   height: 2rem;
@@ -1626,7 +1627,6 @@ header.open nav button.menu-toggle svg.menu-toggle-close {
 header.open nav ul,
 header.open nav form {
   width: 33.3333333333%;
-  padding: 3rem 0 0;
   transform: translateX(0);
 }
 header.open nav form {
