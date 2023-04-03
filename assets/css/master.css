@@ -1130,10 +1130,13 @@ article.project.transferx figure.marks .icon {
 }
 
 .banner.intro {
-  justify-content: flex-end;
+  justify-content: flex-start;
   background-color: white;
   background-position: center 4rem;
   background-size: contain;
+}
+.banner.intro .text {
+  padding-top: 40vh;
 }
 
 .banner.intro.welcome {
@@ -1155,6 +1158,10 @@ article.project.transferx figure.marks .icon {
 
 .banner.intro.resume {
   justify-content: center;
+}
+.banner.intro.resume .text {
+  max-width: 29.75rem;
+  padding-top: 0;
 }
 .banner.intro.resume .text h2.title {
   font-size: calc(1.5 * var(--h1));
@@ -1205,6 +1212,9 @@ article.project.transferx figure.marks .icon {
   }
   .banner.intro.welcome .text {
     padding: 0;
+  }
+  .banner.intro.resume .text {
+    width: 80%;
   }
   .banner.intro.east-wind {
     color: white;

@@ -66,10 +66,14 @@
 
 // INTRO BANNERS
 .banner.intro {
-  justify-content: flex-end;
+  justify-content: flex-start;
   background-color: white;
   background-position: center 4rem;
   background-size: contain;
+
+  .text {
+    padding-top: 40vh;
+  }
 }
 
 .banner.intro.welcome {
@@ -95,6 +99,9 @@
   justify-content: center;
 
   .text {
+    max-width: calc(33.75rem - 4rem);
+    padding-top: 0;
+
     h2.title {
       font-size: calc(1.5 * $h1);
     }
@@ -151,6 +158,12 @@
 
     .text {
       padding: 0;
+    }
+  }
+
+  .banner.intro.resume {
+    .text {
+      width: 80%;
     }
   }
 
