@@ -1321,6 +1321,9 @@ ul.cta {
   padding-left: 0;
   list-style: none;
 }
+ul.cta li {
+  padding: calc(1.5 * var(--p)) 0 0;
+}
 ul.cta li a {
   display: flex;
   flex-direction: row;
