@@ -1809,6 +1809,9 @@ html.dark a {
 html.dark a:hover, html.dark a:focus {
   color: var(--orange);
 }
+html.dark article {
+  background: var(--green-dark);
+}
 
 html.dark header {
   background: var(--green-dark);
