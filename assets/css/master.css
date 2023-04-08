@@ -1193,7 +1193,7 @@ article.project.transferx figure.marks .icon {
 
 @media (min-width: 48rem) {
   .banner.intro .text {
-    padding-top: 12rem;
+    padding-top: 50vh;
   }
 }
 @media (orientation: landscape) {
