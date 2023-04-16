@@ -78,6 +78,11 @@ small {
   display: none;
 }
 
+@media (min-width: 90rem) {
+  p {
+    line-height: 1.777777777777778;
+  }
+}
 
 // TEXT ALIGNMENT
 h1.center,

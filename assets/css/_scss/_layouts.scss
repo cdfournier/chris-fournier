@@ -132,10 +132,27 @@
   background-image: url(../images/transferx-30-1x.jpg);
 }
 
+@media (orientation: portrait) and (min-height: 48rem) {
+  .banner.intro {
+    .text {
+      padding-top: 35vh;
+    }
+  }
+}
+
 @media (min-width: 48rem) {
   .banner.intro {
     .text {
       padding-top: 50vh;
+    }
+  }
+
+  .banner.intro.welcome,
+  .banner.intro.resume {
+    .text {
+      h2.title {
+        font-size: calc(1.75 * $h2);
+      }
     }
   }
 }
@@ -216,6 +233,15 @@
     }
   }
 
+  .banner.intro.welcome,
+  .banner.intro.resume {
+    .text {
+      h2.title {
+        font-size: calc(2.25 * $h2);
+      }
+    }
+  }
+
   .banner.intro.resume {
     z-index: 0;
   }
@@ -250,6 +276,16 @@
 
   .banner.intro.welcome {
     background-image: url(../images/mug-2x.png);
+  }
+}
+
+@media (min-width: 90rem) {
+  .banner.intro.resume {
+    .text {
+      width: 100%;
+      max-width: 40rem;
+      padding: 2rem 2rem 0;
+    }
   }
 }
 
