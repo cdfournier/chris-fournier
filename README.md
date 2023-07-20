@@ -1,7 +1,7 @@
 # Chris Fournier
 ## American made. Powered by coffee.
 
-I have more than 20 years of experience solving problems in cross-functional settings for a wide range of B2B and B2C products, platforms, and services for retail, e-commerce, fintech, and more. I specialize in UX and UI design, responsive web design, and design systems.
+I specialize in UX and UI design, responsive web design, and design systems, and I have experience solving problems in cross-functional settings for a wide range of B2B and B2C products, platforms, and services for retail, e-commerce, fintech, and more.
 
 - [Home](https://chris.blackcoffeeshoppe.com/index.html)
 - [Resume](https://chris.blackcoffeeshoppe.com/resume/index.html)
