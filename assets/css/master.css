@@ -354,6 +354,14 @@ figure a {
   overflow: hidden;
   border-radius: 0.25rem;
 }
+figure a img {
+  transform: scale(1);
+  transform-origin: center;
+  transition: all 5s ease 0s;
+}
+figure a:hover img, figure a:focus img {
+  transform: scale(1.25);
+}
 figure img {
   border-radius: 0.25rem;
 }
@@ -453,8 +461,8 @@ ul.cta li a span.icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
+  height: 1.75rem;
   margin: 0;
   padding: 0.125rem;
   border: 1px solid;
@@ -519,6 +527,10 @@ ul.cta li a:active.page span.label {
   ul.cta li:last-of-type {
     padding: 1.5rem 0 0 0;
   }
+  ul.cta li a span.icon {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 main.home section {
   background-color: white;
@@ -527,7 +539,45 @@ main.home section {
 main.home section.about-me div.text {
   padding: 1rem 0 0;
 }
+main.home section.about-me div.text ul.about-me {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+main.home section.about-me div.text ul.about-me li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  max-width: 50%;
+  padding: 1rem;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--p);
+  text-transform: uppercase;
+}
+main.home section.about-me div.text ul.about-me li svg {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.25rem;
+}
 
+@media (min-width: 40rem) {
+  main.home section.about-me div.text ul.about-me {
+    justify-content: space-between;
+  }
+  main.home section.about-me div.text ul.about-me li {
+    align-items: flex-start;
+    padding-left: 0;
+  }
+}
 @media (min-width: 64rem) {
   main.home section.about-me {
     min-height: 100vh;
@@ -547,6 +597,9 @@ main.home section.about-me div.text {
   }
   main.home section.about-me div.text h2 {
     padding: 0;
+  }
+  main.home section.about-me div.text ul.about-me {
+    padding: 0.5rem 0 0;
   }
   main.home section.about-me div.text ul.cta li a {
     color: white;

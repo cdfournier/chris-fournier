@@ -11,6 +11,18 @@ figure {
     display: grid;
     overflow: hidden;
     border-radius: 0.25rem;
+
+    img {
+      @include transform(scale(1));
+      @include transform-origin(center);
+      @include transition(all, 5s, ease);
+    }
+
+    &:hover, &:focus {
+      img {
+        @include transform(scale(1.25));
+      }
+    }
   }
 
   img {
