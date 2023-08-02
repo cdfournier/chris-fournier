@@ -1,0 +1,30 @@
+// FIGURES
+figure {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: grid;
+    overflow: hidden;
+    border-radius: 0.25rem;
+  }
+
+  img {
+    border-radius: 0.25rem;
+  }
+}
+
+
+// FIGCAPTION
+figcaption {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  @include sans-bold;
+  font-size: $small;
+  line-height: 1.25;
+}

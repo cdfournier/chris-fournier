@@ -1,0 +1,75 @@
+// NAVIGATION
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  button.menu-toggle {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: $green;
+    background-color: transparent;
+    cursor: pointer;
+    @include transition(color, 0.25s, ease);
+
+    svg {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    svg.menu-toggle-open {
+      @include transition(width, 0.25s, ease);
+    }
+
+    svg.menu-toggle-close {
+      width: 0;
+      @include transition(width, 0.25s, ease);
+    }
+
+    &:hover,
+    &:focus {
+      color: $orange;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 2) - 0.5rem);
+    max-width: 16rem;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.75rem 0 0;
+      line-height: 1.25;
+
+      &:first-child {
+        padding: 0;
+        @include sans-bold;
+        font-size: $xsmall;
+        text-transform: uppercase;
+      }
+
+      svg {
+        display: inline-grid;
+        width: $small;
+        height: $small;
+      }
+    }
+
+    li a {
+      @include sans-regular;
+    }
+  }
+}
