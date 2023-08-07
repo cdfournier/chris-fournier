@@ -582,7 +582,7 @@ main.home section.about-me div.text ul.about-me li svg {
   main.home section.about-me {
     min-height: 100vh;
     color: white;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-blend-mode: hard-light;
     background-color: rgba(0, 0, 0, 0.25);
     background-image: url(../images/new-mug-2x.jpg);
@@ -757,7 +757,6 @@ header.open nav form {
 }
 header.open nav form {
   align-items: flex-start;
-  padding: 1rem 0 0;
 }
 header.open nav form fieldset {
   width: auto;
@@ -772,7 +771,7 @@ header.open nav form fieldset {
   header nav {
     align-items: flex-end;
   }
-  header.open nav ul {
+  header.open nav ul, header.open nav form {
     width: 50%;
   }
 }
@@ -787,7 +786,7 @@ header.open nav form fieldset {
     width: var(--p);
     height: var(--p);
   }
-  header.open nav ul {
+  header.open nav ul, header.open nav form {
     width: 33.3333333333%;
   }
 }
@@ -833,6 +832,9 @@ footer div.branding svg {
   width: 100%;
   max-width: 8rem;
 }
+footer div.branding form {
+  max-width: 8rem;
+}
 footer div.copyright {
   width: 100%;
   padding: 1rem 0 0;
@@ -867,5 +869,115 @@ footer div.copyright p {
 @media (min-width: 64rem) {
   footer nav {
     justify-content: flex-start;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0 0;
+}
+form fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+form fieldset label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  color: var(--green);
+}
+form fieldset label span {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+form fieldset label input[type=checkbox] {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  min-width: 2rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+  padding: 0;
+  border: 1px solid var(--green);
+  border-radius: 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+form fieldset label input[type=checkbox]:after {
+  display: block;
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 100%;
+  background: var(--green);
+  content: "";
+  transition: all 0.25s ease 0s;
+}
+form fieldset label input[type=checkbox]:checked:after {
+  margin-left: 1rem;
+}
+
+html.dark {
+  color: white;
+}
+html.dark body {
+  background: var(--green-dark);
+}
+html.dark a {
+  color: white;
+}
+html.dark a:hover, html.dark a:focus {
+  color: var(--orange);
+}
+html.dark article {
+  background: var(--green-dark);
+}
+
+html.dark header {
+  background: var(--green-dark);
+}
+html.dark header nav button.menu-toggle {
+  color: white;
+}
+html.dark nav ul li {
+  color: var(--gray-mid);
+}
+html.dark nav ul li:first-child {
+  color: white;
+}
+
+html.dark form fieldset label {
+  color: white;
+}
+html.dark form fieldset label input[type=checkbox] {
+  border-color: white;
+}
+html.dark form fieldset label input[type=checkbox]:after {
+  background: white;
+}
+
+html.dark .skip {
+  background: var(--green-dark);
+}
+
+html.dark main.home section {
+  background-color: var(--green-dark);
+}
+
+@media (min-width: 64rem) {
+  html.dark main.home section.about-me {
+    background-blend-mode: soft-light;
+    background-color: var(--green-dark);
   }
 }

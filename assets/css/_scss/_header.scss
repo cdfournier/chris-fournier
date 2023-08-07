@@ -63,7 +63,6 @@ header.open {
 
     form {
       align-items: flex-start;
-      padding: 1rem 0 0;
 
       fieldset {
         width: auto;
@@ -89,7 +88,7 @@ header.open {
 
   header.open {
     nav {
-      ul {
+      ul, form {
         width: 50%;
       }
     }
@@ -118,7 +117,7 @@ header.open {
 
   header.open {
     nav {
-      ul {
+      ul, form {
         width: calc(100% / 3);
       }
     }
