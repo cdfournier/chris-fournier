@@ -71,14 +71,6 @@ header.open {
   }
 }
 
-@media (max-width: 48rem) and (orientation: landscape) {
-  header {
-    nav {
-      flex-direction: row;
-    }
-  }
-}
-
 @media (min-width: 48rem) {
   header {
     nav {
@@ -95,9 +87,20 @@ header.open {
   }
 }
 
+@media (max-width: 64rem) and (orientation: landscape) {
+  header {
+    nav {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+}
+
 @media (min-width: 64rem) {
   header {
     nav {
+      align-items: flex-end;
+      flex-direction: column;
       ul {
         li {
           font-size: calc($p * 1.25);

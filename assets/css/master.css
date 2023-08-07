@@ -762,11 +762,6 @@ header.open nav form fieldset {
   width: auto;
 }
 
-@media (max-width: 48rem) and (orientation: landscape) {
-  header nav {
-    flex-direction: row;
-  }
-}
 @media (min-width: 48rem) {
   header nav {
     align-items: flex-end;
@@ -775,7 +770,17 @@ header.open nav form fieldset {
     width: 50%;
   }
 }
+@media (max-width: 64rem) and (orientation: landscape) {
+  header nav {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
 @media (min-width: 64rem) {
+  header nav {
+    align-items: flex-end;
+    flex-direction: column;
+  }
   header nav ul li {
     font-size: calc(var(--p) * 1.25);
   }
