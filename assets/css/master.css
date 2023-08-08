@@ -549,7 +549,8 @@ main.home section {
 main.home section.about-me div.text {
   padding: 1rem 0 0;
 }
-main.home section.about-me div.text ul.about-me {
+main.home section.about-me div.text ul.about-me,
+main.home section.about-me div.text ul.favorite-tools {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -559,7 +560,8 @@ main.home section.about-me div.text ul.about-me {
   padding: 0;
   list-style: none;
 }
-main.home section.about-me div.text ul.about-me li {
+main.home section.about-me div.text ul.about-me li,
+main.home section.about-me div.text ul.favorite-tools li {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -572,35 +574,51 @@ main.home section.about-me div.text ul.about-me li {
   font-size: var(--p);
   text-transform: uppercase;
 }
-main.home section.about-me div.text ul.about-me li svg {
+main.home section.about-me div.text ul.about-me li svg,
+main.home section.about-me div.text ul.favorite-tools li svg {
   display: grid;
   width: 2rem;
   height: 2rem;
   margin-bottom: 0.25rem;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(1) {
+main.home section.about-me div.text ul.about-me li:nth-of-type(1),
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(1) {
   padding-left: 0;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(2) {
+main.home section.about-me div.text ul.about-me li:nth-of-type(2),
+main.home section.about-me div.text ul.about-me li:nth-of-type(3),
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2),
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
   display: none;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(3) {
+main.home section.about-me div.text ul.about-me li:nth-of-type(4),
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(4) {
   padding-right: 0;
+}
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2),
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
+  display: flex;
 }
 
 @media (min-width: 40rem) {
-  main.home section.about-me div.text ul.about-me li:nth-of-type(2) {
+  main.home section.about-me div.text ul.about-me li:nth-of-type(2),
+  main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2) {
+    display: flex;
+  }
+}
+@media (min-width: 48rem) {
+  main.home section.about-me div.text ul.about-me li:nth-of-type(3),
+  main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
     display: flex;
   }
 }
 @media (min-width: 64rem) {
   main.home section.about-me {
-    min-height: 100vh;
     color: white;
     background-attachment: fixed;
     background-blend-mode: hard-light;
     background-color: rgba(0, 0, 0, 0.25);
-    background-image: url(../images/new-mug-1x.jpg);
+    background-image: url(../images/mug-2x.jpg);
     background-position: right center;
     background-size: cover;
   }
@@ -618,11 +636,6 @@ main.home section.about-me div.text ul.about-me li:nth-of-type(3) {
   }
   main.home section.about-me div.text ul.cta li a {
     color: white;
-  }
-}
-@media (min-width: 64rem) and (resolution: 150dpi) {
-  main.home section.about-me {
-    background-image: url(../images/new-mug-2x.jpg);
   }
 }
 main.home section.projects {
@@ -646,7 +659,7 @@ main.home section.projects div.project div.text {
   main.home section.projects div.project {
     align-items: center;
     flex-direction: row;
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
   main.home section.projects div.project figure {
     width: 40%;
