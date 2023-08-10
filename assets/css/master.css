@@ -460,7 +460,6 @@ ul.cta {
 }
 ul.cta li {
   padding: 1.5rem 0 0;
-  font-size: var(--small);
 }
 ul.cta li a {
   display: flex;
@@ -472,7 +471,11 @@ ul.cta li a span.icon {
   align-items: center;
   justify-content: center;
   width: 1.75rem;
+  max-width: 1.75rem;
+  min-width: 1.75rem;
   height: 1.75rem;
+  max-height: 1.75rem;
+  min-height: 1.75rem;
   margin: 0;
   padding: 0.125rem;
   border: 1px solid;
@@ -485,7 +488,10 @@ ul.cta li a span.icon svg {
   transition: all 0.25s ease 0s;
 }
 ul.cta li a span.label {
+  overflow: hidden;
   padding: 0 0 0 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 ul.cta li a span.icon svg,
 ul.cta li a span.label {
@@ -532,14 +538,17 @@ ul.cta li a:active.page span.label {
   ul.cta li {
     width: auto;
     padding-right: 4rem;
-    font-size: var(--p);
   }
   ul.cta li:last-of-type {
     padding: 1.5rem 0 0 0;
   }
   ul.cta li a span.icon {
     width: 2rem;
+    max-width: 2rem;
+    min-width: 2rem;
     height: 2rem;
+    max-height: 2rem;
+    min-height: 2rem;
   }
 }
 main.home section {
@@ -567,11 +576,11 @@ main.home section.about-me div.text ul.favorite-tools li {
   flex-direction: column;
   width: auto;
   max-width: 50%;
-  padding: 1rem 1rem 0;
+  padding: 0.25rem 1rem 0;
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--p);
+  font-size: var(--small);
   text-transform: uppercase;
 }
 main.home section.about-me div.text ul.about-me li svg,
@@ -599,16 +608,23 @@ main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2),
 main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
   display: flex;
 }
+main.home section.about-me div.text ul.favorite-tools li:last-of-type {
+  display: none;
+}
+main.home section.about-me div.text ul.cta {
+  padding: 1rem 0 0;
+}
 
 @media (min-width: 40rem) {
-  main.home section.about-me div.text ul.about-me li:nth-of-type(2),
-  main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2) {
+  main.home section.about-me div.text ul.about-me li:nth-of-type(2) {
     display: flex;
   }
 }
 @media (min-width: 48rem) {
   main.home section.about-me div.text ul.about-me li:nth-of-type(3),
-  main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
+  main.home section.about-me div.text ul.about-me li:last-of-type,
+  main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3),
+  main.home section.about-me div.text ul.favorite-tools li:last-of-type {
     display: flex;
   }
 }
@@ -630,9 +646,6 @@ main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
   }
   main.home section.about-me div.text h2 {
     padding: 0;
-  }
-  main.home section.about-me div.text ul.about-me {
-    padding: 0.5rem 0 0;
   }
   main.home section.about-me div.text ul.cta li a {
     color: white;

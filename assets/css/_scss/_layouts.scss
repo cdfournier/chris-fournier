@@ -81,7 +81,7 @@ ul.cta {
 
   li {
     padding: 1.5rem 0 0;
-    font-size: $small;
+    // font-size: $small;
   }
 
   li a {
@@ -94,7 +94,11 @@ ul.cta {
       align-items: center;
       justify-content: center;
       width: 1.75rem;
+      max-width: 1.75rem;
+      min-width: 1.75rem;
       height: 1.75rem;
+      max-height: 1.75rem;
+      min-height: 1.75rem;
       margin: 0;
       padding: 0.125rem;
       border: 1px solid;
@@ -109,7 +113,10 @@ ul.cta {
     }
 
     span.label {
+      overflow: hidden;
       padding: 0 0 0 0.5rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     span.icon svg,
@@ -118,7 +125,6 @@ ul.cta {
     }
 
     &.down {
-
       span.icon svg {
         @include transform(translateY(0) (scale(0.75)));
       }
@@ -129,7 +135,6 @@ ul.cta {
     }
 
     &.page {
-
       span.icon svg {
         @include transform(translateY(0) (scale(0.75)));
       }
@@ -148,7 +153,6 @@ ul.cta {
       }
 
       &.page {
-
         span.icon svg {
           @include transform(translateX(1.75rem) (scale(1)));
         }
@@ -161,7 +165,6 @@ ul.cta {
 
     &:active {
       &.down {
-
         span.icon svg {
           @include transform(translateY(0) (scale(0.75)));
           ;
@@ -173,7 +176,6 @@ ul.cta {
       }
 
       &.page {
-
         span.icon svg {
           @include transform(translateX(0) (scale(0.75)));
           ;
@@ -194,7 +196,6 @@ ul.cta {
     li {
       width: auto;
       padding-right: 4rem;
-      font-size: $p;
 
       &:last-of-type {
         padding: 1.5rem 0 0 0;
@@ -204,7 +205,11 @@ ul.cta {
     li a {
       span.icon {
         width: 2rem;
+        max-width: 2rem;
+        min-width: 2rem;
         height: 2rem;
+        max-height: 2rem;
+        min-height: 2rem;
       }
     }
   }
@@ -242,9 +247,9 @@ main.home {
           flex-direction: column;
           width: auto;
           max-width: 50%;
-          padding: 1rem 1rem 0;
+          padding: 0.25rem 1rem 0;
           @include sans-bold;
-          font-size: $p;
+          font-size: $small;
           text-transform: uppercase;
 
           svg {
@@ -276,6 +281,14 @@ main.home {
         li:nth-of-type(3) {
           display: flex;
         }
+
+        li:last-of-type {
+          display: none;
+        }
+      }
+
+      ul.cta {
+        padding: 1rem 0 0;
       }
     }
   }
@@ -285,10 +298,7 @@ main.home {
   main.home {
     section.about-me {
       div.text {
-
-        ul.about-me,
-        ul.favorite-tools {
-
+        ul.about-me {
           li:nth-of-type(2) {
             display: flex;
           }
@@ -306,7 +316,8 @@ main.home {
         ul.about-me,
         ul.favorite-tools {
 
-          li:nth-of-type(3) {
+          li:nth-of-type(3),
+          li:last-of-type {
             display: flex;
           }
         }
@@ -335,11 +346,6 @@ main.home {
 
         h2 {
           padding: 0;
-        }
-
-        ul.about-me {
-          padding: 0.5rem 0 0;
-
         }
 
         ul.cta {
