@@ -704,6 +704,27 @@ main.resume section.banner.intro div.text h2 span {
   line-height: calc(var(--p) * 1.5);
   text-transform: uppercase;
 }
+main.resume section.banner.intro section.skills {
+  display: none;
+}
+main.resume section.banner.intro section.skills ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 36rem;
+  padding: 1rem 0 0;
+  list-style: none;
+}
+main.resume section.banner.intro section.skills ul li {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  font-size: var(--small);
+  line-height: 1;
+}
 main.resume section.banner.intro section.contact {
   display: none;
 }
@@ -824,11 +845,41 @@ main.resume article.resume section.contact ul li a span {
     min-height: auto;
     padding: 4rem 2rem 2rem;
   }
+  main.resume section.banner.intro div.text {
+    padding: 0 0 2rem 0;
+  }
   main.resume section.banner.intro section.contact {
+    display: block;
+  }
+  main.resume section.banner.intro section.contact h2 + p {
+    font-size: var(--p);
+  }
+  main.resume section.banner.intro section.contact ul {
+    flex-direction: column;
+  }
+  main.resume section.banner.intro section.contact ul li {
+    padding: 0.5rem 0;
+  }
+  main.resume section.banner.intro section.contact ul li a {
+    display: flex;
+    align-items: center;
+  }
+  main.resume section.banner.intro section.contact ul li a span {
+    display: block;
+    padding: 0 0 0 0.5rem;
+    font-family: "metropolis-regular", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+  }
+  main.resume section.banner.intro section.skills {
     display: block;
   }
   main.resume article.resume {
     padding-top: 2rem;
+  }
+  main.resume article.resume section.skills,
+  main.resume article.resume section.contact {
+    display: none;
   }
 }
 nav {

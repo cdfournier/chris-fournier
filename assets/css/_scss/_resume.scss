@@ -25,6 +25,31 @@ main.resume {
       }
     }
 
+    section.skills {
+      display: none;
+
+      ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 36rem;
+        padding: 1rem 0 0;
+        list-style: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          width: auto;
+          margin: 0 0.5rem 0.5rem 0;
+          padding: 0.25rem 0.5rem;
+          border: 1px solid;
+          border-radius: 1rem;
+          font-size: $small;
+          line-height: 1;
+        }
+
+      }
+    }
+
     section.contact {
       display: none;
 
@@ -210,7 +235,39 @@ main.resume {
       min-height: auto;
       padding: 4rem 2rem 2rem;
 
+      div.text {
+        padding: 0 0 2rem 0;
+      }
+
       section.contact {
+        display: block;
+
+        h2+p {
+          font-size: $p;
+        }
+
+        ul {
+          flex-direction: column;
+
+          li {
+            padding: 0.5rem 0;
+
+            a {
+              display: flex;
+              align-items: center;
+
+              span {
+                display: block;
+                padding: 0 0 0 0.5rem;
+                @include sans-regular;
+              }
+            }
+          }
+        }
+
+      }
+
+      section.skills {
         display: block;
       }
 
@@ -218,6 +275,11 @@ main.resume {
 
     article.resume {
       padding-top: 2rem;
+
+      section.skills,
+      section.contact {
+        display: none;
+      }
     }
   }
 }
