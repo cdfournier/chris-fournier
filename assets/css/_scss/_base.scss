@@ -63,7 +63,7 @@ a {
   @include sans-bold;
   text-decoration: none;
   color: $green;
-  @include transition(all, 0.25s, ease);
+  @include transition(color, 0.25s, ease);
   &:hover, &:focus {
     color: $orange;
   }

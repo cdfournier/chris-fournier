@@ -55,7 +55,7 @@
 .animate {
   opacity: 0;
   transform: translateY(1rem);
-  transition: all 1s ease 0s;
+  transition: opacity, 1s, ease translateY, 1s, ease ease 0s;
 }
 .animate.visible {
   opacity: 1;
@@ -115,7 +115,7 @@ a {
   font-weight: normal;
   text-decoration: none;
   color: var(--green);
-  transition: all 0.25s ease 0s;
+  transition: color 0.25s ease 0s;
 }
 a:hover, a:focus {
   color: var(--orange);
@@ -363,14 +363,6 @@ figure a {
   display: grid;
   overflow: hidden;
   border-radius: 0.25rem;
-}
-figure a img {
-  transform: scale(1);
-  transform-origin: center;
-  transition: all 5s ease 0s;
-}
-figure a:hover img, figure a:focus img {
-  transform: scale(1.25);
 }
 figure img {
   border-radius: 0.25rem;
@@ -694,6 +686,149 @@ main.home section.projects div.project div.text {
   main.home section.projects div.project figure:nth-of-type(2) {
     display: flex;
     margin-left: 2rem;
+  }
+}
+main.resume section {
+  padding: 2rem;
+}
+main.resume section > section {
+  padding: 2rem 0;
+}
+
+main.resume section.banner.intro div.text h2 span {
+  display: block;
+  font-family: "metropolis-regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(var(--p) * 0.875);
+  line-height: calc(var(--p) * 1.5);
+  text-transform: uppercase;
+}
+main.resume section.banner.intro section.contact {
+  display: none;
+}
+main.resume section.banner.intro section.contact ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0 0;
+  list-style: none;
+}
+main.resume section.banner.intro section.contact ul li {
+  width: auto;
+  padding: 0 1rem 0 0;
+}
+main.resume section.banner.intro section.contact ul li a svg {
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+main.resume section.banner.intro section.contact ul li a span {
+  display: none;
+}
+
+main.resume article.resume section.experience section.job {
+  padding: 1rem 0;
+}
+main.resume article.resume section.experience section.job h3 {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(var(--h4) * 1.2);
+  line-height: 1.25;
+}
+main.resume article.resume section.experience section.job h3 span.dates {
+  font-size: var(--small);
+}
+main.resume article.resume section.experience section.job p {
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+main.resume article.resume section.experience section.job ul {
+  padding: 1rem 0 0;
+  list-style: none;
+}
+main.resume article.resume section.experience section.job:last-of-type {
+  padding-bottom: 0;
+}
+
+@media (min-width: 40rem) {
+  main.resume article.resume section.experience section.job h3 {
+    align-items: center;
+    flex-direction: row;
+    line-height: 1;
+  }
+  main.resume article.resume section.experience section.job h3 span.dates {
+    padding: 0 0 0 1rem;
+  }
+}
+@media (min-width: 64rem) {
+  main.resume article.resume section.experience section.job {
+    padding: 1.5rem 0 1rem;
+  }
+  main.resume article.resume section.experience section.job:last-of-type {
+    padding-bottom: 0;
+  }
+  main.resume article.resume section.experience section.job h3 {
+    justify-content: space-between;
+    max-width: 36rem;
+  }
+}
+main.resume article.resume section.skills ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 36rem;
+  padding: 1rem 0 0;
+  list-style: none;
+}
+main.resume article.resume section.skills ul li {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  font-size: var(--small);
+  line-height: 1;
+}
+
+main.resume article.resume section.contact ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0 0;
+  list-style: none;
+}
+main.resume article.resume section.contact ul li {
+  width: auto;
+  padding: 0 1rem 0 0;
+}
+main.resume article.resume section.contact ul li a svg {
+  display: grid;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+main.resume article.resume section.contact ul li a span {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  main.resume {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  main.resume section.banner.intro {
+    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
+    min-height: auto;
+    padding: 4rem 2rem 2rem;
+  }
+  main.resume section.banner.intro section.contact {
+    display: block;
+  }
+  main.resume article.resume {
+    padding-top: 2rem;
   }
 }
 nav {

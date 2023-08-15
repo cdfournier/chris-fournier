@@ -1,0 +1,209 @@
+// HOME PAGE
+main.home {
+  section {
+    background-color: white;
+  }
+}
+
+
+// HOME PAGE: ABOUT ME
+main.home {
+  section.about-me {
+    div.text {
+      padding: 1rem 0 0;
+
+      ul.about-me,
+      ul.favorite-tools {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          width: auto;
+          max-width: 50%;
+          padding: 0.25rem 1rem 0;
+          @include sans-bold;
+          font-size: $small;
+          text-transform: uppercase;
+
+          svg {
+            display: grid;
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: 0.25rem;
+          }
+
+        }
+
+        li:nth-of-type(1) {
+          padding-left: 0;
+        }
+
+        li:nth-of-type(2),
+        li:nth-of-type(3) {
+          display: none;
+        }
+
+        li:nth-of-type(4) {
+          padding-right: 0;
+        }
+      }
+
+      ul.favorite-tools {
+
+        li:nth-of-type(2),
+        li:nth-of-type(3) {
+          display: flex;
+        }
+
+        li:last-of-type {
+          display: none;
+        }
+      }
+
+      ul.cta {
+        padding: 1rem 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main.home {
+    section.about-me {
+      div.text {
+        ul.about-me {
+          li:nth-of-type(2) {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  main.home {
+    section.about-me {
+      div.text {
+
+        ul.about-me,
+        ul.favorite-tools {
+
+          li:nth-of-type(3),
+          li:last-of-type {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  main.home {
+    section.about-me {
+      color: white;
+      background-attachment: fixed;
+      background-blend-mode: hard-light;
+      background-color: rgba($color: #000000, $alpha: 0.25);
+      background-image: url(../images/mug-2x.jpg);
+      background-position: right center;
+      background-size: cover;
+
+      img {
+        display: none;
+      }
+
+      div.text {
+        padding: 0;
+
+        h2 {
+          padding: 0;
+        }
+
+        ul.cta {
+          li a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// HOME PAGE: SELECTED PROJECTS
+main.home {
+  section.projects {
+    padding: 2rem;
+
+    div.project {
+      display: flex;
+      flex-direction: column-reverse;
+      overflow: hidden;
+      max-width: 100%;
+      padding: 2rem 0 0;
+
+      figure:nth-of-type(2) {
+        display: none;
+      }
+
+      div.text {
+        padding: 1rem 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) or (orientation: landscape) {
+  main.home {
+    section.projects {
+      div.project {
+        align-items: center;
+        flex-direction: row;
+        padding: 1rem 0;
+
+        figure {
+          width: 40%;
+        }
+
+        div.text {
+          width: 60%;
+          padding: 0 2rem 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  main.home {
+    section.projects {
+      div.project {
+        div.text {
+          width: 40%;
+          min-width: 40%;
+        }
+
+        figure {
+          width: 35%;
+          min-width: 35%;
+        }
+
+        figure:nth-of-type(2) {
+          display: flex;
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}
