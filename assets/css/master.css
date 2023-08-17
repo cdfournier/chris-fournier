@@ -587,13 +587,11 @@ main.home section.about-me div.text ul.favorite-tools li:nth-of-type(1) {
   padding-left: 0;
 }
 main.home section.about-me div.text ul.about-me li:nth-of-type(2),
-main.home section.about-me div.text ul.about-me li:nth-of-type(3),
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2),
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2) {
   display: none;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(4),
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(4) {
+main.home section.about-me div.text ul.about-me li:nth-of-type(3),
+main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
   padding-right: 0;
 }
 main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2),
