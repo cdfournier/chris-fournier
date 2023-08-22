@@ -543,6 +543,93 @@ ul.cta li a:active.page span.label {
     min-height: 2rem;
   }
 }
+div.details {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+div.details ul {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1rem 0 0;
+  list-style: none;
+}
+div.details ul li:first-of-type {
+  padding: 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--p);
+}
+div.details ul li,
+div.details ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0 0;
+  font-size: var(--small);
+  line-height: 1.25;
+}
+div.details ul li svg,
+div.details ul li a svg {
+  display: inline-grid;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.25rem 0 0;
+}
+div.details ul li a {
+  padding: 0;
+}
+div.details ul.links li svg {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0 0 0.25rem;
+}
+div.details ul.skills {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem 0 0;
+  list-style: none;
+}
+div.details ul.skills li {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: auto;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  font-size: var(--small);
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.details ul.skills li:first-of-type {
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+  border: none;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--p);
+}
+
+@media (min-width: 40rem) {
+  div.details {
+    justify-content: space-between;
+  }
+  div.details ul {
+    width: calc(25% - 1rem);
+  }
+  div.details ul.skills {
+    width: 50%;
+  }
+}
 main.home section {
   background-color: white;
 }
@@ -837,9 +924,9 @@ main.resume article.resume section.contact ul li a span {
     align-items: flex-start;
   }
   main.resume section.banner.intro {
-    width: 50%;
-    max-width: 50%;
-    min-width: 50%;
+    width: 45%;
+    max-width: 45%;
+    min-width: 45%;
     min-height: auto;
     padding: 4rem 2rem 2rem;
   }
@@ -873,13 +960,24 @@ main.resume article.resume section.contact ul li a span {
     display: block;
   }
   main.resume article.resume {
-    padding-top: 2rem;
+    padding-top: 3.5rem;
   }
   main.resume article.resume section.skills,
   main.resume article.resume section.contact {
     display: none;
   }
 }
+main.delta-design-system section.banner.intro {
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+}
+main.delta-design-system section.banner.intro div.text {
+  padding: 1rem 0 0;
+}
+main.delta-design-system section {
+  padding: 2rem;
+}
+
 nav {
   display: flex;
   flex-direction: column;
