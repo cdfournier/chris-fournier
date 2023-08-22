@@ -157,3 +157,15 @@ html.dark {
     }
   }
 }
+
+
+// DELTA DESIGN SYSTEM DARK MODE
+html.dark {
+  main.delta-design-system {
+    section.gallery {
+      div.collection {
+        background-color: transparent;
+      }
+    }
+  }
+}
