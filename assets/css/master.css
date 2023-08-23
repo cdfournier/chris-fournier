@@ -1102,6 +1102,45 @@ main.enservio section.gallery div.collection {
     padding: 0;
   }
 }
+main.mystuff section.banner.intro {
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+}
+main.mystuff section.banner.intro div.text {
+  padding: 1rem 0 0;
+}
+main.mystuff section {
+  padding: 2rem;
+}
+main.mystuff section.gallery {
+  padding: 1rem;
+}
+main.mystuff section.gallery div.collection {
+  background-color: var(--mystuff);
+}
+
+@media (min-width: 64rem) {
+  main.mystuff section.banner.intro {
+    justify-content: center;
+    z-index: 100;
+    background-attachment: fixed;
+    background-blend-mode: hard-light;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url(../images/mystuff-01-2x.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+  main.mystuff section.banner.intro img {
+    display: none;
+  }
+  main.mystuff section.banner.intro div.text {
+    width: 45%;
+    padding: 0;
+  }
+  main.mystuff section.banner.intro div.text h2 {
+    padding: 0;
+  }
+}
 nav {
   display: flex;
   flex-direction: column;
@@ -1465,5 +1504,9 @@ html.dark main.enservio section.banner.intro {
   color: black;
 }
 html.dark main.enservio section.gallery div.collection {
+  background-color: transparent;
+}
+
+html.dark main.mystuff section.gallery div.collection {
   background-color: transparent;
 }

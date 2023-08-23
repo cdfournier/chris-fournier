@@ -187,3 +187,15 @@ html.dark {
     }
   }
 }
+
+
+// MYSTUFF DARK MODE
+html.dark {
+  main.mystuff {
+    section.gallery {
+      div.collection {
+        background-color: transparent;
+      }
+    }
+  }
+}

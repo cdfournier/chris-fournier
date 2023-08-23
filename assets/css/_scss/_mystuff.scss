@@ -1,0 +1,51 @@
+// MYSTUFF INTRO BANNER
+main.mystuff {
+  section.banner.intro {
+    justify-content: flex-start;
+    padding: 4rem 2rem;
+
+    div.text {
+      padding: 1rem 0 0;
+    }
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+  section.gallery {
+    padding: 1rem;
+
+    div.collection {
+      background-color: $mystuff;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  main.mystuff {
+    section.banner.intro {
+      justify-content: center;
+      z-index: 100;
+      background-attachment: fixed;
+      background-blend-mode: hard-light;
+      background-color: rgba($color: #000000, $alpha: 0.25);
+      background-image: url(../images/mystuff-01-2x.jpg);
+      background-position: left center;
+      background-size: cover;
+
+      img {
+        display: none;
+      }
+
+      div.text {
+        width: 45%;
+        padding: 0;
+
+        h2 {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
