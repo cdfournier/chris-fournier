@@ -54,12 +54,10 @@
 }
 .animate {
   opacity: 0;
-  transform: translateY(1rem);
-  transition: opacity, 1s, ease translateY, 1s, ease ease 0s;
+  transition: opacity 1s ease 0s;
 }
 .animate.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 html {
@@ -1011,10 +1009,19 @@ section.gallery div.collection figure.laptop {
 section.gallery div.collection figure.tablet {
   width: 50%;
 }
+section.gallery div.collection figure.phone {
+  width: 33.3333333333%;
+}
 
 @media (min-width: 64rem) {
   section.gallery figure {
     width: 50%;
+  }
+  section.gallery div.collection figure.tablet {
+    width: 40%;
+  }
+  section.gallery div.collection figure.phone {
+    width: 25%;
   }
 }
 main.delta-design-system section.banner.intro {
@@ -1053,6 +1060,45 @@ main.delta-design-system section.gallery div.collection {
     padding: 0;
   }
   main.delta-design-system section.banner.intro div.text h2 {
+    padding: 0;
+  }
+}
+main.enservio section.banner.intro {
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+}
+main.enservio section.banner.intro div.text {
+  padding: 1rem 0 0;
+}
+main.enservio section {
+  padding: 2rem;
+}
+main.enservio section.gallery {
+  padding: 1rem;
+}
+main.enservio section.gallery div.collection {
+  background-color: var(--enservio);
+}
+
+@media (min-width: 64rem) {
+  main.enservio section.banner.intro {
+    justify-content: center;
+    z-index: 100;
+    background-attachment: fixed;
+    background-blend-mode: hard-light;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url(../images/enservio-16-2x.jpg);
+    background-position: left center;
+    background-size: cover;
+  }
+  main.enservio section.banner.intro img {
+    display: none;
+  }
+  main.enservio section.banner.intro div.text {
+    width: 45%;
+    padding: 0;
+  }
+  main.enservio section.banner.intro div.text h2 {
     padding: 0;
   }
 }
@@ -1408,6 +1454,16 @@ html.dark main.home section {
     background-color: var(--green-dark);
   }
 }
+html.dark main.delta-design-system section.banner.intro {
+  color: black;
+}
 html.dark main.delta-design-system section.gallery div.collection {
+  background-color: transparent;
+}
+
+html.dark main.enservio section.banner.intro {
+  color: black;
+}
+html.dark main.enservio section.gallery div.collection {
   background-color: transparent;
 }

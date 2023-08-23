@@ -162,6 +162,24 @@ html.dark {
 // DELTA DESIGN SYSTEM DARK MODE
 html.dark {
   main.delta-design-system {
+    section.banner.intro {
+      color: black;
+    }
+    section.gallery {
+      div.collection {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+// ENSERVIO DARK MODE
+html.dark {
+  main.enservio {
+    section.banner.intro {
+      color: black;
+    }
     section.gallery {
       div.collection {
         background-color: transparent;

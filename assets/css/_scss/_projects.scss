@@ -149,6 +149,10 @@ section.gallery {
       width: 50%;
     }
 
+    figure.phone {
+      width: calc(100% / 3);
+    }
+
   }
 }
 
@@ -156,6 +160,16 @@ section.gallery {
   section.gallery {
     figure {
       width: 50%;
+    }
+
+    div.collection {
+      figure.tablet {
+        width: 40%;
+      }
+
+      figure.phone {
+        width: 25%;
+      }
     }
   }
 }
