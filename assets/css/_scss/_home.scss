@@ -12,8 +12,7 @@ main.home {
     div.text {
       padding: 1rem 0 0;
 
-      ul.about-me,
-      ul.favorite-tools {
+      ul.about-me {
         display: flex;
         align-items: center;
         flex-direction: row;
@@ -47,24 +46,13 @@ main.home {
           padding-left: 0;
         }
 
-        li:nth-of-type(2) {
-          display: none;
-        }
-
-        li:nth-of-type(3) {
-          padding-right: 0;
-        }
-      }
-
-      ul.favorite-tools {
-
         li:nth-of-type(2),
         li:nth-of-type(3) {
-          display: flex;
+          display: none;
         }
 
-        li:last-of-type {
-          display: none;
+        li:nth-of-type(4) {
+          padding-right: 0;
         }
       }
 
@@ -94,11 +82,8 @@ main.home {
     section.about-me {
       div.text {
 
-        ul.about-me,
-        ul.favorite-tools {
-
-          li:nth-of-type(3),
-          li:last-of-type {
+        ul.about-me {
+          li:nth-of-type(3) {
             display: flex;
           }
         }

@@ -3,8 +3,8 @@
   --green-dark: #20261c;
   --orange: #af4433;
   --cream: #eef1e8;
-  --delta-design: #003442;
-  --delta-design-light: #eeeeee;
+  --delta-design-system: #003442;
+  --delta-design-system-light: #eeeeee;
   --east-wind: #552a80;
   --east-wind-light: #eeeaf2;
   --eberhardt-design: #ffe151;
@@ -52,14 +52,6 @@
   font-style: normal;
   font-weight: normal;
 }
-.animate {
-  opacity: 0;
-  transition: opacity 1s ease 0s;
-}
-.animate.visible {
-  opacity: 1;
-}
-
 html {
   width: 100%;
   min-width: 100%;
@@ -349,6 +341,49 @@ h4 + dl {
   padding-top: calc(var(--p) * 0.5);
 }
 
+blockquote {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 36rem;
+  margin: 2rem auto 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: var(--gray);
+}
+blockquote:before {
+  display: block;
+  position: absolute;
+  top: -0.75rem;
+  left: calc(50% - 1.5rem);
+  width: 3rem;
+  height: 1.5rem;
+  text-align: center;
+  background-color: white;
+  content: url(../icons/double-quotes-l.svg);
+  transform: scale(1.5);
+}
+blockquote p {
+  padding: 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+@media (min-width: 64rem) {
+  blockquote {
+    margin: 4rem auto 3rem 0;
+  }
+  blockquote p {
+    max-width: 40rem;
+    font-size: calc(var(--p) * 1.25);
+  }
+  blockquote:before {
+    transform: scale(2);
+  }
+}
 figure {
   display: flex;
   flex-direction: column;
@@ -365,9 +400,67 @@ figure a {
 figure img {
   border-radius: 0.25rem;
 }
+figure ul.users,
+figure ul.pageviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 36rem;
+  padding: 1rem 0;
+  list-style: none;
+}
+figure ul.users li,
+figure ul.pageviews li {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  font-size: var(--small);
+  text-transform: uppercase;
+}
+figure ul.users li:first-of-type,
+figure ul.pageviews li:first-of-type {
+  width: 100%;
+  margin: 0;
+  border-right: none;
+  font-size: var(--h4);
+  line-height: 1;
+  text-transform: uppercase;
+}
+figure ul.users li span,
+figure ul.pageviews li span {
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--h3);
+  line-height: 1;
+}
+figure ul.users {
+  padding-top: 2rem;
+}
+figure ul.pageviews {
+  padding-bottom: 0;
+}
 
+@media (min-width: 30rem) {
+  figure ul.users li,
+  figure ul.pageviews li {
+    width: calc(25% - 1rem);
+    margin: 0.5rem 1rem 0 0;
+    border-right: 1px solid var(--gray);
+  }
+  figure ul.users li:last-of-type,
+  figure ul.pageviews li:last-of-type {
+    margin: 0.5rem 0 0;
+    border-right: none;
+  }
+}
 figcaption {
   width: 100%;
+  max-width: 36rem;
   margin: 0 auto;
   padding: 1rem 0 0;
   font-family: "metropolis-bold", sans-serif;
@@ -441,6 +534,33 @@ figcaption {
   z-index: 10;
 }
 
+.banner.intro {
+  justify-content: flex-start;
+  padding: 4rem 2rem;
+}
+.banner.intro div.text {
+  padding: 1rem 0 0;
+}
+
+@media (min-width: 64rem) {
+  .banner.intro {
+    justify-content: center;
+    z-index: 100;
+    background-attachment: fixed;
+    background-position: left center;
+    background-size: cover;
+  }
+  .banner.intro img {
+    display: none;
+  }
+  .banner.intro div.text {
+    width: 50%;
+    padding: 0;
+  }
+  .banner.intro div.text h2 {
+    padding: 0;
+  }
+}
 ul.cta {
   display: flex;
   flex-direction: column;
@@ -548,8 +668,7 @@ main.home section {
 main.home section.about-me div.text {
   padding: 1rem 0 0;
 }
-main.home section.about-me div.text ul.about-me,
-main.home section.about-me div.text ul.favorite-tools {
+main.home section.about-me div.text ul.about-me {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -559,8 +678,7 @@ main.home section.about-me div.text ul.favorite-tools {
   padding: 0;
   list-style: none;
 }
-main.home section.about-me div.text ul.about-me li,
-main.home section.about-me div.text ul.favorite-tools li {
+main.home section.about-me div.text ul.about-me li {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -573,31 +691,21 @@ main.home section.about-me div.text ul.favorite-tools li {
   font-size: var(--small);
   text-transform: uppercase;
 }
-main.home section.about-me div.text ul.about-me li svg,
-main.home section.about-me div.text ul.favorite-tools li svg {
+main.home section.about-me div.text ul.about-me li svg {
   display: grid;
   width: 2rem;
   height: 2rem;
   margin-bottom: 0.25rem;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(1),
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(1) {
+main.home section.about-me div.text ul.about-me li:nth-of-type(1) {
   padding-left: 0;
 }
 main.home section.about-me div.text ul.about-me li:nth-of-type(2),
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2) {
+main.home section.about-me div.text ul.about-me li:nth-of-type(3) {
   display: none;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(3),
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
+main.home section.about-me div.text ul.about-me li:nth-of-type(4) {
   padding-right: 0;
-}
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(2),
-main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3) {
-  display: flex;
-}
-main.home section.about-me div.text ul.favorite-tools li:last-of-type {
-  display: none;
 }
 main.home section.about-me div.text ul.cta {
   padding: 1rem 0 0;
@@ -609,10 +717,7 @@ main.home section.about-me div.text ul.cta {
   }
 }
 @media (min-width: 48rem) {
-  main.home section.about-me div.text ul.about-me li:nth-of-type(3),
-  main.home section.about-me div.text ul.about-me li:last-of-type,
-  main.home section.about-me div.text ul.favorite-tools li:nth-of-type(3),
-  main.home section.about-me div.text ul.favorite-tools li:last-of-type {
+  main.home section.about-me div.text ul.about-me li:nth-of-type(3) {
     display: flex;
   }
 }
@@ -842,6 +947,7 @@ main.resume article.resume section.contact ul li a span {
     padding: 4rem 2rem 2rem;
   }
   main.resume section.banner.intro div.text {
+    width: 100%;
     padding: 0 0 2rem 0;
   }
   main.resume section.banner.intro section.contact {
@@ -878,11 +984,45 @@ main.resume article.resume section.contact ul li a span {
     display: none;
   }
 }
+@media (min-width: 64rem) {
+  main.delta-design-system section.banner.intro {
+    background-image: url(../images/delta-design-system-01-2x.jpg);
+  }
+  main.enservio section.banner.intro {
+    background-image: url(../images/enservio-16-2x.jpg);
+  }
+  main.enservio section.banner.intro div.text {
+    width: 45%;
+  }
+  main.mystuff section.banner.intro {
+    background-image: url(../images/mystuff-01-2x.jpg);
+    color: white;
+  }
+  main.mystuff section.banner.intro div.text {
+    width: 42.5%;
+  }
+  main.panera section.banner.intro {
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.25);
+    background-image: url(../images/panera-20-2x.jpg);
+  }
+  main.panera section.banner.intro div.text {
+    width: 45%;
+    color: white;
+  }
+  main.transferx section.banner.intro {
+    background-image: url(../images/transferx-30-2x.jpg);
+  }
+}
+article.project section {
+  padding: 2rem;
+}
+
 div.details {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   padding: 0 0 1rem;
   border-bottom: 1px solid var(--gray);
@@ -959,7 +1099,6 @@ div.details ul.skills li:first-of-type {
 
 @media (min-width: 40rem) {
   div.details {
-    justify-content: space-between;
     padding: 0;
     border-bottom: none;
   }
@@ -976,22 +1115,26 @@ div.details ul.skills li:first-of-type {
     background-color: var(--gray);
     content: "";
   }
+  div.details ul.links {
+    padding-left: 1rem;
+  }
   div.details ul.skills {
     width: 50%;
+    padding-left: 1rem;
   }
   div.details ul.skills::after {
     display: none;
   }
 }
-section.gallery {
+article.project section.gallery {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
 }
-section.gallery figure {
+article.project section.gallery figure {
   padding: 1rem;
 }
-section.gallery div.collection {
+article.project section.gallery div.collection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1000,147 +1143,222 @@ section.gallery div.collection {
   margin: 1rem 0 1rem -1rem;
   padding: 1rem;
 }
-section.gallery div.collection figure {
+article.project section.gallery div.collection figure {
   width: 100%;
 }
-section.gallery div.collection figure.laptop {
+article.project section.gallery div.collection figure.laptop {
   width: 80%;
 }
-section.gallery div.collection figure.tablet {
+article.project section.gallery div.collection figure.tablet {
   width: 50%;
 }
-section.gallery div.collection figure.phone {
+article.project section.gallery div.collection figure.phone {
   width: 33.3333333333%;
 }
+article.project section.gallery div.collection + div.collection {
+  margin-top: -2rem;
+}
 
 @media (min-width: 64rem) {
-  section.gallery figure {
+  article.project section.gallery figure {
     width: 50%;
   }
-  section.gallery div.collection figure.tablet {
+  article.project section.gallery div.collection figure.tablet {
     width: 40%;
   }
-  section.gallery div.collection figure.phone {
+  article.project section.gallery div.collection figure.phone {
     width: 25%;
   }
+  article.project section.gallery div.collection blockquote {
+    max-width: 40rem;
+    margin: 4rem auto 3rem;
+  }
 }
-main.delta-design-system section.banner.intro {
-  justify-content: flex-start;
-  padding: 4rem 2rem;
-}
-main.delta-design-system section.banner.intro div.text {
-  padding: 1rem 0 0;
-}
-main.delta-design-system section {
-  padding: 2rem;
-}
-main.delta-design-system section.gallery {
-  padding: 1rem;
+@media (min-width: 90rem) {
+  article.project section.gallery div.collection blockquote {
+    max-width: 48rem;
+  }
+  article.project section.gallery div.collection blockquote p {
+    max-width: 56rem;
+    font-size: calc(var(--p) * 1.5);
+  }
 }
 main.delta-design-system section.gallery div.collection {
-  background-color: var(--delta-design);
+  background-color: var(--delta-design-system);
 }
 
-@media (min-width: 64rem) {
-  main.delta-design-system section.banner.intro {
-    justify-content: center;
-    z-index: 100;
-    background-attachment: fixed;
-    background-blend-mode: hard-light;
-    background-color: rgba(0, 0, 0, 0.25);
-    background-image: url(../images/delta-design-system-01-2x.jpg);
-    background-position: left center;
-    background-size: cover;
-  }
-  main.delta-design-system section.banner.intro img {
-    display: none;
-  }
-  main.delta-design-system section.banner.intro div.text {
-    width: 50%;
-    padding: 0;
-  }
-  main.delta-design-system section.banner.intro div.text h2 {
-    padding: 0;
-  }
-}
-main.enservio section.banner.intro {
-  justify-content: flex-start;
-  padding: 4rem 2rem;
-}
-main.enservio section.banner.intro div.text {
-  padding: 1rem 0 0;
-}
-main.enservio section {
-  padding: 2rem;
-}
-main.enservio section.gallery {
-  padding: 1rem;
-}
 main.enservio section.gallery div.collection {
   background-color: var(--enservio);
 }
 
-@media (min-width: 64rem) {
-  main.enservio section.banner.intro {
-    justify-content: center;
-    z-index: 100;
-    background-attachment: fixed;
-    background-blend-mode: hard-light;
-    background-color: rgba(0, 0, 0, 0.25);
-    background-image: url(../images/enservio-16-2x.jpg);
-    background-position: left center;
-    background-size: cover;
-  }
-  main.enservio section.banner.intro img {
-    display: none;
-  }
-  main.enservio section.banner.intro div.text {
-    width: 45%;
-    padding: 0;
-  }
-  main.enservio section.banner.intro div.text h2 {
-    padding: 0;
-  }
-}
-main.mystuff section.banner.intro {
-  justify-content: flex-start;
-  padding: 4rem 2rem;
-}
-main.mystuff section.banner.intro div.text {
-  padding: 1rem 0 0;
-}
-main.mystuff section {
-  padding: 2rem;
-}
-main.mystuff section.gallery {
-  padding: 1rem;
-}
 main.mystuff section.gallery div.collection {
   background-color: var(--mystuff);
 }
 
-@media (min-width: 64rem) {
-  main.mystuff section.banner.intro {
-    justify-content: center;
-    z-index: 100;
-    background-attachment: fixed;
-    background-blend-mode: hard-light;
-    background-color: rgba(0, 0, 0, 0.25);
-    background-image: url(../images/mystuff-01-2x.jpg);
-    background-position: left center;
-    background-size: cover;
+main.panera section.gallery div.collection {
+  color: white;
+  background-color: var(--panera);
+}
+main.panera section.gallery div.collection figure.phone {
+  width: 45%;
+}
+main.panera section.gallery div.collection figure.tablet {
+  width: 100%;
+}
+main.panera section.gallery div.collection blockquote:before {
+  background-color: var(--panera);
+}
+
+main.transferx section.gallery div.collection {
+  background-color: var(--transferx);
+}
+
+@media (min-width: 40rem) {
+  main.panera section.gallery div.collection figure.phone {
+    width: 35%;
   }
-  main.mystuff section.banner.intro img {
-    display: none;
-  }
-  main.mystuff section.banner.intro div.text {
-    width: 45%;
-    padding: 0;
-  }
-  main.mystuff section.banner.intro div.text h2 {
-    padding: 0;
+  main.panera section.gallery div.collection figure.tablet {
+    width: 75%;
   }
 }
+@media (min-width: 56rem) {
+  main.panera section.gallery div.collection figure.phone {
+    width: 25%;
+  }
+  main.panera section.gallery div.collection figure.tablet {
+    width: 65%;
+  }
+}
+@media (min-width: 90rem) {
+  main.panera section.gallery div.collection figure.phone {
+    width: 22.5%;
+  }
+  main.panera section.gallery div.collection figure.tablet {
+    width: 50%;
+  }
+}
+main.transferx figure.colors,
+main.transferx figure.patterns,
+main.transferx figure.marks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 34rem;
+  margin: 1rem 0 0;
+}
+main.transferx figure.colors img,
+main.transferx figure.patterns img,
+main.transferx figure.marks img {
+  width: calc(50% - 1rem);
+  background-color: white;
+}
+main.transferx figure.colors img:nth-of-type(2),
+main.transferx figure.patterns img:nth-of-type(2),
+main.transferx figure.marks img:nth-of-type(2) {
+  display: none;
+}
+main.transferx figure.colors dl.colors {
+  width: calc(50% - 1rem);
+  margin: 0;
+  padding: 1rem 0;
+  font-size: var(--small);
+  text-transform: uppercase;
+}
+main.transferx figure.colors dl.colors dt {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--small);
+  line-height: 1.5;
+}
+main.transferx figure.colors dl.colors dt span {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 0.5rem;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+main.transferx figure.colors dl.colors dd {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-size: var(--xsmall);
+}
+main.transferx figure.colors dl.colors dd span {
+  display: inline-block;
+  margin: 0 0.125rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(1) span {
+  width: 19.375%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(1) span:first-child {
+  width: 22.5%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(2) span {
+  width: 25.8333333333%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(2) span:first-child {
+  width: 22.5%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(3) span {
+  width: 77.5%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(3) span:first-child {
+  width: 22.5%;
+}
+@media (min-width: 48rem) {
+  main.transferx figure.colors dl.colors {
+    width: calc(33.3333333333% - 1rem);
+  }
+}
+@media (min-width: 90rem) {
+  main.transferx figure.colors dl.colors {
+    width: calc(25% - 1rem);
+  }
+}
+main.transferx figure.patterns {
+  padding: 0 0 2rem;
+}
+main.transferx figure.marks .logo {
+  display: grid;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto 2rem 0;
+  background-color: white;
+}
+main.transferx figure.marks .icon {
+  width: 4rem;
+  max-width: 4rem;
+}
+@media (min-width: 48rem) {
+  main.transferx figure.marks {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main.transferx figure.marks .logo {
+    margin: 0 2rem 0 0;
+  }
+}
+@media (min-width: 64rem) {
+  main.transferx figure.patterns img {
+    width: calc(33.3333333333% - 1rem);
+  }
+  main.transferx figure.patterns img:nth-of-type(2n) {
+    display: inherit;
+  }
+}
+@media (min-width: 90rem) {
+  main.transferx figure.colors,
+  main.transferx figure.patterns,
+  main.transferx figure.marks {
+    max-width: 40rem;
+  }
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -1483,6 +1701,13 @@ html.dark .skip {
   background: var(--green-dark);
 }
 
+html.dark blockquote {
+  border-color: white;
+}
+html.dark blockquote:before {
+  background-color: var(--green-dark);
+}
+
 html.dark main.home section {
   background-color: var(--green-dark);
 }
@@ -1509,4 +1734,18 @@ html.dark main.enservio section.gallery div.collection {
 
 html.dark main.mystuff section.gallery div.collection {
   background-color: transparent;
+}
+
+html.dark main.panera section.gallery div.collection {
+  background-color: transparent;
+}
+html.dark main.panera section.gallery div.collection blockquote:before {
+  background-color: var(--green-dark);
+}
+
+html.dark main.transferx section.gallery div.collection {
+  background-color: transparent;
+}
+html.dark main.transferx figure.marks div.icon svg path {
+  fill: white;
 }

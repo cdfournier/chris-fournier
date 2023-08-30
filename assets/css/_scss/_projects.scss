@@ -1,9 +1,67 @@
+// PROJECT BANNER INTRO IMAGES
+@media (min-width: 64rem) {
+  main.delta-design-system {
+    section.banner.intro {
+      background-image: url(../images/delta-design-system-01-2x.jpg);
+    }
+  }
+
+  main.enservio {
+    section.banner.intro {
+      background-image: url(../images/enservio-16-2x.jpg);
+
+      div.text {
+        width: 45%;
+      }
+    }
+  }
+
+  main.mystuff {
+    section.banner.intro {
+      background-image: url(../images/mystuff-01-2x.jpg);
+      color: white;
+
+      div.text {
+        width: 42.5%;
+      }
+    }
+  }
+
+  main.panera {
+    section.banner.intro {
+      background-blend-mode: overlay;
+      background-color: rgba($color: #000000, $alpha: 0.25);
+      background-image: url(../images/panera-20-2x.jpg);
+
+      div.text {
+        width: 45%;
+        color: white;
+      }
+    }
+  }
+
+  main.transferx {
+    section.banner.intro {
+      background-image: url(../images/transferx-30-2x.jpg);
+    }
+  }
+}
+
+
+// PROJECT ARTICLES
+article.project {
+  section {
+    padding: 2rem;
+  }
+}
+
+
 // PROJECT DETAILS LISTS
 div.details {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   padding: 0 0 1rem;
   border-bottom: 1px solid $gray;
@@ -88,7 +146,7 @@ div.details {
 
 @media (min-width: 40rem) {
   div.details {
-    justify-content: space-between;
+    // justify-content: space-between;
     padding: 0;
     border-bottom: none;
 
@@ -107,8 +165,13 @@ div.details {
       }
     }
 
+    ul.links {
+      padding-left: 1rem;
+    }
+
     ul.skills {
       width: 50%;
+      padding-left: 1rem;
 
       &::after {
         display: none;
@@ -119,57 +182,347 @@ div.details {
 
 
 // PROJECT GALLERIES
-section.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem;
-
-  figure {
-    padding: 1rem;
-  }
-
-  div.collection {
+article.project {
+  section.gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: calc(100vw + 2rem);
-    min-width: 100vw;
-    margin: 1rem 0 1rem -1rem;
     padding: 1rem;
 
     figure {
-      width: 100%;
+      padding: 1rem;
     }
 
-    figure.laptop {
-      width: 80%;
+    div.collection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: calc(100vw + 2rem);
+      min-width: 100vw;
+      margin: 1rem 0 1rem -1rem;
+      padding: 1rem;
+
+      figure {
+        width: 100%;
+      }
+
+      figure.laptop {
+        width: 80%;
+      }
+
+      figure.tablet {
+        width: 50%;
+      }
+
+      figure.phone {
+        width: calc(100% / 3);
+      }
+
     }
 
-    figure.tablet {
-      width: 50%;
+    div.collection+div.collection {
+      margin-top: -2rem;
     }
-
-    figure.phone {
-      width: calc(100% / 3);
-    }
-
   }
 }
 
 @media (min-width: 64rem) {
-  section.gallery {
-    figure {
-      width: 50%;
-    }
+  article.project {
 
-    div.collection {
-      figure.tablet {
-        width: 40%;
+    section.gallery {
+      figure {
+        width: 50%;
       }
+
+      div.collection {
+        figure.tablet {
+          width: 40%;
+        }
+
+        figure.phone {
+          width: 25%;
+        }
+
+        blockquote {
+          max-width: 40rem;
+          margin: 4rem auto 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  article.project {
+    section.gallery {
+      div.collection {
+        blockquote {
+          max-width: 48rem;
+
+          p {
+            max-width: 56rem;
+            font-size: calc($p * 1.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// PROJECT GALLERIES COLLECTION COLORS
+main.delta-design-system {
+  section.gallery {
+    div.collection {
+      background-color: $delta-design-system;
+    }
+  }
+}
+
+main.enservio {
+  section.gallery {
+    div.collection {
+      background-color: $enservio;
+    }
+  }
+}
+
+main.mystuff {
+  section.gallery {
+    div.collection {
+      background-color: $mystuff;
+    }
+  }
+}
+
+main.panera {
+  section.gallery {
+    div.collection {
+      color: white;
+      background-color: $panera;
 
       figure.phone {
-        width: 25%;
+        width: 45%;
       }
+
+      figure.tablet {
+        width: 100%;
+      }
+
+      blockquote:before {
+        background-color: $panera;
+      }
+    }
+  }
+}
+
+main.transferx {
+  section.gallery {
+    div.collection {
+      background-color: $transferx;
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main.panera {
+    section.gallery {
+      div.collection {
+        figure.phone {
+          width: 35%;
+        }
+
+        figure.tablet {
+          width: 75%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+  main.panera {
+    section.gallery {
+      div.collection {
+        figure.phone {
+          width: 25%;
+        }
+
+        figure.tablet {
+          width: 65%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  main.panera {
+    section.gallery {
+      div.collection {
+        figure.phone {
+          width: 22.5%;
+        }
+
+        figure.tablet {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+// TRANSFERX FIGURES
+main.transferx {
+
+  figure.colors,
+  figure.patterns,
+  figure.marks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 34rem;
+    margin: 1rem 0 0;
+
+    img {
+      width: calc((100% / 2) - 1rem);
+      background-color: white;
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  figure.colors {
+
+    dl.colors {
+      width: calc(50% - 1rem);
+      margin: 0;
+      padding: 1rem 0;
+      font-size: $small;
+      text-transform: uppercase;
+
+      dt {
+        display: flex;
+        flex-direction: column;
+        font-size: $small;
+        line-height: 1.5;
+
+        span {
+          display: grid;
+          width: 3rem;
+          height: 3rem;
+          margin: 0 0 0.5rem;
+          border: 2px solid white;
+          border-radius: 100%;
+        }
+      }
+
+      dd {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        font-size: $xsmall;
+
+        span {
+          display: inline-block;
+          margin: 0 0.125rem 0 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        &:nth-of-type(1) {
+          span {
+            width: calc((100% - 22.5%) / 4);
+
+            &:first-child {
+              width: 22.5%;
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          span {
+            width: calc((100% - 22.5%) / 3);
+
+            &:first-child {
+              width: 22.5%;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          span {
+            width: calc(100% - 22.5%);
+
+            &:first-child {
+              width: 22.5%;
+            }
+          }
+        }
+      }
+
+      @media (min-width: 48rem) {
+        width: calc((100% / 3) - 1rem);
+      }
+
+      @media (min-width: 90rem) {
+        width: calc((100% / 4) - 1rem);
+      }
+    }
+  }
+
+  figure.patterns {
+    padding: 0 0 2rem;
+  }
+
+  figure.marks {
+    .logo {
+      display: grid;
+      width: 100%;
+      max-width: 24rem;
+      margin: 0 auto 2rem 0;
+      background-color: white;
+    }
+
+    .icon {
+      width: 4rem;
+      max-width: 4rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    figure.marks {
+      align-items: center;
+      justify-content: flex-start;
+
+      .logo {
+        margin: 0 2rem 0 0;
+      }
+    }
+  }
+
+  @media (min-width: 64rem) {
+    figure.patterns {
+      img {
+        width: calc((100% / 3) - 1rem);
+
+        &:nth-of-type(2n) {
+          display: inherit;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 90rem) {
+
+    figure.colors,
+    figure.patterns,
+    figure.marks {
+      max-width: 40rem;
     }
   }
 }
