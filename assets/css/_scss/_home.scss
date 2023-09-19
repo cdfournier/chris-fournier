@@ -68,21 +68,8 @@ main.home {
     section.about-me {
       div.text {
         ul.about-me {
-          li:nth-of-type(2) {
-            display: flex;
-          }
-        }
-      }
-    }
-  }
-}
 
-@media (min-width: 48rem) {
-  main.home {
-    section.about-me {
-      div.text {
-
-        ul.about-me {
+          li:nth-of-type(2),
           li:nth-of-type(3) {
             display: flex;
           }
@@ -92,11 +79,11 @@ main.home {
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   main.home {
     section.about-me {
       color: white;
-      background-attachment: fixed;
+      background-attachment: scroll;
       background-blend-mode: hard-light;
       background-color: rgba($color: #000000, $alpha: 0.25);
       background-image: url(../images/mug-2x.jpg);
@@ -130,12 +117,22 @@ main.home {
   section.projects {
     padding: 2rem;
 
+    h2,
+    p {
+      margin: 0;
+    }
+
     div.project {
       display: flex;
+      align-items: flex-start;
       flex-direction: column-reverse;
       overflow: hidden;
       max-width: 100%;
       padding: 2rem 0 0;
+
+      &:first-of-type {
+        padding: 2rem 0 1rem;
+      }
 
       figure:nth-of-type(2) {
         display: none;
@@ -152,7 +149,6 @@ main.home {
   main.home {
     section.projects {
       div.project {
-        align-items: center;
         flex-direction: row;
         padding: 1rem 0;
 
@@ -164,6 +160,16 @@ main.home {
           width: 60%;
           padding: 0 2rem 0 0;
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  main.home {
+    section.projects {
+      div.project {
+        align-items: center;
       }
     }
   }

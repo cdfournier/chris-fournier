@@ -119,7 +119,8 @@ p,
 small {
   display: block;
   width: 100%;
-  margin: 0;
+  max-width: 36rem;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -155,7 +156,6 @@ h4 {
 }
 
 p {
-  max-width: 36rem;
   padding: var(--p) 0 0;
   font-size: var(--p);
   line-height: 1.5;
@@ -172,7 +172,6 @@ b {
 }
 
 small {
-  max-width: 28rem;
   padding: var(--small) 0 0;
   font-size: var(--small);
   line-height: 1.5;
@@ -182,7 +181,7 @@ small {
   display: none;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   h2 {
     font-size: calc(var(--h2) * 1.25);
   }
@@ -217,7 +216,8 @@ dl {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0;
+  max-width: 36rem;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -232,7 +232,6 @@ dl dt,
 dl dd {
   display: list-item;
   width: 100%;
-  max-width: 36rem;
   margin: 0;
   padding: var(--p) 0 0;
   font-size: var(--p);
@@ -542,7 +541,7 @@ figcaption {
   padding: 1rem 0 0;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   .banner.intro {
     justify-content: center;
     z-index: 100;
@@ -554,7 +553,6 @@ figcaption {
     display: none;
   }
   .banner.intro div.text {
-    width: 50%;
     padding: 0;
   }
   .banner.intro div.text h2 {
@@ -712,19 +710,15 @@ main.home section.about-me div.text ul.cta {
 }
 
 @media (min-width: 40rem) {
-  main.home section.about-me div.text ul.about-me li:nth-of-type(2) {
-    display: flex;
-  }
-}
-@media (min-width: 48rem) {
+  main.home section.about-me div.text ul.about-me li:nth-of-type(2),
   main.home section.about-me div.text ul.about-me li:nth-of-type(3) {
     display: flex;
   }
 }
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   main.home section.about-me {
     color: white;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-blend-mode: hard-light;
     background-color: rgba(0, 0, 0, 0.25);
     background-image: url(../images/mug-2x.jpg);
@@ -747,12 +741,20 @@ main.home section.about-me div.text ul.cta {
 main.home section.projects {
   padding: 2rem;
 }
+main.home section.projects h2,
+main.home section.projects p {
+  margin: 0;
+}
 main.home section.projects div.project {
   display: flex;
+  align-items: flex-start;
   flex-direction: column-reverse;
   overflow: hidden;
   max-width: 100%;
   padding: 2rem 0 0;
+}
+main.home section.projects div.project:first-of-type {
+  padding: 2rem 0 1rem;
 }
 main.home section.projects div.project figure:nth-of-type(2) {
   display: none;
@@ -763,7 +765,6 @@ main.home section.projects div.project div.text {
 
 @media (min-width: 40rem) or (orientation: landscape) {
   main.home section.projects div.project {
-    align-items: center;
     flex-direction: row;
     padding: 1rem 0;
   }
@@ -773,6 +774,11 @@ main.home section.projects div.project div.text {
   main.home section.projects div.project div.text {
     width: 60%;
     padding: 0 2rem 0 0;
+  }
+}
+@media (min-width: 64rem) {
+  main.home section.projects div.project {
+    align-items: center;
   }
 }
 @media (min-width: 90rem) {
@@ -796,6 +802,12 @@ main.resume section > section {
   padding: 2rem 0;
 }
 
+main.resume section.banner.intro {
+  justify-content: center;
+}
+main.resume section.banner.intro div.text {
+  margin: 0 auto;
+}
 main.resume section.banner.intro div.text h2 span {
   display: block;
   font-family: "metropolis-regular", sans-serif;
@@ -984,31 +996,47 @@ main.resume article.resume section.contact ul li a span {
     display: none;
   }
 }
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
+  main.delta-design-system section.banner.intro,
+  main.enservio section.banner.intro,
+  main.mystuff section.banner.intro,
+  main.panera section.banner.intro,
+  main.transferx section.banner.intro {
+    justify-content: center;
+    z-index: 100;
+    background-size: cover;
+  }
+  main.delta-design-system section.banner.intro img,
+  main.enservio section.banner.intro img,
+  main.mystuff section.banner.intro img,
+  main.panera section.banner.intro img,
+  main.transferx section.banner.intro img {
+    display: none;
+  }
+  main.delta-design-system section.banner.intro div.text,
+  main.enservio section.banner.intro div.text,
+  main.mystuff section.banner.intro div.text,
+  main.panera section.banner.intro div.text,
+  main.transferx section.banner.intro div.text {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
   main.delta-design-system section.banner.intro {
     background-image: url(../images/delta-design-system-01-2x.jpg);
   }
   main.enservio section.banner.intro {
     background-image: url(../images/enservio-16-2x.jpg);
   }
-  main.enservio section.banner.intro div.text {
-    width: 45%;
-  }
   main.mystuff section.banner.intro {
     background-image: url(../images/mystuff-01-2x.jpg);
     color: white;
   }
-  main.mystuff section.banner.intro div.text {
-    width: 42.5%;
-  }
   main.panera section.banner.intro {
+    color: white;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.25);
     background-image: url(../images/panera-20-2x.jpg);
-  }
-  main.panera section.banner.intro div.text {
-    width: 45%;
-    color: white;
   }
   main.transferx section.banner.intro {
     background-image: url(../images/transferx-30-2x.jpg);
@@ -1024,6 +1052,8 @@ div.details {
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
   padding: 0 0 1rem;
   border-bottom: 1px solid var(--gray);
 }
@@ -1031,6 +1061,7 @@ div.details ul {
   display: flex;
   flex-direction: column;
   width: 50%;
+  margin: 0;
   padding: 1rem 0 0;
   list-style: none;
 }
@@ -1102,9 +1133,6 @@ div.details ul.skills li:first-of-type {
     padding: 0;
     border-bottom: none;
   }
-  div.details ul {
-    width: calc(25% - 1rem);
-  }
   div.details ul::after {
     display: block;
     position: absolute;
@@ -1119,8 +1147,7 @@ div.details ul.skills li:first-of-type {
     padding-left: 1rem;
   }
   div.details ul.skills {
-    width: 50%;
-    padding-left: 1rem;
+    width: 100%;
   }
   div.details ul.skills::after {
     display: none;
@@ -1244,8 +1271,8 @@ main.transferx figure.marks {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 34rem;
-  margin: 1rem 0 0;
+  max-width: 36rem;
+  margin: 1rem auto 0;
 }
 main.transferx figure.colors img,
 main.transferx figure.patterns img,
@@ -1401,6 +1428,7 @@ nav ul {
   flex-direction: column;
   width: calc(50% - 0.5rem);
   max-width: 16rem;
+  margin: 0;
   padding: 0;
   list-style: none;
 }

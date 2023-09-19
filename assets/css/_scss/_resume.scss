@@ -13,7 +13,11 @@ main.resume {
 // RESUME INTRO
 main.resume {
   section.banner.intro {
+    justify-content: center;
+
     div.text {
+      margin: 0 auto;
+
       h2 {
         span {
           display: block;
