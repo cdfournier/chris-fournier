@@ -52,6 +52,14 @@
   font-style: normal;
   font-weight: normal;
 }
+.animate {
+  opacity: 0;
+  transition: opacity 1s ease 0s;
+}
+.animate.visible {
+  opacity: 1;
+}
+
 html {
   width: 100%;
   min-width: 100%;
@@ -1493,7 +1501,7 @@ header.open nav form fieldset {
   width: auto;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
   header nav {
     align-items: flex-end;
   }
