@@ -89,6 +89,7 @@ footer {
 footer.resume {
   max-width: calc(36rem + 4rem);
   margin: 0 auto;
+  padding: 2rem 0 2rem 2rem;
 
   nav {
     width: 80%;
@@ -103,5 +104,6 @@ footer.resume {
   footer.resume {
     max-width: none;
     margin: 0;
+    padding: 2rem;
   }
 }

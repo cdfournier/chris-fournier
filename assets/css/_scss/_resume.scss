@@ -14,6 +14,7 @@ main.resume {
 main.resume {
   section.banner.intro {
     justify-content: center;
+    z-index: inherit;
 
     div.text {
       margin: 0 auto;
