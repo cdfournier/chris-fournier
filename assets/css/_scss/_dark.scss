@@ -176,6 +176,10 @@ html.dark {
   main.delta-design-system {
     section.banner.intro {
       color: black;
+
+      a {
+        color: inherit;
+      }
     }
 
     section.gallery {
@@ -192,6 +196,10 @@ html.dark {
   main.enservio {
     section.banner.intro {
       color: black;
+
+      a {
+        color: inherit;
+      }
     }
 
     section.gallery {
@@ -234,6 +242,12 @@ html.dark {
 // TRANSFERX DARK MODE
 html.dark {
   main.transferx {
+    section.banner.intro {
+      a {
+        color: inherit;
+      }
+    }
+
     section.gallery {
       div.collection {
         background-color: transparent;
