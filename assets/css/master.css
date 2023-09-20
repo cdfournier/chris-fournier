@@ -373,7 +373,7 @@ blockquote p {
 
 @media (min-width: 64rem) {
   blockquote {
-    margin: 4rem auto 3rem 0;
+    margin: 4rem auto 3rem;
   }
   blockquote p {
     max-width: 40rem;
@@ -1040,6 +1040,7 @@ main.resume article.resume section.contact ul li a span {
   }
   main.transferx section.banner.intro {
     background-image: url(../images/transferx-30-2x.jpg);
+    color: black;
   }
 }
 article.project section {
@@ -1174,24 +1175,38 @@ article.project section.gallery div.collection figure {
   width: 100%;
 }
 article.project section.gallery div.collection figure.laptop {
-  width: 80%;
+  width: 100%;
 }
 article.project section.gallery div.collection figure.tablet {
-  width: 50%;
+  width: 75%;
+}
+article.project section.gallery div.collection figure.tablet.landscape {
+  width: 90%;
 }
 article.project section.gallery div.collection figure.phone {
-  width: 33.3333333333%;
+  width: 45%;
 }
 article.project section.gallery div.collection + div.collection {
   margin-top: -2rem;
 }
 
+@media (min-width: 48rem) {
+  article.project section.gallery div.collection figure.tablet {
+    width: 50%;
+  }
+  article.project section.gallery div.collection figure.phone {
+    width: 33.3333333333%;
+  }
+}
 @media (min-width: 64rem) {
   article.project section.gallery figure {
     width: 50%;
   }
   article.project section.gallery div.collection figure.tablet {
     width: 40%;
+  }
+  article.project section.gallery div.collection figure.tablet.landscape {
+    width: 50%;
   }
   article.project section.gallery div.collection figure.phone {
     width: 25%;
@@ -1226,12 +1241,6 @@ main.panera section.gallery div.collection {
   color: white;
   background-color: var(--panera);
 }
-main.panera section.gallery div.collection figure.phone {
-  width: 45%;
-}
-main.panera section.gallery div.collection figure.tablet {
-  width: 100%;
-}
 main.panera section.gallery div.collection blockquote:before {
   background-color: var(--panera);
 }
@@ -1240,30 +1249,6 @@ main.transferx section.gallery div.collection {
   background-color: var(--transferx);
 }
 
-@media (min-width: 40rem) {
-  main.panera section.gallery div.collection figure.phone {
-    width: 35%;
-  }
-  main.panera section.gallery div.collection figure.tablet {
-    width: 75%;
-  }
-}
-@media (min-width: 56rem) {
-  main.panera section.gallery div.collection figure.phone {
-    width: 25%;
-  }
-  main.panera section.gallery div.collection figure.tablet {
-    width: 65%;
-  }
-}
-@media (min-width: 90rem) {
-  main.panera section.gallery div.collection figure.phone {
-    width: 22.5%;
-  }
-  main.panera section.gallery div.collection figure.tablet {
-    width: 50%;
-  }
-}
 main.transferx figure.colors,
 main.transferx figure.patterns,
 main.transferx figure.marks {
@@ -1376,13 +1361,6 @@ main.transferx figure.marks .icon {
   }
   main.transferx figure.patterns img:nth-of-type(2n) {
     display: inherit;
-  }
-}
-@media (min-width: 90rem) {
-  main.transferx figure.colors,
-  main.transferx figure.patterns,
-  main.transferx figure.marks {
-    max-width: 40rem;
   }
 }
 

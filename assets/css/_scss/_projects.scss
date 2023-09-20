@@ -56,6 +56,7 @@
   main.transferx {
     section.banner.intro {
       background-image: url(../images/transferx-30-2x.jpg);
+      color: black;
     }
   }
 }
@@ -220,21 +221,41 @@ article.project {
       }
 
       figure.laptop {
-        width: 80%;
+        width: 100%;
       }
 
       figure.tablet {
-        width: 50%;
+        width: 75%;
+
+        &.landscape {
+          width: 90%;
+        }
       }
 
       figure.phone {
-        width: calc(100% / 3);
+        width: 45%;
       }
 
     }
 
     div.collection+div.collection {
       margin-top: -2rem;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  article.project {
+    section.gallery {
+      div.collection {
+        figure.tablet {
+          width: 50%;
+        }
+
+        figure.phone {
+          width: calc(100% / 3);
+        }
+      }
     }
   }
 }
@@ -250,6 +271,10 @@ article.project {
       div.collection {
         figure.tablet {
           width: 40%;
+
+          &.landscape {
+            width: 50%;
+          }
         }
 
         figure.phone {
@@ -314,14 +339,6 @@ main.panera {
       color: white;
       background-color: $panera;
 
-      figure.phone {
-        width: 45%;
-      }
-
-      figure.tablet {
-        width: 100%;
-      }
-
       blockquote:before {
         background-color: $panera;
       }
@@ -333,54 +350,6 @@ main.transferx {
   section.gallery {
     div.collection {
       background-color: $transferx;
-    }
-  }
-}
-
-@media (min-width: 40rem) {
-  main.panera {
-    section.gallery {
-      div.collection {
-        figure.phone {
-          width: 35%;
-        }
-
-        figure.tablet {
-          width: 75%;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 56rem) {
-  main.panera {
-    section.gallery {
-      div.collection {
-        figure.phone {
-          width: 25%;
-        }
-
-        figure.tablet {
-          width: 65%;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 90rem) {
-  main.panera {
-    section.gallery {
-      div.collection {
-        figure.phone {
-          width: 22.5%;
-        }
-
-        figure.tablet {
-          width: 50%;
-        }
-      }
     }
   }
 }
@@ -528,15 +497,6 @@ main.transferx {
           display: inherit;
         }
       }
-    }
-  }
-
-  @media (min-width: 90rem) {
-
-    figure.colors,
-    figure.patterns,
-    figure.marks {
-      max-width: 40rem;
     }
   }
 }
