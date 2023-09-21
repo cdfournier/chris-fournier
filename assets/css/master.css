@@ -1625,7 +1625,6 @@ footer div.copyright p {
 footer.resume {
   max-width: 40rem;
   margin: 0 auto;
-  padding: 2rem 0 2rem 2rem;
 }
 footer.resume nav {
   width: 80%;
@@ -1638,7 +1637,6 @@ footer.resume div.branding {
   footer.resume {
     max-width: none;
     margin: 0;
-    padding: 2rem;
   }
 }
 form {
