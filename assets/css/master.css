@@ -379,7 +379,7 @@ blockquote p {
   line-height: 1.75;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   blockquote {
     margin: 4rem auto 3rem;
   }
@@ -799,7 +799,7 @@ main.home section.projects .project .text {
     align-items: center;
   }
 }
-@media (min-width: 90rem) {
+@media (min-width: 82.5rem) {
   main.home section.projects .project .text {
     width: 40%;
     min-width: 40%;
@@ -1223,7 +1223,7 @@ article.project section.gallery .collection + .collection {
     width: 33.3333333333%;
   }
 }
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   article.project section.gallery figure {
     width: 50%;
   }
@@ -1241,7 +1241,7 @@ article.project section.gallery .collection + .collection {
     margin: 4rem auto 3rem;
   }
 }
-@media (min-width: 90rem) {
+@media (min-width: 82.5rem) {
   article.project section.gallery .collection blockquote {
     max-width: 48rem;
   }
@@ -1352,7 +1352,7 @@ main.transferx figure.colors dl.colors dd:nth-of-type(3) span:first-child {
     width: calc(33.3333333333% - 1rem);
   }
 }
-@media (min-width: 90rem) {
+@media (min-width: 82.5rem) {
   main.transferx figure.colors dl.colors {
     width: calc(25% - 1rem);
   }
@@ -1380,7 +1380,7 @@ main.transferx figure.marks .icon {
     margin: 0 2rem 0 0;
   }
 }
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   main.transferx figure.patterns img {
     width: calc(33.3333333333% - 1rem);
   }
