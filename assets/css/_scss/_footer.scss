@@ -16,7 +16,7 @@ footer {
     }
   }
 
-  div.branding {
+  .branding {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +36,7 @@ footer {
     }
   }
 
-  div.copyright {
+  .copyright {
     width: 100%;
     padding: 1rem 0 0;
     text-align: center;
@@ -58,14 +58,14 @@ footer {
       }
     }
 
-    div.branding {
+    .branding {
       align-items: flex-end;
       justify-content: flex-end;
       width: 20%;
       padding-top: 0;
     }
 
-    div.copyright {
+    .copyright {
       padding: 2rem 0 0;
       text-align: right;
 
@@ -94,7 +94,7 @@ footer.resume {
     width: 80%;
   }
 
-  div.branding {
+  .branding {
     width: 20%;
   }
 }

@@ -183,7 +183,7 @@ html.dark {
     }
 
     section.gallery {
-      div.collection {
+      .collection {
         background-color: transparent;
       }
     }
@@ -203,7 +203,7 @@ html.dark {
     }
 
     section.gallery {
-      div.collection {
+      .collection {
         background-color: transparent;
       }
     }
@@ -215,7 +215,7 @@ html.dark {
 html.dark {
   main.mystuff {
     section.gallery {
-      div.collection {
+      .collection {
         background-color: transparent;
       }
     }
@@ -227,7 +227,7 @@ html.dark {
 html.dark {
   main.panera {
     section.gallery {
-      div.collection {
+      .collection {
         background-color: transparent;
 
         blockquote:before {
@@ -249,13 +249,13 @@ html.dark {
     }
 
     section.gallery {
-      div.collection {
+      .collection {
         background-color: transparent;
       }
     }
 
     figure.marks {
-      div.icon svg path {
+      .icon svg path {
         fill: white;
       }
     }

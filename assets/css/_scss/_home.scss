@@ -9,7 +9,7 @@ main.home {
 // HOME PAGE: ABOUT ME
 main.home {
   section.about-me {
-    div.text {
+    .text {
       padding: 1rem 0 0;
 
       ul.about-me {
@@ -66,7 +66,7 @@ main.home {
 @media (min-width: 40rem) {
   main.home {
     section.about-me {
-      div.text {
+      .text {
         ul.about-me {
 
           li:nth-of-type(2),
@@ -94,7 +94,7 @@ main.home {
         display: none;
       }
 
-      div.text {
+      .text {
         padding: 0;
 
         h2 {
@@ -122,7 +122,7 @@ main.home {
       margin: 0;
     }
 
-    div.project {
+    .project {
       display: flex;
       align-items: flex-start;
       flex-direction: column-reverse;
@@ -138,7 +138,7 @@ main.home {
         display: none;
       }
 
-      div.text {
+      .text {
         padding: 1rem 0 0;
       }
     }
@@ -148,7 +148,7 @@ main.home {
 @media (min-width: 40rem) or (orientation: landscape) {
   main.home {
     section.projects {
-      div.project {
+      .project {
         flex-direction: row;
         padding: 1rem 0;
 
@@ -156,7 +156,7 @@ main.home {
           width: 40%;
         }
 
-        div.text {
+        .text {
           width: 60%;
           padding: 0 2rem 0 0;
         }
@@ -168,7 +168,7 @@ main.home {
 @media (min-width: 64rem) {
   main.home {
     section.projects {
-      div.project {
+      .project {
         align-items: center;
       }
     }
@@ -178,8 +178,8 @@ main.home {
 @media (min-width: 90rem) {
   main.home {
     section.projects {
-      div.project {
-        div.text {
+      .project {
+        .text {
           width: 40%;
           min-width: 40%;
         }

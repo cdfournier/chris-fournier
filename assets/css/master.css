@@ -527,7 +527,7 @@ figcaption {
   padding: 4rem 2rem;
   background-repeat: no-repeat;
 }
-.banner div.overlay {
+.banner .overlay {
   display: none;
   position: absolute;
   top: 0;
@@ -537,7 +537,7 @@ figcaption {
   background-color: black;
   opacity: 0.25;
 }
-.banner div.text {
+.banner .text {
   z-index: 10;
 }
 
@@ -545,7 +545,7 @@ figcaption {
   justify-content: flex-start;
   padding: 4rem 2rem;
 }
-.banner.intro div.text {
+.banner.intro .text {
   padding: 1rem 0 0;
 }
 
@@ -560,10 +560,10 @@ figcaption {
   .banner.intro img {
     display: none;
   }
-  .banner.intro div.text {
+  .banner.intro .text {
     padding: 0;
   }
-  .banner.intro div.text h2 {
+  .banner.intro .text h2 {
     padding: 0;
   }
 }
@@ -671,10 +671,10 @@ main.home section {
   background-color: white;
 }
 
-main.home section.about-me div.text {
+main.home section.about-me .text {
   padding: 1rem 0 0;
 }
-main.home section.about-me div.text ul.about-me {
+main.home section.about-me .text ul.about-me {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -684,7 +684,7 @@ main.home section.about-me div.text ul.about-me {
   padding: 0;
   list-style: none;
 }
-main.home section.about-me div.text ul.about-me li {
+main.home section.about-me .text ul.about-me li {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -697,29 +697,29 @@ main.home section.about-me div.text ul.about-me li {
   font-size: var(--small);
   text-transform: uppercase;
 }
-main.home section.about-me div.text ul.about-me li svg {
+main.home section.about-me .text ul.about-me li svg {
   display: grid;
   width: 2rem;
   height: 2rem;
   margin-bottom: 0.25rem;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(1) {
+main.home section.about-me .text ul.about-me li:nth-of-type(1) {
   padding-left: 0;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(2),
-main.home section.about-me div.text ul.about-me li:nth-of-type(3) {
+main.home section.about-me .text ul.about-me li:nth-of-type(2),
+main.home section.about-me .text ul.about-me li:nth-of-type(3) {
   display: none;
 }
-main.home section.about-me div.text ul.about-me li:nth-of-type(4) {
+main.home section.about-me .text ul.about-me li:nth-of-type(4) {
   padding-right: 0;
 }
-main.home section.about-me div.text ul.cta {
+main.home section.about-me .text ul.cta {
   padding: 1rem 0 0;
 }
 
 @media (min-width: 40rem) {
-  main.home section.about-me div.text ul.about-me li:nth-of-type(2),
-  main.home section.about-me div.text ul.about-me li:nth-of-type(3) {
+  main.home section.about-me .text ul.about-me li:nth-of-type(2),
+  main.home section.about-me .text ul.about-me li:nth-of-type(3) {
     display: flex;
   }
 }
@@ -736,13 +736,13 @@ main.home section.about-me div.text ul.cta {
   main.home section.about-me img {
     display: none;
   }
-  main.home section.about-me div.text {
+  main.home section.about-me .text {
     padding: 0;
   }
-  main.home section.about-me div.text h2 {
+  main.home section.about-me .text h2 {
     padding: 0;
   }
-  main.home section.about-me div.text ul.cta li a {
+  main.home section.about-me .text ul.cta li a {
     color: white;
   }
 }
@@ -753,7 +753,7 @@ main.home section.projects h2,
 main.home section.projects p {
   margin: 0;
 }
-main.home section.projects div.project {
+main.home section.projects .project {
   display: flex;
   align-items: flex-start;
   flex-direction: column-reverse;
@@ -761,44 +761,44 @@ main.home section.projects div.project {
   max-width: 100%;
   padding: 2rem 0 0;
 }
-main.home section.projects div.project:first-of-type {
+main.home section.projects .project:first-of-type {
   padding: 2rem 0 1rem;
 }
-main.home section.projects div.project figure:nth-of-type(2) {
+main.home section.projects .project figure:nth-of-type(2) {
   display: none;
 }
-main.home section.projects div.project div.text {
+main.home section.projects .project .text {
   padding: 1rem 0 0;
 }
 
 @media (min-width: 40rem) or (orientation: landscape) {
-  main.home section.projects div.project {
+  main.home section.projects .project {
     flex-direction: row;
     padding: 1rem 0;
   }
-  main.home section.projects div.project figure {
+  main.home section.projects .project figure {
     width: 40%;
   }
-  main.home section.projects div.project div.text {
+  main.home section.projects .project .text {
     width: 60%;
     padding: 0 2rem 0 0;
   }
 }
 @media (min-width: 64rem) {
-  main.home section.projects div.project {
+  main.home section.projects .project {
     align-items: center;
   }
 }
 @media (min-width: 90rem) {
-  main.home section.projects div.project div.text {
+  main.home section.projects .project .text {
     width: 40%;
     min-width: 40%;
   }
-  main.home section.projects div.project figure {
+  main.home section.projects .project figure {
     width: 35%;
     min-width: 35%;
   }
-  main.home section.projects div.project figure:nth-of-type(2) {
+  main.home section.projects .project figure:nth-of-type(2) {
     display: flex;
     margin-left: 2rem;
   }
@@ -814,10 +814,10 @@ main.resume section.banner.intro {
   justify-content: center;
   z-index: inherit;
 }
-main.resume section.banner.intro div.text {
+main.resume section.banner.intro .text {
   margin: 0 auto;
 }
-main.resume section.banner.intro div.text h2 span {
+main.resume section.banner.intro .text h2 span {
   display: block;
   font-family: "metropolis-regular", sans-serif;
   font-style: normal;
@@ -967,7 +967,7 @@ main.resume article.resume section.contact ul li a span {
     min-height: auto;
     padding: 4rem 2rem 2rem;
   }
-  main.resume section.banner.intro div.text {
+  main.resume section.banner.intro .text {
     width: 100%;
     padding: 0 0 2rem 0;
   }
@@ -1022,11 +1022,11 @@ main.resume article.resume section.contact ul li a span {
   main.transferx section.banner.intro img {
     display: none;
   }
-  main.delta-design-system section.banner.intro div.text,
-  main.enservio section.banner.intro div.text,
-  main.mystuff section.banner.intro div.text,
-  main.panera section.banner.intro div.text,
-  main.transferx section.banner.intro div.text {
+  main.delta-design-system section.banner.intro .text,
+  main.enservio section.banner.intro .text,
+  main.mystuff section.banner.intro .text,
+  main.panera section.banner.intro .text,
+  main.transferx section.banner.intro .text {
     width: 50%;
   }
 }
@@ -1062,7 +1062,7 @@ article.project section {
   padding: 2rem;
 }
 
-div.details {
+.details {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -1073,7 +1073,7 @@ div.details {
   padding: 0 0 1rem;
   border-bottom: 1px solid var(--gray);
 }
-div.details ul {
+.details ul {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -1081,44 +1081,44 @@ div.details ul {
   padding: 1rem 0 0;
   list-style: none;
 }
-div.details ul li:first-of-type {
+.details ul li:first-of-type {
   padding: 0;
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: var(--p);
 }
-div.details ul li,
-div.details ul li a {
+.details ul li,
+.details ul li a {
   display: flex;
   align-items: center;
   padding: 0.5rem 0 0;
   font-size: var(--small);
   line-height: 1.25;
 }
-div.details ul li svg,
-div.details ul li a svg {
+.details ul li svg,
+.details ul li a svg {
   display: inline-grid;
   width: 1.5rem;
   height: 1.5rem;
   margin: 0 0.25rem 0 0;
 }
-div.details ul li a {
+.details ul li a {
   padding: 0;
 }
-div.details ul.links li svg {
+.details ul.links li svg {
   width: 1rem;
   height: 1rem;
   margin: 0 0 0 0.25rem;
 }
-div.details ul.skills {
+.details ul.skills {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   padding: 1rem 0 0;
   list-style: none;
 }
-div.details ul.skills li {
+.details ul.skills li {
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1132,7 +1132,7 @@ div.details ul.skills li {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-div.details ul.skills li:first-of-type {
+.details ul.skills li:first-of-type {
   width: 100%;
   min-width: 100%;
   padding: 0;
@@ -1145,11 +1145,11 @@ div.details ul.skills li:first-of-type {
 }
 
 @media (min-width: 40rem) {
-  div.details {
+  .details {
     padding: 0;
     border-bottom: none;
   }
-  div.details ul::after {
+  .details ul::after {
     display: block;
     position: absolute;
     top: 1rem;
@@ -1159,13 +1159,13 @@ div.details ul.skills li:first-of-type {
     background-color: var(--gray);
     content: "";
   }
-  div.details ul.links {
+  .details ul.links {
     padding-left: 1rem;
   }
-  div.details ul.skills {
+  .details ul.skills {
     width: 100%;
   }
-  div.details ul.skills::after {
+  .details ul.skills::after {
     display: none;
   }
 }
@@ -1177,7 +1177,7 @@ article.project section.gallery {
 article.project section.gallery figure {
   padding: 1rem;
 }
-article.project section.gallery div.collection {
+article.project section.gallery .collection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1186,30 +1186,30 @@ article.project section.gallery div.collection {
   margin: 1rem 0 1rem -1rem;
   padding: 1rem;
 }
-article.project section.gallery div.collection figure {
+article.project section.gallery .collection figure {
   width: 100%;
 }
-article.project section.gallery div.collection figure.laptop {
+article.project section.gallery .collection figure.laptop {
   width: 100%;
 }
-article.project section.gallery div.collection figure.tablet {
+article.project section.gallery .collection figure.tablet {
   width: 75%;
 }
-article.project section.gallery div.collection figure.tablet.landscape {
+article.project section.gallery .collection figure.tablet.landscape {
   width: 90%;
 }
-article.project section.gallery div.collection figure.phone {
+article.project section.gallery .collection figure.phone {
   width: 45%;
 }
-article.project section.gallery div.collection + div.collection {
+article.project section.gallery .collection + .collection {
   margin-top: -2rem;
 }
 
 @media (min-width: 48rem) {
-  article.project section.gallery div.collection figure.tablet {
+  article.project section.gallery .collection figure.tablet {
     width: 50%;
   }
-  article.project section.gallery div.collection figure.phone {
+  article.project section.gallery .collection figure.phone {
     width: 33.3333333333%;
   }
 }
@@ -1217,50 +1217,50 @@ article.project section.gallery div.collection + div.collection {
   article.project section.gallery figure {
     width: 50%;
   }
-  article.project section.gallery div.collection figure.tablet {
+  article.project section.gallery .collection figure.tablet {
     width: 40%;
   }
-  article.project section.gallery div.collection figure.tablet.landscape {
+  article.project section.gallery .collection figure.tablet.landscape {
     width: 50%;
   }
-  article.project section.gallery div.collection figure.phone {
+  article.project section.gallery .collection figure.phone {
     width: 25%;
   }
-  article.project section.gallery div.collection blockquote {
+  article.project section.gallery .collection blockquote {
     max-width: 40rem;
     margin: 4rem auto 3rem;
   }
 }
 @media (min-width: 90rem) {
-  article.project section.gallery div.collection blockquote {
+  article.project section.gallery .collection blockquote {
     max-width: 48rem;
   }
-  article.project section.gallery div.collection blockquote p {
+  article.project section.gallery .collection blockquote p {
     max-width: 56rem;
     font-size: calc(var(--p) * 1.5);
   }
 }
-main.delta-design-system section.gallery div.collection {
+main.delta-design-system section.gallery .collection {
   background-color: var(--delta-design-system);
 }
 
-main.enservio section.gallery div.collection {
+main.enservio section.gallery .collection {
   background-color: var(--enservio);
 }
 
-main.mystuff section.gallery div.collection {
+main.mystuff section.gallery .collection {
   background-color: var(--mystuff);
 }
 
-main.panera section.gallery div.collection {
+main.panera section.gallery .collection {
   color: white;
   background-color: var(--panera);
 }
-main.panera section.gallery div.collection blockquote:before {
+main.panera section.gallery .collection blockquote:before {
   background-color: var(--panera);
 }
 
-main.transferx section.gallery div.collection {
+main.transferx section.gallery .collection {
   background-color: var(--transferx);
 }
 
@@ -1569,7 +1569,7 @@ footer nav {
 footer nav ul {
   max-width: none;
 }
-footer div.branding {
+footer .branding {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1578,20 +1578,20 @@ footer div.branding {
   margin: 0;
   padding: 2rem 0 0;
 }
-footer div.branding svg {
+footer .branding svg {
   display: grid;
   width: 100%;
   max-width: 8rem;
 }
-footer div.branding form {
+footer .branding form {
   max-width: 8rem;
 }
-footer div.copyright {
+footer .copyright {
   width: 100%;
   padding: 1rem 0 0;
   text-align: center;
 }
-footer div.copyright p {
+footer .copyright p {
   max-width: none;
   font-size: var(--xsmall);
 }
@@ -1603,17 +1603,17 @@ footer div.copyright p {
   footer nav ul {
     width: calc(50% - 0.5rem);
   }
-  footer div.branding {
+  footer .branding {
     align-items: flex-end;
     justify-content: flex-end;
     width: 20%;
     padding-top: 0;
   }
-  footer div.copyright {
+  footer .copyright {
     padding: 2rem 0 0;
     text-align: right;
   }
-  footer div.copyright p {
+  footer .copyright p {
     font-size: var(--small);
   }
 }
@@ -1629,7 +1629,7 @@ footer.resume {
 footer.resume nav {
   width: 80%;
 }
-footer.resume div.branding {
+footer.resume .branding {
   width: 20%;
 }
 
@@ -1762,7 +1762,7 @@ html.dark main.delta-design-system section.banner.intro {
 html.dark main.delta-design-system section.banner.intro a {
   color: inherit;
 }
-html.dark main.delta-design-system section.gallery div.collection {
+html.dark main.delta-design-system section.gallery .collection {
   background-color: transparent;
 }
 
@@ -1772,27 +1772,27 @@ html.dark main.enservio section.banner.intro {
 html.dark main.enservio section.banner.intro a {
   color: inherit;
 }
-html.dark main.enservio section.gallery div.collection {
+html.dark main.enservio section.gallery .collection {
   background-color: transparent;
 }
 
-html.dark main.mystuff section.gallery div.collection {
+html.dark main.mystuff section.gallery .collection {
   background-color: transparent;
 }
 
-html.dark main.panera section.gallery div.collection {
+html.dark main.panera section.gallery .collection {
   background-color: transparent;
 }
-html.dark main.panera section.gallery div.collection blockquote:before {
+html.dark main.panera section.gallery .collection blockquote:before {
   background-color: var(--green-dark);
 }
 
 html.dark main.transferx section.banner.intro a {
   color: inherit;
 }
-html.dark main.transferx section.gallery div.collection {
+html.dark main.transferx section.gallery .collection {
   background-color: transparent;
 }
-html.dark main.transferx figure.marks div.icon svg path {
+html.dark main.transferx figure.marks .icon svg path {
   fill: white;
 }
