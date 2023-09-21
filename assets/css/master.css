@@ -571,6 +571,8 @@ ul.cta {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -750,7 +752,15 @@ main.home section.projects {
   padding: 2rem;
 }
 main.home section.projects h2,
-main.home section.projects p {
+main.home section.projects h3,
+main.home section.projects p,
+main.home section.projects ul.cta {
+  margin: 0;
+}
+main.home section.projects h2:first-child,
+main.home section.projects h3:first-child,
+main.home section.projects p:first-child,
+main.home section.projects ul.cta:first-child {
   margin: 0;
 }
 main.home section.projects .project {

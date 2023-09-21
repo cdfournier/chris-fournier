@@ -118,8 +118,14 @@ main.home {
     padding: 2rem;
 
     h2,
-    p {
+    h3,
+    p,
+    ul.cta {
       margin: 0;
+
+      &:first-child {
+        margin: 0;
+      }
     }
 
     .project {
