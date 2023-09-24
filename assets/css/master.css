@@ -1766,26 +1766,30 @@ html.dark main.home section {
     background-color: var(--green-dark);
   }
 }
-html.dark main.delta-design-system section.banner.intro {
-  color: black;
-}
-html.dark main.delta-design-system section.banner.intro a {
-  color: inherit;
-}
 html.dark main.delta-design-system section.gallery .collection {
   background-color: transparent;
 }
 
-html.dark main.enservio section.banner.intro {
-  color: black;
-}
-html.dark main.enservio section.banner.intro a {
-  color: inherit;
+@media (min-width: 64rem) {
+  html.dark main.delta-design-system section.banner.intro {
+    color: black;
+  }
+  html.dark main.delta-design-system section.banner.intro a {
+    color: inherit;
+  }
 }
 html.dark main.enservio section.gallery .collection {
   background-color: transparent;
 }
 
+@media (min-width: 64rem) {
+  html.dark main.enservio section.banner.intro {
+    color: black;
+  }
+  html.dark main.enservio section.banner.intro a {
+    color: inherit;
+  }
+}
 html.dark main.mystuff section.gallery .collection {
   background-color: transparent;
 }
@@ -1797,12 +1801,18 @@ html.dark main.panera section.gallery .collection blockquote:before {
   background-color: var(--green-dark);
 }
 
-html.dark main.transferx section.banner.intro a {
-  color: inherit;
-}
 html.dark main.transferx section.gallery .collection {
   background-color: transparent;
 }
 html.dark main.transferx figure.marks .icon svg path {
   fill: white;
+}
+
+@media (min-width: 64rem) {
+  html.dark main.transferx section.banner.intro {
+    color: black;
+  }
+  html.dark main.transferx section.banner.intro a {
+    color: inherit;
+  }
 }

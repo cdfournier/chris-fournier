@@ -174,17 +174,23 @@ html.dark {
 // DELTA DESIGN SYSTEM DARK MODE
 html.dark {
   main.delta-design-system {
-    section.banner.intro {
-      color: black;
-
-      a {
-        color: inherit;
-      }
-    }
-
     section.gallery {
       .collection {
         background-color: transparent;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  html.dark {
+    main.delta-design-system {
+      section.banner.intro {
+        color: black;
+
+        a {
+          color: inherit;
+        }
       }
     }
   }
@@ -194,17 +200,23 @@ html.dark {
 // ENSERVIO DARK MODE
 html.dark {
   main.enservio {
-    section.banner.intro {
-      color: black;
-
-      a {
-        color: inherit;
-      }
-    }
-
     section.gallery {
       .collection {
         background-color: transparent;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  html.dark {
+    main.enservio {
+      section.banner.intro {
+        color: black;
+
+        a {
+          color: inherit;
+        }
       }
     }
   }
@@ -242,12 +254,6 @@ html.dark {
 // TRANSFERX DARK MODE
 html.dark {
   main.transferx {
-    section.banner.intro {
-      a {
-        color: inherit;
-      }
-    }
-
     section.gallery {
       .collection {
         background-color: transparent;
@@ -257,6 +263,20 @@ html.dark {
     figure.marks {
       .icon svg path {
         fill: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  html.dark {
+    main.transferx {
+      section.banner.intro {
+        color: black;
+
+        a {
+          color: inherit;
+        }
       }
     }
   }
