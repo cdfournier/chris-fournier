@@ -1632,23 +1632,6 @@ footer .copyright p {
     justify-content: flex-start;
   }
 }
-footer.resume {
-  max-width: 40rem;
-  margin: 0 auto;
-}
-footer.resume nav {
-  width: 80%;
-}
-footer.resume .branding {
-  width: 20%;
-}
-
-@media (min-width: 64rem) {
-  footer.resume {
-    max-width: none;
-    margin: 0;
-  }
-}
 form {
   display: flex;
   flex-direction: column;

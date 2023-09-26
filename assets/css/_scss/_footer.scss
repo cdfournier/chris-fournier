@@ -83,25 +83,3 @@ footer {
     }
   }
 }
-
-
-// RESUME FOOTER
-footer.resume {
-  max-width: calc(36rem + 4rem);
-  margin: 0 auto;
-
-  nav {
-    width: 80%;
-  }
-
-  .branding {
-    width: 20%;
-  }
-}
-
-@media (min-width: 64rem) {
-  footer.resume {
-    max-width: none;
-    margin: 0;
-  }
-}
