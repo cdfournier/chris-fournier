@@ -580,7 +580,7 @@ ul.cta li {
   padding: 1.5rem 0 0;
 }
 ul.cta li a {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
 }
