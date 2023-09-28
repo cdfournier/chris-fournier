@@ -719,8 +719,12 @@ main.home section.about-me .text ul.cta {
   padding: 1rem 0 0;
 }
 
+@media (min-width: 34.25rem) {
+  main.home section.about-me .text ul.about-me li:nth-of-type(2) {
+    display: flex;
+  }
+}
 @media (min-width: 40rem) {
-  main.home section.about-me .text ul.about-me li:nth-of-type(2),
   main.home section.about-me .text ul.about-me li:nth-of-type(3) {
     display: flex;
   }
