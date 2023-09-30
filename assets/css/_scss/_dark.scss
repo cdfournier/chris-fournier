@@ -197,6 +197,38 @@ html.dark {
 }
 
 
+// EAST WIND DARK MODE
+html.dark {
+  main.east-wind {
+    section.gallery {
+      .collection {
+        background-color: transparent;
+      }
+    }
+
+    figure.logo {
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  html.dark {
+    main.east-wind {
+      section.banner.intro {
+        color: white;
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+
 // ENSERVIO DARK MODE
 html.dark {
   main.enservio {

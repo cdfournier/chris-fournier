@@ -1048,6 +1048,15 @@ main.resume article.resume section.contact ul li a span {
   main.delta-design-system section.banner.intro {
     background-image: url(../images/delta-design-system-01-2x.jpg);
   }
+  main.east-wind section.banner.intro {
+    color: white;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/east-wind-01-2x.jpg);
+  }
+  main.east-wind section.banner.intro a {
+    color: white;
+  }
   main.enservio section.banner.intro {
     background-image: url(../images/enservio-16-2x.jpg);
   }
@@ -1278,6 +1287,46 @@ main.transferx section.gallery .collection {
   background-color: var(--transferx);
 }
 
+main.east-wind figure.logo {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+}
+main.east-wind figure.logo svg {
+  width: 50%;
+  padding: 1rem 2rem;
+  fill: var(--east-wind);
+}
+main.east-wind figure.logo svg:nth-of-type(1) {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  main.east-wind figure.logo svg {
+    width: 35%;
+  }
+  main.east-wind figure.logo svg:nth-of-type(1) {
+    align-self: center;
+    width: 80%;
+  }
+}
+@media (min-width: 64rem) {
+  main.east-wind figure.logo {
+    max-width: 40rem;
+  }
+  main.east-wind figure.logo svg {
+    width: 25%;
+  }
+  main.east-wind figure.logo svg:nth-of-type(1) {
+    align-self: center;
+    width: 50%;
+  }
+}
 main.transferx figure.colors,
 main.transferx figure.patterns,
 main.transferx figure.marks {
@@ -1762,6 +1811,21 @@ html.dark main.delta-design-system section.gallery .collection {
     color: black;
   }
   html.dark main.delta-design-system section.banner.intro a {
+    color: inherit;
+  }
+}
+html.dark main.east-wind section.gallery .collection {
+  background-color: transparent;
+}
+html.dark main.east-wind figure.logo svg {
+  fill: white;
+}
+
+@media (min-width: 64rem) {
+  html.dark main.east-wind section.banner.intro {
+    color: white;
+  }
+  html.dark main.east-wind section.banner.intro a {
     color: inherit;
   }
 }
