@@ -1,10 +1,10 @@
-// DARK MODE/LIGHT MODE FORM
+// DARK MODE/LIGHT SWITCH
 form {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding: 1rem 0 0;
+  padding: 2rem 0 0;
 
   fieldset {
     width: 100%;
@@ -61,7 +61,7 @@ form {
 }
 
 
-// DARK MODE
+// DARK MODE GLOBAL SETTINGS
 html.dark {
   color: white;
 
@@ -138,36 +138,6 @@ html.dark {
 }
 
 
-// CARDS DARK MODE
-html.dark {
-  .card {
-    &:before {
-      background: white;
-    }
-  }
-}
-
-
-// RESUME SKILLS DARK MODE
-html.dark {
-  .skills {
-    ul {
-      li {
-        div {
-          background: $green-dark;
-          background: $gray-dark;
-
-          &>span {
-            background: $cream;
-            background: white;
-          }
-        }
-      }
-    }
-  }
-}
-
-
 // BLOCKQUOTES DARK MODE
 html.dark {
   blockquote {
@@ -180,52 +150,46 @@ html.dark {
 }
 
 
-// FIGURES & GALLERIES
+// HOME PAGE DARK MODE
 html.dark {
-  .gallery {
-    background: transparent;
-  }
-
-  article.project.delta-design-system,
-  article.project.enservio,
-  article.project.mystuff,
-  article.project.panera,
-  article.project.transferx {
-    .gallery {
-      background: transparent;
+  main.home {
+    section {
+      background-color: $green-dark;
     }
   }
+}
 
-  article.project.east-wind figure.logo svg,
-  article.project.transferx figure.marks .icon svg path {
-    fill: white;
+@media (min-width: 56rem) {
+  html.dark {
+    main.home {
+      section.about-me {
+        background-blend-mode: soft-light;
+        background-color: $green-dark;
+      }
+    }
   }
 }
 
 
-// INTRO BANNERS
+// DELTA DESIGN SYSTEM DARK MODE
 html.dark {
-  .banner.intro {
-    background-color: $green-dark;
+  main.delta-design-system {
+    section.gallery {
+      .collection {
+        background-color: transparent;
+      }
+    }
   }
+}
 
-  .banner.intro.welcome {
-    background-blend-mode: soft-light;
-  }
+@media (min-width: 56rem) {
+  html.dark {
+    main.delta-design-system {
+      section.banner.intro {
+        color: black;
 
-  @media (orientation: landscape) {
-
-    .banner.intro.delta-design-system,
-    .banner.intro.enservio,
-    .banner.intro.transferx {
-      color: black;
-
-      a {
-        color: $green;
-
-        &:hover,
-        &:focus {
-          color: $orange;
+        a {
+          color: inherit;
         }
       }
     }
@@ -233,14 +197,139 @@ html.dark {
 }
 
 
-// RESUME SKILLS
+// EAST WIND DARK MODE
 html.dark {
-  article.resume {
-    section.skills ul li div {
-      background: $gray-dark;
+  main.east-wind {
+    section.gallery {
+      .collection {
+        background-color: transparent;
+      }
+    }
 
-      &>span.animate {
-        background: $cream;
+    figure.logo {
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+  html.dark {
+    main.east-wind {
+      section.banner.intro {
+        color: white;
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+// ENSERVIO DARK MODE
+html.dark {
+  main.enservio {
+    section.gallery {
+      .collection {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+  html.dark {
+    main.enservio {
+      section.banner.intro {
+        color: black;
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+// MYSTUFF DARK MODE
+html.dark {
+  main.mystuff {
+    section.gallery {
+      .collection {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+// PANERA DARK MODE
+html.dark {
+  main.panera {
+    section.gallery {
+      .collection {
+        background-color: transparent;
+
+        blockquote:before {
+          background-color: $green-dark;
+        }
+      }
+    }
+  }
+}
+
+
+// TRANSFERX DARK MODE
+html.dark {
+  main.transferx {
+    section.gallery {
+      .collection {
+        background-color: transparent;
+      }
+    }
+
+    figure.marks {
+      .icon svg path {
+        fill: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+  html.dark {
+    main.transferx {
+      section.banner.intro {
+        color: black;
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+
+// ERROR PAGE DARK MODE
+html.dark {
+  main.error {
+    section {
+      background-color: $green-dark;
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+  html.dark {
+    main.error {
+      .banner.intro.error {
+        background-blend-mode: soft-light;
+        background-color: $green-dark;
       }
     }
   }

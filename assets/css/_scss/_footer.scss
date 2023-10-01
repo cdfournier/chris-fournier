@@ -8,10 +8,11 @@ footer {
   padding: 2rem;
 
   nav {
+    flex-direction: row;
+    text-align: left;
+
     ul {
-      &:last-of-type {
-        display: none;
-      }
+      max-width: none;
     }
   }
 
@@ -22,21 +23,25 @@ footer {
     justify-content: center;
     width: 100%;
     margin: 0;
-    padding: 2rem 0 0.5rem;
+    padding: 2rem 0 0;
 
     svg {
       display: grid;
       width: 100%;
       max-width: 8rem;
     }
+
+    form {
+      max-width: 8rem;
+    }
   }
 
   .copyright {
     width: 100%;
-    padding: $p 0 0;
+    padding: 1rem 0 0;
     text-align: center;
 
-    small {
+    p {
       max-width: none;
       font-size: $xsmall;
     }
@@ -45,43 +50,36 @@ footer {
 
 @media (min-width: 48rem) {
   footer {
-    align-items: flex-end;
-
     nav {
       width: 80%;
 
       ul {
-        &:last-of-type {
-          display: flex;
-        }
+        width: calc(50% - 0.5rem);
       }
     }
 
     .branding {
       align-items: flex-end;
+      justify-content: flex-end;
       width: 20%;
-      padding: 0;
-
-      form {
-        align-items: flex-end;
-        max-width: 8rem;
-      }
+      padding-top: 0;
     }
 
     .copyright {
+      padding: 2rem 0 0;
       text-align: right;
+
+      p {
+        font-size: $small;
+      }
     }
   }
 }
 
 @media (min-width: 64rem) {
   footer {
-    padding: 4rem 2rem 2rem;
-  }
-}
-
-@media (min-width: 90rem) {
-  footer {
-    padding: 8rem 2rem 2rem;
+    nav {
+      justify-content: flex-start;
+    }
   }
 }

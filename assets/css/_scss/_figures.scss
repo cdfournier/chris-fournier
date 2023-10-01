@@ -11,10 +11,87 @@ figure {
     display: grid;
     overflow: hidden;
     border-radius: 0.25rem;
+
+    img {
+      // @include transform(scale(1));
+      // @include transform-origin(center);
+      // @include transition(all, 5s, ease);
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        // @include transform(scale(1.25));
+      }
+    }
   }
 
   img {
     border-radius: 0.25rem;
+  }
+
+  ul.users,
+  ul.pageviews {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 36rem;
+    padding: 1rem 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      max-width: none;
+      margin: 0.5rem 0 0;
+      padding: 0;
+      font-size: $small;
+      text-transform: uppercase;
+
+      &:first-of-type {
+        width: 100%;
+        margin: 0;
+        border-right: none;
+        font-size: $h4;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      span {
+        @include sans-bold;
+        font-size: $h3;
+        line-height: 1;
+      }
+    }
+  }
+
+  ul.users {
+    padding-top: 2rem;
+  }
+
+  ul.pageviews {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 30rem) {
+  figure {
+
+    ul.users,
+    ul.pageviews {
+      li {
+        width: calc((100% / 4) - 1rem);
+        margin: 0.5rem 1rem 0 0;
+        border-right: 1px solid $gray;
+
+        &:last-of-type {
+          margin: 0.5rem 0 0;
+          border-right: none;
+        }
+      }
+    }
   }
 }
 
@@ -22,335 +99,10 @@ figure {
 // FIGCAPTION
 figcaption {
   width: 100%;
+  max-width: 36rem;
   margin: 0 auto;
   padding: 1rem 0 0;
   @include sans-bold;
   font-size: $small;
   line-height: 1.25;
-}
-
-
-// GALLERIES
-.gallery {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100vw;
-  margin: 2rem 0 0 -2rem;
-  padding: 1rem;
-
-  &+.gallery {
-    margin: -2rem 0 0 -2rem;
-  }
-
-  &+.gallery.transparent {
-    margin: 0 0 0 -2rem;
-  }
-
-  &+p {
-    padding-top: 2rem;
-  }
-
-  figure {
-    padding: 1rem;
-
-    &.phone {
-      width: 40%;
-    }
-  }
-
-  p {
-    padding: 1rem;
-  }
-}
-
-article.project.delta-design-system {
-  .gallery {
-    background: $delta-design;
-  }
-}
-
-article.project.enservio {
-  .gallery {
-    background: $enservio;
-  }
-}
-
-article.project.mystuff {
-  .gallery {
-    background: $mystuff;
-  }
-}
-
-article.project.panera {
-  .gallery {
-    background: $panera-light;
-  }
-}
-
-article.project.transferx {
-  .gallery {
-    background: $transferx;
-  }
-}
-
-.gallery.transparent {
-  background: transparent !important;
-
-  &+.gallery {
-    margin: 0 0 0 -2rem;
-  }
-}
-
-@media (min-width: 48rem) {
-  .gallery {
-    figure.phone {
-      width: 22.5%;
-    }
-
-    figure.tablet {
-      width: 50%;
-    }
-  }
-}
-
-@media (min-width: 64rem) {
-  .gallery {
-    margin: 4rem 0 0 -2rem;
-
-    &+p {
-      padding-top: 4rem;
-    }
-
-    figure {
-      &.small {
-        width: 50%;
-      }
-    }
-
-    p {
-      padding: 2rem 0;
-      line-height: 1.75;
-    }
-  }
-}
-
-@media (min-width: 90rem) {
-  .gallery {
-    margin: 8rem 0 0 -2rem;
-
-    p {
-      font-size: $h4;
-    }
-  }
-}
-
-
-// EAST WIND FIGURES
-article.project.east-wind figure.logo {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 33.75rem;
-  margin: 0 auto;
-  padding: 1rem 0 0;
-
-  svg {
-    width: 50%;
-    padding: 1rem 2rem;
-    fill: $east-wind;
-
-    &:nth-of-type(1) {
-      width: 100%;
-    }
-  }
-}
-
-@media (min-width: 48rem) {
-  article.project.east-wind figure.logo {
-    svg {
-      width: 35%;
-
-      &:nth-of-type(1) {
-        align-self: center;
-        width: 80%;
-      }
-    }
-  }
-}
-
-@media (min-width: 64rem) {
-  article.project.east-wind figure.logo {
-    max-width: 40rem;
-
-    svg {
-      width: 25%;
-
-      &:nth-of-type(1) {
-        align-self: center;
-        width: 50%;
-      }
-    }
-  }
-}
-
-
-// TRANSFERX FIGURES
-article.project.transferx {
-
-  figure.colors,
-  figure.patterns,
-  figure.marks {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 33.75rem;
-    margin: 2rem auto 0;
-
-    img {
-      width: calc((100% / 2) - 1rem);
-      background-color: white;
-
-      &:nth-of-type(2) {
-        display: none;
-      }
-    }
-  }
-
-  figure.colors {
-    justify-content: flex-start;
-
-    dl.colors {
-      width: 50%;
-      margin: 0;
-      padding: 1rem 2rem 1rem 0;
-      font-size: $small;
-      text-transform: uppercase;
-
-      dt {
-        display: flex;
-        flex-direction: column;
-        font-size: $small;
-        line-height: 1.5;
-
-        span {
-          display: grid;
-          width: 3rem;
-          height: 3rem;
-          margin: 0 0 0.5rem;
-          border: 2px solid white;
-          border-radius: 100%;
-        }
-      }
-
-      dd {
-        display: flex;
-        align-items: center;
-        padding: 0;
-        font-size: $xsmall;
-
-        span {
-          display: inline-block;
-          margin: 0 0.125rem 0 0;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-
-        &:nth-of-type(1) {
-          span {
-            width: calc((100% - 22.5%) / 4);
-
-            &:first-child {
-              width: 22.5%;
-            }
-          }
-        }
-
-        &:nth-of-type(2) {
-          span {
-            width: calc((100% - 22.5%) / 3);
-
-            &:first-child {
-              width: 22.5%;
-            }
-          }
-        }
-
-        &:nth-of-type(3) {
-          span {
-            width: calc(100% - 22.5%);
-
-            &:first-child {
-              width: 22.5%;
-            }
-          }
-        }
-      }
-
-      @media (min-width: 48rem) {
-        width: (100% / 3);
-      }
-
-      @media (min-width: 90rem) {
-        width: (100% / 4);
-      }
-    }
-  }
-
-  figure.patterns {
-    padding: 0 0 2rem;
-  }
-
-  figure.marks {
-    .logo {
-      display: grid;
-      width: 100%;
-      max-width: 24rem;
-      margin: 0 auto 2rem 0;
-      background-color: white;
-    }
-
-    .icon {
-      width: 4rem;
-      max-width: 4rem;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    figure.marks {
-      align-items: center;
-      justify-content: flex-start;
-
-      .logo {
-        margin: 0 2rem 0 0;
-      }
-    }
-  }
-
-  @media (min-width: 64rem) {
-    figure.patterns {
-      img {
-        width: calc((100% / 3) - 1rem);
-
-        &:nth-of-type(2n) {
-          display: inherit;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 90rem) {
-
-    figure.colors,
-    figure.patterns,
-    figure.marks {
-      max-width: 40rem;
-    }
-  }
 }

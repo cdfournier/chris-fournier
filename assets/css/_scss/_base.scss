@@ -1,9 +1,10 @@
 @import "mixins";
 @import "variables";
-@import "colors";
 @import "fonts";
 @import "animations";
 
+
+// HTML
 html {
   width: 100%;
   min-width: 100%;
@@ -35,6 +36,8 @@ html {
   }
 }
 
+
+// BODY
 body {
   width: 100%;
   margin: 0 auto;
@@ -48,6 +51,8 @@ body {
   box-sizing: border-box;
 }
 
+
+// GLOBAL
 img {
   width: 100%;
   height: auto;
@@ -58,10 +63,8 @@ a {
   @include sans-bold;
   text-decoration: none;
   color: $green;
-  @include transition(all, 0.25s, ease);
-
-  &:hover,
-  &:focus {
+  @include transition(color, 0.25s, ease);
+  &:hover, &:focus {
     color: $orange;
   }
 }

@@ -3,7 +3,7 @@ blockquote {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 33.75rem;
+  max-width: 36rem;
   margin: 2rem auto 1rem;
   padding: 2rem 0;
   border-top: 1px solid;
@@ -24,14 +24,20 @@ blockquote {
   }
 
   p {
+    padding: 0;
     @include sans-bold;
     line-height: 1.75;
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   blockquote {
     margin: 4rem auto 3rem;
+
+    p {
+      max-width: 40rem;
+      font-size: calc($p * 1.25);
+    }
 
     &:before {
       @include transform(scale(2));

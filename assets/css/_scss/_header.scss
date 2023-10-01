@@ -11,57 +11,16 @@ header {
   max-height: 4rem;
   margin: 0;
   padding: 0;
-  background: white;
+  padding: 2rem;
+  background-color: white;
   @include transition(max-height, 0.25s, ease);
 
   nav {
-    flex-direction: row;
-    align-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    position: relative;
+    justify-content: flex-start;
     width: 100%;
     max-height: 4rem;
-    padding: 1rem 2rem;
+    padding: 2rem 0;
     @include transition(max-height, 0.25s, ease);
-
-    button.menu-toggle {
-      display: flex;
-      justify-content: flex-end;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 2rem;
-      height: 2rem;
-      margin: 0;
-      padding: 0;
-      border: none;
-      color: $green;
-      background-color: transparent;
-      cursor: pointer;
-      @include transition(color, 0.25s, ease);
-
-      svg {
-        position: absolute;
-        width: 2rem;
-        height: 2rem;
-      }
-
-      svg.menu-toggle-open {
-        @include transition(width, 0.25s, ease);
-      }
-
-      svg.menu-toggle-close {
-        width: 0;
-        @include transition(width, 0.25s, ease);
-      }
-
-      &:hover,
-      &:focus {
-        color: $orange;
-      }
-    }
 
     ul,
     form {
@@ -70,31 +29,6 @@ header {
       padding: 2rem 0 0;
       @include transform(translateX(100vw));
       @include transition(all, 0.25s, ease);
-    }
-
-    ul {
-      li {
-        font-size: $h4;
-        svg {
-          width: $h4;
-          height: $h4;
-        }
-      }
-    }
-  }
-}
-
-@media (min-height: 40rem) {
-  header {
-    nav {
-      align-items: flex-end;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-
-      ul {
-        padding: 2rem 0 0;
-      }
     }
   }
 }
@@ -123,14 +57,12 @@ header.open {
 
     ul,
     form {
-      width: calc(100% / 3);
-      // padding: 3rem 0 0;
+      width: 100%;
       @include transform(translateX(0));
     }
 
     form {
       align-items: flex-start;
-      padding: 1rem 0 0;
 
       fieldset {
         width: auto;
@@ -139,30 +71,57 @@ header.open {
   }
 }
 
-@media (min-height: 40rem) {
+@media (min-width: 40rem) {
+  header {
+    nav {
+      align-items: flex-end;
+    }
+  }
+
   header.open {
     nav {
-
-      ul,
-      form {
-        width: 80%;
-        padding: 2rem 0 0;
-      }
-
-      form {
-        padding: 1rem 0 0;
+      ul, form {
+        width: 50%;
       }
     }
   }
 }
 
-@media (min-width: 48rem) {
+@media (max-width: 64rem) and (orientation: landscape) {
+  header {
+    nav {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  header {
+    nav {
+      align-items: flex-end;
+      flex-direction: column;
+      ul {
+        li {
+          font-size: calc($p * 1.25);
+
+          &:first-child {
+            font-size: $small;
+          }
+
+          svg {
+            width: $p;
+            height: $p;
+          }
+        }
+      }
+    }
+  }
+
   header.open {
     nav {
-
-      ul,
-      form {
-        width: 40vw;
+      ul, form {
+        width: calc(100% / 3);
       }
     }
   }

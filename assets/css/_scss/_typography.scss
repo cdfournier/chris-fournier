@@ -7,7 +7,8 @@ p,
 small {
   display: block;
   width: 100%;
-  margin: 0;
+  max-width: 36rem;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -41,22 +42,9 @@ h4 {
 }
 
 p {
-  max-width: 36rem;
   padding: $p 0 0;
   font-size: $p;
   line-height: 1.5;
-}
-
-p>cite {
-  display: block;
-  font-size: $small;
-}
-
-p>cite a {
-  display: inline;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 strong,
@@ -68,7 +56,6 @@ b {
 }
 
 small {
-  max-width: 28rem;
   padding: $small 0 0;
   font-size: $small;
   line-height: 1.5;
@@ -76,6 +63,16 @@ small {
 
 .visuallyhidden {
   display: none;
+}
+
+@media (min-width: 40rem) {
+  h2 {
+    font-size: calc($h2 * 1.25);
+
+    &+p {
+      font-size: calc($p * 1.25);
+    }
+  }
 }
 
 
@@ -109,7 +106,8 @@ dl {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0;
+  max-width: 36rem;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 
@@ -118,7 +116,6 @@ dl {
   dd {
     display: list-item;
     width: 100%;
-    max-width: 36rem;
     margin: 0;
     padding: $p 0 0;
     font-size: $p;
@@ -131,7 +128,7 @@ dl {
 }
 
 ul {
-  padding: $p 0 0 calc(1.5 * #{$p});
+  padding: $p 0 0 calc($p * 1.5);
   list-style: disc;
 
   &.no-bullets {
@@ -186,7 +183,7 @@ dl {
   }
 
   dd {
-    padding: 0 0 calc(1.5 * #{$p});
+    padding: 0 0 calc($p * 1.5);
 
     &:last-of-type {
       padding: 0;
@@ -226,401 +223,5 @@ h1+dl,
 h2+dl,
 h3+dl,
 h4+dl {
-  padding-top: calc(0.5 * #{$p});
-}
-
-
-// H SPANS
-h1,
-h2,
-h3,
-h4 {
-  span {
-    display: block;
-    line-height: 1.75;
-    text-transform: uppercase;
-  }
-
-  &:first-child {
-    padding: 0;
-  }
-}
-
-h1 {
-  span {
-    font-size: calc(0.425 * #{$h1});
-  }
-}
-
-h2 {
-  span {
-    font-size: calc(0.425 * #{$h2});
-  }
-}
-
-h3 {
-  span {
-    font-size: calc(0.425 * #{$h3});
-  }
-}
-
-h4 {
-  span {
-    font-size: calc(0.425 * #{$h4});
-  }
-}
-
-
-// TITLE SIZES
-h2.title {
-  font-size: $h1;
-}
-
-@media (min-width: 48rem) {
-  h1.title {
-    max-width: calc(1.5 * 36rem);
-    font-size: calc(1.5 * #{$h1});
-
-    &+p {
-      max-width: calc(1.5 * 36rem);
-      font-size: calc(1.5 * #{$p});
-    }
-  }
-
-  h2.title {
-    max-width: calc(1.25 * 36rem);
-    font-size: calc(1.5 * #{$h2});
-
-    &+p {
-      max-width: calc(1.25 * 36rem);
-      font-size: calc(1.25 * #{$p});
-    }
-  }
-
-  h3.title {
-    max-width: calc(1.25 * 36rem);
-    font-size: $h2;
-  }
-}
-
-@media (min-width: 64rem) {
-  h1.title {
-    font-size: calc(2 * #{$h1});
-  }
-
-  h2.title {
-    font-size: calc(1.75 * #{$h2});
-  }
-
-  h3.title {
-    font-size: $h1;
-  }
-}
-
-@media (min-width: 90rem) {
-  h1.title {
-    font-size: calc(2.5 * #{$h1});
-  }
-
-  h2.title {
-    font-size: calc(2.25 * #{$h2});
-  }
-
-  h3.title {
-    font-size: $h2;
-  }
-}
-
-
-// HOMEPAGE TYPOGRAPHY
-.about-me {
-  ul.about-me {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    padding: $p 0 0;
-    list-style: none;
-
-    li {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      width: 50%;
-      padding: 0 2rem 0 0;
-      font-size: calc(1.25 / #{$p});
-      text-transform: uppercase;
-
-      svg {
-        display: grid;
-        width: 2rem;
-      }
-
-      span {
-        padding: 0.25rem 0 0;
-        font-size: $h3;
-        line-height: 1;
-        @include sans-bold;
-      }
-    }
-
-    @media (min-width: 48rem) {
-      li {
-        width: 25%;
-      }
-    }
-  }
-}
-
-
-// RESUME TYPOGRAPHY
-article.resume {
-  section.job {
-    small {
-      padding: calc(0.25 * $p) 0 0;
-      text-transform: uppercase;
-    }
-
-    p.role {
-      padding: calc(0.5 * $p) 0 0;
-      @include sans-bold;
-
-      +ul {
-        padding: $p 0 0;
-        list-style: none;
-      }
-    }
-  }
-
-  section.skills {
-    ul.skills {
-      padding: 0;
-      list-style: none;
-
-      li {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: calc(0.75 * $p) 0;
-
-        &:first-child {
-          padding-top: 0;
-        }
-
-        span {
-          display: inline-flex;
-          margin: 0 0.25rem 0.25rem 0;
-          padding: 0.125rem 0.5rem;
-          border: 1px solid;
-          border-radius: 2rem;
-          font-size: $xsmall;
-
-          &:first-child {
-            display: block;
-            width: 100%;
-            margin: 0;
-            padding: 0 0 0.125rem;
-            border: none;
-            font-size: $p;
-          }
-        }
-
-        div {
-          display: block;
-          width: 100%;
-          height: 0.5rem;
-          margin: 0.5rem 0 0;
-          border-radius: 0.25rem;
-          background: $cream;
-
-          >span.animate {
-            width: 0;
-            height: inherit;
-            border-radius: 0.25rem;
-            background: $green;
-            @include transition(width, 0.5s, ease);
-            @include transform-origin(left);
-          }
-        }
-
-        &.code {
-          div {
-            >span.animate.visible {
-              width: 85%;
-            }
-          }
-        }
-
-        &.ux-tools {
-          div {
-            >span.animate.visible {
-              width: 85%;
-            }
-          }
-        }
-
-        &.google {
-          div {
-            >span.animate.visible {
-              width: 60%;
-            }
-          }
-        }
-
-        &.accessibility {
-          div {
-            >span {
-              width: 50%;
-            }
-          }
-        }
-
-        &.adobe {
-          div {
-            >span.animate.visible {
-              width: 90%;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  section.contact {
-    text-align: center;
-
-    ul {
-      flex-direction: row;
-      justify-content: center;
-      padding-left: 0;
-      list-style: none;
-
-      li {
-        width: auto;
-        padding: $p;
-
-        a {
-          svg {
-            display: grid;
-            width: 1.75rem;
-            height: 1.75rem;
-          }
-
-          span {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-
-// ARTICLE TYPOGRAPHY
-article.project {
-  section {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    ul,
-    ol,
-    dl,
-    figcaption {
-      max-width: 33.75rem;
-      margin: 0 auto;
-    }
-
-    ul.project-details {
-      padding-left: 0;
-      list-style: none;
-
-      li span {
-        display: block;
-        width: 100%;
-        font-size: $h3;
-        text-transform: uppercase;
-      }
-    }
-
-    ul.users,
-    ul.pageviews {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 2rem 0 0;
-      list-style: none;
-
-      li {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        max-width: none;
-        margin: 0.5rem 0 0;
-        padding: 0;
-        font-size: $xsmall;
-        text-transform: uppercase;
-
-        &:first-of-type {
-          width: 100%;
-          margin: 0;
-          border-right: none;
-          font-size: $h4;
-          line-height: 1;
-          text-transform: uppercase;
-        }
-
-        span {
-          @include sans-bold;
-          font-size: $h3;
-          line-height: 1;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 30rem) {
-  article.project {
-    section {
-
-      ul.users,
-      ul.pageviews {
-        li {
-          width: calc((100% / 4) - 1rem);
-          margin: 0.5rem 1rem 0 0;
-          border-right: 1px solid $gray;
-
-          &:last-of-type {
-            margin: 0.5rem 0 0;
-            border-right: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (orientation: landscape) {}
-
-@media (min-width: 90rem) {
-  article.project {
-    section {
-
-      h1,
-      h2,
-      h3,
-      h4,
-      p,
-      ul,
-      ol,
-      dl,
-      figcaption {
-        max-width: 40rem;
-      }
-    }
-  }
+  padding-top: calc($p * 0.5);
 }

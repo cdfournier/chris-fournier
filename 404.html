@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chris Fournier. American Made. Powered by Coffee.</title>
-    <meta name="description" content="I specialize in UX and UI design, responsive web design, and design systems, and I have experience solving problems in cross-functional settings for a wide range of B2B and B2C products, platforms, and services for retail, e-commerce, fintech, and more.">
+    <meta name="description" content="I'm a seasoned user experience designer who works in code and Git. I specialize in UX and UI design, responsive web design, and design systems, and I have experience solving problems in cross-functional settings for a wide range of B2B and B2C products, platforms, and services for retail, e-commerce, fintech, and more.">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <!-- css -->
@@ -13,11 +13,11 @@
     <style>
       body {
         opacity: 0;
-        -webkit-transition: opacity 1.5s ease-in;
-        -moz-transition: opacity 1.5s ease-in;
-        -ms-transition: opacity 1.5s ease-in;
-        -o-transition: opacity 1.5s ease-in;
-        transition: opacity 1.5s ease-in;
+        -webkit-transition: opacity 1.25s ease-in;
+        -moz-transition: opacity 1.25s ease-in;
+        -ms-transition: opacity 1.25s ease-in;
+        -o-transition: opacity 1.25s ease-in;
+        transition: opacity 1.25s ease-in;
       }
 
       body.visible {
@@ -25,67 +25,6 @@
       }
     </style>
     <link rel="stylesheet" href="assets/css/master.min.css">
-    <style>
-      header {
-        background: transparent;
-      }
-
-      html.dark header {
-        background: transparent;
-      }
-
-      header.open {
-        background: white;
-      }
-
-      html.dark header.open {
-        background: var(--green-dark);
-      }
-
-      header nav button.menu-toggle {
-        color: white;
-      }
-
-      header.open nav button.menu-toggle {
-        color: var(--green);
-      }
-
-      html.dark header.open nav button.menu-toggle {
-        color: white;
-      }
-
-      .banner {
-        z-index: 0;
-        background-image: url(assets/images/banner-error-1x.jpg);
-      }
-
-      .banner .overlay {
-        background-color: black;
-        opacity: 0.5;
-      }
-
-      html.dark .banner {
-        background-blend-mode: soft-light;
-      }
-
-      html.dark .banner .overlay {
-        opacity: 0;
-      }
-
-      @media (orientation: landscape) {
-
-        .banner.intro,
-        .banner.intro a {
-          color: white;
-        }
-      }
-
-      @media (min-width: 64rem) {
-        .banner {
-          background-image: url(assets/images/banner-error-2x.jpg);
-        }
-      }
-    </style>
     <!-- icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
@@ -110,6 +49,7 @@
         "url": "https://chris.blackcoffeeshoppe.com/"
       }
     </script>
+    <meta name="google-site-verification" content="YgnQtrZEtnYHo_da7UW1Ixj8NRA9WNH4MvU5nW0nBvA">
   </head>
 
   <body>
@@ -117,59 +57,55 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KT8KPS8"
               height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="skip">
-      <p><a href="index.html#content" class="skip">Skip to the main content on this page</a></p>
-    </div>
     <header>
       <nav id="header-navigation" aria-labelledby="header-navigation">
-        <button class="menu-toggle" aria-label="Open and close navigation" aria-expanded="true"
-                aria-controls="header-navigation">
-          <svg xmlns="http://www.w3.org/2000/svg" class="menu-toggle-open" viewBox="0 0 24 24" stroke="currentColor"
-               fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 0h24v24H0z" stroke="none"></path>
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
+        <button class="menu-toggle" aria-label="Open and close navigation" aria-expanded="true" aria-controls="header-navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-toggle-open icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6l16 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M4 18l16 0"></path>
           </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" class="menu-toggle-close" viewBox="0 0 24 24" stroke="currentColor"
-               fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 0h24v24H0z" stroke="none"></path>
-            <path d="M18 6 6 18M6 6l12 12"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-toggle-close icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
           </svg>
         </button>
         <ul class="profile">
           <li>About me</li>
           <li><a href="index.html" class="header--home">Home</a></li>
           <li><a href="resume/index.html" class="header--resume">My resume</a></li>
-          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="header--linkedin" target="_blank"
-               rel="noopener noreferrer">
+          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="footer--linkedin" target="_blank" rel="noopener noreferrer">
               <span>LinkedIn</span>
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="icon-external-link"
-                     viewBox="0 0 24 24">
-                  <path stroke="none" d="M0 0h24v24H0z" />
-                  <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5" />
-                </svg></span>
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                  <path d="M11 13l9 -9"></path>
+                  <path d="M15 4h5v5"></path>
+                </svg>
+              </span>
             </a></li>
-          <li><a href="https://github.com/cdfournier" class="header--github" target="_blank" rel="noopener noreferrer">
+          <li><a href="https://github.com/cdfournier" class="footer--github" target="_blank" rel="noopener noreferrer">
               <span>Github</span>
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="icon-external-link"
-                     viewBox="0 0 24 24">
-                  <path stroke="none" d="M0 0h24v24H0z" />
-                  <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5" />
-                </svg></span>
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                  <path d="M11 13l9 -9"></path>
+                  <path d="M15 4h5v5"></path>
+                </svg>
+              </span>
             </a></li>
         </ul>
-        <ul class="work-projects">
-          <li>Work projects</li>
+        <ul class="projects">
+          <li>Projects</li>
           <li><a href="projects/panera/index.html" class="header--panera">Panera Bread</a></li>
           <li><a href="projects/enservio/index.html" class="header--enservio">Enservio</a></li>
           <li><a href="projects/transferx/index.html" class="header--transferx">TransferX</a></li>
-        </ul>
-        <ul class="other-projects">
-          <li>Other projects</li>
           <li><a href="projects/delta-design-system/index.html" class="header--delta-design-system">The Delta Design System</a></li>
           <li><a href="projects/mystuff/index.html" class="header--mystuff">MyStuff</a></li>
-          <li><a href="projects/east-wind/index.html" class="header--east-wind">East Wind</a></li>
         </ul>
         <form>
           <fieldset>
@@ -195,28 +131,30 @@
         </form>
       </nav>
     </header>
-    <main>
-      <div class="banner intro error">
-        <div class="overlay"></div>
+    <main class="error">
+      <h1 style="display: none;">404: Not Found Error</h1>
+      <section class="banner intro error">
+        <img src="assets/images/banner-error-1x.jpg" srcset="assets/images/banner-error-1x.jpg 1x, assets/images/banner-error-2x.jpg 2x" alt="Vintage NASA control room">
         <div class="text">
-          <h2 class="title"><span>404: Not Found</span>Not finding it</h2>
+          <h2><span>404: Not Found</span>Not finding it</h2>
           <p>I don&rsquo;t know what you&rsquo;re looking for, but you won&rsquo;t find it here.</p>
           <ul class="cta">
             <li>
               <a href="index.html" class="page">
                 <span class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-                       stroke-linejoin="round" stroke-width="1.5" class="icon arrow-right" viewBox="0 0 24 24">
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <path d="M5 12h14M13 18l6-6M13 6l6 6" />
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l14 0"></path>
+                    <path d="M13 18l6 -6"></path>
+                    <path d="M13 6l6 6"></path>
                   </svg>
                 </span>
-                <span class="label"> Get back home</span>
+                <span class="label"> Get back home </span>
               </a>
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="animate">
       <nav id="footer-navigation" aria-labelledby="footer-navigation">
@@ -224,37 +162,36 @@
           <li>About me</li>
           <li><a href="index.html" class="footer--home">Home</a></li>
           <li><a href="resume/index.html" class="footer--resume">My resume</a></li>
-          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="footer--linkedin" target="_blank"
-               rel="noopener noreferrer">
+          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="footer--linkedin" target="_blank" rel="noopener noreferrer">
               <span>LinkedIn</span>
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="icon-external-link"
-                     viewBox="0 0 24 24">
-                  <path stroke="none" d="M0 0h24v24H0z" />
-                  <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5" />
-                </svg></span>
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                  <path d="M11 13l9 -9"></path>
+                  <path d="M15 4h5v5"></path>
+                </svg>
+              </span>
             </a></li>
           <li><a href="https://github.com/cdfournier" class="footer--github" target="_blank" rel="noopener noreferrer">
               <span>Github</span>
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-                     stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="icon-external-link"
-                     viewBox="0 0 24 24">
-                  <path stroke="none" d="M0 0h24v24H0z" />
-                  <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5M10 14 20 4M15 4h5v5" />
-                </svg></span>
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                  <path d="M11 13l9 -9"></path>
+                  <path d="M15 4h5v5"></path>
+                </svg>
+              </span>
             </a></li>
         </ul>
         <ul class="projects">
-          <li>Work projects</li>
+          <li>Projects</li>
           <li><a href="projects/panera/index.html" class="footer--panera">Panera Bread</a></li>
           <li><a href="projects/enservio/index.html" class="footer--enservio">Enservio</a></li>
           <li><a href="projects/transferx/index.html" class="footer--transferx">TransferX</a></li>
-        </ul>
-        <ul class="other-projects">
-          <li>Other projects</li>
           <li><a href="projects/delta-design-system/index.html" class="footer--delta-design-system">The Delta Design System</a></li>
           <li><a href="projects/mystuff/index.html" class="footer--mystuff">MyStuff</a></li>
-          <li><a href="projects/east-wind/index.html" class="footer--east-wind">East Wind</a></li>
         </ul>
       </nav>
       <div class="branding">
@@ -289,14 +226,15 @@
           </fieldset>
         </form>
       </div>
-      <div class="copyright"><small>&copy; Chris Fournier. American Made. Powered by Coffee.</small></div>
+      <div class="copyright">
+        <p>&copy; Chris Fournier. American Made. Powered by Coffee.</p>
+      </div>
     </footer>
     <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="assets/scripts/headroom.js"></script>
     <script src="assets/scripts/site.js"></script>
     <script>
-      // CHANGE CSS WHEN PAGE LOADS
       $(document).ready(function () {
         $("body").addClass("visible");
       });
