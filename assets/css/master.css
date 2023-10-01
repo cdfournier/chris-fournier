@@ -1194,7 +1194,7 @@ article.project section {
     padding: 0;
     border-bottom: none;
   }
-  .details ul::after {
+  .details ul.deliverables::after {
     display: block;
     position: absolute;
     top: 1rem;
@@ -1211,6 +1211,10 @@ article.project section {
     width: 100%;
   }
   .details ul.skills::after {
+    display: none;
+  }
+  main.transferx .details ul.deliverables::after,
+  main.east-wind .details ul.deliverables::after {
     display: none;
   }
 }

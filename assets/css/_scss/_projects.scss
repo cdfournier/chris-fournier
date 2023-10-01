@@ -187,7 +187,7 @@ article.project {
     padding: 0;
     border-bottom: none;
 
-    ul {
+    ul.deliverables {
 
       &::after {
         display: block;
@@ -211,6 +211,17 @@ article.project {
 
       &::after {
         display: none;
+      }
+    }
+  }
+
+  main.transferx,
+  main.east-wind {
+    .details {
+      ul.deliverables {
+        &::after {
+          display: none;
+        }
       }
     }
   }
