@@ -1818,7 +1818,7 @@ html.dark main.home section {
   background-color: var(--green-dark);
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   html.dark main.home section.about-me {
     background-blend-mode: soft-light;
     background-color: var(--green-dark);
@@ -1828,7 +1828,7 @@ html.dark main.delta-design-system section.gallery .collection {
   background-color: transparent;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   html.dark main.delta-design-system section.banner.intro {
     color: black;
   }
@@ -1843,7 +1843,7 @@ html.dark main.east-wind figure.logo svg {
   fill: white;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   html.dark main.east-wind section.banner.intro {
     color: white;
   }
@@ -1855,7 +1855,7 @@ html.dark main.enservio section.gallery .collection {
   background-color: transparent;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   html.dark main.enservio section.banner.intro {
     color: black;
   }
@@ -1881,7 +1881,7 @@ html.dark main.transferx figure.marks .icon svg path {
   fill: white;
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   html.dark main.transferx section.banner.intro {
     color: black;
   }
