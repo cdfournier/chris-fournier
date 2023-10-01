@@ -567,6 +567,28 @@ figcaption {
     padding: 0;
   }
 }
+.banner.intro.error {
+  justify-content: flex-start;
+}
+.banner.intro.error .text h2 span {
+  display: block;
+  padding-bottom: 0.25rem;
+  font-size: var(--small);
+  line-height: 1.5;
+}
+
+@media (min-width: 56rem) {
+  .banner.intro.error {
+    justify-content: center;
+    color: white;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/banner-error-2x.jpg);
+  }
+  .banner.intro.error a {
+    color: white;
+  }
+}
 ul.cta {
   display: flex;
   flex-direction: column;
@@ -1865,5 +1887,15 @@ html.dark main.transferx figure.marks .icon svg path {
   }
   html.dark main.transferx section.banner.intro a {
     color: inherit;
+  }
+}
+html.dark main.error section {
+  background-color: var(--green-dark);
+}
+
+@media (min-width: 56rem) {
+  html.dark main.error .banner.intro.error {
+    background-blend-mode: soft-light;
+    background-color: var(--green-dark);
   }
 }

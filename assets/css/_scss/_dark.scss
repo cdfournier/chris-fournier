@@ -313,3 +313,24 @@ html.dark {
     }
   }
 }
+
+
+// ERROR PAGE DARK MODE
+html.dark {
+  main.error {
+    section {
+      background-color: $green-dark;
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+  html.dark {
+    main.error {
+      .banner.intro.error {
+        background-blend-mode: soft-light;
+        background-color: $green-dark;
+      }
+    }
+  }
+}

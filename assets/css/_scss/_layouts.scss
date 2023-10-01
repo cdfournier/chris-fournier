@@ -102,6 +102,35 @@
 }
 
 
+// ERROR PAGE BANNERS
+.banner.intro.error {
+  justify-content: flex-start;
+
+  .text {
+    h2 span {
+      display: block;
+      padding-bottom: 0.25rem;
+      font-size: $small;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+  .banner.intro.error {
+    justify-content: center;
+    color: white;
+    background-blend-mode: overlay;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-image: url(../images/banner-error-2x.jpg);
+
+    a {
+      color: white;
+    }
+  }
+}
+
+
 // CTAS
 ul.cta {
   display: flex;
