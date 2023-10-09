@@ -862,6 +862,9 @@ main.resume section.banner.intro .text h2 span {
   line-height: calc(var(--p) * 1.5);
   text-transform: uppercase;
 }
+main.resume section.banner.intro .text h2, main.resume section.banner.intro .text p {
+  margin: 0;
+}
 main.resume section.banner.intro section.skills {
   display: none;
 }
