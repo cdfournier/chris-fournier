@@ -14,6 +14,7 @@ html {
   font-size: 16px;
   color: black;
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
   font-smoothing: auto;
@@ -45,14 +46,14 @@ body {
   background: white;
 }
 
+
+// GLOBAL
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-
-// GLOBAL
 img {
   width: 100%;
   height: auto;
@@ -64,7 +65,9 @@ a {
   text-decoration: none;
   color: $green;
   @include transition(color, 0.25s, ease);
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     color: $orange;
   }
 }
