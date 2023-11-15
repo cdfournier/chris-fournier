@@ -6,6 +6,19 @@ main.home {
 }
 
 
+// HOME PAGE: WELCOME BANNER
+main.home {
+  section.banner {
+
+    h2,
+    p,
+    ul.cta {
+      margin: 0;
+    }
+  }
+}
+
+
 // HOME PAGE: ABOUT ME
 main.home {
   section.about-me {
@@ -101,7 +114,7 @@ main.home {
       background-blend-mode: hard-light;
       background-color: rgba($color: #000000, $alpha: 0.25);
       background-image: url(../images/mug-2x.jpg);
-      background-position: right center;
+      background-position: center;
       background-size: cover;
 
       img {
@@ -148,7 +161,7 @@ main.home {
       flex-direction: column;
       overflow: hidden;
       width: 100%;
-      max-width: 100%;
+      max-width: 64rem;
       min-height: 100vh;
       padding: 2rem 0 0;
 
@@ -161,7 +174,8 @@ main.home {
           flex-direction: row;
           justify-content: space-between;
           max-width: 40rem;
-          padding: 0 0 1rem;
+          margin: 0;
+          padding: 0;
 
           img {
             width: calc(100% / 3);
@@ -171,9 +185,8 @@ main.home {
 
       .text {
         width: 100%;
-        max-width: 40rem;
         margin: 0 auto;
-        padding: 1rem 0 0;
+        padding: 2rem 0 0;
       }
     }
   }
@@ -195,55 +208,12 @@ main.home {
   }
 }
 
-// @media (min-width: 40rem) or (orientation: landscape) {
-//   main.home {
-//     section.projects {
-//       .project {
-//         flex-direction: row;
-//         padding: 1rem 0;
-
-//         figure {
-//           width: 40%;
-//         }
-
-//         .text {
-//           width: 60%;
-//           padding: 0 2rem 0 0;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media (min-width: 64rem) {
-//   main.home {
-//     section.projects {
-//       .project {
-//         align-items: center;
-//       }
-//     }
-//   }
-// }
-
-// @media (min-width: 82.5rem) {
-//   main.home {
-//     section.projects {
-//       .project {
-//         .text {
-//           width: 40%;
-//           min-width: 40%;
-//         }
-
-//         figure {
-//           width: 35%;
-//           min-width: 35%;
-//         }
-
-//         figure:nth-of-type(2) {
-//           display: flex;
-//           margin-left: 2rem;
-//         }
-//       }
-//     }
-//   }
-// }
+@media (min-width: 54.25rem) {
+  main.home {
+    section.projects {
+      .project {
+        min-height: 150vh;
+      }
+    }
+  }
+}

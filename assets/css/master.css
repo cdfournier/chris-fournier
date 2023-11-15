@@ -612,6 +612,7 @@ ul.cta li a {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  max-width: 100%;
 }
 ul.cta li a span.icon {
   display: flex;
@@ -702,6 +703,12 @@ main.home section {
   background-color: white;
 }
 
+main.home section.banner h2,
+main.home section.banner p,
+main.home section.banner ul.cta {
+  margin: 0;
+}
+
 main.home section.about-me .text {
   padding: 1rem 0 0;
 }
@@ -765,7 +772,7 @@ main.home section.about-me .text ul.cta {
     background-blend-mode: hard-light;
     background-color: rgba(0, 0, 0, 0.25);
     background-image: url(../images/mug-2x.jpg);
-    background-position: right center;
+    background-position: center;
     background-size: cover;
   }
   main.home section.about-me img {
@@ -802,7 +809,7 @@ main.home section.projects .project {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  max-width: 100%;
+  max-width: 64rem;
   min-height: 100vh;
   padding: 2rem 0 0;
 }
@@ -813,21 +820,26 @@ main.home section.projects .project figure.row {
   flex-direction: row;
   justify-content: space-between;
   max-width: 40rem;
-  padding: 0 0 1rem;
+  margin: 0;
+  padding: 0;
 }
 main.home section.projects .project figure.row img {
   width: 33.3333333333%;
 }
 main.home section.projects .project .text {
   width: 100%;
-  max-width: 40rem;
   margin: 0 auto;
-  padding: 1rem 0 0;
+  padding: 2rem 0 0;
 }
 
 @media (min-width: 40rem) {
   main.home section.projects .project figure.row img {
     width: calc(33.3333333333% - 1rem);
+  }
+}
+@media (min-width: 54.25rem) {
+  main.home section.projects .project {
+    min-height: 150vh;
   }
 }
 main.resume section {
