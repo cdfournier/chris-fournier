@@ -145,75 +145,105 @@ main.home {
     .project {
       display: flex;
       align-items: flex-start;
-      flex-direction: column-reverse;
+      flex-direction: column;
       overflow: hidden;
+      width: 100%;
       max-width: 100%;
+      min-height: 100vh;
       padding: 2rem 0 0;
 
       &:first-of-type {
         padding: 2rem 0 1rem;
       }
 
-      figure:nth-of-type(2) {
-        display: none;
+      figure {
+        &.row {
+          flex-direction: row;
+          justify-content: space-between;
+          max-width: 40rem;
+          padding: 0 0 1rem;
+
+          img {
+            width: calc(100% / 3);
+          }
+        }
       }
 
       .text {
+        width: 100%;
+        max-width: 40rem;
+        margin: 0 auto;
         padding: 1rem 0 0;
       }
     }
   }
 }
 
-@media (min-width: 40rem) or (orientation: landscape) {
+@media (min-width: 40rem) {
   main.home {
     section.projects {
       .project {
-        flex-direction: row;
-        padding: 1rem 0;
-
         figure {
-          width: 40%;
-        }
-
-        .text {
-          width: 60%;
-          padding: 0 2rem 0 0;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 64rem) {
-  main.home {
-    section.projects {
-      .project {
-        align-items: center;
-      }
-    }
-  }
-}
-
-@media (min-width: 82.5rem) {
-  main.home {
-    section.projects {
-      .project {
-        .text {
-          width: 40%;
-          min-width: 40%;
-        }
-
-        figure {
-          width: 35%;
-          min-width: 35%;
-        }
-
-        figure:nth-of-type(2) {
-          display: flex;
-          margin-left: 2rem;
+          &.row {
+            img {
+              width: calc((100% / 3) - 1rem);
+            }
+          }
         }
       }
     }
   }
 }
+
+// @media (min-width: 40rem) or (orientation: landscape) {
+//   main.home {
+//     section.projects {
+//       .project {
+//         flex-direction: row;
+//         padding: 1rem 0;
+
+//         figure {
+//           width: 40%;
+//         }
+
+//         .text {
+//           width: 60%;
+//           padding: 0 2rem 0 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 64rem) {
+//   main.home {
+//     section.projects {
+//       .project {
+//         align-items: center;
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 82.5rem) {
+//   main.home {
+//     section.projects {
+//       .project {
+//         .text {
+//           width: 40%;
+//           min-width: 40%;
+//         }
+
+//         figure {
+//           width: 35%;
+//           min-width: 35%;
+//         }
+
+//         figure:nth-of-type(2) {
+//           display: flex;
+//           margin-left: 2rem;
+//         }
+//       }
+//     }
+//   }
+// }
