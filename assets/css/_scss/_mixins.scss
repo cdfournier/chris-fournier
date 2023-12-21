@@ -1,4 +1,4 @@
-// MIXINS
+// TRANSITION & TRANSFORM MIXINS
 @mixin transition($property: all, $easing: 0.25s, $timing: ease, $delay: 0s) {
   -webkit-transition: $property $easing $timing $delay;
   -moz-transition: $property $easing $timing $delay;
@@ -23,12 +23,16 @@
   transform-origin: $transform-origin;
 }
 
+
+// APPEARANCE MIXIN
 @mixin appearance($appearance: none) {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
+
+// ANIMATION MIXINS
 @mixin animation-delay($delay: 1s) {
   -webkit-animation-delay: $delay;
   animation-delay: $delay;

@@ -1,7 +1,6 @@
 @import "mixins";
 @import "variables";
 @import "fonts";
-@import "animations";
 
 
 // HTML
@@ -17,7 +16,6 @@ html {
   -webkit-text-size-adjust: none;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-smoothing: auto;
 }
 
 @media (min-width: 90rem) {
@@ -70,7 +68,7 @@ a {
   @include sans-bold;
   text-decoration: none;
   color: $green;
-  @include transition(color, 0.25s, ease);
+  @include transition(color);
 
   &:hover,
   &:focus {
