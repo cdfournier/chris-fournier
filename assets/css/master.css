@@ -775,6 +775,20 @@ figure figcaption {
   font-weight: normal;
 }
 
+main.home h1,
+main.home h2,
+main.home h3,
+main.home h4,
+main.home p,
+main.home small,
+main.home ul,
+main.home ol,
+main.home dl,
+main.home figure {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
 main.home .banner ul {
   flex-direction: row;
   width: 100%;
@@ -798,6 +812,23 @@ main.home .banner ul li a svg {
   margin-right: 0.25rem;
 }
 
+@media (min-width: 48rem) {
+  main.home .banner.intro {
+    background-attachment: fixed;
+    background-image: url(../images/mug-2x.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 45vw;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  main.home .banner.intro {
+    background-attachment: scroll;
+  }
+}
+main.home .about-me {
+  min-height: 100vh;
+}
 main.home .about-me ul {
   flex-direction: row;
   flex-wrap: wrap;
@@ -822,31 +853,6 @@ main.home .about-me ul li svg {
   margin-right: 0.25rem;
 }
 
-@media (min-width: 40rem) {
-  main.home .about-me {
-    min-height: 50vh;
-    background-image: url(../images/mug-2x.png);
-    background-position: right bottom;
-    background-size: 45vh;
-  }
-  main.home .about-me h1,
-  main.home .about-me h2,
-  main.home .about-me h3,
-  main.home .about-me h4,
-  main.home .about-me p,
-  main.home .about-me small,
-  main.home .about-me ul,
-  main.home .about-me ol,
-  main.home .about-me dl {
-    max-width: 30rem;
-  }
-  main.home .about-me ul {
-    max-width: 24rem;
-  }
-  main.home .about-me ul li {
-    width: 50%;
-  }
-}
 main.home .selected-projects div {
   display: flex;
   flex-direction: column;
@@ -868,4 +874,16 @@ main.home .selected-projects .phone figure img {
 }
 main.home .selected-projects .phone figure img:last-child {
   margin: 0;
+}
+
+@media (min-width: 48rem) {
+  main.home .selected-projects div {
+    min-height: 80vh;
+  }
+  main.home .selected-projects div .text {
+    min-height: auto;
+  }
+  main.home .selected-projects .phone figure img {
+    width: 25%;
+  }
 }

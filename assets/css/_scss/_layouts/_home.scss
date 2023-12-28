@@ -1,3 +1,22 @@
+// HOME TYPOGRAPHY
+main.home {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small,
+  ul,
+  ol,
+  dl,
+  figure {
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+}
+
+
 // HOME BANNER
 main.home {
   .banner {
@@ -30,10 +49,32 @@ main.home {
   }
 }
 
+@media (min-width: 48rem) {
+  main.home {
+    .banner.intro {
+      background-attachment: fixed;
+      background-image: url(../images/mug-2x.png);
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: 45vw;
+    }
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  main.home {
+    .banner.intro {
+      background-attachment: scroll;
+    }
+  }
+}
+
 
 // ABOUT ME
 main.home {
   .about-me {
+    min-height: 100vh;
+
     ul {
       flex-direction: row;
       flex-wrap: wrap;
@@ -56,37 +97,6 @@ main.home {
           width: 2rem;
           height: 2rem;
           margin-right: 0.25rem;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 40rem) {
-  main.home {
-    .about-me {
-      min-height: 50vh;
-      background-image: url(../images/mug-2x.png);
-      background-position: right bottom;
-      background-size: 45vh;
-
-      h1,
-      h2,
-      h3,
-      h4,
-      p,
-      small,
-      ul,
-      ol,
-      dl {
-        max-width: 30rem;
-      }
-
-      ul {
-        max-width: 24rem;
-
-        li {
-          width: 50%;
         }
       }
     }
@@ -128,38 +138,24 @@ main.home {
   }
 }
 
-// @media (min-width: 48rem) {
-//   main.home {
-//     .selected-projects {
-//       .phone {
-//         flex-direction: row;
+@media (min-width: 48rem) {
+  main.home {
+    .selected-projects {
+      div {
+        min-height: 80vh;
 
-//         .text {
-//           padding: 0 0 0 2rem;
-//         }
-//       }
-//     }
-//   }
-// }
+        .text {
+          min-height: auto;
+        }
+      }
 
-// @media (min-width: 64rem) {
-//   main.home {
-//     .selected-projects {
-//       div {
-//         flex-direction: row;
-
-//         .text {
-//           padding: 0 0 0 2rem;
-//         }
-//       }
-
-//       .reverse {
-//         flex-direction: row-reverse;
-
-//         .text {
-//           padding: 0 2rem 0 0;
-//         }
-//       }
-//     }
-//   }
-// }
+      .phone {
+        figure {
+          img {
+            width: 25%;
+          }
+        }
+      }
+    }
+  }
+}
