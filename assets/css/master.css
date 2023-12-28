@@ -765,6 +765,7 @@ figure {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  overflow: hidden;
 }
 figure figcaption {
   width: 100%;
@@ -863,17 +864,9 @@ main.home .selected-projects div .text {
   flex-direction: column;
   padding: var(--p) 0 0;
 }
-main.home .selected-projects .phone figure {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-main.home .selected-projects .phone figure img {
-  width: calc(33.3333333333% - 1rem);
-  margin: 0 1rem 0 0;
-}
-main.home .selected-projects .phone figure img:last-child {
-  margin: 0;
+main.home .selected-projects div figure.transferx figcaption {
+  z-index: 10;
+  background-color: white;
 }
 
 @media (min-width: 48rem) {
@@ -883,7 +876,52 @@ main.home .selected-projects .phone figure img:last-child {
   main.home .selected-projects div .text {
     min-height: auto;
   }
-  main.home .selected-projects .phone figure img {
-    width: 25%;
-  }
+}
+html.dark {
+  color: white;
+}
+html.dark body {
+  background: var(--green-dark);
+}
+html.dark a {
+  color: white;
+}
+html.dark a:hover, html.dark a:focus {
+  color: var(--orange);
+}
+
+html.dark header {
+  background: var(--green-dark);
+}
+html.dark header nav button.menu-toggle {
+  color: white;
+}
+html.dark nav ul li {
+  color: var(--gray-mid);
+}
+html.dark nav ul li:first-child {
+  color: white;
+}
+
+html.dark form fieldset label {
+  color: white;
+}
+html.dark form fieldset label input[type=checkbox] {
+  border-color: white;
+}
+html.dark form fieldset label input[type=checkbox]:after {
+  background: white;
+}
+
+html.dark .skip {
+  background: var(--green-dark);
+}
+
+html.dark main.home .banner.intro {
+  background-blend-mode: soft-light;
+  background-color: var(--green-dark);
+}
+html.dark main.home .selected-projects figure.transferx figcaption {
+  z-index: 10;
+  background-color: var(--green-dark);
 }

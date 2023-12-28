@@ -117,21 +117,11 @@ main.home {
         flex-direction: column;
         padding: $p 0 0;
       }
-    }
 
-    .phone {
-      figure {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-        img {
-          width: calc((100% / 3) - 1rem);
-          margin: 0 1rem 0 0;
-
-          &:last-child {
-            margin: 0;
-          }
+      figure.transferx {
+        figcaption {
+          z-index: 10;
+          background-color: white;
         }
       }
     }
@@ -146,14 +136,6 @@ main.home {
 
         .text {
           min-height: auto;
-        }
-      }
-
-      .phone {
-        figure {
-          img {
-            width: 25%;
-          }
         }
       }
     }
