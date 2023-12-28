@@ -62,13 +62,35 @@
     </div>
     <header>
       <nav id="header-navigation" aria-labelledby="header-navigation">
-        <button class="menu-toggle" aria-label="Open and close header navigation" aria-expanded="false" aria-controls="header-navigation"></button>
+        <button class="menu-toggle" aria-label="Open and close header navigation" aria-expanded="false" aria-controls="header-navigation">
+          <svg class="menu-toggle-open" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
+          <svg class="menu-toggle-close" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+          </svg>
+        </button>
         <ul class="profile">
           <li>Me</li>
           <li><a href="index.html" class="header--home">Home</a></li>
           <li><a href="resume/index.html" class="header--resume">Resume</a></li>
-          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="header--linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/cdfournier" class="header--github" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="header--linkedin" target="_blank" rel="noopener noreferrer">LinkedIn<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg></a></li>
+          <li><a href="https://github.com/cdfournier" class="header--github" target="_blank" rel="noopener noreferrer">Github<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg></a></li>
         </ul>
         <ul class="projects">
           <li>Projects</li>
@@ -78,62 +100,148 @@
           <li><a href="projects/delta-design-system/index.html" class="header--delta-design-system">The Delta Design System</a></li>
           <li><a href="projects/mystuff/index.html" class="header--mystuff">MyStuff</a></li>
         </ul>
-        <fieldset>
-          <label for="switch-theme-header">
-            <span class="light-mode"></span>
-            <input type="checkbox" name="switch-theme" class="switch" id="switch-theme-header">
-            <span class="dark-mode"></span>
-          </label>
-        </fieldset>
+        <form>
+          <fieldset>
+            <label for="switch-theme-header">
+              <span class="light-mode"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-high" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />
+                  <path d="M6.343 17.657l-1.414 1.414" />
+                  <path d="M6.343 6.343l-1.414 -1.414" />
+                  <path d="M17.657 6.343l1.414 -1.414" />
+                  <path d="M17.657 17.657l1.414 1.414" />
+                  <path d="M4 12h-2" />
+                  <path d="M12 4v-2" />
+                  <path d="M20 12h2" />
+                  <path d="M12 20v2" />
+                </svg></span>
+              <input type="checkbox" name="switch-theme" class="switch" id="switch-theme-header">
+              <span class="dark-mode"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                </svg></span>
+            </label>
+          </fieldset>
+        </form>
       </nav>
     </header>
     <main class="home">
       <h1 style="display: none;">Chris Fournier's Project Portfolio</h1>
-      <section>
-        <h2>Hi. I'm Chris.</h2>
-        <p>I am a user experience designer.</p>
+      <section class="banner">
+        <h2>Hi. I&rsquo;m Chris.</h2>
+        <p>I am a user experience and product designer.</p>
         <ul>
-          <li><a href="mailto:chris.d.fournier@gmail.com">Email</a></li>
-          <li><a href="https://www.linkedin.com/in/christopher-fournier/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/cdfournier/" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="mailto:chris.d.fournier@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
+              </svg>Email</a></li>
+          <li><a href="https://www.linkedin.com/in/christopher-fournier/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M8 11l0 5" />
+                <path d="M8 8l0 .01" />
+                <path d="M12 16l0 -5" />
+                <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+              </svg>LinkedIn</a></li>
+          <li><a href="https://github.com/cdfournier/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+              </svg>Github</a></li>
         </ul>
       </section>
-      <section id="content">
+      <section id="content" class="banner about-me">
         <h2>About me</h2>
         <p>I&rsquo;m passionate about responsive, semantic, and accessible design and design systems. My style is simple, clean, and effective.</p>
         <h3>Attributes</h3>
         <ul>
-          <li>KPI-Driven</li>
-          <li>Active-Listener</li>
-          <li>Change-Agent</li>
-          <li>Left-Handed</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-arrows-vertical" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18 21v-14" />
+              <path d="M9 15l3 -3l3 3" />
+              <path d="M15 10l3 -3l3 3" />
+              <path d="M3 21l18 0" />
+              <path d="M12 21l0 -9" />
+              <path d="M3 6l3 -3l3 3" />
+              <path d="M6 21v-18" />
+            </svg>KPI-Driven</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ear" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 10a7 7 0 1 1 13 3.6a10 10 0 0 1 -2 2a8 8 0 0 0 -2 3a4.5 4.5 0 0 1 -6.8 1.4" />
+              <path d="M10 10a3 3 0 1 1 5 2.2" />
+            </svg>Active-Listener</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-status-change" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M6 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M6 12v-2a6 6 0 1 1 12 0v2" />
+              <path d="M15 9l3 3l3 -3" />
+            </svg>Change-Agent</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-ramp-left-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18 3v8.707" />
+              <path d="M8 14l-4 -4l4 -4" />
+              <path d="M18 21c0 -6.075 -4.925 -11 -11 -11h-3" />
+            </svg>Left-Handed</li>
         </ul>
       </section>
-      <section>
+      <section class="selected-projects">
         <h2>Selected projects</h2>
         <p>I love to build things. These projects are good examples of my work.</p>
-        <figure>
-          <img src="assets/images/home-panera-1x.png" srcset="assets/images/home-panera-1x.png 1x, assets/images/home-panera-2x.png 2x" alt="Panera prototype on a laptop, tablet, and phone">
-          <figcaption>Panera prototype on a laptop, tablet, and phone</figcaption>
-        </figure>
-        <h3>Panera Bread</h3>
-        <p>Panera Bread is an American chain of fast-casual restaurants. I worked to convince Panera&rsquo;s leadership that there were massive, untapped opportunities to drive revenue and engagement through user experience, analytics, and personalization, and that the path to success was paved with moments that matter, key tactics, and measurable outcomes.</p>
-        <figure>
-          <img src="assets/images/home-enservio-1x.png" srcset="assets/images/home-enservio-1x.png 1x, assets/images/home-enservio-2x.png 2x" alt="Enservio prototype on a laptop, tablet, and phone">
-          <figcaption>Enservio prototype on a laptop, tablet, and phone</figcaption>
-        </figure>
-        <h3>Enservio</h3>
-        <p>Enservio&rsquo;s Customer Portal is an online tool that allows users to collaborate with their adjuster to file claims, itemize and upload receipts, and more. I was part of an elite team able to rapidly design and develop updates and feature enhancements to improve data collection, conversion, and customer satisfaction for a specific workflow.</p>
-        <h3>TransferX</h3>
-        <p>TransferX is a blockchain-driven P2P money transfer platform designed to provide a better solution for transferring funds into under-banked markets and give money back to those same communities that need it. They hired me to design a new brand identity and user experience for their MVP product.</p>
-        <h3>MyStuff</h3>
-        <p>We take for granted that we are usually safe from disaster and property loss. Should a disaster strike, it would be helpful to have a record of your property. Inspired by the work I had done at Enservio, I decided to create a consumer-facing application to make it easier for people to file insurance claims.</p>
-        <figure>
-          <img src="assets/images/home-delta-design-system-1x.png" srcset="assets/images/home-delta-design-system-1x.png 1x, assets/images/home-delta-design-system-2x.png 2x" alt="The Delta Design System on a laptop, tablet, and phone">
-          <figcaption>The Delta Design System on a laptop, tablet, and phone</figcaption>
-        </figure>
-        <h3>The Delta Design System</h3>
-        <p>I love to create responsive web sites and applications. I frequently find myself reusing my own code, so I decided to build The Delta Design System, an open-source system that makes it easy to design responsive web sites, apps, and prototypes with code that is semantic, flexible, customizable, and wicked efficient.</p>
+        <div>
+          <figure>
+            <img src="assets/images/home-panera-1x.png" srcset="assets/images/home-panera-1x.png 1x, assets/images/home-panera-2x.png 2x" alt="Panera prototype on a laptop, tablet, and phone">
+            <figcaption>Panera prototype on a laptop, tablet, and phone</figcaption>
+          </figure>
+          <div class="text">
+            <h3>Panera Bread</h3>
+            <p>Panera Bread is an American chain of fast-casual restaurants. I worked to convince Panera&rsquo;s leadership that there were massive, untapped opportunities to drive revenue and engagement through user experience, analytics, and personalization, and that the path to success was paved with moments that matter, key tactics, and measurable outcomes.</p>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <img src="assets/images/home-enservio-1x.png" srcset="assets/images/home-enservio-1x.png 1x, assets/images/home-enservio-2x.png 2x" alt="Enservio prototype on a laptop, tablet, and phone">
+            <figcaption>Enservio prototype on a laptop, tablet, and phone</figcaption>
+          </figure>
+          <div class="text">
+            <h3>Enservio</h3>
+            <p>Enservio&rsquo;s Customer Portal is an online tool that allows users to collaborate with their adjuster to file claims, itemize and upload receipts, and more. I was part of an elite team able to rapidly design and develop updates and feature enhancements to improve data collection, conversion, and customer satisfaction for a specific workflow.</p>
+          </div>
+        </div>
+        <div class="phone">
+          <figure class="transferx">
+            <img src="assets/images/transferx-07-1x.png" srcset="assets/images/transferx-07-1x.png 1x, assets/images/transferx-07-2x.png 2x" alt="TransferX recent transfer screen">
+            <img src="assets/images/transferx-22-1x.png" srcset="assets/images/transferx-22-1x.png 1x, assets/images/transferx-22-2x.png 2x" alt="TransferX set transfer schedule screen">
+            <img src="assets/images/transferx-25-1x.png" srcset="assets/images/transferx-25-1x.png 1x, assets/images/transferx-25-2x.png 2x" alt="TransferX transfer receipt screen">
+            <figcaption>TransferX concept screens</figcaption>
+          </figure>
+          <div class="text">
+            <h3>TransferX</h3>
+            <p>TransferX is a blockchain-driven P2P money transfer platform designed to provide a better solution for transferring funds into under-banked markets and give money back to those same communities that need it. They hired me to design a new brand identity and user experience for their MVP product.</p>
+          </div>
+        </div>
+        <div class="phone">
+          <figure class="mystuff">
+            <img src="assets/images/mystuff-06-1x.png" srcset="assets/images/mystuff-06-1x.png 1x, assets/images/mystuff-06-2x.png 2x" alt="MyStuff authentication screen">
+            <img src="assets/images/mystuff-09-1x.png" srcset="assets/images/mystuff-09-1x.png 1x, assets/images/mystuff-09-2x.png 2x" alt="MyStuff stuff screen">
+            <img src="assets/images/mystuff-09-1x.png" srcset="assets/images/mystuff-09-1x.png 1x, assets/images/mystuff-09-2x.png 2x" alt="MyStuff stuff screen">
+            <figcaption>MyStuff concept screens</figcaption>
+          </figure>
+          <div class="text">
+            <h3>MyStuff</h3>
+            <p>We take for granted that we are usually safe from disaster and property loss. Should a disaster strike, it would be helpful to have a record of your property. Inspired by the work I had done at Enservio, I decided to create a consumer-facing application to make it easier for people to file insurance claims.</p>
+          </div>
+        </div>
+        <div>
+          <figure>
+            <img src="assets/images/home-delta-design-system-1x.png" srcset="assets/images/home-delta-design-system-1x.png 1x, assets/images/home-delta-design-system-2x.png 2x" alt="The Delta Design System on a laptop, tablet, and phone">
+            <figcaption>The Delta Design System on a laptop, tablet, and phone</figcaption>
+          </figure>
+          <div class="text">
+            <h3>The Delta Design System</h3>
+            <p>I love to create responsive web sites and applications. I frequently find myself reusing my own code, so I decided to build The Delta Design System, an open-source system that makes it easy to design responsive web sites, apps, and prototypes with code that is semantic, flexible, customizable, and wicked efficient.</p>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
@@ -142,8 +250,18 @@
           <li>Me</li>
           <li><a href="index.html" class="footer--home">Home</a></li>
           <li><a href="resume/index.html" class="footer--resume">Resume</a></li>
-          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="footer--linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/cdfournier" class="footer--github" target="_blank" rel="noopener noreferrer">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/christopher-fournier/" class="footer--linkedin" target="_blank" rel="noopener noreferrer">LinkedIn<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg></a></li>
+          <li><a href="https://github.com/cdfournier" class="footer--github" target="_blank" rel="noopener noreferrer">Github<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+                <path d="M11 13l9 -9" />
+                <path d="M15 4h5v5" />
+              </svg></a></li>
         </ul>
         <ul class="projects">
           <li>Projects</li>
@@ -155,13 +273,31 @@
         </ul>
       </nav>
       <div class="branding">
-        <fieldset>
-          <label for="switch-theme-footer">
-            <span class="light-mode"></span>
-            <input type="checkbox" name="switch-theme" class="switch" id="switch-theme-footer">
-            <span class="dark-mode"></span>
-          </label>
-        </fieldset>
+        <a href="index.html" class="footer-logo-home">
+          <img src="assets/images/logo.svg" alt="Chris Fournier logo">
+        </a>
+        <form>
+          <fieldset>
+            <label for="switch-theme-footer">
+              <span class="light-mode"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-high" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />
+                  <path d="M6.343 17.657l-1.414 1.414" />
+                  <path d="M6.343 6.343l-1.414 -1.414" />
+                  <path d="M17.657 6.343l1.414 -1.414" />
+                  <path d="M17.657 17.657l1.414 1.414" />
+                  <path d="M4 12h-2" />
+                  <path d="M12 4v-2" />
+                  <path d="M20 12h2" />
+                  <path d="M12 20v2" />
+                </svg></span>
+              <input type="checkbox" name="switch-theme" class="switch" id="switch-theme-footer">
+              <span class="dark-mode"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path>
+                </svg></span>
+            </label>
+          </fieldset>
+        </form>
       </div>
       <div class="copyright">
         <p>&copy; Chris Fournier. American Made. Powered by Coffee.</p>

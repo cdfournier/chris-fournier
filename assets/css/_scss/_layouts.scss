@@ -1,0 +1,16 @@
+// SECTIONS
+section {
+  padding: 2rem;
+}
+
+section>section {
+  padding: 2rem 0 0
+}
+
+
+@import "_layouts/skip";
+@import "_layouts/switch";
+@import "_layouts/banners";
+@import "_layouts/figures";
+
+@import "_layouts/home";
