@@ -1,0 +1,24 @@
+// CTAS
+a.cta {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 36rem;
+  margin: $p auto 0;
+  line-height: 1;
+
+  svg {
+    display: grid;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0 0 0.25rem;
+    @include transition(margin);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      margin: 0 0 0 0.5rem;
+    }
+  }
+}
