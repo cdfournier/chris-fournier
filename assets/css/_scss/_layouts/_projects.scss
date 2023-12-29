@@ -91,6 +91,13 @@ main.transferx {
       color: black;
     }
   }
+
+  main.mystuff {
+    .banner.intro {
+      background-image: url(../images/mystuff-01-2x.jpg);
+      color: white;
+    }
+  }
 }
 
 
@@ -292,6 +299,14 @@ main.enservio {
   .gallery {
     .collection {
       background-color: $enservio;
+    }
+  }
+}
+
+main.mystuff {
+  .gallery {
+    .collection {
+      background-color: $mystuff;
     }
   }
 }

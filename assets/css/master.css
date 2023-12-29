@@ -1101,6 +1101,10 @@ main.transferx .banner.intro img {
     background-image: url(../images/enservio-16-2x.jpg);
     color: black;
   }
+  main.mystuff .banner.intro {
+    background-image: url(../images/mystuff-01-2x.jpg);
+    color: white;
+  }
 }
 .details {
   display: flex;
@@ -1256,6 +1260,10 @@ main.delta-design-system .gallery .collection {
 
 main.enservio .gallery .collection {
   background-color: var(--enservio);
+}
+
+main.mystuff .gallery .collection {
+  background-color: var(--mystuff);
 }
 
 .cta {
