@@ -89,3 +89,19 @@ html.dark {
     }
   }
 }
+
+
+// PROJECT GALLERIES
+html.dark {
+
+  main.delta-design-system,
+  main.east-wind,
+  main.enservio,
+  main.mystuff,
+  main.panera,
+  main.transferx {
+    .gallery .collection {
+      background-color: $green-dark;
+    }
+  }
+}
