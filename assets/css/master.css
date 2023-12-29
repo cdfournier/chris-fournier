@@ -1033,6 +1033,16 @@ main.transferx dl {
   margin: 0 auto;
 }
 
+main.delta-design-system .banner.intro img,
+main.east-wind .banner.intro img,
+main.enservio .banner.intro img,
+main.mystuff .banner.intro img,
+main.panera .banner.intro img,
+main.transferx .banner.intro img {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
 @media (min-width: 56rem) {
   main.delta-design-system .banner.intro,
   main.east-wind .banner.intro,
@@ -1079,6 +1089,13 @@ main.transferx dl {
 @media (min-width: 56rem) {
   main.delta-design-system .banner.intro {
     background-image: url(../images/delta-design-system-01-2x.jpg);
+    color: black;
+  }
+  main.east-wind .banner.intro {
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/east-wind-01-2x.jpg);
+    color: white;
   }
 }
 .details {
@@ -1213,6 +1230,9 @@ main.transferx dl {
   .gallery figure {
     width: 50%;
   }
+  .gallery figure.wide {
+    width: 100%;
+  }
   .gallery .collection figure.laptop {
     width: 90%;
   }
@@ -1312,4 +1332,8 @@ html.dark main.mystuff .gallery .collection,
 html.dark main.panera .gallery .collection,
 html.dark main.transferx .gallery .collection {
   background-color: var(--green-dark);
+}
+
+html.dark main.east-wind figure.logo svg {
+  fill: white;
 }

@@ -22,6 +22,20 @@ main.transferx {
 
 
 // PROJECT BANNER INTRO
+main.delta-design-system,
+main.east-wind,
+main.enservio,
+main.mystuff,
+main.panera,
+main.transferx {
+  .banner.intro {
+    img {
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+  }
+}
+
 @media (min-width: 56rem) {
 
   main.delta-design-system,
@@ -58,6 +72,16 @@ main.transferx {
   main.delta-design-system {
     .banner.intro {
       background-image: url(../images/delta-design-system-01-2x.jpg);
+      color: black;
+    }
+  }
+
+  main.east-wind {
+    .banner.intro {
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, .5);
+      background-image: url(../images/east-wind-01-2x.jpg);
+      color: white;
     }
   }
 }
@@ -221,6 +245,10 @@ main.transferx {
   .gallery {
     figure {
       width: 50%;
+
+      &.wide {
+        width: 100%;
+      }
     }
 
     .collection {
