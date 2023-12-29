@@ -877,6 +877,100 @@ main.home .selected-projects div figure.transferx figcaption {
     min-height: auto;
   }
 }
+main.resume h1,
+main.resume h2,
+main.resume h3,
+main.resume h4,
+main.resume p,
+main.resume small,
+main.resume ul,
+main.resume ol,
+main.resume dl,
+main.resume figure {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+main.resume .banner h2 span {
+  display: block;
+  font-family: "metropolis-regular", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(var(--p) * 0.875);
+  line-height: calc(var(--p) * 1.5);
+  text-transform: uppercase;
+}
+
+main.resume .experience section:first-of-type {
+  padding: 0;
+}
+main.resume .experience h3 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: var(--h4);
+  line-height: 1.25;
+}
+main.resume .experience h3 span.dates {
+  font-size: var(--small);
+}
+main.resume .experience p {
+  padding: 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+main.resume .experience ul {
+  padding: var(--xsmall) 0 0;
+  list-style: none;
+}
+main.resume .experience ul li {
+  line-height: 1.25;
+}
+
+main.resume .skills ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 36rem;
+  padding: 1rem 0 0;
+  list-style: none;
+}
+main.resume .skills ul li {
+  display: flex;
+  align-items: center;
+  width: auto;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid;
+  border-radius: 1rem;
+  font-size: var(--small);
+  line-height: 1;
+}
+
+main.resume .contact ul {
+  flex-direction: row;
+  width: 100%;
+  padding-left: 0;
+  list-style: none;
+}
+main.resume .contact ul li {
+  width: auto;
+  padding: 0 var(--p) 0 0;
+}
+main.resume .contact ul li:last-child {
+  padding: 0;
+}
+main.resume .contact ul li a {
+  display: flex;
+  align-items: center;
+}
+main.resume .contact ul li a svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 0.25rem;
+}
+
 a.cta {
   display: flex;
   align-items: center;
@@ -890,6 +984,7 @@ a.cta svg {
   width: 1rem;
   height: 1rem;
   margin: 0 0 0 0.25rem;
+  stroke-width: 2;
   -webkit-transition: margin 0.25s ease 0s;
   -moz-transition: margin 0.25s ease 0s;
   -ms-transition: margin 0.25s ease 0s;

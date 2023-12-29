@@ -1,0 +1,127 @@
+// RESUME GLOBAL
+main.resume {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  small,
+  ul,
+  ol,
+  dl,
+  figure {
+    max-width: 36rem;
+    margin: 0 auto;
+  }
+}
+
+// RESUME INTRO
+main.resume {
+  .banner {
+    h2 span {
+      display: block;
+      @include sans-regular;
+      font-size: calc($p * 0.875);
+      line-height: calc($p * 1.5);
+      text-transform: uppercase;
+
+    }
+  }
+}
+
+
+// RESUME EXPERIENCE
+main.resume {
+  .experience {
+    section:first-of-type {
+      padding: 0;
+    }
+
+    h3 {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: $h4;
+      line-height: 1.25;
+
+      span.dates {
+        font-size: $small;
+      }
+    }
+
+    p {
+      padding: 0;
+      @include sans-bold;
+    }
+
+    ul {
+      padding: $xsmall 0 0;
+      list-style: none;
+
+      li {
+        line-height: 1.25;
+      }
+    }
+  }
+}
+
+
+// RESUME SKILLS
+main.resume {
+  .skills {
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 36rem;
+      padding: 1rem 0 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        width: auto;
+        margin: 0 0.5rem 0.5rem 0;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid;
+        border-radius: 1rem;
+        font-size: $small;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+
+// RESUME CONTACT
+main.resume {
+  .contact {
+    ul {
+      flex-direction: row;
+      width: 100%;
+      padding-left: 0;
+      list-style: none;
+
+      li {
+        width: auto;
+        padding: 0 $p 0 0;
+
+        &:last-child {
+          padding: 0;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+
+          svg {
+            width: 1.125rem;
+            height: 1.125rem;
+            margin-right: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
