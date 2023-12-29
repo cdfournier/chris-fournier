@@ -215,3 +215,9 @@ h3+dl,
 h4+dl {
   padding-top: calc($p * 0.5);
 }
+
+
+// H + P FONT-SIZE
+h2 + p {
+  font-size: calc($p * 1.25);
+}
