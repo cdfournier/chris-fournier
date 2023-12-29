@@ -107,6 +107,13 @@ main.transferx {
       color: white;
     }
   }
+
+  main.transferx {
+    .banner.intro {
+      background-image: url(../images/transferx-30-2x.jpg);
+      color: black;
+    }
+  }
 }
 
 
@@ -333,6 +340,14 @@ main.panera {
   }
 }
 
+main.transferx {
+  .gallery {
+    .collection {
+      background-color: $transferx;
+    }
+  }
+}
+
 
 // PANERA BREAD FIGURES
 main.panera {
@@ -423,6 +438,153 @@ main.panera {
 
         &:before {
           background-color: $panera;
+        }
+      }
+    }
+  }
+}
+
+
+// TRANSFERX FIGURES
+main.transferx {
+
+  figure.colors,
+  figure.patterns,
+  figure.marks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 36rem;
+    margin: 1rem auto 0;
+
+    img {
+      width: calc((100% / 2) - 1rem);
+      background-color: white;
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  figure.colors {
+
+    dl.colors {
+      width: calc(50% - 1rem);
+      margin: 0;
+      padding: 1rem 0;
+      font-size: $small;
+      text-transform: uppercase;
+
+      dt {
+        display: flex;
+        flex-direction: column;
+        font-size: $small;
+        line-height: 1.5;
+
+        span {
+          display: grid;
+          width: 3rem;
+          height: 3rem;
+          margin: 0 0 0.5rem;
+          border: 2px solid white;
+          border-radius: 100%;
+        }
+      }
+
+      dd {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        font-size: $xsmall;
+
+        span {
+          display: inline-block;
+          margin: 0 0.125rem 0 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        &:nth-of-type(1) {
+          span {
+            width: calc((100% - 22.5%) / 4);
+
+            &:first-child {
+              width: 22.5%;
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          span {
+            width: calc((100% - 22.5%) / 3);
+
+            &:first-child {
+              width: 22.5%;
+            }
+          }
+        }
+
+        &:nth-of-type(3) {
+          span {
+            width: calc(100% - 22.5%);
+
+            &:first-child {
+              width: 22.5%;
+            }
+          }
+        }
+      }
+
+      @media (min-width: 48rem) {
+        width: calc((100% / 3) - 1rem);
+      }
+
+      @media (min-width: 82.5rem) {
+        width: calc((100% / 4) - 1rem);
+      }
+    }
+  }
+
+  figure.patterns {
+    padding: 0 0 2rem;
+  }
+
+  figure.marks {
+    .logo {
+      display: grid;
+      width: 100%;
+      max-width: 24rem;
+      margin: 0 auto 2rem 0;
+      background-color: white;
+    }
+
+    .icon {
+      width: 4rem;
+      max-width: 4rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    figure.marks {
+      align-items: center;
+      justify-content: flex-start;
+
+      .logo {
+        margin: 0 2rem 0 0;
+      }
+    }
+  }
+
+  @media (min-width: 56rem) {
+    figure.patterns {
+      img {
+        width: calc((100% / 3) - 1rem);
+
+        &:nth-of-type(2n) {
+          display: inherit;
         }
       }
     }

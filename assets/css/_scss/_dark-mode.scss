@@ -129,3 +129,15 @@ html.dark {
     }
   }
 }
+
+
+// TRANSFERX DARK MODE
+html.dark {
+  main.transferx {
+    figure.marks {
+      .icon svg path {
+        fill: white;
+      }
+    }
+  }
+}
