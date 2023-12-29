@@ -84,6 +84,13 @@ main.transferx {
       color: white;
     }
   }
+
+  main.enservio {
+    .banner.intro {
+      background-image: url(../images/enservio-16-2x.jpg);
+      color: black;
+    }
+  }
 }
 
 
@@ -277,6 +284,14 @@ main.delta-design-system {
   .gallery {
     .collection {
       background-color: $delta-design-system;
+    }
+  }
+}
+
+main.enservio {
+  .gallery {
+    .collection {
+      background-color: $enservio;
     }
   }
 }

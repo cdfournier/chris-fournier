@@ -1097,6 +1097,10 @@ main.transferx .banner.intro img {
     background-image: url(../images/east-wind-01-2x.jpg);
     color: white;
   }
+  main.enservio .banner.intro {
+    background-image: url(../images/enservio-16-2x.jpg);
+    color: black;
+  }
 }
 .details {
   display: flex;
@@ -1248,6 +1252,10 @@ main.transferx .banner.intro img {
 }
 main.delta-design-system .gallery .collection {
   background-color: var(--delta-design-system);
+}
+
+main.enservio .gallery .collection {
+  background-color: var(--enservio);
 }
 
 .cta {
