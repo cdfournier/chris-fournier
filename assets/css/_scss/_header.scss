@@ -41,6 +41,15 @@ header {
 
 }
 
+@media (min-width: 56rem) {
+  header {
+    nav {
+      width: 35%;
+    }
+  }
+
+}
+
 
 // OPEN HEADER
 header.open {

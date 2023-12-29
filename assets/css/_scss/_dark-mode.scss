@@ -71,6 +71,18 @@ html.dark {
 }
 
 
+// BLOCKQUOTES DARK MODE
+html.dark {
+  blockquote {
+    border-color: white;
+
+    &:before {
+      background-color: $green-dark;
+    }
+  }
+}
+
+
 // HOME PAGE DARK MODE
 html.dark {
   main.home {

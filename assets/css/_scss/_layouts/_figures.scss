@@ -10,6 +10,8 @@ figure {
 
   figcaption {
     width: 100%;
+    max-width: 36rem;
+    margin: 0 auto;
     padding: $xsmall 0 0;
     font-size: $small;
     @include sans-bold;

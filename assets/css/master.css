@@ -487,6 +487,11 @@ header nav form {
     width: 50%;
   }
 }
+@media (min-width: 56rem) {
+  header nav {
+    width: 35%;
+  }
+}
 header.open {
   z-index: 1000;
   max-height: 100vh;
@@ -611,6 +616,57 @@ footer .copyright p {
 @media (min-width: 64rem) {
   footer nav {
     justify-content: flex-start;
+  }
+}
+blockquote {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 36rem;
+  margin: 2rem auto 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: var(--gray);
+}
+blockquote:before {
+  display: block;
+  position: absolute;
+  top: -0.75rem;
+  left: calc(50% - 1.5rem);
+  width: 3rem;
+  height: 1.5rem;
+  text-align: center;
+  background-color: white;
+  content: url(../icons/double-quotes-l.svg);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+blockquote p {
+  padding: 0;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.75;
+}
+
+@media (min-width: 56rem) {
+  blockquote {
+    margin: 4rem auto 3rem;
+  }
+  blockquote p {
+    max-width: 40rem;
+    font-size: calc(var(--p) * 1.25);
+  }
+  blockquote:before {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
   }
 }
 section {
@@ -773,6 +829,8 @@ figure {
 }
 figure figcaption {
   width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
   padding: var(--xsmall) 0 0;
   font-size: var(--small);
   font-family: "metropolis-bold", sans-serif;
@@ -1105,6 +1163,12 @@ main.transferx .banner.intro img {
     background-image: url(../images/mystuff-01-2x.jpg);
     color: white;
   }
+  main.panera .banner.intro {
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/panera-20-2x.jpg);
+    color: white;
+  }
 }
 .details {
   display: flex;
@@ -1205,6 +1269,10 @@ main.transferx .banner.intro img {
   min-width: 100vw;
   margin: 1rem 0 1rem -1rem;
   padding: 1rem;
+  color: white;
+}
+.gallery .collection + .collection {
+  margin-top: -2rem;
 }
 .gallery .collection figure {
   width: 100%;
@@ -1264,6 +1332,79 @@ main.enservio .gallery .collection {
 
 main.mystuff .gallery .collection {
   background-color: var(--mystuff);
+}
+
+main.panera .gallery .collection {
+  background-color: var(--panera);
+}
+
+main.panera figure ul.users,
+main.panera figure ul.pageviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 36rem;
+  padding: 1rem 0;
+  list-style: none;
+}
+main.panera figure ul.users li,
+main.panera figure ul.pageviews li {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  font-size: var(--small);
+  text-transform: uppercase;
+}
+main.panera figure ul.users li:first-of-type,
+main.panera figure ul.pageviews li:first-of-type {
+  width: 100%;
+  margin: 0;
+  border-right: none;
+  font-size: var(--h4);
+  line-height: 1;
+  text-transform: uppercase;
+}
+main.panera figure ul.users li span,
+main.panera figure ul.pageviews li span {
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--h3);
+  line-height: 1;
+}
+main.panera figure ul.users li span > span,
+main.panera figure ul.pageviews li span > span {
+  font-size: var(--h4);
+}
+main.panera figure ul.users {
+  padding-top: 2rem;
+}
+main.panera figure ul.pageviews {
+  padding-bottom: 0;
+}
+main.panera figure ul.pageviews + figcaption {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 30rem) {
+  main.panera figure ul.users li,
+  main.panera figure ul.pageviews li {
+    width: calc(25% - 1rem);
+    margin: 0.5rem 1rem 0 0;
+    border-right: 1px solid var(--gray);
+  }
+  main.panera figure ul.users li:last-of-type,
+  main.panera figure ul.pageviews li:last-of-type {
+    margin: 0.5rem 0 0;
+    border-right: none;
+  }
+}
+main.panera .gallery .collection blockquote:before {
+  background-color: var(--panera);
 }
 
 .cta {
@@ -1330,6 +1471,13 @@ html.dark form fieldset label input[type=checkbox]:after {
 
 html.dark .skip {
   background: var(--green-dark);
+}
+
+html.dark blockquote {
+  border-color: white;
+}
+html.dark blockquote:before {
+  background-color: var(--green-dark);
 }
 
 html.dark main.home .banner.intro {

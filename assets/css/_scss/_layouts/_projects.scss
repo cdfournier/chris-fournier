@@ -98,6 +98,15 @@ main.transferx {
       color: white;
     }
   }
+
+  main.panera {
+    .banner.intro {
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, .5);
+      background-image: url(../images/panera-20-2x.jpg);
+      color: white;
+    }
+  }
 }
 
 
@@ -212,6 +221,11 @@ main.transferx {
     min-width: 100vw;
     margin: 1rem 0 1rem -1rem;
     padding: 1rem;
+    color: white;
+
+    &+.collection {
+      margin-top: -2rem;
+    }
 
     figure {
       width: 100%;
@@ -307,6 +321,110 @@ main.mystuff {
   .gallery {
     .collection {
       background-color: $mystuff;
+    }
+  }
+}
+
+main.panera {
+  .gallery {
+    .collection {
+      background-color: $panera;
+    }
+  }
+}
+
+
+// PANERA BREAD FIGURES
+main.panera {
+  figure {
+
+    ul.users,
+    ul.pageviews {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 36rem;
+      padding: 1rem 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        max-width: none;
+        margin: 0.5rem 0 0;
+        padding: 0;
+        font-size: $small;
+        text-transform: uppercase;
+
+        &:first-of-type {
+          width: 100%;
+          margin: 0;
+          border-right: none;
+          font-size: $h4;
+          line-height: 1;
+          text-transform: uppercase;
+        }
+
+        span {
+          @include sans-bold;
+          font-size: $h3;
+          line-height: 1;
+
+          &>span {
+            font-size: $h4;
+          }
+        }
+      }
+    }
+
+    ul.users {
+      padding-top: 2rem;
+    }
+
+    ul.pageviews {
+      padding-bottom: 0;
+
+      &+figcaption {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 30rem) {
+  main.panera {
+    figure {
+
+      ul.users,
+      ul.pageviews {
+        li {
+          width: calc((100% / 4) - 1rem);
+          margin: 0.5rem 1rem 0 0;
+          border-right: 1px solid $gray;
+
+          &:last-of-type {
+            margin: 0.5rem 0 0;
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// PANERA BREAD GALLERY BLOCKQUOTES
+main.panera {
+  .gallery {
+    .collection {
+      blockquote {
+
+        &:before {
+          background-color: $panera;
+        }
+      }
     }
   }
 }
