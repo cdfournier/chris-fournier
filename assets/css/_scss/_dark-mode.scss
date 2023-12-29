@@ -131,6 +131,23 @@ html.dark {
 }
 
 
+// PANERA BREAD DARK MODE
+html.dark {
+  main.panera {
+    .gallery {
+      .collection {
+        blockquote {
+
+          &:before {
+            background-color: $green-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 // TRANSFERX DARK MODE
 html.dark {
   main.transferx {

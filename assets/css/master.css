@@ -1625,6 +1625,10 @@ html.dark main.east-wind figure.logo svg {
   fill: white;
 }
 
+html.dark main.panera .gallery .collection blockquote:before {
+  background-color: var(--green-dark);
+}
+
 html.dark main.transferx figure.marks .icon svg path {
   fill: white;
 }
