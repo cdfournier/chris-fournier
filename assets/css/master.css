@@ -669,6 +669,10 @@ blockquote p {
     transform: scale(2);
   }
 }
+main.panera .gallery .collection blockquote:before {
+  background-color: var(--panera);
+}
+
 section {
   padding: 2rem;
 }
@@ -818,6 +822,89 @@ form fieldset label input[type=checkbox]:checked:after {
   z-index: 10;
 }
 
+main.delta-design-system .banner.intro img,
+main.east-wind .banner.intro img,
+main.enservio .banner.intro img,
+main.mystuff .banner.intro img,
+main.panera .banner.intro img,
+main.transferx .banner.intro img {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 56rem) {
+  main.delta-design-system .banner.intro,
+  main.east-wind .banner.intro,
+  main.enservio .banner.intro,
+  main.mystuff .banner.intro,
+  main.panera .banner.intro,
+  main.transferx .banner.intro {
+    justify-content: center;
+    z-index: 100;
+    background-size: cover;
+  }
+  main.delta-design-system .banner.intro img,
+  main.east-wind .banner.intro img,
+  main.enservio .banner.intro img,
+  main.mystuff .banner.intro img,
+  main.panera .banner.intro img,
+  main.transferx .banner.intro img {
+    display: none;
+  }
+  main.delta-design-system .banner.intro h2,
+  main.delta-design-system .banner.intro p,
+  main.east-wind .banner.intro h2,
+  main.east-wind .banner.intro p,
+  main.enservio .banner.intro h2,
+  main.enservio .banner.intro p,
+  main.mystuff .banner.intro h2,
+  main.mystuff .banner.intro p,
+  main.panera .banner.intro h2,
+  main.panera .banner.intro p,
+  main.transferx .banner.intro h2,
+  main.transferx .banner.intro p {
+    max-width: 24rem;
+    margin: 0;
+  }
+  main.delta-design-system .banner.intro h2,
+  main.east-wind .banner.intro h2,
+  main.enservio .banner.intro h2,
+  main.mystuff .banner.intro h2,
+  main.panera .banner.intro h2,
+  main.transferx .banner.intro h2 {
+    padding: 0;
+  }
+}
+@media (min-width: 56rem) {
+  main.delta-design-system .banner.intro {
+    background-image: url(../images/delta-design-system-01-2x.jpg);
+    color: black;
+  }
+  main.east-wind .banner.intro {
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/east-wind-01-2x.jpg);
+    color: white;
+  }
+  main.enservio .banner.intro {
+    background-image: url(../images/enservio-16-2x.jpg);
+    color: black;
+  }
+  main.mystuff .banner.intro {
+    background-image: url(../images/mystuff-01-2x.jpg);
+    color: white;
+  }
+  main.panera .banner.intro {
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/panera-20-2x.jpg);
+    color: white;
+  }
+  main.transferx .banner.intro {
+    background-image: url(../images/transferx-30-2x.jpg);
+    color: black;
+  }
+}
 main.error h2 span {
   display: block;
   width: 100%;
@@ -861,6 +948,188 @@ figure figcaption {
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
+}
+
+main.panera figure ul.users,
+main.panera figure ul.pageviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 36rem;
+  padding: 1rem 0;
+  list-style: none;
+}
+main.panera figure ul.users li,
+main.panera figure ul.pageviews li {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  font-size: var(--small);
+  text-transform: uppercase;
+}
+main.panera figure ul.users li:first-of-type,
+main.panera figure ul.pageviews li:first-of-type {
+  width: 100%;
+  margin: 0;
+  border-right: none;
+  font-size: var(--h4);
+  line-height: 1;
+  text-transform: uppercase;
+}
+main.panera figure ul.users li span,
+main.panera figure ul.pageviews li span {
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--h3);
+  line-height: 1;
+}
+main.panera figure ul.users li span > span,
+main.panera figure ul.pageviews li span > span {
+  font-size: var(--h4);
+}
+main.panera figure ul.users {
+  padding-top: 2rem;
+}
+main.panera figure ul.pageviews {
+  padding-bottom: 0;
+}
+main.panera figure ul.pageviews + figcaption {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 30rem) {
+  main.panera figure ul.users li,
+  main.panera figure ul.pageviews li {
+    width: calc(25% - 1rem);
+    margin: 0.5rem 1rem 0 0;
+    border-right: 1px solid var(--gray);
+  }
+  main.panera figure ul.users li:last-of-type,
+  main.panera figure ul.pageviews li:last-of-type {
+    margin: 0.5rem 0 0;
+    border-right: none;
+  }
+}
+main.transferx figure.colors,
+main.transferx figure.patterns,
+main.transferx figure.marks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 36rem;
+  margin: 1rem auto 0;
+}
+main.transferx figure.colors img,
+main.transferx figure.patterns img,
+main.transferx figure.marks img {
+  width: calc(50% - 1rem);
+  background-color: white;
+}
+main.transferx figure.colors img:nth-of-type(2),
+main.transferx figure.patterns img:nth-of-type(2),
+main.transferx figure.marks img:nth-of-type(2) {
+  display: none;
+}
+main.transferx figure.colors dl.colors {
+  width: calc(50% - 1rem);
+  margin: 0;
+  padding: 1rem 0;
+  font-size: var(--small);
+  text-transform: uppercase;
+}
+main.transferx figure.colors dl.colors dt {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--small);
+  line-height: 1.5;
+}
+main.transferx figure.colors dl.colors dt span {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 0.5rem;
+  border-radius: 100%;
+}
+main.transferx figure.colors dl.colors dd {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-size: var(--xsmall);
+}
+main.transferx figure.colors dl.colors dd span {
+  display: inline-block;
+  margin: 0 0.125rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(1) span {
+  width: 19.375%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(1) span:first-child {
+  width: 22.5%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(2) span {
+  width: 25.8333333333%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(2) span:first-child {
+  width: 22.5%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(3) span {
+  width: 77.5%;
+}
+main.transferx figure.colors dl.colors dd:nth-of-type(3) span:first-child {
+  width: 22.5%;
+}
+@media (min-width: 40rem) {
+  main.transferx figure.colors dl.colors {
+    width: calc(33.3333333333% - 1rem);
+  }
+}
+@media (min-width: 72rem) {
+  main.transferx figure.colors dl.colors {
+    width: calc(25% - 1rem);
+  }
+}
+main.transferx figure.patterns {
+  padding: 0 0 2rem;
+}
+main.transferx figure.marks {
+  justify-content: flex-start;
+}
+main.transferx figure.marks .logo {
+  display: grid;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 2rem 2rem 0;
+  background-color: white;
+}
+main.transferx figure.marks .icon {
+  width: 4rem;
+  max-width: 4rem;
+}
+@media (min-width: 48rem) {
+  main.transferx figure.marks {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main.transferx figure.marks .logo {
+    margin: 0 2rem 0 0;
+  }
+}
+@media (min-width: 40rem) {
+  main.transferx figure.patterns img {
+    width: calc(33.3333333333% - 1rem);
+  }
+  main.transferx figure.patterns img:nth-of-type(2n) {
+    display: inherit;
+  }
 }
 
 main.home h1,
@@ -1116,89 +1385,6 @@ main.transferx dl {
   margin: 0 auto;
 }
 
-main.delta-design-system .banner.intro img,
-main.east-wind .banner.intro img,
-main.enservio .banner.intro img,
-main.mystuff .banner.intro img,
-main.panera .banner.intro img,
-main.transferx .banner.intro img {
-  max-width: 36rem;
-  margin: 0 auto;
-}
-
-@media (min-width: 56rem) {
-  main.delta-design-system .banner.intro,
-  main.east-wind .banner.intro,
-  main.enservio .banner.intro,
-  main.mystuff .banner.intro,
-  main.panera .banner.intro,
-  main.transferx .banner.intro {
-    justify-content: center;
-    z-index: 100;
-    background-size: cover;
-  }
-  main.delta-design-system .banner.intro img,
-  main.east-wind .banner.intro img,
-  main.enservio .banner.intro img,
-  main.mystuff .banner.intro img,
-  main.panera .banner.intro img,
-  main.transferx .banner.intro img {
-    display: none;
-  }
-  main.delta-design-system .banner.intro h2,
-  main.delta-design-system .banner.intro p,
-  main.east-wind .banner.intro h2,
-  main.east-wind .banner.intro p,
-  main.enservio .banner.intro h2,
-  main.enservio .banner.intro p,
-  main.mystuff .banner.intro h2,
-  main.mystuff .banner.intro p,
-  main.panera .banner.intro h2,
-  main.panera .banner.intro p,
-  main.transferx .banner.intro h2,
-  main.transferx .banner.intro p {
-    max-width: 24rem;
-    margin: 0;
-  }
-  main.delta-design-system .banner.intro h2,
-  main.east-wind .banner.intro h2,
-  main.enservio .banner.intro h2,
-  main.mystuff .banner.intro h2,
-  main.panera .banner.intro h2,
-  main.transferx .banner.intro h2 {
-    padding: 0;
-  }
-}
-@media (min-width: 56rem) {
-  main.delta-design-system .banner.intro {
-    background-image: url(../images/delta-design-system-01-2x.jpg);
-    color: black;
-  }
-  main.east-wind .banner.intro {
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-image: url(../images/east-wind-01-2x.jpg);
-    color: white;
-  }
-  main.enservio .banner.intro {
-    background-image: url(../images/enservio-16-2x.jpg);
-    color: black;
-  }
-  main.mystuff .banner.intro {
-    background-image: url(../images/mystuff-01-2x.jpg);
-    color: white;
-  }
-  main.panera .banner.intro {
-    background-blend-mode: overlay;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-image: url(../images/panera-20-2x.jpg);
-    color: white;
-  }
-  main.transferx .banner.intro {
-    background-image: url(../images/transferx-30-2x.jpg);
-    color: black;
-  }
-}
 .details {
   display: flex;
   align-items: flex-start;
@@ -1369,192 +1555,6 @@ main.panera .gallery .collection {
 
 main.transferx .gallery .collection {
   background-color: var(--transferx);
-}
-
-main.panera figure ul.users,
-main.panera figure ul.pageviews {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 36rem;
-  padding: 1rem 0;
-  list-style: none;
-}
-main.panera figure ul.users li,
-main.panera figure ul.pageviews li {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  max-width: none;
-  margin: 0.5rem 0 0;
-  padding: 0;
-  font-size: var(--small);
-  text-transform: uppercase;
-}
-main.panera figure ul.users li:first-of-type,
-main.panera figure ul.pageviews li:first-of-type {
-  width: 100%;
-  margin: 0;
-  border-right: none;
-  font-size: var(--h4);
-  line-height: 1;
-  text-transform: uppercase;
-}
-main.panera figure ul.users li span,
-main.panera figure ul.pageviews li span {
-  font-family: "metropolis-bold", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: var(--h3);
-  line-height: 1;
-}
-main.panera figure ul.users li span > span,
-main.panera figure ul.pageviews li span > span {
-  font-size: var(--h4);
-}
-main.panera figure ul.users {
-  padding-top: 2rem;
-}
-main.panera figure ul.pageviews {
-  padding-bottom: 0;
-}
-main.panera figure ul.pageviews + figcaption {
-  padding-bottom: 1rem;
-}
-
-@media (min-width: 30rem) {
-  main.panera figure ul.users li,
-  main.panera figure ul.pageviews li {
-    width: calc(25% - 1rem);
-    margin: 0.5rem 1rem 0 0;
-    border-right: 1px solid var(--gray);
-  }
-  main.panera figure ul.users li:last-of-type,
-  main.panera figure ul.pageviews li:last-of-type {
-    margin: 0.5rem 0 0;
-    border-right: none;
-  }
-}
-main.panera .gallery .collection blockquote:before {
-  background-color: var(--panera);
-}
-
-main.transferx figure.colors,
-main.transferx figure.patterns,
-main.transferx figure.marks {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 36rem;
-  margin: 1rem auto 0;
-}
-main.transferx figure.colors img,
-main.transferx figure.patterns img,
-main.transferx figure.marks img {
-  width: calc(50% - 1rem);
-  background-color: white;
-}
-main.transferx figure.colors img:nth-of-type(2),
-main.transferx figure.patterns img:nth-of-type(2),
-main.transferx figure.marks img:nth-of-type(2) {
-  display: none;
-}
-main.transferx figure.colors dl.colors {
-  width: calc(50% - 1rem);
-  margin: 0;
-  padding: 1rem 0;
-  font-size: var(--small);
-  text-transform: uppercase;
-}
-main.transferx figure.colors dl.colors dt {
-  display: flex;
-  flex-direction: column;
-  font-size: var(--small);
-  line-height: 1.5;
-}
-main.transferx figure.colors dl.colors dt span {
-  display: grid;
-  width: 3rem;
-  height: 3rem;
-  margin: 0 0 0.5rem;
-  border-radius: 100%;
-}
-main.transferx figure.colors dl.colors dd {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  font-size: var(--xsmall);
-}
-main.transferx figure.colors dl.colors dd span {
-  display: inline-block;
-  margin: 0 0.125rem 0 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-main.transferx figure.colors dl.colors dd:nth-of-type(1) span {
-  width: 19.375%;
-}
-main.transferx figure.colors dl.colors dd:nth-of-type(1) span:first-child {
-  width: 22.5%;
-}
-main.transferx figure.colors dl.colors dd:nth-of-type(2) span {
-  width: 25.8333333333%;
-}
-main.transferx figure.colors dl.colors dd:nth-of-type(2) span:first-child {
-  width: 22.5%;
-}
-main.transferx figure.colors dl.colors dd:nth-of-type(3) span {
-  width: 77.5%;
-}
-main.transferx figure.colors dl.colors dd:nth-of-type(3) span:first-child {
-  width: 22.5%;
-}
-@media (min-width: 40rem) {
-  main.transferx figure.colors dl.colors {
-    width: calc(33.3333333333% - 1rem);
-  }
-}
-@media (min-width: 72rem) {
-  main.transferx figure.colors dl.colors {
-    width: calc(25% - 1rem);
-  }
-}
-main.transferx figure.patterns {
-  padding: 0 0 2rem;
-}
-main.transferx figure.marks {
-  justify-content: flex-start;
-}
-main.transferx figure.marks .logo {
-  display: grid;
-  width: 100%;
-  max-width: 24rem;
-  margin: 0 2rem 2rem 0;
-  background-color: white;
-}
-main.transferx figure.marks .icon {
-  width: 4rem;
-  max-width: 4rem;
-}
-@media (min-width: 48rem) {
-  main.transferx figure.marks {
-    align-items: center;
-    justify-content: flex-start;
-  }
-  main.transferx figure.marks .logo {
-    margin: 0 2rem 0 0;
-  }
-}
-@media (min-width: 40rem) {
-  main.transferx figure.patterns img {
-    width: calc(33.3333333333% - 1rem);
-  }
-  main.transferx figure.patterns img:nth-of-type(2n) {
-    display: inherit;
-  }
 }
 
 .cta {

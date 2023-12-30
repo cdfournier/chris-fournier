@@ -44,3 +44,18 @@ blockquote {
     }
   }
 }
+
+
+// PANERA BREAD GALLERY BLOCKQUOTES
+main.panera {
+  .gallery {
+    .collection {
+      blockquote {
+
+        &:before {
+          background-color: $panera;
+        }
+      }
+    }
+  }
+}

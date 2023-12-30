@@ -29,6 +29,102 @@
 }
 
 
+// PROJECT BANNERS
+main.delta-design-system,
+main.east-wind,
+main.enservio,
+main.mystuff,
+main.panera,
+main.transferx {
+  .banner.intro {
+    img {
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 56rem) {
+
+  main.delta-design-system,
+  main.east-wind,
+  main.enservio,
+  main.mystuff,
+  main.panera,
+  main.transferx {
+    .banner.intro {
+      justify-content: center;
+      z-index: 100;
+      background-size: cover;
+
+      img {
+        display: none;
+      }
+
+      h2,
+      p {
+        max-width: 24rem;
+        margin: 0;
+      }
+
+      h2 {
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+// PROJECT BANNER INTRO IMAGES
+@media (min-width: 56rem) {
+  main.delta-design-system {
+    .banner.intro {
+      background-image: url(../images/delta-design-system-01-2x.jpg);
+      color: black;
+    }
+  }
+
+  main.east-wind {
+    .banner.intro {
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, .5);
+      background-image: url(../images/east-wind-01-2x.jpg);
+      color: white;
+    }
+  }
+
+  main.enservio {
+    .banner.intro {
+      background-image: url(../images/enservio-16-2x.jpg);
+      color: black;
+    }
+  }
+
+  main.mystuff {
+    .banner.intro {
+      background-image: url(../images/mystuff-01-2x.jpg);
+      color: white;
+    }
+  }
+
+  main.panera {
+    .banner.intro {
+      background-blend-mode: overlay;
+      background-color: rgba(0, 0, 0, .5);
+      background-image: url(../images/panera-20-2x.jpg);
+      color: white;
+    }
+  }
+
+  main.transferx {
+    .banner.intro {
+      background-image: url(../images/transferx-30-2x.jpg);
+      color: black;
+    }
+  }
+}
+
+
 // ERROR PAGE BANNER
 main.error {
   h2 span {
