@@ -227,7 +227,7 @@ main.transferx {
     width: calc(100vw + 2rem);
     min-width: 100vw;
     margin: 1rem 0 1rem -1rem;
-    padding: 1rem;
+    padding: 2rem 1rem;
     color: white;
 
     &+.collection {
@@ -252,7 +252,7 @@ main.transferx {
     }
 
     figure.phone {
-      width: 45%;
+      width: 40%;
     }
 
   }
@@ -538,11 +538,11 @@ main.transferx {
         }
       }
 
-      @media (min-width: 48rem) {
+      @media (min-width: 40rem) {
         width: calc((100% / 3) - 1rem);
       }
 
-      @media (min-width: 82.5rem) {
+      @media (min-width: 72rem) {
         width: calc((100% / 4) - 1rem);
       }
     }
@@ -553,11 +553,12 @@ main.transferx {
   }
 
   figure.marks {
+    justify-content: flex-start;
     .logo {
       display: grid;
       width: 100%;
       max-width: 24rem;
-      margin: 0 auto 2rem 0;
+      margin: 0 2rem 2rem 0;
       background-color: white;
     }
 
@@ -578,7 +579,7 @@ main.transferx {
     }
   }
 
-  @media (min-width: 56rem) {
+  @media (min-width: 40rem) {
     figure.patterns {
       img {
         width: calc((100% / 3) - 1rem);

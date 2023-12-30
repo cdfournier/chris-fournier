@@ -1272,7 +1272,7 @@ main.transferx .banner.intro img {
   width: calc(100vw + 2rem);
   min-width: 100vw;
   margin: 1rem 0 1rem -1rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
   color: white;
 }
 .gallery .collection + .collection {
@@ -1292,7 +1292,7 @@ main.transferx .banner.intro img {
   width: 90%;
 }
 .gallery .collection figure.phone {
-  width: 45%;
+  width: 40%;
 }
 
 @media (min-width: 48rem) {
@@ -1488,12 +1488,12 @@ main.transferx figure.colors dl.colors dd:nth-of-type(3) span {
 main.transferx figure.colors dl.colors dd:nth-of-type(3) span:first-child {
   width: 22.5%;
 }
-@media (min-width: 48rem) {
+@media (min-width: 40rem) {
   main.transferx figure.colors dl.colors {
     width: calc(33.3333333333% - 1rem);
   }
 }
-@media (min-width: 82.5rem) {
+@media (min-width: 72rem) {
   main.transferx figure.colors dl.colors {
     width: calc(25% - 1rem);
   }
@@ -1501,11 +1501,14 @@ main.transferx figure.colors dl.colors dd:nth-of-type(3) span:first-child {
 main.transferx figure.patterns {
   padding: 0 0 2rem;
 }
+main.transferx figure.marks {
+  justify-content: flex-start;
+}
 main.transferx figure.marks .logo {
   display: grid;
   width: 100%;
   max-width: 24rem;
-  margin: 0 auto 2rem 0;
+  margin: 0 2rem 2rem 0;
   background-color: white;
 }
 main.transferx figure.marks .icon {
@@ -1521,7 +1524,7 @@ main.transferx figure.marks .icon {
     margin: 0 2rem 0 0;
   }
 }
-@media (min-width: 56rem) {
+@media (min-width: 40rem) {
   main.transferx figure.patterns img {
     width: calc(33.3333333333% - 1rem);
   }
