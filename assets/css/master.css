@@ -818,6 +818,31 @@ form fieldset label input[type=checkbox]:checked:after {
   z-index: 10;
 }
 
+main.error h2 span {
+  display: block;
+  width: 100%;
+  font-size: var(--p);
+  line-height: 2;
+}
+
+@media (min-width: 56rem) {
+  main.error img {
+    display: none;
+  }
+  main.error .banner.intro {
+    z-index: 100;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../images/banner-error-2x.jpg);
+    color: white;
+  }
+  main.error .banner.intro .cta {
+    margin-left: 0;
+  }
+  main.error .banner.intro .cta a {
+    color: white;
+  }
+}
 figure {
   display: flex;
   flex-direction: column;
