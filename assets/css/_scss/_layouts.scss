@@ -1,10 +1,10 @@
 // SECTIONS
 section {
-  padding: 2rem;
+  padding: calc($p * 2);
 }
 
 section>section {
-  padding: 2rem 0 0
+  padding: calc($p * 2) 0 0
 }
 
 

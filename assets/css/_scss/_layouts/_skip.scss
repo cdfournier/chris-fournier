@@ -31,7 +31,7 @@
       @include transition(all, 0.25s, ease);
 
       &:focus {
-        padding: 1rem;
+        padding: $p;
         opacity: 1;
         @include transform(translateY(0));
       }

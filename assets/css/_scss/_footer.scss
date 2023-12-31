@@ -5,7 +5,7 @@ footer {
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
-  padding: 2rem;
+  padding: calc($p * 2);
 
   nav {
     flex-direction: row;
@@ -23,7 +23,7 @@ footer {
     justify-content: center;
     width: 100%;
     margin: 0;
-    padding: 2rem 0 0;
+    padding: calc($p * 2) 0 0;
 
     img,
     svg {
@@ -39,7 +39,7 @@ footer {
 
   .copyright {
     width: 100%;
-    padding: 1rem 0 0;
+    padding: $p 0 0;
     text-align: center;
 
     p {
@@ -67,7 +67,7 @@ footer {
     }
 
     .copyright {
-      padding: 2rem 0 0;
+      padding: calc($p * 2) 0 0;
       text-align: right;
 
       p {

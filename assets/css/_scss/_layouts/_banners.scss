@@ -9,7 +9,7 @@
   width: 100vw;
   min-height: 100vh;
   margin: 0;
-  padding: 4rem 2rem;
+  padding: calc($p * 4) calc($p * 2);
   background-repeat: no-repeat;
 
   .overlay {

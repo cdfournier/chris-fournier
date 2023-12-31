@@ -36,7 +36,7 @@ main.resume {
 main.resume {
   .experience {
     section:first-of-type {
-      padding: 0;
+      padding: $p 0 0;
     }
 
     h3 {
@@ -66,10 +66,6 @@ main.resume {
     ul {
       padding: $xsmall 0 0;
       list-style: none;
-
-      li {
-        line-height: 1.25;
-      }
     }
   }
 }
@@ -82,17 +78,17 @@ main.resume {
       flex-direction: row;
       flex-wrap: wrap;
       max-width: 36rem;
-      padding: 1rem 0 0;
+      padding: $p 0 0;
       list-style: none;
 
       li {
         display: flex;
         align-items: center;
         width: auto;
-        margin: 0 0.5rem 0.5rem 0;
-        padding: 0.25rem 0.5rem;
+        margin: 0 calc($p * 0.5) calc($p * 0.5) 0;
+        padding: calc($p * 0.25) calc($p * 0.5);
         border: 1px solid;
-        border-radius: 1rem;
+        border-radius: $p;
         font-size: $small;
         line-height: 1;
       }
@@ -125,7 +121,7 @@ main.resume {
           svg {
             width: 1.125rem;
             height: 1.125rem;
-            margin-right: 0.25rem;
+            margin-right: calc($p * 0.25);
           }
         }
       }

@@ -16,7 +16,7 @@
       display: grid;
       width: $p;
       height: $p;
-      margin: 0 0 0 0.25rem;
+      margin: 0 0 0 calc($p * 0.25);
       stroke-width: 2;
       @include transition(margin);
     }
@@ -25,7 +25,7 @@
   &:hover,
   &:focus {
     svg {
-      margin: 0 0 0 0.5rem;
+      margin: 0 0 0 calc($p * 0.5);
     }
   }
 }

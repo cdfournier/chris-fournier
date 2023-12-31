@@ -39,9 +39,9 @@ main.home {
           align-items: center;
 
           svg {
-            width: 1.125rem;
-            height: 1.125rem;
-            margin-right: 0.25rem;
+            width: calc($p * 1.125);
+            height: calc($p * 1.125);
+            margin-right: calc($p * 0.25);
           }
         }
       }
@@ -88,14 +88,14 @@ main.home {
         align-items: center;
         flex-direction: row;
         width: calc(50% - 1rem);
-        margin: 0 0 1rem;
+        margin: 0 0 $p;
         padding: 0;
         line-height: 1.125;
 
         svg {
           display: grid;
-          width: 2rem;
-          height: 2rem;
+          width: calc($p * 2);
+          height: calc($p * 2);
           margin-right: 0.25rem;
         }
       }
@@ -111,7 +111,7 @@ main.home {
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 4rem 0 0;
+      padding: calc($p * 4) 0 0;
 
       .text {
         flex-direction: column;
