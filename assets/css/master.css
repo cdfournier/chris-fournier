@@ -1563,6 +1563,7 @@ main.transferx .gallery .collection {
 }
 
 .cta {
+  display: block;
   width: 100%;
   max-width: 36rem;
   margin: calc(var(--p) * 1.5) auto 0;
