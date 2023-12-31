@@ -45,10 +45,16 @@ main.resume {
       flex-direction: row;
       justify-content: space-between;
       font-size: $h4;
-      line-height: 1.25;
 
       span.dates {
+        min-width: 6.25rem;
         font-size: $small;
+        text-align: right;
+      }
+
+      &+p {
+        padding: calc($xsmall / 2) 0 0;
+        line-height: 1;
       }
     }
 

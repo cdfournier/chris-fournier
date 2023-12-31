@@ -1266,10 +1266,15 @@ main.resume .experience h3 {
   flex-direction: row;
   justify-content: space-between;
   font-size: var(--h4);
-  line-height: 1.25;
 }
 main.resume .experience h3 span.dates {
+  min-width: 6.25rem;
   font-size: var(--small);
+  text-align: right;
+}
+main.resume .experience h3 + p {
+  padding: calc(var(--xsmall) / 2) 0 0;
+  line-height: 1;
 }
 main.resume .experience p {
   padding: 0;
