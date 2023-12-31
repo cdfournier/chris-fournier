@@ -822,6 +822,14 @@ form fieldset label input[type=checkbox]:checked:after {
   z-index: 10;
 }
 
+main.delta-design-system .banner.intro,
+main.east-wind .banner.intro,
+main.enservio .banner.intro,
+main.mystuff .banner.intro,
+main.panera .banner.intro,
+main.transferx .banner.intro {
+  justify-content: flex-start;
+}
 main.delta-design-system .banner.intro img,
 main.east-wind .banner.intro img,
 main.enservio .banner.intro img,
