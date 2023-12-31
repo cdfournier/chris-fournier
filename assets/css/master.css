@@ -1410,14 +1410,14 @@ main.transferx dl {
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--p);
+  font-size: var(--small);
 }
 .details ul li,
 .details ul li a {
   display: flex;
   align-items: center;
   padding: calc(var(--p) * 0.5) 0 0;
-  font-size: var(--small);
+  font-size: var(--p);
   line-height: 1.25;
 }
 .details ul li span,
@@ -1444,7 +1444,7 @@ main.transferx dl {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  padding: var(--p) 0 0;
+  padding: calc(var(--p) * 1.5) 0 0;
   list-style: none;
 }
 .details ul.skills li {
@@ -1469,7 +1469,7 @@ main.transferx dl {
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: var(--p);
+  font-size: var(--small);
   line-height: 1.25;
 }
 

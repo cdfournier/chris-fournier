@@ -43,7 +43,7 @@ main.transferx {
     li:first-of-type {
       padding: 0;
       @include sans-bold;
-      font-size: $p;
+      font-size: $small;
     }
 
     li,
@@ -51,12 +51,11 @@ main.transferx {
       display: flex;
       align-items: center;
       padding: calc($p * 0.5) 0 0;
-      font-size: $small;
+      font-size: $p;
       line-height: 1.25;
 
       span {
         display: inline-grid;
-        // display: none;
         width: $small;
         height: $small;
         margin: 0 calc($p * 0.25) 0 0;
@@ -87,7 +86,7 @@ main.transferx {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding: $p 0 0;
+    padding: calc($p * 1.5) 0 0;
     list-style: none;
 
     li {
@@ -111,7 +110,7 @@ main.transferx {
       padding: 0;
       border: none;
       @include sans-bold;
-      font-size: $p;
+      font-size: $small;
       line-height: 1.25;
     }
   }
