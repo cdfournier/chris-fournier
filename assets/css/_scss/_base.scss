@@ -18,7 +18,7 @@ html {
   -webkit-font-smoothing: auto;
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 90rem) or (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 2dppx) {
   html {
     font-size: 18px;
   }

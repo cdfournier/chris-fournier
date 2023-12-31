@@ -30,15 +30,6 @@
   --p: 1rem;
   --small: 0.75rem;
   --xsmall: 0.625rem;
-
-  @media (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 2dppx) {
-    --h2: 3rem;
-    --h3: 2.5rem;
-    --h4: 2rem;
-    --p: 1.25rem;
-    --small: 1rem;
-    --xsmall: 0.75rem;
-  }
 }
 
 $green: var(--green);

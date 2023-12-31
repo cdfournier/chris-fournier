@@ -30,16 +30,6 @@
   --small: 0.75rem;
   --xsmall: 0.625rem;
 }
-@media (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 2dppx) {
-  :root {
-    --h2: 3rem;
-    --h3: 2.5rem;
-    --h4: 2rem;
-    --p: 1.25rem;
-    --small: 1rem;
-    --xsmall: 0.75rem;
-  }
-}
 
 @font-face {
   font-family: "metropolis-light";
@@ -78,7 +68,7 @@ html {
   -webkit-font-smoothing: auto;
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 90rem) or (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 2dppx) {
   html {
     font-size: 18px;
   }
@@ -1571,6 +1561,7 @@ main.transferx .gallery .collection {
   width: 100%;
   max-width: 36rem;
   margin: calc(var(--p) * 1.5) auto 0;
+  font-size: var(--p);
   line-height: 1;
 }
 .cta a {
@@ -1580,8 +1571,8 @@ main.transferx .gallery .collection {
 }
 .cta a svg {
   display: grid;
-  width: 1rem;
-  height: 1rem;
+  width: var(--p);
+  height: var(--p);
   margin: 0 0 0 0.25rem;
   stroke-width: 2;
   -webkit-transition: margin 0.25s ease 0s;
@@ -1590,7 +1581,7 @@ main.transferx .gallery .collection {
   -o-transition: margin 0.25s ease 0s;
   transition: margin 0.25s ease 0s;
 }
-.cta a:hover svg, .cta a:focus svg {
+.cta:hover svg, .cta:focus svg {
   margin: 0 0 0 0.5rem;
 }
 
