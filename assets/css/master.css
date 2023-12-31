@@ -1420,12 +1420,17 @@ main.transferx dl {
   font-size: var(--small);
   line-height: 1.25;
 }
-.details ul li svg,
-.details ul li a svg {
+.details ul li span,
+.details ul li a span {
   display: inline-grid;
-  width: calc(var(--p) * 1.5);
-  height: calc(var(--p) * 1.5);
+  width: var(--small);
+  height: var(--small);
   margin: 0 calc(var(--p) * 0.25) 0 0;
+}
+.details ul li span svg,
+.details ul li a span svg {
+  width: 100%;
+  height: 100%;
 }
 .details ul li a {
   padding: 0;
