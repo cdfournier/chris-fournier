@@ -484,7 +484,7 @@ header nav form {
   transition: all 0.25s ease 0s;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 30rem) {
   header nav {
     width: 50%;
   }
