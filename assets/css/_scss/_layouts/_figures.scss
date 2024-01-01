@@ -100,81 +100,6 @@ main.panera {
 }
 
 
-// PANERA STORIES FIGURES
-main.panera {
-  figure {
-    ul.stories {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      max-width: none;
-      padding: calc($p *2) 0;
-      list-style: none;
-
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: calc(100% / 3);
-        aspect-ratio: 1;
-        margin: calc($p * (-1)) calc($p * (-0.5));
-        padding: $p;
-        border: 1px solid $gray-mid;
-        border-radius: 100%;
-        @include sans-bold;
-        font-size: $xsmall;
-        line-height: 1;
-        text-align: center;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
-@media (min-width: 30rem) {
-  main.panera {
-    figure {
-      ul.stories {
-        flex-wrap: nowrap;
-
-        li {
-          width: calc(100% / 5);
-          margin: 0 calc($p * (-0.5));
-          font-size: $small;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 40rem) {
-  main.panera {
-    figure {
-      ul.stories {
-        li {
-          margin: 0 calc($p * (-1));
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 90rem) {
-  main.panera {
-    figure {
-      ul.stories {
-        li {
-          margin: 0 calc($p * (-1.25));
-          font-size: $p;
-        }
-      }
-    }
-  }
-}
-
-
 // PANERA USER EXPERIENCE FIGURES
 main.panera {
   .gallery.user-experience {
@@ -296,11 +221,19 @@ main.panera {
   }
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 30rem) {
   main.panera {
     .gallery.user-experience {
       figure {
         width: 55%;
+
+        .user,
+        .rewards,
+        .menu,
+        .brand,
+        .commerce {
+          font-size: $small;
+        }
 
         .new {
           padding: $p 0;
@@ -340,6 +273,81 @@ main.panera {
           .commerce {
             font-size: $p;
           }
+        }
+      }
+    }
+  }
+}
+
+
+// PANERA STORIES FIGURES
+main.panera {
+  figure {
+    ul.stories {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: none;
+      padding: calc($p *2) 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% / 3);
+        aspect-ratio: 1;
+        margin: calc($p * (-1)) calc($p * (-0.5));
+        padding: $p;
+        border: 1px solid $gray-mid;
+        border-radius: 100%;
+        @include sans-bold;
+        font-size: $xsmall;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (min-width: 30rem) {
+  main.panera {
+    figure {
+      ul.stories {
+        flex-wrap: nowrap;
+
+        li {
+          width: calc(100% / 5);
+          margin: 0 calc($p * (-0.5));
+          font-size: $small;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main.panera {
+    figure {
+      ul.stories {
+        li {
+          margin: 0 calc($p * (-1));
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  main.panera {
+    figure {
+      ul.stories {
+        li {
+          margin: 0 calc($p * (-1.25));
+          font-size: $p;
         }
       }
     }

@@ -1025,56 +1025,6 @@ main.panera figure ul.pageviews + figcaption {
     border-right: none;
   }
 }
-main.panera figure ul.stories {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  max-width: none;
-  padding: calc(var(--p) * 2) 0;
-  list-style: none;
-}
-main.panera figure ul.stories li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 33.3333333333%;
-  aspect-ratio: 1;
-  margin: calc(var(--p) * -1) calc(var(--p) * -0.5);
-  padding: var(--p);
-  border: 1px solid var(--gray-mid);
-  border-radius: 100%;
-  font-family: "metropolis-bold", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: var(--xsmall);
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-@media (min-width: 30rem) {
-  main.panera figure ul.stories {
-    flex-wrap: nowrap;
-  }
-  main.panera figure ul.stories li {
-    width: 20%;
-    margin: 0 calc(var(--p) * -0.5);
-    font-size: var(--small);
-  }
-}
-@media (min-width: 40rem) {
-  main.panera figure ul.stories li {
-    margin: 0 calc(var(--p) * -1);
-  }
-}
-@media (min-width: 90rem) {
-  main.panera figure ul.stories li {
-    margin: 0 calc(var(--p) * -1.25);
-    font-size: var(--p);
-  }
-}
 main.panera .gallery.user-experience {
   align-items: stretch;
   justify-content: center;
@@ -1181,9 +1131,16 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
   padding: calc(var(--p) * 2) 0 0;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 30rem) {
   main.panera .gallery.user-experience figure {
     width: 55%;
+  }
+  main.panera .gallery.user-experience figure .user,
+  main.panera .gallery.user-experience figure .rewards,
+  main.panera .gallery.user-experience figure .menu,
+  main.panera .gallery.user-experience figure .brand,
+  main.panera .gallery.user-experience figure .commerce {
+    font-size: var(--small);
   }
   main.panera .gallery.user-experience figure .new {
     padding: var(--p) 0;
@@ -1212,6 +1169,56 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
   main.panera .gallery.user-experience figure .new .menu,
   main.panera .gallery.user-experience figure .new .brand,
   main.panera .gallery.user-experience figure .new .commerce {
+    font-size: var(--p);
+  }
+}
+main.panera figure ul.stories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  padding: calc(var(--p) * 2) 0;
+  list-style: none;
+}
+main.panera figure ul.stories li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3333333333%;
+  aspect-ratio: 1;
+  margin: calc(var(--p) * -1) calc(var(--p) * -0.5);
+  padding: var(--p);
+  border: 1px solid var(--gray-mid);
+  border-radius: 100%;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--xsmall);
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 30rem) {
+  main.panera figure ul.stories {
+    flex-wrap: nowrap;
+  }
+  main.panera figure ul.stories li {
+    width: 20%;
+    margin: 0 calc(var(--p) * -0.5);
+    font-size: var(--small);
+  }
+}
+@media (min-width: 40rem) {
+  main.panera figure ul.stories li {
+    margin: 0 calc(var(--p) * -1);
+  }
+}
+@media (min-width: 90rem) {
+  main.panera figure ul.stories li {
+    margin: 0 calc(var(--p) * -1.25);
     font-size: var(--p);
   }
 }
