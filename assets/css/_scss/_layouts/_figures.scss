@@ -272,13 +272,10 @@ main.panera {
         }
 
         .rewards,
-        .brand {
-          margin: 0 calc($p * (-1)) 0 0;
-        }
-
         .menu,
-        .commerce {
-          margin: 0 0 0 calc($p * (-1));
+        .commerce,
+        .brand {
+          margin: calc($p * (-1));
         }
 
         .user {
@@ -287,6 +284,13 @@ main.panera {
           border-color: rgba(148, 148, 148, 0.5);
           background-color: rgba(255, 255, 255, 0.6);
         }
+      }
+    }
+
+    figure:last-of-type {
+      padding: $p 0 0;
+      figcaption {
+        padding: calc($p * 2) 0 0;
       }
     }
   }
@@ -308,11 +312,13 @@ main.panera {
       }
 
       figure:last-of-type {
+        padding: 0;
         width: 45%;
 
         figcaption {
           position: absolute;
           bottom: 0;
+          padding: $xsmall 0 0;
         }
       }
     }

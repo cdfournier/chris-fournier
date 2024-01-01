@@ -1163,18 +1163,22 @@ main.panera .gallery.user-experience figure .new .commerce {
   width: 33.3333333333%;
 }
 main.panera .gallery.user-experience figure .new .rewards,
-main.panera .gallery.user-experience figure .new .brand {
-  margin: 0 calc(var(--p) * -1) 0 0;
-}
 main.panera .gallery.user-experience figure .new .menu,
-main.panera .gallery.user-experience figure .new .commerce {
-  margin: 0 0 0 calc(var(--p) * -1);
+main.panera .gallery.user-experience figure .new .commerce,
+main.panera .gallery.user-experience figure .new .brand {
+  margin: calc(var(--p) * -1);
 }
 main.panera .gallery.user-experience figure .new .user {
   z-index: 10;
   margin: calc(var(--p) * -4) 25%;
   border-color: rgba(148, 148, 148, 0.5);
   background-color: rgba(255, 255, 255, 0.6);
+}
+main.panera .gallery.user-experience figure:last-of-type {
+  padding: var(--p) 0 0;
+}
+main.panera .gallery.user-experience figure:last-of-type figcaption {
+  padding: calc(var(--p) * 2) 0 0;
 }
 
 @media (min-width: 40rem) {
@@ -1188,11 +1192,13 @@ main.panera .gallery.user-experience figure .new .user {
     text-align: center;
   }
   main.panera .gallery.user-experience figure:last-of-type {
+    padding: 0;
     width: 45%;
   }
   main.panera .gallery.user-experience figure:last-of-type figcaption {
     position: absolute;
     bottom: 0;
+    padding: var(--xsmall) 0 0;
   }
 }
 @media (min-width: 90rem) {
