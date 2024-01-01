@@ -11,7 +11,188 @@
     <meta name="googlebot" content="index,follow">
     <!-- css -->
     <style>
-      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none} /*# sourceMappingURL=normalize.min.css.map */
+      /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+      html {
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%
+      }
+
+      body {
+        margin: 0
+      }
+
+      main {
+        display: block
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: .67em 0
+      }
+
+      hr {
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible
+      }
+
+      pre {
+        font-family: monospace, monospace;
+        font-size: 1em
+      }
+
+      a {
+        background-color: transparent
+      }
+
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        text-decoration: underline dotted
+      }
+
+      b,
+      strong {
+        font-weight: bolder
+      }
+
+      code,
+      kbd,
+      samp {
+        font-family: monospace, monospace;
+        font-size: 1em
+      }
+
+      small {
+        font-size: 80%
+      }
+
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline
+      }
+
+      sub {
+        bottom: -.25em
+      }
+
+      sup {
+        top: -.5em
+      }
+
+      img {
+        border-style: none
+      }
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0
+      }
+
+      button,
+      input {
+        overflow: visible
+      }
+
+      button,
+      select {
+        text-transform: none
+      }
+
+      [type=button],
+      [type=reset],
+      [type=submit],
+      button {
+        -webkit-appearance: button
+      }
+
+      [type=button]::-moz-focus-inner,
+      [type=reset]::-moz-focus-inner,
+      [type=submit]::-moz-focus-inner,
+      button::-moz-focus-inner {
+        border-style: none;
+        padding: 0
+      }
+
+      [type=button]:-moz-focusring,
+      [type=reset]:-moz-focusring,
+      [type=submit]:-moz-focusring,
+      button:-moz-focusring {
+        outline: 1px dotted ButtonText
+      }
+
+      fieldset {
+        padding: .35em .75em .625em
+      }
+
+      legend {
+        box-sizing: border-box;
+        color: inherit;
+        display: table;
+        max-width: 100%;
+        padding: 0;
+        white-space: normal
+      }
+
+      progress {
+        vertical-align: baseline
+      }
+
+      textarea {
+        overflow: auto
+      }
+
+      [type=checkbox],
+      [type=radio] {
+        box-sizing: border-box;
+        padding: 0
+      }
+
+      [type=number]::-webkit-inner-spin-button,
+      [type=number]::-webkit-outer-spin-button {
+        height: auto
+      }
+
+      [type=search] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px
+      }
+
+      [type=search]::-webkit-search-decoration {
+        -webkit-appearance: none
+      }
+
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit
+      }
+
+      details {
+        display: block
+      }
+
+      summary {
+        display: list-item
+      }
+
+      template {
+        display: none
+      }
+
+      [hidden] {
+        display: none
+      }
+
+      /*# sourceMappingURL=normalize.min.css.map */
       body {
         opacity: 0;
         -webkit-transition: opacity 1s ease-in;
@@ -207,8 +388,52 @@
         <h2>A More Elegant Solution</h2>
         <p>What Panera&rsquo;s leaders failed to realize is that the menu was (and still is) the perfect place to drive transactions and engagement. I knew from the research and analytics that the moments that mattered most to users were the menu and their rewards. Everything else was secondary for users.</p>
         <p>I began to talk about the menu as the ideal index or table of contents for the site. Users who wanted to place an order or redeem their rewards could do so immediately on the home page or at any time on the menu pages without interruption or interference. With the same experience, branded content could be placed adjacent to menu items for users who were more curious about the brand. It was all about focusing on moments that matter and removing friction from those experiences.</p>
-        <figure style="max-width: 64rem;">
-          <img src="assets/images/panera-21-1x.png" srcset="assets/images/panera-21-1x.png 1x, assets/images/panera-21-2x.png 2x" alt="Old user experience journey v. new user experience journey">
+        <figure class="user-experience">
+          <!-- <img src="assets/images/panera-21-1x.png" srcset="assets/images/panera-21-1x.png 1x, assets/images/panera-21-2x.png 2x" alt="Old user experience journey v. new user experience journey"> -->
+          <div class="old">
+            <div class="user">User</div>
+            <div class="paths">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up-right-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8.464 15.536l9.536 -9.536" />
+                <path d="M18 10v-4h-4" />
+                <path d="M8.414 15.586a2 2 0 1 0 -2.828 2.828a2 2 0 0 0 2.828 -2.828" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 15l3 -3l-3 -3" />
+                <path d="M5 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M7 12h14" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-down-right-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8.464 8.464l9.536 9.536" />
+                <path d="M14 18h4v-4" />
+                <path d="M8.414 8.414a2 2 0 1 0 -2.828 -2.828a2 2 0 0 0 2.828 2.828" />
+              </svg>
+            </div>
+            <div class="group">
+              <div class="rewards">Rewards</div>
+              <div class="menu">Menu</div>
+              <div class="brand">Brand</div>
+            </div>
+            <div class="paths">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 15l3 -3l-3 -3" />
+                <path d="M5 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M7 12h14" />
+              </svg>
+            </div>
+            <div class="commerce">Commerce</div>
+          </div>
+          <div class="new">
+            <div class="rewards">Rewards</div>
+            <div class="menu">Menu</div>
+            <div class="user">User</div>
+            <div class="brand">Brand</div>
+            <div class="commerce">Commerce</div>
+          </div>
           <figcaption>Old user experience journey v. new user experience journey</figcaption>
         </figure>
         <h3>Business Objectives</h3>
@@ -234,8 +459,15 @@
         <p>Lastly, everything had to be cataloged as part of a tagging, testing, and analytics cycle to provide insights and highlight opportunities, as well as foster an enhanced learning environment.</p>
         <h3>Content Strategy</h3>
         <p>Content and design are most successful in a symbiotic relationship. The new content strategy was also simple: support the product (the food). Provide the details and tell the stories that inspired the food. Connect those things for people who are invested in the brand. Where do ingredients come from? How does it get to my plate? The only requirements: make it authentic and enjoyable, and something that would resonate based on how and when users were browsing the menu.</p>
-        <figure style="width: 100%; max-width: 64rem;">
-          <img src="assets/images/panera-22-1x.png" srcset="assets/images/panera-22-1x.png 1x, assets/images/panera-22-2x.png 2x" alt="Continuum of storytelling opportunities">
+        <figure>
+          <!-- <img src="assets/images/panera-22-1x.png" srcset="assets/images/panera-22-1x.png 1x, assets/images/panera-22-2x.png 2x" alt="Continuum of storytelling opportunities"> -->
+          <ul class="stories">
+            <li>Inspiration</li>
+            <li>In the Field</li>
+            <li>In the Kitchen</li>
+            <li>On the Plate</li>
+            <li>In the Community</li>
+          </ul>
           <figcaption>Continuum of storytelling opportunities</figcaption>
         </figure>
       </section>

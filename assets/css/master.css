@@ -68,9 +68,11 @@ html {
   -webkit-font-smoothing: auto;
 }
 
-@media (min-width: 90rem) or (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 2dppx) {
-  html {
-    font-size: 18px;
+@media (min-width: 30rem) {
+  @media (min-width: 90rem) or (-webkit-min-device-pixel-ratio: 2) or (min-resolution: 2dppx) {
+    html {
+      font-size: 18px;
+    }
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1009,6 +1011,123 @@ main.panera figure ul.pageviews {
 main.panera figure ul.pageviews + figcaption {
   padding-bottom: var(--p);
 }
+main.panera figure ul.stories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  padding: calc(var(--p) * 2) 0;
+  list-style: none;
+}
+main.panera figure ul.stories li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.3333333333%;
+  aspect-ratio: 1;
+  margin: calc(var(--p) * -1) calc(var(--p) * -0.5);
+  padding: var(--p);
+  border: 1px solid var(--gray);
+  border-radius: 100%;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--xsmall);
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+main.panera figure.user-experience {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 64rem;
+  padding: var(--p) 0;
+}
+main.panera figure.user-experience .user,
+main.panera figure.user-experience .group,
+main.panera figure.user-experience .commerce {
+  width: calc(33.3333333333% - var(--p));
+}
+main.panera figure.user-experience .group {
+  display: flex;
+  flex-direction: column;
+}
+main.panera figure.user-experience .user,
+main.panera figure.user-experience .rewards,
+main.panera figure.user-experience .menu,
+main.panera figure.user-experience .brand,
+main.panera figure.user-experience .commerce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  margin: 0;
+  padding: var(--p);
+  border: 1px solid var(--gray-mid);
+  border-radius: 100%;
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--xsmall);
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+main.panera figure.user-experience .rewards,
+main.panera figure.user-experience .menu,
+main.panera figure.user-experience .brand {
+  width: 100%;
+}
+main.panera figure.user-experience .menu {
+  margin: var(--p) 0;
+}
+main.panera figure.user-experience .paths {
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--p) * 2);
+}
+main.panera figure.user-experience .paths svg {
+  width: 100%;
+  stroke-width: 1;
+  stroke: var(--gray-mid);
+}
+main.panera figure.user-experience .old,
+main.panera figure.user-experience .new {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: var(--p) 0;
+}
+main.panera figure.user-experience .new {
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+main.panera figure.user-experience .new .user,
+main.panera figure.user-experience .new .rewards,
+main.panera figure.user-experience .new .menu,
+main.panera figure.user-experience .new .brand,
+main.panera figure.user-experience .new .commerce {
+  width: 33.3333333333%;
+}
+main.panera figure.user-experience .new .rewards,
+main.panera figure.user-experience .new .brand {
+  margin: 0 calc(var(--p) * -1) 0 0;
+}
+main.panera figure.user-experience .new .menu,
+main.panera figure.user-experience .new .commerce {
+  margin: 0 0 0 calc(var(--p) * -1);
+}
+main.panera figure.user-experience .new .user {
+  margin: calc(var(--p) * -2.5) 25%;
+}
 
 @media (min-width: 30rem) {
   main.panera figure ul.users li,
@@ -1021,6 +1140,44 @@ main.panera figure ul.pageviews + figcaption {
   main.panera figure ul.pageviews li:last-of-type {
     margin: calc(var(--p) * 0.5) 0 0;
     border-right: none;
+  }
+  main.panera figure ul.stories {
+    flex-wrap: nowrap;
+  }
+  main.panera figure ul.stories li {
+    width: 20%;
+    margin: 0 calc(var(--p) * -0.5);
+    font-size: var(--small);
+  }
+}
+@media (min-width: 40rem) {
+  main.panera figure ul.stories li {
+    margin: 0 calc(var(--p) * -1);
+  }
+  main.panera figure.user-experience .old,
+  main.panera figure.user-experience .new {
+    width: calc(50% - 2rem);
+  }
+  main.panera figure.user-experience .new .user {
+    margin: calc(var(--p) * -3.5) 25%;
+  }
+}
+@media (min-width: 90rem) {
+  main.panera figure ul.stories li {
+    margin: 0 calc(var(--p) * -1.25);
+    font-size: var(--p);
+  }
+  main.panera figure.user-experience .old .user,
+  main.panera figure.user-experience .old .rewards,
+  main.panera figure.user-experience .old .menu,
+  main.panera figure.user-experience .old .brand,
+  main.panera figure.user-experience .old .commerce,
+  main.panera figure.user-experience .new .user,
+  main.panera figure.user-experience .new .rewards,
+  main.panera figure.user-experience .new .menu,
+  main.panera figure.user-experience .new .brand,
+  main.panera figure.user-experience .new .commerce {
+    font-size: var(--p);
   }
 }
 main.transferx figure.colors,

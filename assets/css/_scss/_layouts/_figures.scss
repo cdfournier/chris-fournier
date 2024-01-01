@@ -75,6 +75,135 @@ main.panera {
         padding-bottom: $p;
       }
     }
+
+    ul.stories {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: none;
+      padding: calc($p *2) 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% / 3);
+        aspect-ratio: 1;
+        margin: calc($p * (-1)) calc($p * (-0.5));
+        padding: $p;
+        border: 1px solid $gray;
+        border-radius: 100%;
+        @include sans-bold;
+        font-size: $xsmall;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  figure.user-experience {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 64rem;
+    padding: $p 0;
+
+    .user,
+    .group,
+    .commerce {
+      width: calc((100% / 3) - $p);
+    }
+
+    .group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .user,
+    .rewards,
+    .menu,
+    .brand,
+    .commerce {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      margin: 0;
+      padding: $p;
+      border: 1px solid $gray-mid;
+      border-radius: 100%;
+      @include sans-bold;
+      font-size: $xsmall;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .rewards,
+    .menu,
+    .brand {
+      width: 100%;
+    }
+
+    .menu {
+      margin: $p 0;
+    }
+
+    .paths {
+      display: flex;
+      flex-direction: column;
+      width: calc($p * 2);
+
+      svg {
+        width: 100%;
+        stroke-width: 1;
+        stroke: $gray-mid;
+      }
+    }
+
+    .old,
+    .new {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: $p 0;
+    }
+
+    .new {
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+
+      .user,
+      .rewards,
+      .menu,
+      .brand,
+      .commerce {
+        width: calc(100% / 3);
+      }
+
+      .rewards,
+      .brand {
+        margin: 0 calc($p * (-1)) 0 0;
+      }
+
+      .menu,
+      .commerce {
+        margin: 0 0 0 calc($p * (-1));
+      }
+
+      .user {
+        margin: calc($p * (-2.5)) 25%;
+      }
+    }
   }
 }
 
@@ -93,6 +222,70 @@ main.panera {
             margin: calc($p * 0.5) 0 0;
             border-right: none;
           }
+        }
+      }
+
+      ul.stories {
+        flex-wrap: nowrap;
+
+        li {
+          width: calc(100% / 5);
+          margin: 0 calc($p * (-0.5));
+          font-size: $small;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main.panera {
+    figure {
+      ul.stories {
+        li {
+          margin: 0 calc($p * (-1));
+        }
+      }
+    }
+
+    figure.user-experience {
+
+      .old,
+      .new {
+        width: calc(50% - 2rem);
+      }
+
+      .new {
+        .user {
+          margin: calc($p * (-3.5)) 25%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  main.panera {
+    figure {
+      ul.stories {
+        li {
+          margin: 0 calc($p * (-1.25));
+          font-size: $p;
+        }
+      }
+    }
+
+    figure.user-experience {
+
+      .old,
+      .new {
+
+        .user,
+        .rewards,
+        .menu,
+        .brand,
+        .commerce {
+          font-size: $p;
         }
       }
     }
@@ -208,6 +401,7 @@ main.transferx {
 
   figure.marks {
     justify-content: flex-start;
+
     .logo {
       display: grid;
       width: 100%;
