@@ -1029,7 +1029,7 @@ main.panera figure ul.stories li {
   aspect-ratio: 1;
   margin: calc(var(--p) * -1) calc(var(--p) * -0.5);
   padding: var(--p);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--gray-mid);
   border-radius: 100%;
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
@@ -1126,7 +1126,9 @@ main.panera figure.user-experience .new .commerce {
   margin: 0 0 0 calc(var(--p) * -1);
 }
 main.panera figure.user-experience .new .user {
+  z-index: 10;
   margin: calc(var(--p) * -2.5) 25%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media (min-width: 30rem) {
