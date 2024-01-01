@@ -19,7 +19,7 @@ figure {
 }
 
 
-// PANERA BREAD FIGURES
+// PANERA USERS & PAGEVIEWS FIGURES
 main.panera {
   figure {
 
@@ -75,7 +75,34 @@ main.panera {
         padding-bottom: $p;
       }
     }
+  }
+}
 
+@media (min-width: 30rem) {
+  main.panera {
+    figure {
+
+      ul.users,
+      ul.pageviews {
+        li {
+          width: calc((100% / 4) - 1rem);
+          margin: calc($p * 0.5) $p 0 0;
+          border-right: 1px solid $gray;
+
+          &:last-of-type {
+            margin: calc($p * 0.5) 0 0;
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// PANERA STORIES FIGURES
+main.panera {
+  figure {
     ul.stories {
       display: flex;
       flex-direction: row;
@@ -104,129 +131,11 @@ main.panera {
       }
     }
   }
-
-  figure.user-experience {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 64rem;
-    padding: $p 0;
-
-    .user,
-    .group,
-    .commerce {
-      width: calc((100% / 3) - $p);
-    }
-
-    .group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .user,
-    .rewards,
-    .menu,
-    .brand,
-    .commerce {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 1;
-      margin: 0;
-      padding: $p;
-      border: 1px solid $gray-mid;
-      border-radius: 100%;
-      @include sans-bold;
-      font-size: $xsmall;
-      line-height: 1;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .rewards,
-    .menu,
-    .brand {
-      width: 100%;
-    }
-
-    .menu {
-      margin: $p 0;
-    }
-
-    .paths {
-      display: flex;
-      flex-direction: column;
-      width: calc($p * 2);
-
-      svg {
-        width: 100%;
-        stroke-width: 1;
-        stroke: $gray-mid;
-      }
-    }
-
-    .old,
-    .new {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 100%;
-      padding: $p 0;
-    }
-
-    .new {
-      flex-wrap: wrap;
-      justify-content: center;
-      position: relative;
-
-      .user,
-      .rewards,
-      .menu,
-      .brand,
-      .commerce {
-        width: calc(100% / 3);
-      }
-
-      .rewards,
-      .brand {
-        margin: 0 calc($p * (-1)) 0 0;
-      }
-
-      .menu,
-      .commerce {
-        margin: 0 0 0 calc($p * (-1));
-      }
-
-      .user {
-        z-index: 10;
-        margin: calc($p * (-2.5)) 25%;
-        background-color: rgba(255,255,255,0.6);
-      }
-    }
-  }
 }
 
 @media (min-width: 30rem) {
   main.panera {
     figure {
-
-      ul.users,
-      ul.pageviews {
-        li {
-          width: calc((100% / 4) - 1rem);
-          margin: calc($p * 0.5) $p 0 0;
-          border-right: 1px solid $gray;
-
-          &:last-of-type {
-            margin: calc($p * 0.5) 0 0;
-            border-right: none;
-          }
-        }
-      }
-
       ul.stories {
         flex-wrap: nowrap;
 
@@ -249,20 +158,6 @@ main.panera {
         }
       }
     }
-
-    figure.user-experience {
-
-      .old,
-      .new {
-        width: calc(50% - 2rem);
-      }
-
-      .new {
-        .user {
-          margin: calc($p * (-3.5)) 25%;
-        }
-      }
-    }
   }
 }
 
@@ -276,18 +171,169 @@ main.panera {
         }
       }
     }
+  }
+}
 
-    figure.user-experience {
+
+// PANERA USER EXPERIENCE FIGURES
+main.panera {
+  .gallery.user-experience {
+    align-items: stretch;
+    justify-content: center;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: $p 0;
+
+    figure {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 64rem;
+      margin: 0;
+      padding: 0;
+
+      .user,
+      .group,
+      .commerce {
+        width: calc((100% / 3) - $p);
+      }
+
+      .group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .user,
+      .rewards,
+      .menu,
+      .brand,
+      .commerce {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1;
+        margin: 0;
+        padding: $p;
+        border: 1px solid $gray-mid;
+        border-radius: 100%;
+        @include sans-bold;
+        font-size: $xsmall;
+        line-height: 1;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .rewards,
+      .menu,
+      .brand {
+        width: 100%;
+      }
+
+      .menu {
+        margin: $p 0;
+      }
+
+      .paths {
+        display: flex;
+        flex-direction: column;
+        width: calc($p * 2);
+
+        svg {
+          width: 100%;
+          stroke-width: 1;
+          stroke: $gray-mid;
+        }
+      }
 
       .old,
       .new {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: $p 0;
+      }
+
+      .new {
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        padding: calc($p * 2) 0 $p;
 
         .user,
         .rewards,
         .menu,
         .brand,
         .commerce {
-          font-size: $p;
+          width: calc(100% / 3);
+        }
+
+        .rewards,
+        .brand {
+          margin: 0 calc($p * (-1)) 0 0;
+        }
+
+        .menu,
+        .commerce {
+          margin: 0 0 0 calc($p * (-1));
+        }
+
+        .user {
+          z-index: 10;
+          margin: calc($p * (-4)) 25%;
+          border-color: rgba(148, 148, 148, 0.5);
+          background-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main.panera {
+    .gallery.user-experience {
+      figure {
+        width: 55%;
+
+        .new {
+          padding: $p 0;
+        }
+
+        figcaption {
+          text-align: center;
+        }
+      }
+
+      figure:last-of-type {
+        width: 45%;
+
+        figcaption {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 90rem) {
+  main.panera {
+    .gallery.user-experience {
+      figure {
+
+        .old,
+        .new {
+
+          .user,
+          .rewards,
+          .menu,
+          .brand,
+          .commerce {
+            font-size: $p;
+          }
         }
       }
     }

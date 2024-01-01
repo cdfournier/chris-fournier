@@ -1011,6 +1011,20 @@ main.panera figure ul.pageviews {
 main.panera figure ul.pageviews + figcaption {
   padding-bottom: var(--p);
 }
+
+@media (min-width: 30rem) {
+  main.panera figure ul.users li,
+  main.panera figure ul.pageviews li {
+    width: calc(25% - 1rem);
+    margin: calc(var(--p) * 0.5) var(--p) 0 0;
+    border-right: 1px solid var(--gray);
+  }
+  main.panera figure ul.users li:last-of-type,
+  main.panera figure ul.pageviews li:last-of-type {
+    margin: calc(var(--p) * 0.5) 0 0;
+    border-right: none;
+  }
+}
 main.panera figure ul.stories {
   display: flex;
   flex-direction: row;
@@ -1039,7 +1053,36 @@ main.panera figure ul.stories li {
   text-align: center;
   text-transform: uppercase;
 }
-main.panera figure.user-experience {
+
+@media (min-width: 30rem) {
+  main.panera figure ul.stories {
+    flex-wrap: nowrap;
+  }
+  main.panera figure ul.stories li {
+    width: 20%;
+    margin: 0 calc(var(--p) * -0.5);
+    font-size: var(--small);
+  }
+}
+@media (min-width: 40rem) {
+  main.panera figure ul.stories li {
+    margin: 0 calc(var(--p) * -1);
+  }
+}
+@media (min-width: 90rem) {
+  main.panera figure ul.stories li {
+    margin: 0 calc(var(--p) * -1.25);
+    font-size: var(--p);
+  }
+}
+main.panera .gallery.user-experience {
+  align-items: stretch;
+  justify-content: center;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--p) 0;
+}
+main.panera .gallery.user-experience figure {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -1047,22 +1090,23 @@ main.panera figure.user-experience {
   justify-content: center;
   width: 100%;
   max-width: 64rem;
-  padding: var(--p) 0;
+  margin: 0;
+  padding: 0;
 }
-main.panera figure.user-experience .user,
-main.panera figure.user-experience .group,
-main.panera figure.user-experience .commerce {
+main.panera .gallery.user-experience figure .user,
+main.panera .gallery.user-experience figure .group,
+main.panera .gallery.user-experience figure .commerce {
   width: calc(33.3333333333% - var(--p));
 }
-main.panera figure.user-experience .group {
+main.panera .gallery.user-experience figure .group {
   display: flex;
   flex-direction: column;
 }
-main.panera figure.user-experience .user,
-main.panera figure.user-experience .rewards,
-main.panera figure.user-experience .menu,
-main.panera figure.user-experience .brand,
-main.panera figure.user-experience .commerce {
+main.panera .gallery.user-experience figure .user,
+main.panera .gallery.user-experience figure .rewards,
+main.panera .gallery.user-experience figure .menu,
+main.panera .gallery.user-experience figure .brand,
+main.panera .gallery.user-experience figure .commerce {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1079,106 +1123,89 @@ main.panera figure.user-experience .commerce {
   text-align: center;
   text-transform: uppercase;
 }
-main.panera figure.user-experience .rewards,
-main.panera figure.user-experience .menu,
-main.panera figure.user-experience .brand {
+main.panera .gallery.user-experience figure .rewards,
+main.panera .gallery.user-experience figure .menu,
+main.panera .gallery.user-experience figure .brand {
   width: 100%;
 }
-main.panera figure.user-experience .menu {
+main.panera .gallery.user-experience figure .menu {
   margin: var(--p) 0;
 }
-main.panera figure.user-experience .paths {
+main.panera .gallery.user-experience figure .paths {
   display: flex;
   flex-direction: column;
   width: calc(var(--p) * 2);
 }
-main.panera figure.user-experience .paths svg {
+main.panera .gallery.user-experience figure .paths svg {
   width: 100%;
   stroke-width: 1;
   stroke: var(--gray-mid);
 }
-main.panera figure.user-experience .old,
-main.panera figure.user-experience .new {
+main.panera .gallery.user-experience figure .old,
+main.panera .gallery.user-experience figure .new {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   padding: var(--p) 0;
 }
-main.panera figure.user-experience .new {
+main.panera .gallery.user-experience figure .new {
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
+  padding: calc(var(--p) * 2) 0 var(--p);
 }
-main.panera figure.user-experience .new .user,
-main.panera figure.user-experience .new .rewards,
-main.panera figure.user-experience .new .menu,
-main.panera figure.user-experience .new .brand,
-main.panera figure.user-experience .new .commerce {
+main.panera .gallery.user-experience figure .new .user,
+main.panera .gallery.user-experience figure .new .rewards,
+main.panera .gallery.user-experience figure .new .menu,
+main.panera .gallery.user-experience figure .new .brand,
+main.panera .gallery.user-experience figure .new .commerce {
   width: 33.3333333333%;
 }
-main.panera figure.user-experience .new .rewards,
-main.panera figure.user-experience .new .brand {
+main.panera .gallery.user-experience figure .new .rewards,
+main.panera .gallery.user-experience figure .new .brand {
   margin: 0 calc(var(--p) * -1) 0 0;
 }
-main.panera figure.user-experience .new .menu,
-main.panera figure.user-experience .new .commerce {
+main.panera .gallery.user-experience figure .new .menu,
+main.panera .gallery.user-experience figure .new .commerce {
   margin: 0 0 0 calc(var(--p) * -1);
 }
-main.panera figure.user-experience .new .user {
+main.panera .gallery.user-experience figure .new .user {
   z-index: 10;
-  margin: calc(var(--p) * -2.5) 25%;
+  margin: calc(var(--p) * -4) 25%;
+  border-color: rgba(148, 148, 148, 0.5);
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-@media (min-width: 30rem) {
-  main.panera figure ul.users li,
-  main.panera figure ul.pageviews li {
-    width: calc(25% - 1rem);
-    margin: calc(var(--p) * 0.5) var(--p) 0 0;
-    border-right: 1px solid var(--gray);
-  }
-  main.panera figure ul.users li:last-of-type,
-  main.panera figure ul.pageviews li:last-of-type {
-    margin: calc(var(--p) * 0.5) 0 0;
-    border-right: none;
-  }
-  main.panera figure ul.stories {
-    flex-wrap: nowrap;
-  }
-  main.panera figure ul.stories li {
-    width: 20%;
-    margin: 0 calc(var(--p) * -0.5);
-    font-size: var(--small);
-  }
-}
 @media (min-width: 40rem) {
-  main.panera figure ul.stories li {
-    margin: 0 calc(var(--p) * -1);
+  main.panera .gallery.user-experience figure {
+    width: 55%;
   }
-  main.panera figure.user-experience .old,
-  main.panera figure.user-experience .new {
-    width: calc(50% - 2rem);
+  main.panera .gallery.user-experience figure .new {
+    padding: var(--p) 0;
   }
-  main.panera figure.user-experience .new .user {
-    margin: calc(var(--p) * -3.5) 25%;
+  main.panera .gallery.user-experience figure figcaption {
+    text-align: center;
+  }
+  main.panera .gallery.user-experience figure:last-of-type {
+    width: 45%;
+  }
+  main.panera .gallery.user-experience figure:last-of-type figcaption {
+    position: absolute;
+    bottom: 0;
   }
 }
 @media (min-width: 90rem) {
-  main.panera figure ul.stories li {
-    margin: 0 calc(var(--p) * -1.25);
-    font-size: var(--p);
-  }
-  main.panera figure.user-experience .old .user,
-  main.panera figure.user-experience .old .rewards,
-  main.panera figure.user-experience .old .menu,
-  main.panera figure.user-experience .old .brand,
-  main.panera figure.user-experience .old .commerce,
-  main.panera figure.user-experience .new .user,
-  main.panera figure.user-experience .new .rewards,
-  main.panera figure.user-experience .new .menu,
-  main.panera figure.user-experience .new .brand,
-  main.panera figure.user-experience .new .commerce {
+  main.panera .gallery.user-experience figure .old .user,
+  main.panera .gallery.user-experience figure .old .rewards,
+  main.panera .gallery.user-experience figure .old .menu,
+  main.panera .gallery.user-experience figure .old .brand,
+  main.panera .gallery.user-experience figure .old .commerce,
+  main.panera .gallery.user-experience figure .new .user,
+  main.panera .gallery.user-experience figure .new .rewards,
+  main.panera .gallery.user-experience figure .new .menu,
+  main.panera .gallery.user-experience figure .new .brand,
+  main.panera .gallery.user-experience figure .new .commerce {
     font-size: var(--p);
   }
 }
