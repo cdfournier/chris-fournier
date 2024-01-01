@@ -1133,7 +1133,7 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
 
 @media (min-width: 30rem) {
   main.panera .gallery.user-experience figure {
-    width: 55%;
+    width: calc(50% - 1rem);
   }
   main.panera .gallery.user-experience figure .user,
   main.panera .gallery.user-experience figure .rewards,
@@ -1150,7 +1150,6 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
   }
   main.panera .gallery.user-experience figure:last-of-type {
     padding: 0;
-    width: 45%;
   }
   main.panera .gallery.user-experience figure:last-of-type figcaption {
     position: absolute;

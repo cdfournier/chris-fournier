@@ -225,7 +225,7 @@ main.panera {
   main.panera {
     .gallery.user-experience {
       figure {
-        width: 55%;
+        width: calc(50% - 1rem);
 
         .user,
         .rewards,
@@ -246,7 +246,6 @@ main.panera {
 
       figure:last-of-type {
         padding: 0;
-        width: 45%;
 
         figcaption {
           position: absolute;
