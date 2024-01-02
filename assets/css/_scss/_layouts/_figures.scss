@@ -511,3 +511,58 @@ main.transferx {
     }
   }
 }
+
+
+// EAST WIND LOGO
+main.east-wind {
+  figure.logo {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 36rem;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+
+    svg {
+      width: 50%;
+      padding: 1rem 2rem;
+      fill: var(--east-wind);
+
+      &:nth-of-type(1) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  main.east-wind {
+    figure.logo {
+      svg {
+        width: 35%;
+
+        &:nth-of-type(1) {
+          align-self: center;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  main.east-wind {
+    figure.logo {
+      svg {
+        width: 25%;
+
+        &:nth-of-type(1) {
+          align-self: center;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
