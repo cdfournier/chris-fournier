@@ -1039,7 +1039,7 @@ main.panera .gallery.user-experience figure {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width: 64rem;
+  max-width: 24rem;
   margin: 0;
   padding: 0;
 }
@@ -1103,7 +1103,7 @@ main.panera .gallery.user-experience figure .new {
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  padding: calc(var(--p) * 2) 0 var(--p);
+  padding: calc(var(--p) * 4) 0 var(--p);
 }
 main.panera .gallery.user-experience figure .new .user,
 main.panera .gallery.user-experience figure .new .rewards,
@@ -1124,9 +1124,6 @@ main.panera .gallery.user-experience figure .new .user {
   border-color: rgba(148, 148, 148, 0.5);
   background-color: rgba(255, 255, 255, 0.6);
 }
-main.panera .gallery.user-experience figure:last-of-type {
-  padding: var(--p) 0 0;
-}
 main.panera .gallery.user-experience figure:last-of-type figcaption {
   padding: calc(var(--p) * 2) 0 0;
 }
@@ -1140,13 +1137,10 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
     font-size: var(--small);
   }
   main.panera .gallery.user-experience figure .new {
-    padding: var(--p) 0;
+    padding: calc(var(--p) * 4) 0;
   }
   main.panera .gallery.user-experience figure figcaption {
     text-align: center;
-  }
-  main.panera .gallery.user-experience figure:last-of-type {
-    padding: 0;
   }
   main.panera .gallery.user-experience figure:last-of-type figcaption {
     position: absolute;
@@ -1156,7 +1150,11 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
 }
 @media (min-width: 48rem) {
   main.panera .gallery.user-experience figure {
-    width: calc(50% - 1rem);
+    width: 48%;
+    max-width: 64rem;
+  }
+  main.panera .gallery.user-experience figure:last-of-type {
+    width: 52%;
   }
 }
 @media (min-width: 90rem) {

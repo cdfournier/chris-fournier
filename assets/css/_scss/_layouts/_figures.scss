@@ -116,7 +116,7 @@ main.panera {
       flex-wrap: wrap;
       justify-content: center;
       width: 100%;
-      max-width: 64rem;
+      max-width: 24rem;
       margin: 0;
       padding: 0;
 
@@ -186,7 +186,7 @@ main.panera {
         flex-wrap: wrap;
         justify-content: center;
         position: relative;
-        padding: calc($p * 2) 0 $p;
+        padding: calc($p * 4) 0 $p;
 
         .user,
         .rewards,
@@ -213,7 +213,6 @@ main.panera {
     }
 
     figure:last-of-type {
-      padding: $p 0 0;
       figcaption {
         padding: calc($p * 2) 0 0;
       }
@@ -224,7 +223,7 @@ main.panera {
 @media (min-width: 30rem) {
   main.panera {
     .gallery.user-experience {
-      figure {        
+      figure {
 
         .user,
         .rewards,
@@ -235,7 +234,7 @@ main.panera {
         }
 
         .new {
-          padding: $p 0;
+          padding: calc($p * 4) 0;
         }
 
         figcaption {
@@ -244,8 +243,6 @@ main.panera {
       }
 
       figure:last-of-type {
-        padding: 0;
-
         figcaption {
           position: absolute;
           bottom: 0;
@@ -260,7 +257,12 @@ main.panera {
   main.panera {
     .gallery.user-experience {
       figure {
-        width: calc(50% - 1rem);
+        width: 48%;
+        max-width: 64rem;
+      }
+
+      figure:last-of-type {
+        width: 52%;
       }
     }
   }
