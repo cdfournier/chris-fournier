@@ -158,3 +158,15 @@ html.dark {
     }
   }
 }
+
+
+// ERROR PAGE BANNERS DARK MODE
+@media (min-width: 56rem) {
+  html.dark {
+    main.error {
+      .banner.intro {
+        background-color: $green-dark;
+      }
+    }
+  }
+}

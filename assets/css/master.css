@@ -931,6 +931,7 @@ main.error h2 span {
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url(../images/banner-error-2x.jpg);
+    background-size: cover;
     color: white;
   }
   main.error .banner.intro .cta {
@@ -1911,4 +1912,10 @@ html.dark main.panera .gallery .collection blockquote:before {
 
 html.dark main.transferx figure.marks .icon svg path {
   fill: white;
+}
+
+@media (min-width: 56rem) {
+  html.dark main.error .banner.intro {
+    background-color: var(--green-dark);
+  }
 }
