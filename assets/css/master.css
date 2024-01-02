@@ -1132,9 +1132,6 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
 }
 
 @media (min-width: 30rem) {
-  main.panera .gallery.user-experience figure {
-    width: calc(50% - 1rem);
-  }
   main.panera .gallery.user-experience figure .user,
   main.panera .gallery.user-experience figure .rewards,
   main.panera .gallery.user-experience figure .menu,
@@ -1155,6 +1152,11 @@ main.panera .gallery.user-experience figure:last-of-type figcaption {
     position: absolute;
     bottom: 0;
     padding: var(--xsmall) 0 0;
+  }
+}
+@media (min-width: 48rem) {
+  main.panera .gallery.user-experience figure {
+    width: calc(50% - 1rem);
   }
 }
 @media (min-width: 90rem) {

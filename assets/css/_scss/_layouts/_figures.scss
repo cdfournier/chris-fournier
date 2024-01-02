@@ -224,8 +224,7 @@ main.panera {
 @media (min-width: 30rem) {
   main.panera {
     .gallery.user-experience {
-      figure {
-        width: calc(50% - 1rem);
+      figure {        
 
         .user,
         .rewards,
@@ -252,6 +251,16 @@ main.panera {
           bottom: 0;
           padding: $xsmall 0 0;
         }
+      }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  main.panera {
+    .gallery.user-experience {
+      figure {
+        width: calc(50% - 1rem);
       }
     }
   }
