@@ -851,6 +851,7 @@ main.transferx .banner.intro img {
   main.transferx .banner.intro {
     justify-content: center;
     z-index: 100;
+    background-attachment: fixed;
     background-size: cover;
   }
   main.delta-design-system .banner.intro img,
@@ -883,6 +884,17 @@ main.transferx .banner.intro img {
   main.panera .banner.intro h2,
   main.transferx .banner.intro h2 {
     padding: 0;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  main.delta-design-system .banner.intro,
+  main.east-wind .banner.intro,
+  main.enservio .banner.intro,
+  main.mystuff .banner.intro,
+  main.panera .banner.intro,
+  main.transferx .banner.intro,
+  main.error .banner.intro {
+    background-attachment: scroll;
   }
 }
 @media (min-width: 56rem) {

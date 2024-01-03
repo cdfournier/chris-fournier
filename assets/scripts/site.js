@@ -38,23 +38,23 @@ $("input.switch").click(function() {
 });
 
 // ANIMATE OBJECTS AS THEY COME ON SCREEN
-const addVisible = document.querySelectorAll(".animate");
-const io_options = {
-  root: null,
-  rootMargin: "0px 0px 0px 0px",
-  threshold: 0
-};
-const io_observer = new IntersectionObserver(io_callback, io_options);
+// const addVisible = document.querySelectorAll(".animate");
+// const io_options = {
+//   root: null,
+//   rootMargin: "0px 0px 0px 0px",
+//   threshold: 0
+// };
+// const io_observer = new IntersectionObserver(io_callback, io_options);
 
-addVisible.forEach(element => {
-    io_observer.observe(element);
-});
+// addVisible.forEach(element => {
+//     io_observer.observe(element);
+// });
 
-function io_callback (entries, observer) {
-    entries.forEach(entry => {
-    entry.target.classList.toggle("visible", entry.isIntersecting);
-  });
-};
+// function io_callback (entries, observer) {
+//     entries.forEach(entry => {
+//     entry.target.classList.toggle("visible", entry.isIntersecting);
+//   });
+// };
 
 // PARALAX BANNERS
 // const banner = document.querySelector(".banner.intro .text");
