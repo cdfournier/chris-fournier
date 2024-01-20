@@ -1133,7 +1133,7 @@ main.panera .gallery.user-experience figure .new .brand {
 }
 main.panera .gallery.user-experience figure .new .user {
   z-index: 10;
-  margin: calc(var(--p) * -4) 25%;
+  margin: calc(var(--p) * -10) 25%;
   border-color: rgba(148, 148, 148, 0.5);
   background-color: rgba(255, 255, 255, 0.6);
 }
