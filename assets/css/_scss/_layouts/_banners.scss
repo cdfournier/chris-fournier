@@ -177,3 +177,11 @@ main.error {
     }
   }
 }
+
+
+// BANNER BIG TYPE
+@media (min-width: 30rem) {
+  .banner.intro h2 {
+    font-size: $h1;
+  }
+}

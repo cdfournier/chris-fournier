@@ -953,6 +953,11 @@ main.error h2 span {
     color: white;
   }
 }
+@media (min-width: 30rem) {
+  .banner.intro h2 {
+    font-size: var(--h1);
+  }
+}
 figure {
   display: flex;
   flex-direction: column;
