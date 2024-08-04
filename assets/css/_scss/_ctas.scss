@@ -20,12 +20,12 @@
       stroke-width: 2;
       @include transition(margin);
     }
-  }
 
-  &:hover,
-  &:focus {
-    svg {
-      margin: 0 0 0 calc($p * 0.5);
+    &:hover,
+    &:focus {
+      svg {
+        margin: 0 0 0 calc($p * 0.5);
+      }
     }
   }
 }

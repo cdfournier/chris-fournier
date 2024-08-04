@@ -1507,7 +1507,13 @@ main.resume ol,
 main.resume dl,
 main.resume figure {
   max-width: 36rem;
-  margin: 0 auto;
+  margin: 0;
+}
+main.resume .skills h2 + p {
+  font-size: var(--p);
+}
+main.resume .cta {
+  margin: calc(var(--p) * 1.5) 0;
 }
 
 main.resume .banner h2 span {
@@ -1524,11 +1530,11 @@ main.resume .experience section:first-of-type {
   padding: var(--p) 0 0;
 }
 main.resume .experience h3 {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: var(--h4);
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--p);
+  text-transform: none;
 }
 main.resume .experience h3 span.dates {
   min-width: 6.25rem;
@@ -1852,7 +1858,7 @@ main.transferx .gallery .collection {
   -o-transition: margin 0.25s ease 0s;
   transition: margin 0.25s ease 0s;
 }
-.cta:hover svg, .cta:focus svg {
+.cta a:hover svg, .cta a:focus svg {
   margin: 0 0 0 calc(var(--p) * 0.5);
 }
 
