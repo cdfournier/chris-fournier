@@ -7,12 +7,10 @@ headroom.init();
 $("button.menu-toggle").click(function() {
   $("body").toggleClass("open");
   $("header").toggleClass("open");
-  $("button.menu-toggle").attr("aria-expanded",true);
-  $("nav ul").attr("aria-hidden",false);
-});
-$(".close").click(function() {
-  $("button.menu-toggle").attr("aria-expanded",false);
-  $("nav ul").attr("aria-hidden",true);
+  $("button.menu-toggle").attr("aria-expanded",
+    $("button.menu-toggle").attr("aria-expanded") == "false" ? "true" : "false");
+  $("nav ul").attr("aria-hidden",
+    $("nav ul").attr("aria-hidden") == "false" ? "true" : "false");
 });
 
 // COLOR MODE CONTROLS
