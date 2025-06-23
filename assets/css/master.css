@@ -1438,7 +1438,7 @@ main.home .banner ul li a svg {
     background-image: url(../images/mug-2x.png);
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: 50vh;
+    background-size: 64vh;
   }
 }
 @supports (-webkit-touch-callout: none) {
