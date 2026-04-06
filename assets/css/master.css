@@ -1924,6 +1924,9 @@ html.dark a {
 html.dark a:hover, html.dark a:focus {
   color: var(--orange);
 }
+html.dark p > code, html.dark li > code {
+  background-color: var(--gray-dark);
+}
 
 html.dark header {
   background: var(--green-dark);
