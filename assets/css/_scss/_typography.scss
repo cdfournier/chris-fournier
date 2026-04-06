@@ -221,3 +221,21 @@ h4+dl {
 h2 + p {
   font-size: calc($p * 1.25);
 }
+
+
+// CODE
+pre {
+  margin: 0.4rem 0 0;
+  line-height: 1.2;
+}
+
+p > code, li > code {
+  margin: 0;
+  padding: 0.15rem 0.25rem;
+  font-family: consolas,"Liberation Mono",courier,monospace;
+  font-size: 0.975rem;
+  white-space: nowrap;
+  background-color: $gray;
+}
+
+li > code {padding: 0.05rem 0.25rem;}
