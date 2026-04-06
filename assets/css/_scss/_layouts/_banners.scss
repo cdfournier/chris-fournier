@@ -39,7 +39,8 @@ main.transferx {
   .banner.intro {
     justify-content: flex-start;
 
-    img {
+    img,
+    picture {
       max-width: 36rem;
       margin: 0 auto;
     }
@@ -60,7 +61,8 @@ main.transferx {
       background-attachment: fixed;
       background-size: cover;
 
-      img {
+      img,
+      picture {
         display: none;
       }
 
@@ -97,7 +99,8 @@ main.transferx {
 @media (min-width: 56rem) {
   main.delta-design-system {
     .banner.intro {
-      background-image: url(../images/delta-design-system-01-2x.jpg);
+      // background-image: url(../images/delta-design-system-01-2x.jpg);
+      background-image: url(../images/delta-design-system-01-2x.webp);
       color: black;
     }
   }

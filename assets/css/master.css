@@ -101,7 +101,9 @@ body {
   box-sizing: border-box;
 }
 
-img {
+img,
+picture,
+source {
   display: inline-grid;
   width: 100%;
   max-width: 100%;
@@ -833,11 +835,17 @@ main.transferx .banner.intro {
   justify-content: flex-start;
 }
 main.delta-design-system .banner.intro img,
+main.delta-design-system .banner.intro picture,
 main.east-wind .banner.intro img,
+main.east-wind .banner.intro picture,
 main.enservio .banner.intro img,
+main.enservio .banner.intro picture,
 main.mystuff .banner.intro img,
+main.mystuff .banner.intro picture,
 main.panera .banner.intro img,
-main.transferx .banner.intro img {
+main.panera .banner.intro picture,
+main.transferx .banner.intro img,
+main.transferx .banner.intro picture {
   max-width: 36rem;
   margin: 0 auto;
 }
@@ -855,11 +863,17 @@ main.transferx .banner.intro img {
     background-size: cover;
   }
   main.delta-design-system .banner.intro img,
+  main.delta-design-system .banner.intro picture,
   main.east-wind .banner.intro img,
+  main.east-wind .banner.intro picture,
   main.enservio .banner.intro img,
+  main.enservio .banner.intro picture,
   main.mystuff .banner.intro img,
+  main.mystuff .banner.intro picture,
   main.panera .banner.intro img,
-  main.transferx .banner.intro img {
+  main.panera .banner.intro picture,
+  main.transferx .banner.intro img,
+  main.transferx .banner.intro picture {
     display: none;
   }
   main.delta-design-system .banner.intro h2,
@@ -899,7 +913,7 @@ main.transferx .banner.intro img {
 }
 @media (min-width: 56rem) {
   main.delta-design-system .banner.intro {
-    background-image: url(../images/delta-design-system-01-2x.jpg);
+    background-image: url(../images/delta-design-system-01-2x.webp);
     color: black;
   }
   main.east-wind .banner.intro {
@@ -972,10 +986,14 @@ figure figcaption {
   max-width: 36rem;
   margin: 0 auto;
   padding: var(--xsmall) 0 0;
-  font-size: var(--small);
+  font-size: var(--xsmall);
+  line-height: 1.5;
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
+}
+figure picture img {
+  border-radius: 0.25rem;
 }
 
 main.panera figure ul.users,
@@ -1781,6 +1799,10 @@ main.transferx dl {
 .gallery .collection figure.phone {
   width: 40%;
 }
+.gallery .collection .row {
+  display: flex;
+  flex-direction: column;
+}
 
 @media (min-width: 48rem) {
   .gallery figure {
@@ -1791,6 +1813,10 @@ main.transferx dl {
   }
   .gallery .collection figure.phone {
     width: 33.3333333333%;
+  }
+  .gallery .collection .row {
+    display: flex;
+    flex-direction: row;
   }
 }
 @media (min-width: 64rem) {

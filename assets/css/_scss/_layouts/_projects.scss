@@ -164,6 +164,11 @@ main.transferx {
       width: 40%;
     }
 
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+
   }
 }
 
@@ -181,7 +186,13 @@ main.transferx {
       figure.phone {
         width: calc(100% / 3);
       }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
     }
+
   }
 }
 
