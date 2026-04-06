@@ -365,6 +365,7 @@ pre {
 p > code, li > code {
   margin: 0;
   padding: 0.15rem 0.25rem;
+  border-radius: 0.125rem;
   font-family: consolas, "Liberation Mono", courier, monospace;
   font-size: 0.975rem;
   white-space: nowrap;
