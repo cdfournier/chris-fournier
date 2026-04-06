@@ -127,6 +127,13 @@ main.transferx {
 
   figure {
     padding: $p;
+
+    figcaption a {
+      color: white;
+      &:hover, &:focus {
+        color: $orange;
+      }
+    }
   }
 
   .collection {

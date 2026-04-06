@@ -1770,6 +1770,12 @@ main.transferx dl {
 .gallery figure {
   padding: var(--p);
 }
+.gallery figure figcaption a {
+  color: white;
+}
+.gallery figure figcaption a:hover, .gallery figure figcaption a:focus {
+  color: var(--orange);
+}
 .gallery .collection {
   display: flex;
   flex-wrap: wrap;
