@@ -1,4 +1,5 @@
 // PROJECT GLOBAL
+main.bodyhealthrx,
 main.delta-design-system,
 main.east-wind,
 main.enservio,
@@ -235,6 +236,14 @@ main.transferx {
 
 
 // PROJECT GALLERIES COLLECTION COLORS
+main.bodyhealthrx {
+  .gallery {
+    .collection {
+      background-color: $bodyhealthrx;
+    }
+  }
+}
+
 main.delta-design-system {
   .gallery {
     .collection {

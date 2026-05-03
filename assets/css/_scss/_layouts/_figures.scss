@@ -24,6 +24,40 @@ figure {
 }
 
 
+// BODYHEALTHRx FIGMA + SHOPIFY FIGURES
+main.bodyhealthrx {
+  .gallery.compare {
+    figure {
+      p {
+        padding: 0 0 0.25rem;
+        @include sans-bold;
+      }
+
+      picture {
+        max-height: 12rem;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding: 0;
+        border: 1px solid $gray;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  main.bodyhealthrx {
+    .gallery.compare {
+      figure {
+        picture {
+          max-height: 24rem;
+        }
+      }
+    }
+  }
+}
+
+
 // PANERA USERS & PAGEVIEWS FIGURES
 main.panera {
   figure {
