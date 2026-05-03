@@ -330,13 +330,6 @@
             <li>Component Library</li>
             <li>Page Templates</li>
           </ul>
-          <!-- <ul class="links">
-            <li>Links</li>
-            <li><a href="https://www.figma.com/design/tHT8Je5cvRTXFN9XQ7XqhA/The-Delta-Design-System?node-id=953-2140&t=FAvGO5OJErrfwGVb-1" class="offsite--bodyhealthrx-figma" target="_blank" rel="noopener noreferrer">Figma library</a></li>
-            <li><a href="https://github.com/cdfournier/delta-design-system" class="offsite--bodyhealthrx-repo" target="_blank" rel="noopener noreferrer">Github repo (legacy)</a></li>
-            <li><a href="https://cdfournier.github.io/delta-design-system/index.html" class="offsite--delta-design-system" target="_blank" rel="noopener noreferrer">Online guide (legacy)</a></li>
-            <li><a href="https://cdfournier.github.io/delta-design-system/demo/index.html" class="offsite--bodyhealthrx-demo" target="_blank" rel="noopener noreferrer">Demo site</a></li>
-          </ul> -->
           <ul class="skills">
             <li>Skills</li>
             <li>Design Systems</li>
@@ -374,7 +367,7 @@
         <p>I&apos;ve never been a fan of traditional wireframes. They tend to be either too abstract for stakeholders to react to meaningfully or too polished to invite real feedback. Instead, I build what I&apos;ve started calling handsome wireframes &mdash; layouts with real content and at least a baseline style applied, something that establishes a framework and gives everyone at the table something genuine to respond to. The goal is to get work in front of real people as quickly and efficiently as possible and to create something that enables other people&apos;s creativity rather than replacing it.</p>
         <p>The token system I built for BodyHealthRx follows a semantic, purpose-driven naming convention throughout. Colors are named for what they do rather than what they look like &mdash; <code>color/brand/primary</code>, <code>color/text/inverse</code>, <code>color/background/secondary</code> &mdash; so the system communicates intent at every level. Variable collections are organized by category, with responsive modes for desktop and mobile baked in at the token level rather than patched on afterward. A good design system should be invisible infrastructure: when it&apos;s working, nobody thinks about it. They just use the components, and the components do the right thing.</p>
         <div class="gallery">
-          <figure>
+          <figure style="width: 100%">
             <picture>
               <source srcset="assets/images/bodyhealthrx-02-1x.webp 1x, assets/images/bodyhealthrx-02-2x.webp 2x" type="image/webp">
               <img src="assets/images/bodyhealthrx-02-1x.webp" alt="">
@@ -386,7 +379,7 @@
         <h2>V1: Proving The Approach</h2>
         <p>The first system was built from experience and best practices, drawing on everything I know about atomic design, token architecture, and responsive-first thinking. The library that came out of that effort was comprehensive: alerts, badges, banners in multiple configurations, buttons across three types and three states, cards for products, lifestyle, partners, and categories, a full input system, navigation, surveys, tabs, typography components, and a motion control system for carousels and sliders. I also built a custom Resizer utility &mdash; a Figma-native tool embedded in text components to enforce consistent line lengths and eliminate widows and orphans across the layout.</p>
         <div class="gallery">
-          <figure>
+          <figure style="width: 100%">
             <picture>
               <source srcset="assets/images/bodyhealthrx-04-1x.webp 1x, assets/images/bodyhealthrx-04-2x.webp 2x" type="image/webp">
               <img src="assets/images/bodyhealthrx-04-1x.webp" alt="">
@@ -401,7 +394,7 @@
         <p>The decision to build a second system wasn&apos;t a judgment on the first one. It was the result of knowing more than I did when I started. You can&apos;t fully design a system for a team you don&apos;t know yet, and what I learned working closely with the creative team was that maximum flexibility wasn&apos;t actually serving them. What they needed was something more purposefully constrained &mdash; specific components and size and spacing structures with room to flex within a well-defined system, not an open-ended library that required constant decision-making.</p>
         <p>The second system reflects that understanding in concrete ways. Typography, for example, is no longer organized around semantic HTML tags. In V1, styles were tied to structural elements &mdash; h1, h2, p &mdash; which made sense architecturally but didn&apos;t map naturally to how the creative team thought about type. In V2, the style is separated from the architecture entirely. The organizing principle is heading, body, small, and fine, with t-shirt size options available for each. The underlying HTML structure is still there and still correct, but the design system speaks the language of the people using it.</p>
         <div class="gallery">
-          <figure>
+          <figure style="width: 100%">
             <picture>
               <source srcset="assets/images/bodyhealthrx-03-1x.webp 1x, assets/images/bodyhealthrx-03-2x.webp 2x" type="image/webp">
               <img src="assets/images/bodyhealthrx-03-1x.webp" alt="">
@@ -410,10 +403,10 @@
         </div>
         <p>The component library follows the same logic. Rather than grouping everything by anatomy &mdash; a card section that grows longer with every new variant &mdash; V2 organizes components by use case. Lab results have their own family. Product display has its own family. Portal components, questionnaire flows, rewards tracking &mdash; each one is a coherent group built around what it does rather than what it looks like. This makes the system easier to navigate, easier to extend, and far easier to hand off to developers who need to understand not just the component but its purpose.</p>
         <div class="gallery">
-          <figure>
+          <figure style="width: 100%">
             <picture>
-              <source srcset="assets/images/bodyhealthrx-04-1x.webp 1x, assets/images/bodyhealthrx-04-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-04-1x.webp" alt="">
+              <source srcset="assets/images/bodyhealthrx-05-1x.webp 1x, assets/images/bodyhealthrx-05-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-05-1x.webp" alt="">
             </picture>
           </figure>
         </div>
@@ -455,7 +448,7 @@
         <h2>The Dashboard</h2>
         <p>Phase 2 centers on a user portal and personal health dashboard &mdash; a single authenticated experience that brings together appointment scheduling, lab result tracking, health score visualization, order history, rewards, and personalized product recommendations across mobile and widescreen.</p>
         <p>The dashboard is built around the idea that a health platform should feel personal from the moment you arrive &mdash; not just functional, but genuinely aware of who you are and what you need right now. The experience greets users by name and opens with a daily affirmation. It knows the time of day and adjusts the banner imagery accordingly &mdash; a different feeling in the morning than in the evening. It surfaces the local weather and temperature for your location. It shows you notifications for upcoming appointments, your current rewards status, and your health score before you&apos;ve had to navigate anywhere. Everything above the fold is contextual, relevant, and yours.</p>
-        <p>From there, tabbed navigation moves fluidly between Appointments, Health Score, Lab Results, Orders, Rewards, and Recommendations. Lab results include biomarker grids, reference range visualizations, and chip-tagged clinical insights that help users understand what their numbers actually mean. The rewards section uses a circular progress ring with clear points accrual and redemption tracking. Personalized recommendations are organized by product category &mdash; supplements, prescriptions, and testing &mdash; and presented as curated cards based on the user&apos;s health history and goals.</p>
+        <p>From there, tabbed navigation moves fluidly between Appointments, Wellness Score, Lab Results, Orders, Rewards, and Recommendations. Lab results include biomarker grids, reference range visualizations, and chip-tagged clinical insights that help users understand what their numbers actually mean. The rewards section uses a circular progress ring with clear points accrual and redemption tracking. Personalized recommendations are organized by product category &mdash; supplements, prescriptions, and testing &mdash; and presented as curated cards based on the user&apos;s health history and goals.</p>
         <p>It's not a dashboard. It's a personal wellness operating system.</p>
         <p>The designs were developed collaboratively, shaped by creative and strategic guidance throughout, and presented to clinical, executive, and creative stakeholders for review. The reaction was overwhelmingly positive and genuinely excited &mdash; the kind of response that tells you the work didn&apos;t just meet expectations, it exceeded them.</p>
       </section>
@@ -476,9 +469,9 @@
         </div>
       </div>
       <section>
-        <h2>What This Demonstrates</h2>
-        <p>I love this work. I love building things and working with people who love to explore and figure things out together. I love finding ways to make processes faster, more efficient, more effective, and less prone to error. That&apos;s not something I arrived at &mdash; it&apos;s just how I&apos;m wired, and it shows up in everything I do on a project like this one.</p>
-        <p>A design system built to anticipate the next phase of a platform before that phase had been scoped. A motion tool born from curiosity and a deliberate decision to extend my own capabilities, built because an opportunity appeared and I wanted to meet it with something better than what already existed. A second, better-fitted system proposed not because the first one failed, but because there was a more purposeful solution available once I knew the team well enough to design for them specifically. Figma files organized with enough clarity and intention that a project manager overseeing an entire platform rollout asked for thirty minutes just to learn from the architecture.</p>
+        <h2>Design to Production</h2>
+        <p>A design system is only as good as what it builds. The real test isn&apos;t how the components look in Figma &mdash; it&apos;s how faithfully they translate when a developer picks them up and puts them to work. The BodyHealthRx Shopify build is that test, and it passes.</p>
+        <p>The side-by-side comparison below shows the Figma design and the live Shopify implementation of the same page. The layout, spacing, typography hierarchy, component structure, and visual tone are essentially identical. The token architecture, the naming conventions, the responsive modes &mdash; all of it was built to make this moment possible. Not just a design that could be handed off, but one that could be built from.</p>
         <div class="gallery compare">
           <figure>
             <p>Figma desktop design</p>
@@ -497,6 +490,11 @@
             <figcaption class="visuallyhidden">Shopify build</figcaption>
           </figure>
         </div>
+      </section>
+      <section>
+        <h2>What This Demonstrates</h2>
+        <p>I love this work. I love building things and working with people who love to explore and figure things out together. I love finding ways to make processes faster, more efficient, more effective, and less prone to error. That&apos;s not something I arrived at &mdash; it&apos;s just how I&apos;m wired, and it shows up in everything I do on a project like this one.</p>
+        <p>A design system built to anticipate the next phase of a platform before that phase had been scoped. A motion tool born from curiosity and a deliberate decision to extend my own capabilities, built because an opportunity appeared and I wanted to meet it with something better than what already existed. A second, better-fitted system proposed not because the first one failed, but because there was a more purposeful solution available once I knew the team well enough to design for them specifically. Figma files organized with enough clarity and intention that a project manager overseeing an entire platform rollout asked for thirty minutes just to learn from the architecture.</p>
         <p>Design systems don&apos;t succeed on their own. They require organizational commitment, cross-functional trust, and a shared willingness to invest in the foundation before the returns are visible. BodyHealthRx made that commitment, and the work reflects it. The engagement is ongoing. The platform is still launching. The system is still evolving. That&apos;s exactly the point. The system didn&apos;t add complexity to any of that. It absorbed it &mdash; so the work doesn&apos;t have to.</p>
       </section>
     </main>
