@@ -354,14 +354,23 @@
         <p>I was brought in as a senior UX/UI design contractor at the start of the rebrand from BodyHealth to BodyHealthRx. The company had been building toward this launch for more than a year, but for me it was a crash course: discover, design, and build &mdash; fast, and without the luxury of a stable target.</p>
         <p>BodyHealthRx is a wellness company in the middle of a significant transformation. What began as a supplement business is expanding into a comprehensive wellness platform: at-home diagnostic testing, compounded prescription medications, online clinical consultation, and subscription-based wellness programs &mdash; all built on Shopify, all launching under a new brand identity, and all being defined and refined at the same time. This wasn&apos;t a simple redesign. It was a full platform launch compressed into months.</p>
         <p>The scope breaks into three phases. Phase 1: a new website and brand for prescriptions and at-home testing to complement the existing supplements business. Phase 2, recently kicked off: a full user portal and personal wellness dashboard covering appointment scheduling, lab results, order tracking, rewards, and personalized wellness recommendations. Phase 3: the redesign of the original BodyHealth website, with the longer-term possibility of unifying both platforms under a single URL. Three distinct phases, one design system, built on a foundation that was still being poured.</p>
-        <p>The scale gives shape to the ambition: 9 pages for products and categories, more than 60 pages across the Rx section, roughly 10 survey paths for different treatment types, and instruction flows for each at-home test running about a dozen pages each. All of it designed to be built, maintained, and extended by a system rather than by hand.</p>
+        <p><em>The BodyHealthRx site alone includes more than 100 designed pages:</em></p>
+        <ul>
+          <li>10 at-home test product pages, a test landing page, and a shop-all page</li>
+          <li>A prescriptions landing page, 10 category pages, and 60+ individual prescription pages</li>
+          <li>A supplements landing page</li>
+          <li>Roughly 10 survey paths for different treatment types</li>
+          <li>Instruction flows for each at-home test running about a dozen pages each</li>
+          <li>Plus dozens of supporting pages &mdash; about, how it works, privacy, terms, kit registration, and more</li>
+        </ul>
+        <p><em>The dashboard and user portal add significantly to that total &mdash; and the system was built to support all of it.</em></p>
       </section>
       <section>
         <h2>The Before</h2>
         <p>The design work I encountered when I arrived was genuinely good. There was a strong visual sensibility in place, real brand instincts, and a clear point of view. The people responsible for it cared about the work and it showed. What was missing wasn&apos;t talent or intention &mdash; it was structure. There was no methodology connecting the good instincts to a repeatable, scalable process. Styles and variables existed, but they had been built up organically over time, applied case by case without an underlying naming convention or organizational logic. Components hadn&apos;t been systematized. The files were hard to navigate and harder to hand off. The ingredients for a great design system were already there. What they needed was someone to build the kitchen.</p>
       </section>
       <section>
-        <h2>The Approach</h2>
+        <h2>Foundation First</h2>
         <p>I typically begin any engagement with what I think of as BEM exercises &mdash; working through the block, element, and modifier relationships of a design before touching a single component. Color, spacing, typography: I build the framework for those decisions first, establishing variables and values and making sure the architecture is sound before the walls go up. From there I move into atoms and molecules without trying to solve everything at once.</p>
         <p>I&apos;ve never been a fan of traditional wireframes. They tend to be either too abstract for stakeholders to react to meaningfully or too polished to invite real feedback. Instead, I build what I&apos;ve started calling handsome wireframes &mdash; layouts with real content and at least a baseline style applied, something that establishes a framework and gives everyone at the table something genuine to respond to. The goal is to get work in front of real people as quickly and efficiently as possible and to create something that enables other people&apos;s creativity rather than replacing it.</p>
         <p>The token system I built for BodyHealthRx follows a semantic, purpose-driven naming convention throughout. Colors are named for what they do rather than what they look like &mdash; <code>color/brand/primary</code>, <code>color/text/inverse</code>, <code>color/background/secondary</code> &mdash; so the system communicates intent at every level. Variable collections are organized by category, with responsive modes for desktop and mobile baked in at the token level rather than patched on afterward. The V1 system used desktop and mobile modes. The V2 system expanded to mobile, tablet, and widescreen &mdash; not because every layout needs a tablet breakpoint, but because the line between screen sizes has been narrowing and classic breakpoint labels like &quot;desktop&quot; don&apos;t describe the range of devices people actually use. A laptop isn&apos;t a desktop, and neither is an HD TV. The extra mode gives us flexibility where information density demands it, particularly as the dashboard work deepens.</p>
@@ -384,7 +393,7 @@
         <p>None of this is glamorous work. But it&apos;s the work that makes the glamorous work possible. When I know that a platform needs to support 60+ Rx pages and growing, I can&apos;t afford to populate designs by hand. The content pipeline has to be as systematic as the component pipeline, or one of them becomes the bottleneck.</p>
       </section>
       <section>
-        <h2>V1: Proving the Approach</h2>
+        <h2>V1: The First System</h2>
         <p>The first system was built from experience and best practices, drawing on everything I know about atomic design, token architecture, and responsive-first thinking. The library that came out of that effort was comprehensive: alerts, badges, banners in multiple configurations, buttons across three types and three states, cards for products, lifestyle, partners, and categories, a full input system, navigation, surveys, tabs, typography components, and a motion control system for carousels and sliders. I also built a custom Resizer utility &mdash; a Figma-native tool embedded in text components to enforce consistent line lengths and eliminate widows and orphans across the layout.</p>
         <div class="gallery">
           <figure style="width: 100%">
@@ -482,13 +491,14 @@
             </picture>
           </figure>
         </div>
+        <p>I built the dashboard home page as a fully functional Figma prototype &mdash; every tab clickable, real content throughout, responsive at both mobile and widescreen. The whole thing came together in about two weeks. I&apos;d already been building the V2 library before the dashboard was assigned, so when it became an urgent priority the system was ready. The components, the tokens, the responsive modes &mdash; all of it was in place. I wasn&apos;t building screens from scratch. I was assembling them from a library that was already working.</p>
         <p>The dashboard designs were developed collaboratively and presented to a cross-functional group of EVPs and VPs across design, project management, and medicine, including a board member. The reaction was telling: the room had very few questions and no suggestions for improvement. For a cross-functional executive review of this scope, silence is the highest compliment &mdash; it means nothing needed to be defended because nothing needed to be fixed.</p>
         <p>These were handsome wireframes &mdash; real content, real style, real responsive behavior &mdash; presented as a framework to react to rather than a finished deliverable. The fact that a room full of executives treated them as if they were finished says something about the approach.</p>
       </section>
       <section>
-        <h2>Design to Production</h2>
+        <h2>The Proof</h2>
         <p>A design system is only as good as what it builds. The real test isn&apos;t how the components look in Figma &mdash; it&apos;s how faithfully they translate when a developer picks them up and puts them to work. The BodyHealthRx Shopify build is that test, and it passes.</p>
-        <p>The side-by-side comparison below shows the Figma design and the live Shopify implementation of the same page. The layout, spacing, typography hierarchy, component structure, and visual tone are essentially identical. The token architecture, the naming conventions, the responsive modes &mdash; all of it was built to make this moment possible. Not just a design that could be handed off, but one that could be built from.</p>
+        <p>The side-by-side comparison below shows the Figma design and the live Shopify implementation of the home page and the at-home tests page. The layout, spacing, typography hierarchy, component structure, and visual tone are essentially identical. The token architecture, the naming conventions, the responsive modes &mdash; all of it was built to make this moment possible. Not just a design that could be handed off, but one that could be built from.</p>
         <p>When asked about the system, the development team&apos;s response was direct: &quot;This thing is 1000x better than just about anything I ever work with. Light years ahead.&quot;</p>
       </section>
       <div class="gallery compare">
