@@ -29,8 +29,12 @@ main.bodyhealthrx {
   .gallery.compare {
     figure {
       p {
-        padding: 0 0 0.25rem;
+        padding: 0;
         @include sans-bold;
+      }
+
+      small {
+        padding: 0 0 0.5rem;
       }
 
       picture {
