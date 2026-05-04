@@ -1031,6 +1031,13 @@ figure picture img {
   border-radius: 0.25rem;
 }
 
+main.bodyhealthrx .gallery.compare {
+  padding-bottom: 0;
+}
+main.bodyhealthrx .gallery.compare .collection {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 main.bodyhealthrx .gallery.compare .collection figure p {
   padding: 0;
   font-family: "metropolis-bold", sans-serif;
@@ -1041,12 +1048,19 @@ main.bodyhealthrx .gallery.compare .collection figure small {
   padding: 0 0 0.5rem;
 }
 main.bodyhealthrx .gallery.compare .collection figure picture {
-  max-height: 12rem;
+  max-height: 14rem;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0;
   border: 1px solid var(--gray);
   border-radius: 0.5rem;
+}
+main.bodyhealthrx .gallery.compare:first-of-type {
+  padding-bottom: 0;
+}
+main.bodyhealthrx .gallery.compare:last-of-type {
+  padding-top: 0;
+  padding-bottom: var(--p);
 }
 
 @media (min-width: 48rem) {

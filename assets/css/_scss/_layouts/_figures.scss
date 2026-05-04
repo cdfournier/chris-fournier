@@ -27,7 +27,12 @@ figure {
 // BODYHEALTHRx FIGMA + SHOPIFY FIGURES
 main.bodyhealthrx {
   .gallery.compare {
+    padding-bottom: 0;
+
     .collection {
+      margin-top: 0;
+      margin-bottom: 0;
+
       figure {
         p {
           padding: 0;
@@ -39,7 +44,7 @@ main.bodyhealthrx {
         }
 
         picture {
-          max-height: 12rem;
+          max-height: 14rem;
           overflow-x: hidden;
           overflow-y: scroll;
           padding: 0;
@@ -48,6 +53,15 @@ main.bodyhealthrx {
         }
       }
     }
+  }
+
+  .gallery.compare:first-of-type {
+    padding-bottom: 0;
+  }
+
+  .gallery.compare:last-of-type {
+    padding-top: 0;
+    padding-bottom: $p;
   }
 }
 
