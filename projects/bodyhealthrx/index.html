@@ -341,6 +341,7 @@
             <li>Variable Modes</li>
             <li>Motion Design</li>
             <li>Component Architecture</li>
+            <li>Content Architecture</li>
             <li>Design-to-Dev Handoff</li>
             <li>Shopify</li>
             <li>B2C</li>
@@ -349,14 +350,11 @@
         </div>
       </section>
       <section>
-        <h2>The Platform</h2>
-        <p>BodyHealthRx is a wellness company in the middle of a significant transformation. What began as a supplement business is expanding into a comprehensive wellness platform: at-home diagnostic testing, compounded prescription medications, online clinical consultation, and subscription-based wellness programs &mdash; all built on Shopify, all launching under a new brand identity, and all being defined and refined at the same time.</p>
-        <p>This wasn't a simple redesign. It was a full platform launch across supplements, prescriptions, at-home testing, online clinical consultation, and subscriptions, compressed into months. The design system didn't add complexity. It absorbed it.</p>
-      </section>
-      <section>
         <h2>The Brief</h2>
         <p>I was brought in as a senior UX/UI design contractor at the start of the rebrand from BodyHealth to BodyHealthRx. The company had been building toward this launch for more than a year, but for me it was a crash course: discover, design, and build &mdash; fast, and without the luxury of a stable target.</p>
-        <p>The scope was ambitious from the beginning. Phase 1 was the launch of a new website and brand for prescriptions and at-home testing to complement the existing supplements business. Phase 2, recently kicked off, is a full user portal and personal wellness dashboard covering appointment scheduling, lab results, order tracking, rewards, and personalized wellness recommendations. Phase 3 is the redesign of the original BodyHealth website, with the longer-term possibility of unifying both platforms under a single URL. Three distinct phases, two design systems built in iteration.</p>
+        <p>BodyHealthRx is a wellness company in the middle of a significant transformation. What began as a supplement business is expanding into a comprehensive wellness platform: at-home diagnostic testing, compounded prescription medications, online clinical consultation, and subscription-based wellness programs &mdash; all built on Shopify, all launching under a new brand identity, and all being defined and refined at the same time. This wasn&apos;t a simple redesign. It was a full platform launch compressed into months.</p>
+        <p>The scope breaks into three phases. Phase 1: a new website and brand for prescriptions and at-home testing to complement the existing supplements business. Phase 2, recently kicked off: a full user portal and personal wellness dashboard covering appointment scheduling, lab results, order tracking, rewards, and personalized wellness recommendations. Phase 3: the redesign of the original BodyHealth website, with the longer-term possibility of unifying both platforms under a single URL. Three distinct phases, one design system, built on a foundation that was still being poured.</p>
+        <p>The scale gives shape to the ambition: 9 pages for products and categories, more than 60 pages across the Rx section, roughly 10 survey paths for different treatment types, and instruction flows for each at-home test running about a dozen pages each. All of it designed to be built, maintained, and extended by a system rather than by hand.</p>
       </section>
       <section>
         <h2>The Before</h2>
@@ -366,21 +364,36 @@
         <h2>The Approach</h2>
         <p>I typically begin any engagement with what I think of as BEM exercises &mdash; working through the block, element, and modifier relationships of a design before touching a single component. Color, spacing, typography: I build the framework for those decisions first, establishing variables and values and making sure the architecture is sound before the walls go up. From there I move into atoms and molecules without trying to solve everything at once.</p>
         <p>I&apos;ve never been a fan of traditional wireframes. They tend to be either too abstract for stakeholders to react to meaningfully or too polished to invite real feedback. Instead, I build what I&apos;ve started calling handsome wireframes &mdash; layouts with real content and at least a baseline style applied, something that establishes a framework and gives everyone at the table something genuine to respond to. The goal is to get work in front of real people as quickly and efficiently as possible and to create something that enables other people&apos;s creativity rather than replacing it.</p>
-        <p>The token system I built for BodyHealthRx follows a semantic, purpose-driven naming convention throughout. Colors are named for what they do rather than what they look like &mdash; <code>color/brand/primary</code>, <code>color/text/inverse</code>, <code>color/background/secondary</code> &mdash; so the system communicates intent at every level. Variable collections are organized by category, with responsive modes for desktop and mobile baked in at the token level rather than patched on afterward. A good design system should be invisible infrastructure: when it&apos;s working, nobody thinks about it. They just use the components, and the components do the right thing.</p>
+        <p>The token system I built for BodyHealthRx follows a semantic, purpose-driven naming convention throughout. Colors are named for what they do rather than what they look like &mdash; <code>color/brand/primary</code>, <code>color/text/inverse</code>, <code>color/background/secondary</code> &mdash; so the system communicates intent at every level. Variable collections are organized by category, with responsive modes for desktop and mobile baked in at the token level rather than patched on afterward. The V1 system used desktop and mobile modes. The V2 system expanded to mobile, tablet, and widescreen &mdash; not because every layout needs a tablet breakpoint, but because the line between screen sizes has been narrowing and classic breakpoint labels like &quot;desktop&quot; don&apos;t describe the range of devices people actually use. A laptop isn&apos;t a desktop, and neither is an HD TV. The extra mode gives us flexibility where information density demands it, particularly as the dashboard work deepens.</p>
+        <p>Across both systems, the token architecture includes more than 300 variables spanning color (with light and dark modes), spacing, and typography &mdash; each collection resolving responsively at every breakpoint. A good design system should be invisible infrastructure: when it&apos;s working, nobody thinks about it. They just use the components, and the components do the right thing.</p>
+      </section>
+      <section>
+        <h2>Content as Architecture</h2>
+        <p>Design systems get a lot of attention. Content systems rarely get the same treatment, but they should &mdash; because the two are the same problem. If your components are modular and reusable, your content needs to be modular and reusable too, or the whole thing falls apart at scale.</p>
+        <p>Early in the engagement I restructured the master copy document into a system that mirrors the component architecture: shared content blocks with reference IDs, canonical product entries (name, description, price, image, attributes), and page layouts that reference shared blocks by ID rather than duplicating content. I also built structured product data spreadsheets for test products, Rx products, and supplement categories &mdash; organized so that large blocks of data could be imported into Figma designs quickly and efficiently rather than transcribed by hand.</p>
         <div class="gallery">
           <figure style="width: 100%">
             <picture>
               <source srcset="assets/images/bodyhealthrx-02-1x.webp 1x, assets/images/bodyhealthrx-02-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-02-1x.webp" alt="Figma variable collections panel showing the BodyHealthRx token architecture">
+              <img src="assets/images/bodyhealthrx-02-1x.webp" alt="Product cards for tests and prescriptions with content imported from spreadsheets">
             </picture>
-            <figcaption>V1 typography variables</figcaption>
+            <figcaption>Content architecture in use</figcaption>
           </figure>
         </div>
+        <p>The survey system got the same treatment. The platform includes roughly 10 survey paths covering different treatment types, each with its own routing logic. I mapped the entire system into a structured spreadsheet &mdash; one tab per category, plus pre-survey and summary tabs &mdash; and then created a flat data import sheet for bringing that content into design tools and templates. I laid the survey content out horizontally because that&apos;s how my brain visualizes data becoming a user experience: I needed to see the flow the way a user would move through it.</p>
+        <p>None of this is glamorous work. But it&apos;s the work that makes the glamorous work possible. When I know that a platform needs to support 60+ Rx pages and growing, I can&apos;t afford to populate designs by hand. The content pipeline has to be as systematic as the component pipeline, or one of them becomes the bottleneck.</p>
       </section>
       <section>
         <h2>V1: Proving the Approach</h2>
         <p>The first system was built from experience and best practices, drawing on everything I know about atomic design, token architecture, and responsive-first thinking. The library that came out of that effort was comprehensive: alerts, badges, banners in multiple configurations, buttons across three types and three states, cards for products, lifestyle, partners, and categories, a full input system, navigation, surveys, tabs, typography components, and a motion control system for carousels and sliders. I also built a custom Resizer utility &mdash; a Figma-native tool embedded in text components to enforce consistent line lengths and eliminate widows and orphans across the layout.</p>
         <div class="gallery">
+          <figure style="width: 100%">
+            <picture>
+              <source srcset="assets/images/bodyhealthrx-03-1x.webp 1x, assets/images/bodyhealthrx-03-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-03-1x.webp" alt="Figma variable collections panel showing the BodyHealthRx token architecture">
+            </picture>
+            <figcaption>V1 typography variables</figcaption>
+          </figure>
           <figure style="width: 100%">
             <picture>
               <source srcset="assets/images/bodyhealthrx-04-1x.webp 1x, assets/images/bodyhealthrx-04-2x.webp 2x" type="image/webp">
@@ -393,24 +406,25 @@
       </section>
       <section>
         <h2>V2: Refining for the Team</h2>
-        <p>I've occasionally been accused of throwing the baby out with the bathwater when I propose starting something over. I've never really seen it that way. We evolve. User needs evolve. Best practices evolve. Business needs evolve. The tools we use to do the work should evolve too, and sometimes evolution means building something new rather than continuing to patch something old.</p>
+        <p>I&apos;ve occasionally been accused of throwing the baby out with the bathwater when I propose starting something over. I&apos;ve never really seen it that way. We evolve. User needs evolve. Best practices evolve. Business needs evolve. The tools we use to do the work should evolve too, and sometimes evolution means building something new rather than continuing to patch something old.</p>
         <p>The decision to build a second system wasn&apos;t a judgment on the first one. It was the result of knowing more than I did when I started. You can&apos;t fully design a system for a team you don&apos;t know yet, and what I learned working closely with the creative team was that maximum flexibility wasn&apos;t actually serving them. What they needed was something more purposefully constrained &mdash; specific components and size and spacing structures with room to flex within a well-defined system, not an open-ended library that required constant decision-making.</p>
         <p>The second system reflects that understanding in concrete ways. Typography, for example, is no longer organized around semantic HTML tags. In V1, styles were tied to structural elements &mdash; h1, h2, p &mdash; which made sense architecturally but didn&apos;t map naturally to how the creative team thought about type. In V2, the style is separated from the architecture entirely. The organizing principle is heading, body, small, and fine, with t-shirt size options available for each. The underlying HTML structure is still there and still correct, but the design system speaks the language of the people using it.</p>
         <div class="gallery">
           <figure style="width: 100%">
             <picture>
-              <source srcset="assets/images/bodyhealthrx-03-1x.webp 1x, assets/images/bodyhealthrx-03-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-03-1x.webp" alt="V2 Figma variable collections panel showing the BodyHealthRx token architecture">
+              <source srcset="assets/images/bodyhealthrx-05-1x.webp 1x, assets/images/bodyhealthrx-05-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-05-1x.webp" alt="V2 Figma variable collections panel showing the BodyHealthRx token architecture">
             </picture>
             <figcaption>New and improved V2 typography variables</figcaption>
           </figure>
         </div>
         <p>The component library follows the same logic. Rather than grouping everything by anatomy &mdash; a card section that grows longer with every new variant &mdash; V2 organizes components by use case. Lab results have their own family. Product display has its own family. Portal components, questionnaire flows, rewards tracking &mdash; each one is a coherent group built around what it does rather than what it looks like. This makes the system easier to navigate, easier to extend, and far easier to hand off to developers who need to understand not just the component but its purpose.</p>
+        <p>The V2 library now includes 97 components across 14 component sets, with 148 variables spanning color, spacing, and typography &mdash; each with responsive modes for mobile, tablet, and widescreen. It&apos;s the system that will build the dashboard, and eventually the redesign of <a href="https://www.bodyhealth.com/" class="offsite--bodyhealth" target="_blank" rel="noopener noreferrer">bodyhealth.com</a>.</p>
         <div class="gallery">
           <figure style="width: 100%">
             <picture>
-              <source srcset="assets/images/bodyhealthrx-05-1x.webp 1x, assets/images/bodyhealthrx-05-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-05-1x.webp" alt="BodyHealthRx V2 design system component library overview in Figma">
+              <source srcset="assets/images/bodyhealthrx-06-1x.webp 1x, assets/images/bodyhealthrx-06-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-06-1x.webp" alt="BodyHealthRx V2 design system component library overview in Figma">
               <figcaption>New and improved V2 component library</figcaption>
             </picture>
           </figure>
@@ -421,30 +435,30 @@
         <div class="collection">
           <figure>
             <picture>
-              <source srcset="assets/images/bodyhealthrx-06-1x.webp 1x, assets/images/bodyhealthrx-06-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-06-1x.webp" alt="BodyHealthRx handsome wireframe showing early home page layout">
+              <source srcset="assets/images/bodyhealthrx-07-1x.webp 1x, assets/images/bodyhealthrx-07-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-07-1x.webp" alt="BodyHealthRx handsome wireframe showing early home page layout">
             </picture>
           </figure>
           <figure>
             <picture>
-              <source srcset="assets/images/bodyhealthrx-07-1x.webp 1x, assets/images/bodyhealthrx-07-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-07-1x.webp" alt="BodyHealthRx handsome wireframe showing early product page layout">
+              <source srcset="assets/images/bodyhealthrx-08-1x.webp 1x, assets/images/bodyhealthrx-08-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-08-1x.webp" alt="BodyHealthRx handsome wireframe showing early product page layout">
             </picture>
           </figure>
         </div>
       </div>
       <section>
-        <h2>Beyond the System</h2>
-        <p>Animation was identified early on as an important part of the user experience, and when I saw an opportunity to move that work forward, I took it. I had plenty of experience building interactive HTML prototypes, but this felt like a chance to extend what I knew &mdash; to stretch deliberately and build something I hadn&apos;t built before. Working with Codex and using Figma&apos;s MCP server to connect directly to the live designs and styles, I built a parametric motion design laboratory from scratch: a browser-based tool that allows the creative team to dial in animation settings interactively &mdash; easing curves, entry and exit speeds, fade values, panel shifts, masking logic, and directional behavior &mdash; and see the results in real time.</p>
-        <p>The tool was built with GSAP via CDN for the motion and transition timelines, and plain HTML, CSS, and vanilla JavaScript for the component structure, styling, controls, and state. Native browser and CSS features &mdash; opacity, transform, overflow: hidden, and will-change &mdash; handle the animation support underneath. No build system, no framework. That was an intentional choice, made with the developer on the other end in mind. The easier it is to pick up and implement, the more useful it is.</p>
-        <p>The output options were designed with the same handoff philosophy: JSON for direct implementation, portable CSS for developer reference, and a shareable URL that encodes the exact configuration as query parameters. That last feature turned out to be the one that stopped the room. The idea that you could tune an animation to exactly the right feel, copy a single URL, and send a developer the precise specification with nothing lost in translation &mdash; that landed in a way I didn&apos;t fully anticipate. It was one of those moments where a tool does exactly what it was built to do, and everyone in the room understands it immediately. I&apos;m genuinely proud of it.</p>
+        <h2>The Motion Lab</h2>
+        <p>Animation was identified early on as an important part of the user experience, and when I saw an opportunity to move that work forward, I took it. I had plenty of experience building interactive HTML prototypes, but this felt like a chance to extend what I knew &mdash; to stretch deliberately and build something I hadn&apos;t built before.</p>
+        <p>The result is a parametric motion design laboratory: a browser-based tool that allows the creative team to dial in animation settings interactively &mdash; easing curves, entry and exit speeds, fade values, panel shifts, masking logic, and directional behavior &mdash; and see the results in real time. It was built with GSAP for the motion and transition timelines, and plain HTML, CSS, and vanilla JavaScript for the component structure, styling, controls, and state. No build system, no framework. That was an intentional choice, made with the developer on the other end in mind. The easier it is to pick up and implement, the more useful it is.</p>
+        <p>The output options were designed with the same handoff philosophy: JSON for direct implementation, portable CSS for developer reference, and a shareable URL that encodes the exact configuration as query parameters. That last feature turned out to be the one that stopped the room. The idea that you could tune an animation to exactly the right feel, copy a single URL, and send a developer the precise specification with nothing lost in translation &mdash; that landed in a way I didn&apos;t fully anticipate. It was one of those moments where a tool does exactly what it was built to do, and everyone in the room understands it immediately.</p>
       </section>
       <div class="gallery">
         <div class="collection">
           <figure>
             <picture>
-              <source srcset="assets/images/bodyhealthrx-08-1x.webp 1x, assets/images/bodyhealthrx-08-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-08-1x.webp" alt="Motion Lab browser interface showing animation controls and settings">
+              <source srcset="assets/images/bodyhealthrx-09-1x.webp 1x, assets/images/bodyhealthrx-09-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-09-1x.webp" alt="Motion Lab browser interface showing animation controls and settings">
             </picture>
           </figure>
         </div>
@@ -454,36 +468,37 @@
         <p>Phase 2 centers on a user portal and personal wellness dashboard &mdash; a single authenticated experience that brings together appointment scheduling, lab result tracking, wellness score visualization, order history, rewards, and personalized product recommendations across mobile and widescreen.</p>
         <p>The dashboard is built around the idea that a wellness platform should feel personal from the moment you arrive &mdash; not just functional, but genuinely aware of who you are and what you need right now. The experience greets users by name and opens with a daily affirmation. It knows the time of day and adjusts the banner imagery accordingly &mdash; a different feeling in the morning than in the evening. It surfaces the local weather and temperature for your location. It shows you notifications for upcoming appointments, your current rewards status, and your wellness score before you&apos;ve had to navigate anywhere. Everything above the fold is contextual, relevant, and yours.</p>
         <p>From there, tabbed navigation moves fluidly between Appointments, Wellness Score, Lab Results, Orders, Rewards, and Recommendations. Lab results include biomarker grids, reference range visualizations, and chip-tagged clinical insights that help users understand what their numbers actually mean. The rewards section uses a circular progress ring with clear points accrual and redemption tracking. Personalized recommendations are organized by product category &mdash; supplements, prescriptions, and testing &mdash; and presented as curated cards based on the user&apos;s wellness history and goals.</p>
-        <p>It's not a dashboard. It's a personal wellness operating system.</p>
-        <p>The designs were developed collaboratively, shaped by creative and strategic guidance throughout, and presented to clinical, executive, and creative stakeholders for review. The reaction was overwhelmingly positive and genuinely excited &mdash; the kind of response that tells you the work didn&apos;t just meet expectations, it exceeded them.</p>
-      </section>
-      <div class="gallery">
-        <div class="collection">
-          <figure>
-            <picture>
-              <source srcset="assets/images/bodyhealthrx-09-1x.webp 1x, assets/images/bodyhealthrx-09-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-09-1x.webp" alt="BodyHealthRx personal wellness dashboard widescreen view">
-            </picture>
-          </figure>
-          <figure>
+        <div class="gallery">
+          <figure style="width: 100%;">
             <picture>
               <source srcset="assets/images/bodyhealthrx-10-1x.webp 1x, assets/images/bodyhealthrx-10-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-10-1x.webp" alt="BodyHealthRx dashboard lab results tab with biomarker grid">
+              <img src="assets/images/bodyhealthrx-10-1x.webp" alt="BodyHealthRx personal wellness dashboard widescreen view">
+            </picture>
+          </figure>
+          <figure style="width: 100%;">
+            <picture>
+              <source srcset="assets/images/bodyhealthrx-11-1x.webp 1x, assets/images/bodyhealthrx-11-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-11-1x.webp" alt="BodyHealthRx dashboard lab results tab with biomarker grid">
             </picture>
           </figure>
         </div>
-      </div>
+        <p>The dashboard designs were developed collaboratively and presented to a cross-functional group of EVPs and VPs across design, project management, and medicine, including a board member. The reaction was telling: the room had very few questions and no suggestions for improvement. For a cross-functional executive review of this scope, silence is the highest compliment &mdash; it means nothing needed to be defended because nothing needed to be fixed.</p>
+        <p>These were handsome wireframes &mdash; real content, real style, real responsive behavior &mdash; presented as a framework to react to rather than a finished deliverable. The fact that a room full of executives treated them as if they were finished says something about the approach.</p>
+      </section>
       <section>
         <h2>Design to Production</h2>
         <p>A design system is only as good as what it builds. The real test isn&apos;t how the components look in Figma &mdash; it&apos;s how faithfully they translate when a developer picks them up and puts them to work. The BodyHealthRx Shopify build is that test, and it passes.</p>
         <p>The side-by-side comparison below shows the Figma design and the live Shopify implementation of the same page. The layout, spacing, typography hierarchy, component structure, and visual tone are essentially identical. The token architecture, the naming conventions, the responsive modes &mdash; all of it was built to make this moment possible. Not just a design that could be handed off, but one that could be built from.</p>
-        <div class="gallery compare">
+        <p>When asked about the system, the development team&apos;s response was direct: &quot;This thing is 1000x better than just about anything I ever work with. Light years ahead.&quot;</p>
+      </section>
+      <div class="gallery compare">
+        <div class="collection">
           <figure>
             <p>Figma home page desktop design</p>
             <small>Scroll to compare</small>
             <picture>
-              <source srcset="assets/images/bodyhealthrx-11-1x.webp 1x, assets/images/bodyhealthrx-11-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-11-1x.webp" alt="BodyHealthRx home page Figma design">
+              <source srcset="assets/images/bodyhealthrx-12-1x.webp 1x, assets/images/bodyhealthrx-12-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-12-1x.webp" alt="BodyHealthRx home page Figma design">
             </picture>
             <figcaption class="visuallyhidden">Figma home page desktop design</figcaption>
           </figure>
@@ -491,19 +506,21 @@
             <p>Shopify home page build</p>
             <small>Scroll to compare</small>
             <picture>
-              <source srcset="assets/images/bodyhealthrx-12-1x.webp 1x, assets/images/bodyhealthrx-12-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-12-1x.webp" alt="BodyHealthRx homepage live Shopify build">
+              <source srcset="assets/images/bodyhealthrx-14-1x.webp 1x, assets/images/bodyhealthrx-14-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-14-1x.webp" alt="BodyHealthRx homepage live Shopify build">
             </picture>
             <figcaption class="visuallyhidden">Shopify home page build</figcaption>
           </figure>
         </div>
-        <div class="gallery compare">
+      </div>
+      <div class="gallery compare">
+        <div class="collection">
           <figure>
             <p>Figma test page desktop design</p>
             <small>Scroll to compare</small>
             <picture>
-              <source srcset="assets/images/bodyhealthrx-14-1x.webp 1x, assets/images/bodyhealthrx-14-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-14-1x.webp" alt="BodyHealthRx test page Figma design">
+              <source srcset="assets/images/bodyhealthrx-15-1x.webp 1x, assets/images/bodyhealthrx-15-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-15-1x.webp" alt="BodyHealthRx test page Figma design">
             </picture>
             <figcaption class="visuallyhidden">Figma test page desktop design</figcaption>
           </figure>
@@ -511,18 +528,18 @@
             <p>Shopify test page build</p>
             <small>Scroll to compare</small>
             <picture>
-              <source srcset="assets/images/bodyhealthrx-15-1x.webp 1x, assets/images/bodyhealthrx-15-2x.webp 2x" type="image/webp">
-              <img src="assets/images/bodyhealthrx-15-1x.webp" alt="BodyHealthRx test page live Shopify build">
+              <source srcset="assets/images/bodyhealthrx-16-1x.webp 1x, assets/images/bodyhealthrx-16-2x.webp 2x" type="image/webp">
+              <img src="assets/images/bodyhealthrx-16-1x.webp" alt="BodyHealthRx test page live Shopify build">
             </picture>
             <figcaption class="visuallyhidden">Shopify test page build</figcaption>
           </figure>
         </div>
-      </section>
+      </div>
       <section>
         <h2>What This Demonstrates</h2>
-        <p>I love this work. I love building things and working with people who love to explore and figure things out together. I love finding ways to make processes faster, more efficient, more effective, and less prone to error. That&apos;s not something I arrived at &mdash; it&apos;s just how I&apos;m wired, and it shows up in everything I do on a project like this one.</p>
-        <p>A design system built to anticipate the next phase of a platform before that phase had been scoped. A motion tool born from curiosity and a deliberate decision to extend my own capabilities, built because an opportunity appeared and I wanted to meet it with something better than what already existed. A second, better-fitted system proposed not because the first one failed, but because there was a more purposeful solution available once I knew the team well enough to design for them specifically. Figma files organized with enough clarity and intention that a project manager overseeing an entire platform rollout asked for thirty minutes just to learn from the architecture.</p>
-        <p>Design systems don&apos;t succeed on their own. They require organizational commitment, cross-functional trust, and a shared willingness to invest in the foundation before the returns are visible. BodyHealthRx made that commitment, and the work reflects it. The engagement is ongoing. The platform is still launching. The system is still evolving. That&apos;s exactly the point. The system didn&apos;t add complexity to any of that. It absorbed it &mdash; so the work doesn&apos;t have to.</p>
+        <p>I love this work. I love building things and working with people who want to figure things out together. I love mining for efficiencies &mdash; finding ways to make processes faster, less prone to error, and more effective without adding complexity. I love the moment where a system starts working for the team instead of the other way around, and I&apos;m always looking for the next version of that.</p>
+        <p>This project is a good example of all of it. A design system built to anticipate the next phase of a platform before that phase had been scoped. A content architecture restructured to mirror the component architecture so that neither becomes the bottleneck. A second, better-fitted system proposed not because the first one failed, but because there was a more purposeful solution available once I knew the team well enough to design for them specifically. A motion tool built because an opportunity appeared and I wanted to meet it with something better than what already existed. Figma files organized with enough clarity and intention that a project manager overseeing an entire platform rollout asked for thirty minutes just to learn from the architecture.</p>
+        <p>Design systems don&apos;t succeed on their own. They require organizational commitment, cross-functional trust, and a shared willingness to invest in the foundation before the returns are visible. BodyHealthRx made that commitment, and the work reflects it. The engagement is ongoing. The platform is still launching. The system is still evolving. That&apos;s exactly the point.</p>
       </section>
     </main>
     <footer>

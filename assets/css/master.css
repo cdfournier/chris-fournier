@@ -1031,16 +1031,16 @@ figure picture img {
   border-radius: 0.25rem;
 }
 
-main.bodyhealthrx .gallery.compare figure p {
+main.bodyhealthrx .gallery.compare .collection figure p {
   padding: 0;
   font-family: "metropolis-bold", sans-serif;
   font-style: normal;
   font-weight: normal;
 }
-main.bodyhealthrx .gallery.compare figure small {
+main.bodyhealthrx .gallery.compare .collection figure small {
   padding: 0 0 0.5rem;
 }
-main.bodyhealthrx .gallery.compare figure picture {
+main.bodyhealthrx .gallery.compare .collection figure picture {
   max-height: 12rem;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1050,7 +1050,10 @@ main.bodyhealthrx .gallery.compare figure picture {
 }
 
 @media (min-width: 48rem) {
-  main.bodyhealthrx .gallery.compare figure picture {
+  main.bodyhealthrx .gallery.compare .collection {
+    flex-wrap: nowrap;
+  }
+  main.bodyhealthrx .gallery.compare .collection figure picture {
     max-height: 24rem;
   }
 }

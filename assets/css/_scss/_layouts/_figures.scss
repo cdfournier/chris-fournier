@@ -27,23 +27,25 @@ figure {
 // BODYHEALTHRx FIGMA + SHOPIFY FIGURES
 main.bodyhealthrx {
   .gallery.compare {
-    figure {
-      p {
-        padding: 0;
-        @include sans-bold;
-      }
+    .collection {
+      figure {
+        p {
+          padding: 0;
+          @include sans-bold;
+        }
 
-      small {
-        padding: 0 0 0.5rem;
-      }
+        small {
+          padding: 0 0 0.5rem;
+        }
 
-      picture {
-        max-height: 12rem;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        padding: 0;
-        border: 1px solid $gray;
-        border-radius: 0.5rem;
+        picture {
+          max-height: 12rem;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          padding: 0;
+          border: 1px solid $gray;
+          border-radius: 0.5rem;
+        }
       }
     }
   }
@@ -52,9 +54,13 @@ main.bodyhealthrx {
 @media (min-width: 48rem) {
   main.bodyhealthrx {
     .gallery.compare {
-      figure {
-        picture {
-          max-height: 24rem;
+      .collection {
+        flex-wrap: nowrap;
+
+        figure {
+          picture {
+            max-height: 24rem;
+          }
         }
       }
     }
