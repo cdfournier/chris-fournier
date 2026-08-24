@@ -1657,15 +1657,15 @@ main.resume .skills ul {
   list-style: none;
 }
 main.resume .skills ul li {
-  display: flex;
-  align-items: center;
   width: auto;
   margin: 0 calc(var(--p) * 0.5) calc(var(--p) * 0.5) 0;
   padding: calc(var(--p) * 0.25) calc(var(--p) * 0.5);
-  border: 1px solid;
-  border-radius: var(--p);
-  font-size: var(--small);
-  line-height: 1;
+  font-size: var(--p);
+}
+main.resume .skills ul li span {
+  font-family: "metropolis-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
 
 main.resume .contact ul {

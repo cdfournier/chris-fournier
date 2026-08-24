@@ -90,15 +90,14 @@ main.resume {
       list-style: none;
 
       li {
-        display: flex;
-        align-items: center;
         width: auto;
         margin: 0 calc($p * 0.5) calc($p * 0.5) 0;
         padding: calc($p * 0.25) calc($p * 0.5);
-        border: 1px solid;
-        border-radius: $p;
-        font-size: $small;
-        line-height: 1;
+        font-size: $p;
+
+        span {
+          @include sans-bold;
+        }
       }
     }
   }
